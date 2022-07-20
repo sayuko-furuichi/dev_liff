@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{--  <script src="https://unpkg.com/glottologist"></script>  --}}
-    <title>DB</title>
+    <title>LIFF DB</title>
 </head>
-<body bgcolor="#c0c0c0">
+<body>
     <h2>登録されたユーザデータ</h2>
     <font color=red><p>一部の項目を省略し、新しく追加されたものから上位10件を表示しています</p></font>
     <font color=red><p>idが10ずつ増加しているのは利用しているシステムの仕様です</p></font>

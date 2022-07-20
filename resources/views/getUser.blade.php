@@ -12,7 +12,7 @@
     <title>THIS IS LIFF APP</title>
 </head>
 
-<body bgcolor="#c0c0c0">
+<body>
 
     <h1>getUser</h1>
     <a href="{{route('getuser.show')}}">登録されたデータを確認する</a>
