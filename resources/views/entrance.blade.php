@@ -12,7 +12,7 @@
     <title>WELCOME</title>
 </head>
 
-<body>
+<body bgcolor="#c0c0c0">
 
     <h1>home</h1>
     <p>Hello!!! world!!!! LINEMINI APP</p>

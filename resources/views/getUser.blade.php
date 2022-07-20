@@ -9,10 +9,10 @@
     {{-- <link rel="stylesheet" href="{{ secure_asset('css/reset.css') }}"> --}}
     {{-- <link id="import-link" rel="import" href="./sub.html"> --}}
     <script src="https://unpkg.com/glottologist"></script>
-    <title>WELCOME TO LINEmini App</title>
+    <title>THIS IS LIFF APP</title>
 </head>
 
-<body>
+<body bgcolor="#c0c0c0">
 
     <h1>getUser</h1>
     <a href="{{route('getuser.show')}}">登録されたデータを確認する</a>
