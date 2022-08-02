@@ -35,7 +35,8 @@
   --}}
 
         <div class="note"></div>
-        <h2>あなたのプロフィール</h2>
+        <h2>以下の情報で登録します</h2>
+        {{--  <h2>あなたのプロフィール</h2>  --}}
 
         <div id="profileInfo">
             <p>プロフィール画像：</p>
@@ -51,14 +52,19 @@
                 <font color="green">動作環境</font>
                 <p> 起動しているOS： <span id="osField"> </span> </p>
                 <p> 起動された画面： <span id="contextField"> </span> </p>
+
+                {{--  0802　DEMO  --}}
+                <p>メールアドレス： <input type="text" style="width:25%"> <span> @ </span> <input type="text" style="width:25%"></p>
+                <p>電話番号： <input type="text" style="width:20%"> <span> - </span> <input type="text" style="width:20%"> <span> - </span> <input type="text" style="width:20%"></p>
                 {{--  公式アカウントと友達か  --}}
                 {{--  <p> 起動された画面： <span id="friendField"> </span> </p>  --}}
                 {{--  ifで、この値なら、***ですの解説  --}}
-
+                
+{{--  DEMO！！！！
                 <form method="POST" name="fm">
                     @csrf
                     <a href="{{route ('getuser.post',['nm'=>'nm','id'=>'id','msg'=>'msg','os'=>'os','con'=>'con','url'=>'url'])}}"></a>
-                    <button type="submit">送信</button>
+                    <button type="submit">送信</button>  --}}
                     
 {{--  POST用  --}}
                 <input type="hidden" id="displayNameps"  name="nm">
