@@ -14,6 +14,7 @@ class SendEvents extends Controller
 
  public function send(Request $request)
  {
+
      //headerに、署名を作成する
 
    // $detail=$request->msg;
@@ -66,7 +67,8 @@ $rand_str = substr(str_shuffle($str), 0, 8);
              'content' => json_encode($detail, true)
          ],
      ]);
-
+     var_dump($detail);
+     
      $rmresponse = file_get_contents('https://dev-bot0722.herokuapp.com/public/api/callback?store_id=3', false, $context);
 
      if (strpos($http_response_header[0], '200') === false) {
