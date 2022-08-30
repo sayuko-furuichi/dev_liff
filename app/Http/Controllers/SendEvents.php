@@ -25,7 +25,7 @@ class SendEvents extends Controller
  date_default_timezone_set ('Asia/Tokyo');
 
  $str = 'abcdefghijklmnopqrstuvwxyz0123456789';
-$rand_str = substr(str_shuffle($str), 0, 8);
+$rand_str = substr(str_shuffle($str), 0, 16);
 
      $detail=([
         'destination'=> $request->id,
