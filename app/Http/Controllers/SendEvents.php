@@ -31,6 +31,7 @@ $rand_str = substr(str_shuffle($str), 0, 16);
 
 //replytokenが効いてない！
      $detail=([
+        //TODO:修正必須
         'destination'=> $request->id,
         'events'=> [
           [
