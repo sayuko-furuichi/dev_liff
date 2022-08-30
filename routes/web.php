@@ -57,3 +57,6 @@ Route::get('/stamp','App\Http\Controllers\stamp@index')-> name('stamp');
 
 //send service message
 // Route::get('/send','App\Http\Controllers\HomeController@getUser')-> name('sendsm');
+
+//公式アカウントへイベントを送信send
+Route::get('/send','App\Http\Controllers\send\sendevent@index')-> name('send.index');

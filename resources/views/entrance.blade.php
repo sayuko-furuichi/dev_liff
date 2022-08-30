@@ -37,7 +37,7 @@
     <a href="https://liff.line.me/1657181787-2vrnwwlj">LIFFへ遷移</a>
     <a href="https://lin.ee/mjCgvBo">発行中のクーポン</a>
     <a href="https://line-logins.herokuapp.com/gotoauthpage">line_login</a>
-    <a href="https://line.me/R/nv/location/">ichi</a>
+    <a href="{{route('send.index')}}">公式アカウントの操作</a>
 
     <div class="note">
 
