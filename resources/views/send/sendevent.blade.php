@@ -26,8 +26,8 @@
             <a href="{{route ('send.send')}}"></a>
             <button type="submit">送信</button>
    <p> <input type="text" name="msg"> </p>
-   <input type="hidden" id="userIdProps" value="
-   Uffd4dd52c580e1d2bb7b0a66e0ef1951" name="id">
+   {{--  <input type="hidden" id="userIdProps" value="" name="id">  --}}
+   <p id="userIdProps"> </p>
 </form>
     <div class="note">
 
@@ -39,7 +39,7 @@
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    {{--  <script src="js/getuser.js"></script>  --}}
+   <script src="js/getuserid.js"></script> 
 </body>
 
 </html>
