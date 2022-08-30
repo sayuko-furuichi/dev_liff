@@ -18,7 +18,12 @@
     <p>Hello!!! world!!!! LINEMINI APP</p>
 
     <p>ようこそ！ <span id="displayNameField"> </span> さん</p>
-
+    <form method="POST">
+            @csrf
+            <a href="{{route ('send.send',['msg'=>'msg'])}}"></a>
+            <button type="submit">送信</button>
+   <p name="msg"> <input type="text"> </p>
+</form>
     <div class="note">
 
         <p glot-model="note1"></p>

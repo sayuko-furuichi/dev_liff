@@ -13,5 +13,10 @@ class SendEvents extends Controller
 
     }
 
+ public function send(Request $request){
+    
 
+    return redirect('/send');
+
+ }
 }
