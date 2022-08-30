@@ -18,7 +18,7 @@ class SendEvents extends Controller
 
    // $detail=$request->msg;
 
- //   $mid= str_pad(random_int(0,99999999),20,0, STR_PAD_LEFT);
+    $mid= str_pad(random_int(0,99999999),20,0, STR_PAD_LEFT);
 
  //TODO:後でiniにも追加する
  date_default_timezone_set ('Asia/Tokyo');
@@ -33,7 +33,7 @@ $rand_str = substr(str_shuffle($str), 0, 8);
             'type'=> 'message',
             'message'=> [
               'type'=> 'text',
-   //           'id'=> '143537989211166465413215365341351',
+              'id'=> $mid,
               'text'=>  $request->msg
             ],
             'timestamp'=> $_SERVER['REQUEST_TIME'],
