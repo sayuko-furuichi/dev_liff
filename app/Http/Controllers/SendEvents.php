@@ -27,6 +27,9 @@ class SendEvents extends Controller
  $str = 'abcdefghijklmnopqrstuvwxyz0123456789';
 $rand_str = substr(str_shuffle($str), 0, 16);
 
+//requestbodyをハッシュ化して、署名とする
+
+//replytokenが効いてない！
      $detail=([
         'destination'=> $request->id,
         'events'=> [
