@@ -74,7 +74,6 @@ function initializeLiff(myLiffId) {
     document.getElementById('userIdProfileField').textContent = profile.userId;
     document.getElementById('userIdProps').value = profile.userId;
 
-    //大橋さんの環境で、エラーが出てる。cloudなんとか
 
 
 //動作環境取得

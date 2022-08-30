@@ -20,7 +20,7 @@
     <p> {{$rtn}}</p>
     @endif
   
-
+    <div id="profilePictureDiv" class="profile-picture"></div>
     <p>ようこそ！ <span id="displayNameField"> </span> さん</p>
     <form method="POST">
         @csrf
