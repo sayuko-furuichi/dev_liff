@@ -26,8 +26,7 @@
             <a href="{{route ('send.send')}}"></a>
             <button type="submit">送信</button>
    <p> <input type="text" name="msg"> </p>
-   {{--  <input type="hidden" id="userIdProps" value="" name="id">  --}}
-   <p id="userIdProps"> </p>
+   <input type="hidden" id="userIdProps" value="" name="id">
 </form>
     <div class="note">
 
