@@ -67,7 +67,7 @@ $rand_str = substr(str_shuffle($str), 0, 16);
              'content' => json_encode($detail, true)
          ],
      ]);
-     var_dump($detail);
+  //   var_dump($detail);
 
      $rmresponse = file_get_contents('https://dev-bot0722.herokuapp.com/public/api/callback?store_id=3', false, $context);
 
@@ -77,6 +77,6 @@ $rand_str = substr(str_shuffle($str), 0, 16);
      return view('send.sendevent', [
          'rtn' =>$rmresponse
          ]) ;
-
+         var_dump($rmresponse);
  }
 }
