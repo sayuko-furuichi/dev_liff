@@ -23,7 +23,7 @@
 
     <p>ようこそ！ <span id="displayNameField"> </span> さん</p>
     <form method="POST">
-            @csrf
+        @csrf
             <a href="{{route ('send.send',['msg'=>'msg'])}}"></a>
             <button type="submit">送信</button>
    <p name="msg"> <input type="text"> </p>
