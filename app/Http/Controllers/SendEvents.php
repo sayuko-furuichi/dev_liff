@@ -17,11 +17,11 @@ class SendEvents extends Controller
      $request;
      //headerに、署名を作成する
 
-     $detail=$request->msg;
+   // $detail=$request->msg;
 
 
      $detail=([
-        'destination'=> '@199ytmiz',
+        'destination'=> $request->uid,
         'events'=> [
           [
             'type'=> 'message',
