@@ -33,7 +33,6 @@ function initializeLiff(myLiffId) {
 
     
     //getuserid
-    document.getElementById('userIdProfileField').textContent = profile.userId;
     document.getElementById('userIdProps').value = profile.userId;
 
 
