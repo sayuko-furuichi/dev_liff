@@ -27,7 +27,7 @@ class SendEvents extends Controller
             'type'=> 'message',
             'message'=> [
               'type'=> 'text',
-              'id'=> '14353798921116',
+              'id'=> '143537989211166465413215365341351',
               'text'=>  $request->msg
             ],
             'timestamp'=> 1625665242211,
@@ -35,9 +35,9 @@ class SendEvents extends Controller
               'type'=> 'user',
               'userId'=> $request->uid,
             ],
-            'replyToken'=> '757913772c4646b784d4b7ce46d12671',
+            'replyToken'=> '757913772c4646b784d4b7ce46d12671awgaergethsdt',
             'mode'=> 'active',
-            'webhookEventId'=> '01FZ74A0TDDPYRVKNK77XKC3ZR',
+            'webhookEventId'=> '01FZ74A0TDDPYRVKNK77XKC3ZUGDWMWOD?JLDWKR',
             'deliveryContext'=> [
               'isRedelivery'=> false
             ]
