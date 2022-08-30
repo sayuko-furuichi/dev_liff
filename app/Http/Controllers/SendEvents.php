@@ -80,6 +80,6 @@ $rand_str = substr(str_shuffle($str), 0, 16);
      return view('send.sendevent', [
          'rtn' =>$rmresponse
          ]) ;
-         var_dump($rmresponse);
+    //     var_dump($rmresponse);
  }
 }
