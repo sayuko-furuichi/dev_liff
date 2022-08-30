@@ -20,6 +20,10 @@ class SendEvents extends Controller
    // $detail=$request->msg;
 
  //   $mid= str_pad(random_int(0,99999999),20,0, STR_PAD_LEFT);
+
+ $str = 'abcdefghijklmnopqrstuvwxyz0123456789';
+$rand_str = substr(str_shuffle($str), 0, 8);
+
      $detail=([
         'destination'=> $request->uid,
         'events'=> [
@@ -35,9 +39,9 @@ class SendEvents extends Controller
               'type'=> 'user',
               'userId'=> $request->uid,
             ],
-            'replyToken'=> '757913772c4646b784d4b7ce46d12671awgaergethsdt',
+            'replyToken'=> $rand_str,
             'mode'=> 'active',
-            'webhookEventId'=> '01FZ74A0TDDPYRVKNK77XKC3ZUGDWMWOD?JLDWKR',
+            'webhookEventId'=> $rand_str,
             'deliveryContext'=> [
               'isRedelivery'=> false
             ]
