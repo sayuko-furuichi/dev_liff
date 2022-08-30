@@ -18,6 +18,7 @@ class SendEvents extends Controller
      //headerに、署名を作成する
 
      $detail=$request->msg;
+     $detail=$request->uid;
 
 
 
