@@ -21,7 +21,7 @@ class SendEvents extends Controller
 
 
      $detail=([
-        'destination'=> 'xxxxxxxxxx',
+        'destination'=> '@199ytmiz',
         'events'=> [
           [
             'type'=> 'message',
