@@ -17,7 +17,7 @@
     <h1>home</h1>
     <p>Hello!!! world!!!! LINEMINI APP</p>
     @if (isset($rtn))
-    <p> {{'$rtn'}}</p>
+    <p> {{$rtn}}</p>
     @endif
   
 
