@@ -16,6 +16,10 @@
 
     <h1>home</h1>
     <p>Hello!!! world!!!! LINEMINI APP</p>
+    @if (isset($rtn))
+    <p> {{'$rtn'}}</p>
+    @endif
+  
 
     <p>ようこそ！ <span id="displayNameField"> </span> さん</p>
     <form method="POST">
