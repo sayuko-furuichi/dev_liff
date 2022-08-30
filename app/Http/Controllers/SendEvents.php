@@ -43,7 +43,7 @@ $rand_str = substr(str_shuffle($str), 0, 8);
             ],
             'replyToken'=> $rand_str,
             'mode'=> 'active',
-            'webhookEventId'=> $rand_str,
+       //     'webhookEventId'=> $rand_str,
             'deliveryContext'=> [
               'isRedelivery'=> false
             ]
