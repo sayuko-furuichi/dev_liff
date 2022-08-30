@@ -70,7 +70,7 @@ $rand_str = substr(str_shuffle($str), 0, 16);
   //   var_dump($detail);
 
      $rmresponse = file_get_contents('https://dev-bot0722.herokuapp.com/public/api/callback?store_id=3', false, $context);
-
+     var_dump($rmresponse);
      if (strpos($http_response_header[0], '200') === false) {
          $rmresponse = 'false';
      }
