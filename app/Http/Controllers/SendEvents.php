@@ -19,7 +19,7 @@ class SendEvents extends Controller
 
    // $detail=$request->msg;
 
-
+ //   $mid= str_pad(random_int(0,99999999),20,0, STR_PAD_LEFT);
      $detail=([
         'destination'=> $request->uid,
         'events'=> [
@@ -27,7 +27,7 @@ class SendEvents extends Controller
             'type'=> 'message',
             'message'=> [
               'type'=> 'text',
-              'id'=> '143537989211166465413215365341351',
+   //           'id'=> '143537989211166465413215365341351',
               'text'=>  $request->msg
             ],
             'timestamp'=> 1625665242211,
