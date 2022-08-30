@@ -42,7 +42,7 @@ $rand_str = substr(str_shuffle($str), 0, 16);
             ],
             'timestamp'=> $_SERVER['REQUEST_TIME'],
             'source'=> [
-              'type'=> 'user',
+              'type'=> 'web',
               'userId'=> $request->id,
             ],
             'replyToken'=> $rand_str,
