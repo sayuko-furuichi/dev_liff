@@ -14,7 +14,6 @@ class SendEvents extends Controller
 
  public function send(Request $request)
  {
-     $request;
      //headerに、署名を作成する
 
    // $detail=$request->msg;
