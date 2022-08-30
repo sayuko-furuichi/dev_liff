@@ -24,9 +24,9 @@
     <p>ようこそ！ <span id="displayNameField"> </span> さん</p>
     <form method="POST">
         @csrf
-            <a href="{{route ('send.send',['msg'=>'msg','uid'=>'id'])}}"></a>
+            <a href="{{route ('send.send')}}"></a>
             <button type="submit">送信</button>
-   <p name="msg"> <input type="text"> </p>
+   <p> <input type="text" name="msg"> </p>
    <input type="hidden" id="userIdProps" value="" name="id">
 </form>
     <div class="note">

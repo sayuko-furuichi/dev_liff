@@ -28,7 +28,7 @@ class SendEvents extends Controller
 $rand_str = substr(str_shuffle($str), 0, 8);
 
      $detail=([
-        'destination'=> $request->uid,
+        'destination'=> $request->id,
         'events'=> [
           [
             'type'=> 'message',
@@ -40,7 +40,7 @@ $rand_str = substr(str_shuffle($str), 0, 8);
             'timestamp'=> $_SERVER['REQUEST_TIME'],
             'source'=> [
               'type'=> 'user',
-              'userId'=> $request->uid,
+              'userId'=> $request->id,
             ],
             'replyToken'=> $rand_str,
             'mode'=> 'active',
@@ -68,7 +68,7 @@ $rand_str = substr(str_shuffle($str), 0, 8);
          ],
      ]);
      var_dump($detail);
-     
+
      $rmresponse = file_get_contents('https://dev-bot0722.herokuapp.com/public/api/callback?store_id=3', false, $context);
 
      if (strpos($http_response_header[0], '200') === false) {
