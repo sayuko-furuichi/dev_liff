@@ -62,6 +62,7 @@ class SendEvents extends Controller
      ]);
 
      $rmresponse = file_get_contents('https://dev-bot0722.herokuapp.com/public/api/callback?store_id=3', false, $context);
+     dd($rmresponse);
      if (strpos($http_response_header[0], '200') === false) {
          $rmresponse = 'false';
      }
