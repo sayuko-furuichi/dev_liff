@@ -56,13 +56,16 @@
                     </p>
 
                 </div>
-            </div>
+         
+           </div>
+
+           <div align="center">
+            <a href="{{ route('send.send') }}"></a>
+            <button type="submit">送信</button>
+        </div>
     </form>
     </div>
-    <div align="center">
-        <a href="{{ route('send.send') }}"></a>
-        <button type="submit">送信</button>
-    </div>
+   
 <td></td>
 <td></td>
 <td></td>
