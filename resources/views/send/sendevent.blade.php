@@ -12,7 +12,7 @@
     <title>WELCOME</title>
 </head>
 
-<body bgcolor="#c0c0c0">
+<body>
 
     <h1>SendMessage</h1>
 
@@ -22,7 +22,7 @@
   
     <p>ようこそ！ <span id="displayNameField"> </span> さん</p>
     <p>入力したメッセージを 公式アカウントからあなたへ送信します</p>
-    
+
 
     <form method="POST">
         @csrf
