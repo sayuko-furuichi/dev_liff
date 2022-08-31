@@ -59,9 +59,11 @@
   </div>
 </form>
 </div>
+<div align="center">
 <a href="{{route ('send.send')}}"></a>
 <button type="submit">自分に送信</button>
 <p>公式アカウントへイベントを発信し、操作したユーザへ送信命令を出します</p>
+</div>
     <div class="note">
 
         <p glot-model="note1"></p>
