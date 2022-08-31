@@ -54,3 +54,14 @@ body{
     font-size: 12px;
     text-align: center;
 }
+.main-content{
+    height:1000px;
+    
+  }
+  
+  .sidebar{
+    height:100px;
+    top:10px;
+    position: -webkit-sticky;
+    position: sticky;
+  }
