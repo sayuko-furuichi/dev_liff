@@ -47,7 +47,7 @@
 
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
-    <script src="js/protoOrder.js"></script>
+    {{--  <script src="js/protoOrder.js"></script>  --}}
 </body>
 <footer class="site-footer">
     <p class="copyright">@2017 WEBDESIGNDAY</p>
