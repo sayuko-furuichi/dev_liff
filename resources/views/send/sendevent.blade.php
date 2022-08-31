@@ -24,9 +24,9 @@
     <form method="POST">
         @csrf
             <a href="{{route ('send.send')}}"></a>
-            <button type="submit">送信</button>
-   <p> <input type="text" name="msg"> </p>
-   <p> <input type="text" name="msg2"> </p>
+            <button type="submit">自分に送信</button>
+   {{--  <p> <input type="text" name="msg"> </p>
+   <p> <input type="text" name="msg2"> </p>  --}}
    <input type="hidden" id="userIdProps" value="" name="id">
    <div class="line-bc">
 
