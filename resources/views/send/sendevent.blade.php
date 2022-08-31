@@ -49,8 +49,11 @@
     </div>
 
     <div class="mycomment">
+        <div class="faceicon">
+            <img src="{{ secure_asset('img/default.png') }}" alt="def">
+          </div>
       <p>
-       ああああああ
+       　　　　　
       </p>
       
     </div>
