@@ -52,7 +52,7 @@
 
                 <div class="mycomment">
                     <p>
-                        
+                        　　　　　　
                     </p>
 
                 </div>
@@ -63,10 +63,15 @@
         <a href="{{ route('send.send') }}"></a>
         <button type="submit">自分に送信</button>
     </div>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
     <div bgcolor="#c0c0c0" margin="2">
         <p>＊解説＊ </p>
         <p>公式アカウントへイベントを発信し、入力を取得して操作したユーザへ向けたメッセージを送信しています </p>
