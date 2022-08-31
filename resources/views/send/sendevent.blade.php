@@ -36,18 +36,18 @@
       </div>
       <div class="chatting">
         <div class="says">
-          <p>左ふきだし文</p>
+          <p> <input type="text" name="msg"></p>
+          <td></td>
+          <p> <input type="text" name="msg2"></p>
         </div>
       </div>
     </div>
 
     <div class="mycomment">
       <p>
-        <input type="text" name="msg">
+       
       </p>
-      <p>
-        <input type="text" name="msg2">
-      </p>
+      
     </div>
   </div>
 </form>
