@@ -61,7 +61,7 @@
     </div>
     <div align="center">
         <a href="{{ route('send.send') }}"></a>
-        <button type="submit">自分に送信</button>
+        <button type="submit">送信</button>
     </div>
 <td></td>
 <td></td>
