@@ -21,6 +21,7 @@
     @endif
   
     <p>ようこそ！ <span id="displayNameField"> </span> さん</p>
+
     <p>入力したメッセージを 公式アカウントからあなたへ送信します</p>
 
 
@@ -57,13 +58,15 @@
     </div>
   </div>
 </form>
+</div>
 <a href="{{route ('send.send')}}"></a>
 <button type="submit">自分に送信</button>
+<p>公式アカウントへイベントを発信し、操作したユーザへ送信命令を出します</p>
     <div class="note">
 
         <p glot-model="note1"></p>
         <p glot-model="note2"></p>
-    </div>
+    
     </div>
 
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
