@@ -32,7 +32,7 @@
 
     <div class="balloon6">
       <div class="faceicon">
-        <img src="public\img\default.png" alt="def">
+        <img src="{{ secure_asset('img/default.png') }}" alt="def">
       </div>
       <div class="chatting">
         <div class="says">

@@ -14,24 +14,23 @@ class SendEvents extends Controller
 
  public function send(Request $request)
  {
-
      //headerに、署名を作成する
 
-   // $detail=$request->msg;
+     // $detail=$request->msg;
 
-    $mid= str_pad(random_int(0,99999999),20,0, STR_PAD_LEFT);
+     $mid= str_pad(random_int(0, 99999999), 20, 0, STR_PAD_LEFT);
 
- //TODO:後でiniにも追加する
- date_default_timezone_set ('Asia/Tokyo');
+     //TODO:後でiniにも追加する
+     date_default_timezone_set('Asia/Tokyo');
 
- $str = 'abcdefghijklmnopqrstuvwxyz0123456789';
-$rand_str = substr(str_shuffle($str), 0, 16);
+     $str = 'abcdefghijklmnopqrstuvwxyz0123456789';
+     $rand_str = substr(str_shuffle($str), 0, 16);
 
-//requestbodyをハッシュ化して、署名とする
+     //requestbodyをハッシュ化して、署名とする
 
-//replytokenが効いてない！
+     //replytokenが効いてない！
      $detail=([
-       
+
         'destination'=> 'Uffd4dd52c580e1d2bb7b0a66e0ef1951',
         'events'=> [
           [
@@ -41,8 +40,8 @@ $rand_str = substr(str_shuffle($str), 0, 16);
               'id'=> $mid,
               'text'=>  $request->msg,
               'text2'=>  $request->msg2
-          
-          
+
+
           ],
             'timestamp'=> $_SERVER['REQUEST_TIME'],
             'source'=> [
@@ -74,7 +73,7 @@ $rand_str = substr(str_shuffle($str), 0, 16);
              'content' => json_encode($detail, true)
          ],
      ]);
-  //   var_dump($detail);
+     //   var_dump($detail);
 
      $rmresponse = file_get_contents('https://dev-bot0722.herokuapp.com/public/api/callback?store_id=3', false, $context);
      var_dump($rmresponse);
@@ -86,4 +85,7 @@ $rand_str = substr(str_shuffle($str), 0, 16);
          ]) ;
     //     var_dump($rmresponse);
  }
+public function Coupons()
+{
+}
 }
