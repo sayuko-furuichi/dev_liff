@@ -34,11 +34,10 @@
       <div class="faceicon">
         <img src="{{ secure_asset('img/default.png') }}" alt="def">
       </div>
+
       <div class="chatting">
         <div class="says">
           <p> <input type="text" name="msg"></p>
-          <td></td>
-          <p> <input type="text" name="msg2"></p>
         </div>
       </div>
     </div>
