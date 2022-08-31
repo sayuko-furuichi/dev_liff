@@ -38,6 +38,7 @@
     <a href="https://lin.ee/mjCgvBo">発行中のクーポン</a>
     <a href="https://line-logins.herokuapp.com/gotoauthpage">line_login</a>
     <a href="{{route('send.index')}}">公式アカウントの操作</a>
+    <a href="{{route('porder.index')}}">公式アカウントの操作</a>
 
     <div class="note">
 

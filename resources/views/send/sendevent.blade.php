@@ -22,6 +22,7 @@
   
     <p>ようこそ！ <span id="displayNameField"> </span> さん</p>
     <p>入力したメッセージを 公式アカウントからあなたへ送信します</p>
+    
 
     <form method="POST">
         @csrf

@@ -61,3 +61,7 @@ Route::get('/stamp','App\Http\Controllers\stamp@index')-> name('stamp');
 //公式アカウントへイベントを送信send
 Route::get('/send','App\Http\Controllers\SendEvents@index')-> name('send.index');
 Route::post('/send','App\Http\Controllers\SendEvents@send')-> name('send.send');
+
+
+//proto
+Route::get('/porder','App\Http\Controllers\ProtoOrders@index')-> name('porder.index');
