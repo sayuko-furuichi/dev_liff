@@ -63,8 +63,13 @@
 <a href="{{route ('send.send')}}"></a>
 <button type="submit">自分に送信</button>
 </div>
-<p>公式アカウントへイベントを発信し、操作したユーザへ送信命令を出します</p>
+<p></p>
 
+<pre><code class="language-text"><div>
+    ＊解説＊  
+    公式アカウントへイベントを発信し、入力を取得して操作したユーザへ向けたメッセージを送信しています 
+    通常はトークルーム内から行われるイベントの発信を、WEB画面から行っています。
+    </div></code></pre>
     <div class="note">
 
         <p glot-model="note1"></p>
