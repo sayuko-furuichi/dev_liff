@@ -43,7 +43,10 @@
 
     <div class="mycomment">
       <p>
-      右ふきだし文
+        <input type="text" name="msg">
+      </p>
+      <p>
+        <input type="text" name="msg2">
       </p>
     </div>
   </div>
