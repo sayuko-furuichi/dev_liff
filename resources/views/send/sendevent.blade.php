@@ -40,6 +40,7 @@
           <p> <input type="text" name="msg"></p>
         </div>
       </div>
+      <td></td>
       <div class="chatting">
         <div class="says">
           <p> <input type="text" name="msg2"></p>
