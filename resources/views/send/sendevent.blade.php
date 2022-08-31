@@ -14,17 +14,18 @@
 
 <body bgcolor="#c0c0c0">
 
-    <h1>home</h1>
-    <p>Hello!!! world!!!! LINEMINI APP</p>
+    <h1>SendMessage</h1>
+
     @if (isset($rtn))
     <p> {{$rtn}}</p>
     @endif
   
     <p>ようこそ！ <span id="displayNameField"> </span> さん</p>
+    <p>入力したメッセージを 公式アカウントからあなたへ送信します</p>
+
     <form method="POST">
         @csrf
-            <a href="{{route ('send.send')}}"></a>
-            <button type="submit">自分に送信</button>
+
    {{--  <p> <input type="text" name="msg"> </p>
    <p> <input type="text" name="msg2"> </p>  --}}
    <input type="hidden" id="userIdProps" value="" name="id">
@@ -54,6 +55,8 @@
       
     </div>
   </div>
+  <a href="{{route ('send.send')}}"></a>
+  <button type="submit">自分に送信</button>
 </form>
     <div class="note">
 
