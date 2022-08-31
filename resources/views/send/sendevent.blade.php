@@ -40,11 +40,15 @@
           <p> <input type="text" name="msg"></p>
         </div>
       </div>
+      <div class="chatting">
+        <div class="says">
+          <p> <input type="text" name="msg2"></p>
+        </div>
     </div>
 
     <div class="mycomment">
       <p>
-       
+       ああああああ
       </p>
       
     </div>
