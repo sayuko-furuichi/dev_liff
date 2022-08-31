@@ -55,9 +55,9 @@
       
     </div>
   </div>
-  <a href="{{route ('send.send')}}"></a>
-  <button type="submit">自分に送信</button>
 </form>
+<a href="{{route ('send.send')}}"></a>
+<button type="submit">自分に送信</button>
     <div class="note">
 
         <p glot-model="note1"></p>
