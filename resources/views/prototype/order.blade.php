@@ -108,9 +108,6 @@
     <div class="container py-3">
         <div class="row">
           <div class="col-12 bg-dark text-white text-center">
-          <header>
-            <p>header</p>
-          </header>
           </div>
         </div>
         <div class="row pt-3 text-center text-white">
@@ -125,13 +122,10 @@
         </div>
         <div class="row pt-3">
           <div class="col-12 bg-dark text-white text-center">
-          <footer>
-            <p>footer</p>
-          </footer>
            </div>
         </div>
       </div>
-      
+
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
     <script src="js/protoOrder.js"></script>
