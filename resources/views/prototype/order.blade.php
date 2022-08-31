@@ -11,6 +11,7 @@
     <h1 class="site-logo"><img src="images/logo.png" alt="WEBDESIGNDAY"></h1>
     <nav class="gnav">
         <ul class="gnav__menu">
+            {{--  ページ内リンクを貼る  --}}
             <li class="gnav__menu__item"><a href="">About</a></li>
             <li class="gnav__menu__item"><a href="">Works</a></li>
             <li class="gnav__menu__item"><a href="">Recruit</a></li>
@@ -22,7 +23,18 @@
 <body>
 <div class="hero"><img src="images/hero.jpg" alt="hero"></div>
 <div class="content">
-    <!--省略-->
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
+
 </div>
 <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
