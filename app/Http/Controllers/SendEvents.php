@@ -39,7 +39,7 @@ $rand_str = substr(str_shuffle($str), 0, 16);
             'message'=> [
               'type'=> 'text',
               'id'=> $mid,
-              'text1'=>  $request->msg,
+              'text'=>  $request->msg,
               'text2'=>  $request->msg2
           
           
