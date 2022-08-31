@@ -31,16 +31,22 @@ $rand_str = substr(str_shuffle($str), 0, 16);
 
 //replytokenが効いてない！
      $detail=([
-        //TODO:修正必須
+       
         'destination'=> 'Uffd4dd52c580e1d2bb7b0a66e0ef1951',
         'events'=> [
           [
             'type'=> 'message',
-            'message'=> [
+            'message'=> [[
               'type'=> 'text',
               'id'=> $mid,
               'text'=>  $request->msg
             ],
+            [
+              'type'=> 'text',
+              'id'=> $mid,
+              'text'=>  $request->msg2
+            ],
+          ],
             'timestamp'=> $_SERVER['REQUEST_TIME'],
             'source'=> [
               'type'=> 'web',
