@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     {{--  <link rel="stylesheet" href="{{ secure_asset('css/liff.css') }}">    --}}
+     <link rel="stylesheet" href="{{ secure_asset('css/lineDetail.css') }}">  
     {{--  <link rel="stylesheet" href="{{ secure_asset('css/reset.css') }}">    --}}
     {{--  <link id="import-link" rel="import" href="./sub.html">  --}}
     <script src="https://unpkg.com/glottologist"></script> 
@@ -28,6 +28,25 @@
    <p> <input type="text" name="msg"> </p>
    <p> <input type="text" name="msg2"> </p>
    <input type="hidden" id="userIdProps" value="" name="id">
+   <div class="line-bc"><!--①LINE会話全体を囲う-->
+
+    <div class="balloon6">
+      <div class="faceicon">
+        <img src="public\img\default.png" alt="def">
+      </div>
+      <div class="chatting">
+        <div class="says">
+          <p>左ふきだし文</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mycomment">
+      <p>
+      右ふきだし文
+      </p>
+    </div>
+  </div>
 </form>
     <div class="note">
 
