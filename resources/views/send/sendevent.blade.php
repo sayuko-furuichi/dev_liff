@@ -28,7 +28,7 @@
    <p> <input type="text" name="msg"> </p>
    <p> <input type="text" name="msg2"> </p>
    <input type="hidden" id="userIdProps" value="" name="id">
-   <div class="line-bc"><!--①LINE会話全体を囲う-->
+   <div class="line-bc">
 
     <div class="balloon6">
       <div class="faceicon">
