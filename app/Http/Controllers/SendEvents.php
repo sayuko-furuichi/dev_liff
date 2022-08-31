@@ -36,16 +36,13 @@ $rand_str = substr(str_shuffle($str), 0, 16);
         'events'=> [
           [
             'type'=> 'message',
-            'message'=> [[
+            'message'=> [
               'type'=> 'text',
               'id'=> $mid,
-              'text'=>  $request->msg
-            ],
-            [
-              'type'=> 'text',
-              'id'=> $mid,
-              'text'=>  $request->msg2
-            ],
+              'text1'=>  $request->msg,
+              'text2'=>  $request->msg2
+          
+          
           ],
             'timestamp'=> $_SERVER['REQUEST_TIME'],
             'source'=> [
