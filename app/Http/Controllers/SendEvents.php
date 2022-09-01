@@ -80,9 +80,14 @@ class SendEvents extends Controller
      if (strpos($http_response_header[0], '200') === false) {
          $rmresponse = 'false';
      }
-     return view('send.sendevent', [
-         'rtn' =>$rmresponse
-         ]) ;
+     return view('send.sendevent');
+
+
+     //デバッグ用
+        //  return view('send.sendevent', [
+        //   'rtn' =>$rmresponse
+        //   ]) ;
+
     //     var_dump($rmresponse);
  }
 public function Coupons()
