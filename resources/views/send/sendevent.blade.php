@@ -15,10 +15,10 @@
 <body>
 
     <h1>SendMessage</h1>
-
+{{--  debug
     @if (isset($rtn))
         <p> {{ $rtn }}</p>
-    @endif
+    @endif  --}}
 
     <p>ようこそ！ <span id="displayNameField"> </span> さん</p>
 
