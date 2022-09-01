@@ -80,7 +80,7 @@ class SendEvents extends Controller
      if (strpos($http_response_header[0], '200') === false) {
          $rmresponse = 'false';
      }
-     return view('send.sendevent');
+     return redirect('/send');
 
 
      //デバッグ用
