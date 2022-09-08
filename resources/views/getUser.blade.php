@@ -16,6 +16,8 @@
 
     <h1>getUser</h1>
     <a href="{{route('getuser.show')}}">登録されたデータを確認する</a>
+    <a href="https://lin.ee/ML72iHJ">ショップカード</a>
+    <a href="https://lin.ee/mjCgvBo">クーポン</a>
     <hr>
 {{--  
         <form method="get">
