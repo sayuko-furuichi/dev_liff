@@ -29,25 +29,32 @@
         <a href="https://line-logins.herokuapp.com/gotoauthpage">line_login</a> --}}
 
     <div class="note"></div>
-{{--  name属性つける  --}}
-    <p>名前　　<span style="color: red">必須</span></p>
-    <input type="text" placeholder="姓" style="width:30%" required>　　<input type="text" placeholder="名"
-        style="width:30%" required>
-
+    {{-- name属性つける --}}
+    <div>
+        <p>名前　　<span style="color: red">必須</span></p>
+        <input type="text" placeholder="姓" style="width:30%" required>　　<input type="text" placeholder="名"
+            style="width:30%" required>
+    </div>
+    <div>
         <p>フリガナ　　<span style="color: red">必須</span></p>
         <input type="text" placeholder="セイ" style="width:30%" required>　　<input type="text" placeholder="メイ"
             style="width:30%" required>
-
-            <p>電話番号(ハイフン無し)　　<span style="color: red">必須</span></p>
-            <input type="text" placeholder="" style="width:60%" required>
-
-            <p>住所　　<span style="color: red">必須</span></p>
-            <input type="text" placeholder="" style="width:60%" required>
-
-            <p>メールアドレス　　<span style="color: red">必須</span></p>
-            <input type="text" placeholder="" style="width:60%" required>
-    
-
+    </div>
+    <div>
+        <p>電話番号(ハイフン無し)　　<span style="color: red">必須</span></p>
+        <input type="text" placeholder="" style="width:60%" required>
+    </div>
+    <div>
+        <p>住所　　<span style="color: red">必須</span></p>
+        <input type="text" placeholder="" style="width:60%" required>
+    </div>
+    <div>
+        <p>メールアドレス　　<span style="color: red">必須</span></p>
+        <input type="text" placeholder="" style="width:60%" required>
+    </div>
+    <div>
+        <button type="submit">送信</button>
+    </div>
     {{-- DEMO！！！！
                 <form method="POST" name="fm">
                     @csrf
