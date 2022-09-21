@@ -13,20 +13,6 @@
 </head>
 
 <body>
-    {{-- <form method="get">
-            @csrf
-            <button type="submit" href="{{ route('getuser.index') }}">user</button>
-        </form>
-
-        <a href="{{ route('kaikei') }}">会計</a>
-        <a href="{{ route('yoyaku') }}">予約</a>
-        <a
-            href="https://liff.line.me/1654883656-XqwKRkd4?aid=060rxmbw&utm_source=LINE&utm_medium=Owner&utm_campaign=Share">ショップカード</a>
-        <a href="{{ route('inputOrders.index') }}">注文</a>
-        <a href="https://liff.line.me/1657181787-2vrnwwlj">LIFFへ遷移</a>
-       
-        <a href="https://lin.ee/mjCgvBo">発行中のクーポン</a>
-        <a href="https://line-logins.herokuapp.com/gotoauthpage">line_login</a> --}}
 
     <div class="note">
     {{-- name属性つける --}}
@@ -58,13 +44,6 @@
     </div>
 </form>
 </div>
-    {{-- DEMO！！！！
-                <form method="POST" name="fm">
-                    @csrf
-                    <a href="{{route ('getuser.post',['nm'=>'nm','id'=>'id','msg'=>'msg','os'=>'os','con'=>'con','url'=>'url'])}}"></a>
-                    <button type="submit">送信</button> --}}
-
-    {{-- POST用 --}}
     <input type="hidden" id="userIdProps" value="" name="id">
 
     </div>
