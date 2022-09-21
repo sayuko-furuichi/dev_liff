@@ -17,6 +17,7 @@
     <div class="note">
     {{-- name属性つける --}}
     <form action="{{route('member.add')}}" method="POST">
+        @csrf
     <div>
         <p>名前　　<span style="color: red">必須</span></p>
         <input type="text" placeholder="姓" style="width:30%" required>　　<input type="text" placeholder="名"
