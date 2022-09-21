@@ -13,12 +13,6 @@
 </head>
 
 <body>
-
-    <h1>getUser</h1>
-    <a href="{{route('getuser.show')}}">登録されたデータを確認する</a>
-    <a href="https://lin.ee/ML72iHJ">ショップカード</a>
-    <a href="https://lin.ee/mjCgvBo">クーポン</a>
-    <hr>
 {{--  
         <form method="get">
             @csrf
@@ -37,30 +31,14 @@
   --}}
 
         <div class="note"></div>
-        <h2>以下の情報で登録します</h2>
-        {{--  <h2>あなたのプロフィール</h2>  --}}
+            <p>名前<span style="color: red">必須</span></p>
+            <input type="text"  placeholder="姓" width="30%">　　<input type="text"  placeholder="名" width="30%">
 
-        <div id="profileInfo">
-            <p>プロフィール画像：</p>
-            <div id="profilePictureDiv" class="profile-picture"></div>
-            <div class="profile-info">
-                {{--  <p>LINEユーザ名： <span id="displayNameField"> </span></p>  --}}
-                <p>LINEユーザ名： <span id="displayNameField"> </span></p>
-
-                <p>LINEユーザID： <span id="userIdProfileField"> </span></p>
-                <p>プロフィールメッセージ： <span id="statusMessageField"> </span> </p>
-                
-                {{-- 動作環境 --}}
-                <font color="green">動作環境</font>
-                <p> 起動しているOS： <span id="osField"> </span> </p>
-                <p> 起動された画面： <span id="contextField"> </span> </p>
 
                 {{--  0802　DEMO  --}}
                 <p>メールアドレス： <input type="text" style="width:25%"> <span> @ </span> <input type="text" style="width:25%"></p>
                 <p>電話番号： <input type="text" style="width:20%"> <span> - </span> <input type="text" style="width:20%"> <span> - </span> <input type="text" style="width:20%"></p>
-                {{--  公式アカウントと友達か  --}}
-                {{--  <p> 起動された画面： <span id="friendField"> </span> </p>  --}}
-                {{--  ifで、この値なら、***ですの解説  --}}
+
                 
 {{--  DEMO！！！！
                 <form method="POST" name="fm">
@@ -69,13 +47,7 @@
                     <button type="submit">送信</button>  --}}
                     
 {{--  POST用  --}}
-                <input type="hidden" id="displayNameps"  name="nm">
                 <input type="hidden" id="userIdProps" value="" name="id">
-                <input type="hidden" id="statusMessageps" value="" name="msg">
-                <input type="hidden" id="osps" value="" name="os">
-                <input type="hidden" id="conteps" value="" name="con">
-                <input type="hidden" id="urlps" value="" name="url">
-                {{--  prof画像のURL url  --}}
 
             </div>
         </div>
@@ -83,7 +55,7 @@
         <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
         <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="js/getuser.js"></script>
+        <script src="js/getuserid.js"></script>
 </body>
 
 </html>
