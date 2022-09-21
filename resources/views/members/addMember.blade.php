@@ -32,7 +32,7 @@
 
         <div class="note"></div>
             <p>名前<span style="color: red">必須</span></p>
-            <input type="text"  placeholder="姓" width="30%">　　<input type="text"  placeholder="名" width="30%">
+            <input type="text"  placeholder="姓" style="width:30%">　　<input type="text"  placeholder="名" style="width:30%">
 
 
                 {{--  0802　DEMO  --}}
