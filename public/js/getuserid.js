@@ -5,6 +5,7 @@
 //イベントを使ってる。表示と値の取得の順番の為に書く
 window.onload = function () {
 	const useNodeJS = false;   // if you are not using a node server, set this value to false
+	// store_tableから、LIFFIDを持ってくる？
 	const defaultLiffId = '1657181787-2vrnwwlj';   // change the default LIFF value if you are not using a node server
   const cloudfrontUrl = 'https://dev-liff.herokuapp.com/public/';
 
