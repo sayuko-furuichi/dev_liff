@@ -28,8 +28,9 @@
         <a href="https://lin.ee/mjCgvBo">発行中のクーポン</a>
         <a href="https://line-logins.herokuapp.com/gotoauthpage">line_login</a> --}}
 
-    <div class="note"></div>
+    <div class="note">
     {{-- name属性つける --}}
+    <form action="{{route('member.add')}}" method="POST">
     <div>
         <p>名前　　<span style="color: red">必須</span></p>
         <input type="text" placeholder="姓" style="width:30%" required>　　<input type="text" placeholder="名"
@@ -55,6 +56,8 @@
     <div>
         <button type="submit">送信</button>
     </div>
+</form>
+</div>
     {{-- DEMO！！！！
                 <form method="POST" name="fm">
                     @csrf
