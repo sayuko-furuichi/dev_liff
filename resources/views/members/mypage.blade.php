@@ -9,7 +9,7 @@
     {{-- <link rel="stylesheet" href="{{ secure_asset('css/reset.css') }}"> --}}
     {{-- <link id="import-link" rel="import" href="./sub.html"> --}}
     <script src="https://unpkg.com/glottologist"></script>
-    <title>会員登録画面</title>
+    <title>まる屋メンバーズカード</title>
 </head>
 
 <body>
