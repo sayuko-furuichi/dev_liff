@@ -8,7 +8,7 @@ class Members extends Controller
 {
     //
     function index(){
-        return views('member.addMember');
+        return views('members.addMember');
     }
 
     function add(){
