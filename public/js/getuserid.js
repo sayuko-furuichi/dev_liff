@@ -27,7 +27,7 @@ function initializeLiff(myLiffId) {
 
   liff.getProfile().then(function (profile) {
 
-    document.getElementById('displayNameField').textContent = profile.displayName;
+    // document.getElementById('displayNameField').textContent = profile.displayName;
 
     //valueに追加 fromのname.子要素のname.value
 
