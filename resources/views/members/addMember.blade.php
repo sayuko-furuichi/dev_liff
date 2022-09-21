@@ -29,7 +29,7 @@
         <a href="https://line-logins.herokuapp.com/gotoauthpage">line_login</a> --}}
 
     <div class="note"></div>
-
+{{--  name属性つける  --}}
     <p>名前　　<span style="color: red">必須</span></p>
     <input type="text" placeholder="姓" style="width:30%" required>　　<input type="text" placeholder="名"
         style="width:30%" required>
@@ -46,12 +46,7 @@
 
             <p>メールアドレス　　<span style="color: red">必須</span></p>
             <input type="text" placeholder="" style="width:60%" required>
-            
-    {{-- 0802　DEMO --}}
-    <p>メールアドレス： <input type="text" style="width:25%"> <span> @ </span> <input type="text" style="width:25%"></p>
-    <p>電話番号： <input type="text" style="width:20%"> <span> - </span> <input type="text" style="width:20%"> <span> -
-        </span> <input type="text" style="width:20%"></p>
-
+    
 
     {{-- DEMO！！！！
                 <form method="POST" name="fm">
