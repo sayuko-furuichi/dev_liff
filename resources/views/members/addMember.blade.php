@@ -13,8 +13,7 @@
 </head>
 
 <body>
-{{--  
-        <form method="get">
+    {{-- <form method="get">
             @csrf
             <button type="submit" href="{{ route('getuser.index') }}">user</button>
         </form>
@@ -27,35 +26,37 @@
         <a href="https://liff.line.me/1657181787-2vrnwwlj">LIFFへ遷移</a>
        
         <a href="https://lin.ee/mjCgvBo">発行中のクーポン</a>
-        <a href="https://line-logins.herokuapp.com/gotoauthpage">line_login</a>
-  --}}
+        <a href="https://line-logins.herokuapp.com/gotoauthpage">line_login</a> --}}
 
-        <div class="note"></div>
-            <p>名前<span style="color: red">必須</span></p>
-            <input type="text"  placeholder="姓" style="width:30%">　　<input type="text"  placeholder="名" style="width:30%">
+    <div class="note"></div>
+
+    <p>名前　　<span style="color: red">必須</span></p>
+    <input type="text" placeholder="姓" style="width:30%" required>　　<input type="text" placeholder="名"
+        style="width:30%" required>
 
 
-                {{--  0802　DEMO  --}}
-                <p>メールアドレス： <input type="text" style="width:25%"> <span> @ </span> <input type="text" style="width:25%"></p>
-                <p>電話番号： <input type="text" style="width:20%"> <span> - </span> <input type="text" style="width:20%"> <span> - </span> <input type="text" style="width:20%"></p>
+    {{-- 0802　DEMO --}}
+    <p>メールアドレス： <input type="text" style="width:25%"> <span> @ </span> <input type="text" style="width:25%"></p>
+    <p>電話番号： <input type="text" style="width:20%"> <span> - </span> <input type="text" style="width:20%"> <span> -
+        </span> <input type="text" style="width:20%"></p>
 
-                
-{{--  DEMO！！！！
+
+    {{-- DEMO！！！！
                 <form method="POST" name="fm">
                     @csrf
                     <a href="{{route ('getuser.post',['nm'=>'nm','id'=>'id','msg'=>'msg','os'=>'os','con'=>'con','url'=>'url'])}}"></a>
-                    <button type="submit">送信</button>  --}}
-                    
-{{--  POST用  --}}
-                <input type="hidden" id="userIdProps" value="" name="id">
+                    <button type="submit">送信</button> --}}
 
-            </div>
-        </div>
-</form>
-        <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-        <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="js/getuserid.js"></script>
+    {{-- POST用 --}}
+    <input type="hidden" id="userIdProps" value="" name="id">
+
+    </div>
+    </div>
+    </form>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/getuserid.js"></script>
 </body>
 
 </html>
