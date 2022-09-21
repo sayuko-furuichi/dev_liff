@@ -34,7 +34,19 @@
     <input type="text" placeholder="姓" style="width:30%" required>　　<input type="text" placeholder="名"
         style="width:30%" required>
 
+        <p>フリガナ　　<span style="color: red">必須</span></p>
+        <input type="text" placeholder="セイ" style="width:30%" required>　　<input type="text" placeholder="メイ"
+            style="width:30%" required>
 
+            <p>電話番号(ハイフン無し)　　<span style="color: red">必須</span></p>
+            <input type="text" placeholder="" style="width:60%" required>
+
+            <p>住所　　<span style="color: red">必須</span></p>
+            <input type="text" placeholder="" style="width:60%" required>
+
+            <p>メールアドレス　　<span style="color: red">必須</span></p>
+            <input type="text" placeholder="" style="width:60%" required>
+            
     {{-- 0802　DEMO --}}
     <p>メールアドレス： <input type="text" style="width:25%"> <span> @ </span> <input type="text" style="width:25%"></p>
     <p>電話番号： <input type="text" style="width:20%"> <span> - </span> <input type="text" style="width:20%"> <span> -
