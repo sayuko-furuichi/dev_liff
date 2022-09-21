@@ -62,6 +62,6 @@ Route::get('/stamp','App\Http\Controllers\stamp@index')-> name('stamp');
 Route::get('/send','App\Http\Controllers\SendEvents@index')-> name('send.index');
 Route::post('/send','App\Http\Controllers\SendEvents@send')-> name('send.send');
 
-
-//proto
-Route::get('/porder','App\Http\Controllers\ProtoOrders@index')-> name('porder.index');
+//0921 会員登録ページ
+Route::get('/addMember','App\Http\Controllers\Members@index')-> name('member.index');
+Route::post('/addMember','App\Http\Controllers\Members@add')-> name('member.add');
