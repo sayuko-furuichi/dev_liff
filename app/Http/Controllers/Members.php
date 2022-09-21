@@ -14,4 +14,8 @@ class Members extends Controller
     function add(){
         return redirect('/addMember');
     }
+
+    function myPage(){
+        return view('members.mypage');
+    }
 }
