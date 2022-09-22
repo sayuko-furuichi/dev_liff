@@ -95,11 +95,12 @@ span {
 .f_logo {
   width: 25%;
   align-items: left;
-  padding-top: 30px;
+  padding-top: 35px;
 }
 
 .f_title {
-  padding-top: 40px;
+  padding-top: 35px;
+  align-items:center;
   color: #BDAD5E;
 }
 
