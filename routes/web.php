@@ -72,8 +72,8 @@ Route::get('/Member/{id?}', 'App\Http\Controllers\Members@myPage')-> name('membe
 
 //0922 予約ページ store_idのクエリつけて飛ばす？
 Route::group(['prefix' => '/reserve', 'as' => 'reserve' ], function () {
-    Route::get('/', 'App\Http\Controllers\Reserve@index')->name('.index');
-    Route::post('/', 'App\Http\Controllers\Reserve@add')->name('.add');
-
+    Route::get('/', 'App\Http\Controllers\Reserve@menu')->name('.menu');
+    Route::get('/date', 'App\Http\Controllers\Reserve@date')->name('.date');
     Route::get('/confirm', 'App\Http\Controllers\Reserve@confirm')->name('.confirm');
+    Route::get('/submit', 'App\Http\Controllers\Reserve@submit')->name('.submit');
 });
