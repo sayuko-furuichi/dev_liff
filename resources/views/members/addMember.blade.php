@@ -13,7 +13,7 @@
 </head>
 {{--  会員登録後、特別な表示と会員証画面へリダイレクトさせる  --}}
 <body>
-    <a href="{{route('member.mypage')}}"></a>
+    <a href="{{route('member.mypage')}}">マイページ（サンプル用）</a>
     <div class="note">
     {{-- name属性つける --}}
     <form action="{{route('member.add')}}" method="POST">
