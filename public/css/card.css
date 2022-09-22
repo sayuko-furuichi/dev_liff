@@ -104,7 +104,7 @@
   }
   
   .back {
-    background-color: #D21849;
+    background-color: #363636;
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
@@ -120,6 +120,9 @@
     line-height: 28px;
     padding-top: 10px;
     opacity: 0.85;
+    color: #BDAD5E;
+    font-family: sans-serif;
+
   }
   
   .b_button {

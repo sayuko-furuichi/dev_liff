@@ -33,7 +33,7 @@
       
           <div class='back'>
             <h1 class='b_headline'>まる屋</h1>
-            <p class='b_text'>Comprehensive insurance of apartments<br />including structural elements, decoration,<br /> equipment, property and responsibility<br />to neighbors in the expanded package<br />insurance risks</p>
+            <p class='b_text'><br />text TEXT テキスト てきすと text TEXT テキスト てきすと<br />text TEXT テキスト てきすと</p>
             <button class='b_button'><span>Buy now</span></button>
           </div>
       
