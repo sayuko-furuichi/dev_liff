@@ -25,7 +25,7 @@
 
         <div class='flip_box'>
       
-          <div class='front' style="background-image: {{secure_asset(/img/1.png)}}">
+          <div class='front' style="background-image: {{secure_asset('/img/1.png')}}">
             <p class='f_title'>Property insurance</p>
             <p class='f_subline'>Pack</p>
             <h1 class='f_headline'>Absolute safety</h1>
