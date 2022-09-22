@@ -9,11 +9,11 @@
     {{-- <link rel="stylesheet" href="{{ secure_asset('css/reset.css') }}"> --}}
     {{-- <link id="import-link" rel="import" href="./sub.html"> --}}
     <script src="https://unpkg.com/glottologist"></script>
-    <title>会員登録画面</title>
+    <title>予約完了画面</title>
 </head>
 {{--  会員登録後、特別な表示と会員証画面へリダイレクトさせる  --}}
 <body>
-    <a href="{{route('member.mypage')}}">マイページ（サンプル用）</a>
+    <a href="{{route('member.mypage')}}">マイページ</a>
     <div class="note">
     {{-- name属性つける --}}
     <form action="{{route('member.add')}}" method="POST">
