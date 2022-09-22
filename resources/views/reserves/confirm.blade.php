@@ -14,7 +14,7 @@
 {{--  会員登録後、特別な表示と会員証画面へリダイレクトさせる  --}}
 <body>
     <h1>menu</h1>
-    <a href="{{route('reserve.submit')}}">確定へ</a>
+    <a href="{{route('reserve.send')}}">お客様情報入力</a>
     <div class="note">
     {{-- name属性つける --}}
     <form action="{{route('member.add')}}" method="POST">
