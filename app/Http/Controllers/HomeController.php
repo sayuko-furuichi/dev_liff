@@ -7,7 +7,7 @@ use App\Models\LineUser;
 
 class HomeController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
         return view('entrance');
     }
