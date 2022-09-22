@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <div class="note">
     {{-- name属性つける --}}
     <form action="{{route('member.add')}}" method="POST">
@@ -43,13 +42,13 @@
     <div>
         <button type="submit">送信</button>
     </div>
+
+
+
+    <input type="hidden" id="userIdProps" value="" name="id">
 </form>
 </div>
-    <input type="hidden" id="userIdProps" value="" name="id">
 
-    </div>
-    </div>
-    </form>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
