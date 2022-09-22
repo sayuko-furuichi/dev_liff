@@ -61,8 +61,8 @@ Route::get('/send', 'App\Http\Controllers\SendEvents@index')-> name('send.index'
 Route::post('/send', 'App\Http\Controllers\SendEvents@send')-> name('send.send');
 
 //0921 会員登録ページ store_idのクエリつけて飛ばす？
-Route::get('/{addMember}', 'App\Http\Controllers\Members@index')-> name('member.index');
-Route::post('/{addMember}', 'App\Http\Controllers\Members@add')-> name('member.add');
+Route::get('/addMember', 'App\Http\Controllers\Members@index')-> name('member.index');
+Route::post('/addMember', 'App\Http\Controllers\Members@add')-> name('member.add');
 
 //0921 会員証ページ
 Route::get('/Member/{id?}', 'App\Http\Controllers\Members@myPage')-> name('member.mypage');
