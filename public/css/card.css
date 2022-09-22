@@ -56,7 +56,7 @@ span {
 .back {
   width: 360px;
   height: 230px;
-  border-radius: 20%;
+  border-radius: 10%;
 }
 
 .container,
@@ -174,7 +174,7 @@ span {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background-color: #363636;
+  background-color: #7e7d7d;
   transition: all 0.2s linear;
 }
 
