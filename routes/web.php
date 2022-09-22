@@ -22,50 +22,58 @@ Route::get('/', function () {
 //Route::get('/','App\Http\Controllers\HomeController@index');
 
 //get user data
-Route::get('/user','App\Http\Controllers\getUser@index')
+Route::get('/user', 'App\Http\Controllers\getUser@index')
 ->name('getuser.index');
 //get user data POST
-Route::post('/user','App\Http\Controllers\getUser@getUser')
+Route::post('/user', 'App\Http\Controllers\getUser@getUser')
 ->name('getuser.post');
 
 //DBshow
-Route::get('/dbshow','App\Http\Controllers\getUser@dbshow')
+Route::get('/dbshow', 'App\Http\Controllers\getUser@dbshow')
 ->name('getuser.show');
 
 //会計
-Route::get('/kaikei','App\Http\Controllers\kaikei@index')-> name('kaikei');
+Route::get('/kaikei', 'App\Http\Controllers\kaikei@index')-> name('kaikei');
 
 //予約
-Route::get('/yoyaku','App\Http\Controllers\yoyaku@index')
+Route::get('/yoyaku', 'App\Http\Controllers\yoyaku@index')
 -> name('yoyaku');
 
 //注文
-Route::get('/inputOrders','App\Http\Controllers\InputOrders@index')-> name('inputOrders.index');
-Route::post('/inputOrders/{products_id?}/{number?}','App\Http\Controllers\InputOrders@inputOrder')
+Route::get('/inputOrders', 'App\Http\Controllers\InputOrders@index')-> name('inputOrders.index');
+Route::post('/inputOrders/{products_id?}/{number?}', 'App\Http\Controllers\InputOrders@inputOrder')
 
 -> name('inputOrders.rgst');
 
 //注文履歴
 Route::get('/history', 'App\Http\Controllers\history@historyIndex')
-->name('history.index'); 
+->name('history.index');
 Route::post('/history', 'App\Http\Controllers\history@historyView')
 ->name('history.view');
-    
+
 
 //スタンプ
-Route::get('/stamp','App\Http\Controllers\stamp@index')-> name('stamp');
+Route::get('/stamp', 'App\Http\Controllers\stamp@index')-> name('stamp');
 
 //send service message
 // Route::get('/send','App\Http\Controllers\HomeController@getUser')-> name('sendsm');
 
 //公式アカウントへイベントを送信send
-Route::get('/send','App\Http\Controllers\SendEvents@index')-> name('send.index');
-Route::post('/send','App\Http\Controllers\SendEvents@send')-> name('send.send');
+Route::get('/send', 'App\Http\Controllers\SendEvents@index')-> name('send.index');
+Route::post('/send', 'App\Http\Controllers\SendEvents@send')-> name('send.send');
 
 //0921 会員登録ページ store_idのクエリつけて飛ばす？
-Route::get('/addMember','App\Http\Controllers\Members@index')-> name('member.index');
-Route::post('/addMember','App\Http\Controllers\Members@add')-> name('member.add');
+Route::get('/addMember', 'App\Http\Controllers\Members@index')-> name('member.index');
+Route::post('/addMember', 'App\Http\Controllers\Members@add')-> name('member.add');
 
 //0921 会員証ページ
-Route::get('/Member/{id?}','App\Http\Controllers\Members@myPage')-> name('member.mypage');
+Route::get('/Member/{id?}', 'App\Http\Controllers\Members@myPage')-> name('member.mypage');
 // Route::post('/Member/{id?}','App\Http\Controllers\Members@myPage')-> name('member.mypage');
+
+//0922 予約ページ store_idのクエリつけて飛ばす？
+Route::group(['prefix' => '/reserve', 'as' => 'reserve' ], function () {
+    Route::get('/', 'App\Http\Controllers\Reserve@index')->name('.index');
+    Route::post('/', 'App\Http\Controllers\Reserve@add')->name('.add');
+
+    Route::get('/confirm', 'App\Http\Controllers\Reserve@confirm')->name('.confirm');
+});
