@@ -28,10 +28,11 @@
           <div class='front'>
             <div class="store">
             <img src="{{secure_asset('img/1.png')}}" alt="logo" class="f_logo">
+            <h1 class='f_headline'>まる屋</h1>
             </div>
             <p class='f_title'>Property insurance</p>
             <p class='f_subline'>Pack</p>
-            <h1 class='f_headline'>まる屋</h1>
+            
           </div>
       
           <div class='back'>

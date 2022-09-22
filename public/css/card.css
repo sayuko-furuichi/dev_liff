@@ -95,6 +95,7 @@ span {
 .f_logo {
   width: 25%;
   align-items: left;
+  padding-top: 30px;
 }
 
 .f_title {
@@ -108,7 +109,8 @@ span {
 
 .f_headline {
   line-height: 23px;
-  align-items: light;
+  align-items:flex-end;
+  padding-top:30px;
 }
 
 .back {
