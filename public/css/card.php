@@ -1,3 +1,7 @@
+<?php
+  header('Content-Type: text/css; charset=utf-8');
+  //include_once( 'config.php' ); 
+?>
 * {
     margin: 0 auto;
     padding: 0;
@@ -85,8 +89,8 @@
   }
   
   .front {
-    background-color: #024395;
-    background-image: url('https://img-fotki.yandex.ru/get/194550/29644339.5/0_d6c5f_c9f15850_orig');
+    background-color: #363636;
+    background-image: <?php echo secure_asset('/img/1.png')?>;
   }
   
   .f_title {
