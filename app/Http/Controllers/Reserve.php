@@ -16,6 +16,9 @@ class Reserve extends Controller
     function confirm(){
         return view('reserves.confirm');
     }
+    function send(){
+        return view('reserves.sendClient');
+    }
     function submit(){
         return view('reserves.submit');
     }

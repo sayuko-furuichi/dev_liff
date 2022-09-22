@@ -75,5 +75,6 @@ Route::group(['prefix' => '/reserve', 'as' => 'reserve' ], function () {
     Route::get('/', 'App\Http\Controllers\Reserve@menu')->name('.menu');
     Route::get('/date', 'App\Http\Controllers\Reserve@date')->name('.date');
     Route::get('/date/confirm', 'App\Http\Controllers\Reserve@confirm')->name('.confirm');
-    Route::get('/date/confirm/submit', 'App\Http\Controllers\Reserve@submit')->name('.submit');
+    Route::get('/date/confirm/send', 'App\Http\Controllers\Reserve@send')->name('.send');
+    Route::get('/date/confirm/send/submit', 'App\Http\Controllers\Reserve@submit')->name('.submit');
 });
