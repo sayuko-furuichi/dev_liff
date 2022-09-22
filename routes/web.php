@@ -17,7 +17,7 @@ use App\Http\Controllers\HomeController;
 
 
 
-Route::get('/','App\Http\Controllers\HomeController@index');
+Route::get('/','App\Http\Controllers\Home@index');
 
 //get user data
 Route::get('/user', 'App\Http\Controllers\getUser@index')
