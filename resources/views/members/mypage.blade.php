@@ -28,7 +28,7 @@
           <div class='front' style="background-image: {{secure_asset('img/1.png')}}">
             <p class='f_title'>Property insurance</p>
             <p class='f_subline'>Pack</p>
-            <h1 class='f_headline'>Absolute safety</h1>
+            <h1 class='f_headline'>まる屋</h1>
           </div>
       
           <div class='back'>
