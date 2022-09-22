@@ -30,8 +30,8 @@
             <img src="{{secure_asset('img/1.png')}}" alt="logo" class="f_logo">
             <h1 class='f_headline'>まる屋</h1>
             </div>
-            <p class='f_title'>Property insurance</p>
-            <p class='f_subline'>Pack</p>
+            <p class='f_title'>MEMBERS CARD</p>
+            <p class='f_subline'></p>
             
           </div>
       
