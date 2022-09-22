@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/card.php') }}">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/card.css') }}">
     {{-- <link rel="stylesheet" href="{{ secure_asset('css/reset.css') }}"> --}}
     {{-- <link id="import-link" rel="import" href="./sub.html"> --}}
     <script src="https://unpkg.com/glottologist"></script>
@@ -25,7 +25,7 @@
 
         <div class='flip_box'>
       
-          <div class='front'>
+          <div class='front' style="background-image: {{secure_asset(/img/1.png)}}">
             <p class='f_title'>Property insurance</p>
             <p class='f_subline'>Pack</p>
             <h1 class='f_headline'>Absolute safety</h1>
