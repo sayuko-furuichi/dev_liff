@@ -53,7 +53,7 @@
       
       </div>
 
-    <div>
+    <div class="return">
         <button type="submit">チャットに戻る</button>
     </div>
 </div>

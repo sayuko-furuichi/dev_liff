@@ -56,7 +56,7 @@ span {
 .back {
   width: 360px;
   height: 230px;
-  border-radius: 80%;
+  border-radius: 20%;
 }
 
 .container,
@@ -174,7 +174,7 @@ span {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background-color: #D21849;
+  background-color: #363636;
   transition: all 0.2s linear;
 }
 
@@ -200,6 +200,8 @@ span {
   background-color: #C30C3D;
 }
 
+
+
 .s_arrow {
   width: 52px;
   height: 52px;
@@ -210,4 +212,8 @@ span {
 
 .s_arrow_rotate {
   transform: rotate(-180deg);
+}
+
+.return{
+  
 }
