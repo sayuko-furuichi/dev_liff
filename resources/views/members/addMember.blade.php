@@ -11,7 +11,7 @@
     <script src="https://unpkg.com/glottologist"></script>
     <title>会員登録画面</title>
 </head>
-
+{{--  会員登録後、特別な表示と会員証画面へリダイレクトさせる  --}}
 <body>
     <div class="note">
     {{-- name属性つける --}}
@@ -42,8 +42,6 @@
     <div>
         <button type="submit">送信</button>
     </div>
-
-
 
     <input type="hidden" id="userIdProps" value="" name="id">
 </form>
