@@ -27,18 +27,8 @@
   
     <a href="{{route('getuser.index') }}">ユーザデータ取得</a>
 
-
-  
-    <a href="{{ route('kaikei') }}">会計</a>
-    <a href="{{ route('yoyaku') }}">予約</a>
-    <a
-        href="https://liff.line.me/1654883656-XqwKRkd4?aid=060rxmbw&utm_source=LINE&utm_medium=Owner&utm_campaign=Share">ショップカード</a>
-    <a href="{{ route('inputOrders.index') }}">注文</a>
-    <a href="https://liff.line.me/1657181787-2vrnwwlj">LIFFへ遷移</a>
-    <a href="https://lin.ee/mjCgvBo">発行中のクーポン</a>
     <a href="https://line-logins.herokuapp.com/gotoauthpage">line_login</a>
     <a href="{{route('send.index')}}">公式アカウントの操作</a>
-    <a href="{{route('porder.index')}}">protoOrder</a>
 
     <div class="note">
 
