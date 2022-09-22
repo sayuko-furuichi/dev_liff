@@ -74,6 +74,6 @@ Route::get('/Member/{id?}', 'App\Http\Controllers\Members@myPage')-> name('membe
 Route::group(['prefix' => '/reserve', 'as' => 'reserve' ], function () {
     Route::get('/', 'App\Http\Controllers\Reserve@menu')->name('.menu');
     Route::get('/date', 'App\Http\Controllers\Reserve@date')->name('.date');
-    Route::get('/confirm', 'App\Http\Controllers\Reserve@confirm')->name('.confirm');
-    Route::get('/submit', 'App\Http\Controllers\Reserve@submit')->name('.submit');
+    Route::get('/date/confirm', 'App\Http\Controllers\Reserve@confirm')->name('.confirm');
+    Route::get('/date/confirm/submit', 'App\Http\Controllers\Reserve@submit')->name('.submit');
 });
