@@ -15,11 +15,9 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('entrance');
-});
 
-//Route::get('/','App\Http\Controllers\HomeController@index');
+
+Route::get('/','App\Http\Controllers\HomeController@index');
 
 //get user data
 Route::get('/user', 'App\Http\Controllers\getUser@index')
