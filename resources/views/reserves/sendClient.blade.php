@@ -9,7 +9,7 @@
     {{-- <link rel="stylesheet" href="{{ secure_asset('css/reset.css') }}"> --}}
     {{-- <link id="import-link" rel="import" href="./sub.html"> --}}
     <script src="https://unpkg.com/glottologist"></script>
-    <title>会員登録画面</title>
+    <title>お客様情報入力</title>
 </head>
 {{--  会員登録後、特別な表示と会員証画面へリダイレクトさせる  --}}
 <body>
