@@ -219,7 +219,7 @@ a.bild_qr{
   color: #fff;
   background-color: #FE725C;
   width: 80%;
-  height: 50px;
+  height: 20px;
   display: block;
   align-items: center;
   padding: 5px;
@@ -236,5 +236,4 @@ a.bild_qr:hover{
 .qr_img{
   width: 10%;
   background-color: #FE725C;
- color: #fff;
 }
