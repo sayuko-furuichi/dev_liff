@@ -28,32 +28,22 @@ function initializeLiff(myLiffId) {
 				liff.login();
 			} else {
 
-  liff.getProfile().then(function (profile) {
-
-    // document.getElementById('displayNameField').textContent = profile.displayName;
-
-    //valueに追加 fromのname.子要素のname.value
-
-    
-    //getuserid
-    document.getElementById('userIdProps').value = profile.userId;
-
     if(document.getElementById("qr").onclick){
         liff.scanCodeV2().then(function (string) {
             document.getElementById('stamp').value=string.value;
             document.getElementById('stamp').textContent=string.value;
           }
         
-      );}
-  },
+      );
+        
 
 
 
 
-).catch(function (error) {
+        }}}).catch(function (error) {
     window.alert('Error getting profile: ' + error);
   });
-}},
+}
     
   
 
@@ -68,5 +58,5 @@ results = regex.exec(url);
 if (!results) return null;
 if (!results[2]) return '';
 return decodeURIComponent(results[2].replace(/\+/g, " "));
-})}
+}
   
