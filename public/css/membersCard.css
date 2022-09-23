@@ -227,7 +227,7 @@ a.bild_qr{
 } */
 .bild_qr_btn{
   align-items: center;
-  background-color: #FE725C;;
+  background-color: #FE725C;
   position: fixed;
   bottom: 10px;
   width: 80%;
@@ -243,5 +243,5 @@ a.bild_qr:hover{
 
 .qr_img{
   width: 10%;
-  background-color: #FFF;
+  background-color: #FE725C;
 }
