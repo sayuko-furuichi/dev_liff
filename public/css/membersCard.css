@@ -214,19 +214,27 @@ span {
   transform: rotate(-180deg);
 }
 
-.bild_qr,
+/* .bild_qr,
 a.bild_qr{
-  color: #fff;
   background-color: #FE725C;
-  width: 80%;
-  height: 50px;
-  display: block;
+  width: 100%;
+  height: 20px;
   align-items: center;
   padding: 5px;
   position: fixed;
   bottom: 10px;
 
+} */
+.bild_qr_btn{
+  color: #fff;
+  align-items: center;
+  background-color: #FE725C;
+  position: fixed;
+  bottom: 10px;
+  width: 80%;
+  height: 20px;
 }
+
 .bild_qr:hover,
 a.bild_qr:hover{
   color: #fff;
@@ -236,5 +244,4 @@ a.bild_qr:hover{
 .qr_img{
   width: 10%;
   background-color: #FE725C;
- color: #fff;
 }
