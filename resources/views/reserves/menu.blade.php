@@ -19,15 +19,23 @@
     {{-- name属性つける --}}
     <form action="{{route('member.add')}}" method="POST">
         @csrf
+      <table>
+        <th>
         <tr>
             <td>Aコース</td>
         </tr>
+    </th>
+    <th>
         <tr>
             <td>Bコース</td>
         </tr>
+    </th>
+    <th>
         <tr>
             <td>Cコース</td>
         </tr>
+    </th>
+    </table>
     <div>
         <button type="submit">日時を選択する</button>
     </div>
