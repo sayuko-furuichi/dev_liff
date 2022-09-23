@@ -56,7 +56,7 @@
     <div class="return">
     </div>
     <div>
-        <input type="button" value="QR立ち上げ" id="qr">QR立ち上げ</button>
+        <input type="button" value="QR立ち上げ" id="qr">
         <p id="stamp"></p>
     </div>
 </div>
