@@ -44,7 +44,7 @@
       
           <div class='b_round'></div>
           <div class='s_round'>
-            <div class='s_arrow'></div>
+            <div class='s_arrow' id="qr"></div>
           </div>
         </div>
       
@@ -53,7 +53,7 @@
     <div class="return">
     </div>
     <div>
-        <button type="button" id="qr">QR立ち上げ</button>
+        {{--  <button type="button" id="qr">QR立ち上げ</button>  --}}
         <p id="stamp"></p>
     </div>
 </div>
