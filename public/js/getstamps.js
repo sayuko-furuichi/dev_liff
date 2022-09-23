@@ -16,6 +16,14 @@ const cloudfrontUrl = 'https://dev-liff.herokuapp.com/public/';
 	$(document).ready(function () {
 		initializeLiff(defaultLiffId);
 	});
+
+        document.getElementById("qr").onclick= function(){
+        liff.scanCodeV2().then(function (string) {
+            document.getElementById('stamp').value=string.value;
+            document.getElementById('stamp').textContent=string.value;
+          },
+    )}
+
 }
 
 function initializeLiff(myLiffId) {
@@ -48,13 +56,7 @@ function initializeLiff(myLiffId) {
     window.alert('Error getting profile: ' + error);
   });
 }
-    function onclick(){
-        document.getElementById("qr").onclick= function(){
-        liff.scanCodeV2().then(function (string) {
-            document.getElementById('stamp').value=string.value;
-            document.getElementById('stamp').textContent=string.value;
-          },
-    )}}
+
   
 
   
