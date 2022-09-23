@@ -11,7 +11,7 @@ class StampCard extends Controller
 
         //カードの作成から
     
-        return view('stampCards.stampcard');
+        return view('stampCards.stampCard');
 
     }
     function add(){
