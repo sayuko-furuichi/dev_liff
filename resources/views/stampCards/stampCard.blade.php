@@ -40,15 +40,15 @@
       
         </div>
       
-        <div class='r_wrap'>
+        {{--  <div class='r_wrap'>  --}}
       
           {{--  <div class='b_round'></div>  --}}
-          <div class='s_round'>
+          {{--  <div class='s_round'>  --}}
             {{--  <div class='s_arrow'></div>  --}}
-          </div>
+          {{--  </div>
         </div>
       
-      </div>
+      </div>  --}}
 
     <div class="return">
     </div>
