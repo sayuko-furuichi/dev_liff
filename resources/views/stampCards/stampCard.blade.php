@@ -35,7 +35,7 @@
           <div class='back'>
             <h1 class='b_headline'>まる屋</h1>
             <p class='b_text'><br />text TEXT テキスト てきすと text TEXT テキスト てきすと<br />text TEXT テキスト てきすと</p>
-            <button class='b_button'><span>Buy now</span></button>
+            {{--  <button class='b_button'><span>Buy now</span></button>  --}}
           </div>
       
         </div>
@@ -64,7 +64,7 @@
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/card.js"></script>
+    {{--  <script src="js/card.js"></script>  --}}
     <script src="js/getstamps.js"></script>
 </body>
 

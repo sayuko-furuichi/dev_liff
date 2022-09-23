@@ -8,8 +8,8 @@ window.onload = function () {
 //	const defaultLiffId = '1657181787-2vrnwwlj';   // change the default LIFF value if you are not using a node server
 //softnext　のLIFFIDでログイン
 const defaultLiffId ='1657487333-JPeEg6lr';
+var s_round = '.s_round';
  
-const cloudfrontUrl = 'https://dev-liff.herokuapp.com/public/';
 
     //jQueryを使い、DOMの読み込みが完了したときに処理を実行
 	$(document).ready(function () {
@@ -21,12 +21,32 @@ const cloudfrontUrl = 'https://dev-liff.herokuapp.com/public/';
           document.getElementById('stamp').textContent=string.value;
         },
   )}
+
   
-  
+  $(s_round).hover(function() {
+    $('.b_round').toggleClass('b_round_hover');
+    return false;
   });
+
+  $(s_round).click(function() {
+    $('.flip_box').toggleClass('flipped');
+    $(this).addClass('s_round_click');
+    $('.s_arrow').toggleClass('s_arrow_rotate');
+    $('.b_round').toggleClass('b_round_back_hover');
+    return false;
+  });
+
+  $(s_round).on('transitionend', function() {
+    $(this).removeClass('s_round_click');
+    $(this).addClass('s_round_back');
+    return false;
+  });
+});
+  
+  }
        
 
-}
+
 
 function initializeLiff(myLiffId) {
 	liff
