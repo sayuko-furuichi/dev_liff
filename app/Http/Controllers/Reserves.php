@@ -24,11 +24,14 @@ class Reserves extends Controller
     
     function date(Request $request){
 
-        return view('reserves.dateTime',[
+        return view('reserves.confirm',[
             'request'=>$request
         ]);
     }
     function confirm(Request $request){
+        return view('reserves.dateTime',[
+            'request'=>$request
+        ]);
        
     }
     function send(Request $request){
