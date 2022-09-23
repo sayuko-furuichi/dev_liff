@@ -24,7 +24,7 @@ class Reserves extends Controller
     
     function date(Request $request){
 
-        return view('reserves.date',[
+        return view('reserves.dateTime',[
             'request'=>$request
         ]);
     }
