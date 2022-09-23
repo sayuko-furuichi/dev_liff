@@ -20,9 +20,7 @@
     <form action="{{route('member.add')}}" method="POST">
         @csrf
         <table border="3">
-            <tr>
-                <th>　　　　　　2022年 4月　　　　</th>
-            </tr>
+                <th>2022年 4月</th>
             <tr>
                 <th></th>
                 <th>1日</th>
