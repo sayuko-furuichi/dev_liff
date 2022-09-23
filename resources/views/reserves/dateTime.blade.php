@@ -37,9 +37,17 @@
             </tr>
             <tr>
                 <th>10:30</th>
+                <td>×</td>
+                <td>×</td>
+                <td>○</td>
+                <td>×</td>
             </tr>
             <tr>
                 <th>11:00</th>
+                <td>×</td>
+                <td>×</td>
+                <td>○</td>
+                <td>×</td>
             </tr>
         </table>
 
