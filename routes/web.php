@@ -17,7 +17,7 @@ use App\Http\Controllers\HomeController;
 
 
 
-Route::get('/','App\Http\Controllers\Home@index');
+Route::get('/', 'App\Http\Controllers\Home@index');
 
 //get user data
 Route::get('/user', 'App\Http\Controllers\getUser@index')
@@ -75,4 +75,10 @@ Route::group(['prefix' => '/reserve', 'as' => 'reserve' ], function () {
     Route::get('/date/confirm', 'App\Http\Controllers\Reserve@confirm')->name('.confirm');
     Route::get('/date/confirm/send', 'App\Http\Controllers\Reserve@send')->name('.send');
     Route::get('/date/confirm/send/submit', 'App\Http\Controllers\Reserve@submit')->name('.submit');
+});
+
+//0921 会員登録ページ store_idのクエリつけて飛ばす？
+Route::group(['prefix' => '/stamps', 'as' => 'stamps' ], function () {
+    Route::get('/', 'App\Http\Controllers\StampCard@index')-> name('.index');
+    Route::post('/', 'App\Http\Controllers\StampCard@add')-> name('.add');
 });
