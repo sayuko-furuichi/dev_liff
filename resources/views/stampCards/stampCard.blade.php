@@ -15,9 +15,6 @@
 <body>
 
     <div class="note">
-    {{-- name属性つける --}}
-    <form action="{{route('member.add')}}" method="POST">
-        @csrf
     <div>
         <p>まる屋</p>
     </div>
