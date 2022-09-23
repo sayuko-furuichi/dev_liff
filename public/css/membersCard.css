@@ -162,8 +162,8 @@ span {
 
 .r_wrap {
   position: absolute;
-  right: 40px;
-  bottom: 38px;
+  right: -40px;
+  bottom: -38px;
 }
 
 .b_round,
