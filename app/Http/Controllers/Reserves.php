@@ -20,15 +20,11 @@ class Reserves extends Controller
             'request'=>$request
         ]);
     }
-    function inputMenu(Request $request){
 
-        return view('reserves.dateTime',[
-            'request'=>$request
-        ]);
-    }
+    
     function date(Request $request){
 
-        return view('reserves.confirm',[
+        return view('reserves.date',[
             'request'=>$request
         ]);
     }
