@@ -19,6 +19,9 @@
     {{-- name属性つける --}}
     <form action="{{route('member.add')}}" method="POST">
         @csrf
+        @if (isset($request))
+            <p>{{$request->store}}</p>
+        @endif
       <table>
         <th>
         <tr>
