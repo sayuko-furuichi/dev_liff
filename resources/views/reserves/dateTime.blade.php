@@ -22,7 +22,7 @@
         <table border="3">
                 <td>2022年 4月</td>
             <tr>
-                <th></th>
+                <th>  日時  </th>
                 <th>1日</th>
                 <th>2日</th>
                 <th>3日</th>
