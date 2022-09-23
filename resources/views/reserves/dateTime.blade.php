@@ -21,7 +21,7 @@
         @csrf
         <table border="3">
             <tr>
-                <th>2022年 4月</th>
+                <th>　　　　　　2022年 4月　　　　</th>
             </tr>
             <tr>
                 <th></th>
