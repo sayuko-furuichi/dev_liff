@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('reserves', function (Blueprint $table) {
             $table->id();
+            $table->string('store_id');
+            $table->string('course');
+            $table->timestamp('desired_dt')->nullable(true);
+            $table->string('payment');
+            $table->string('client_sei');
+            $table->string('client_mei');
+            $table->string('client_tel');
+            $table->string('lineuser_id');
             $table->timestamps();
         });
     }
