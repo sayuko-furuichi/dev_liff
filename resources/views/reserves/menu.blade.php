@@ -19,30 +19,17 @@
     {{-- name属性つける --}}
     <form action="{{route('member.add')}}" method="POST">
         @csrf
+        <tr>
+            <td>Aコース</td>
+        </tr>
+        <tr>
+            <td>Bコース</td>
+        </tr>
+        <tr>
+            <td>Cコース</td>
+        </tr>
     <div>
-        <p>名前　　<span style="color: red">必須</span></p>
-        <input type="text" placeholder="姓" style="width:30%" required name="sei">　　<input type="text" placeholder="名"
-            style="width:30%" required name="mei">
-    </div>
-    <div>
-        <p>フリガナ　　<span style="color: red">必須</span></p>
-        <input type="text" placeholder="セイ" style="width:30%" required name="fSei">　　<input type="text" placeholder="メイ"
-            style="width:30%" required name="fMei">
-    </div>
-    <div>
-        <p>電話番号(ハイフン無し)　　<span style="color: red">必須</span></p>
-        <input type="text" placeholder="" style="width:60%" required name="tel">
-    </div>
-    <div>
-        <p>住所　　<span style="color: red">必須</span></p>
-        <input type="text" placeholder="" style="width:60%" required name="address">
-    </div>
-    <div>
-        <p>メールアドレス　　<span style="color: red">必須</span></p>
-        <input type="text" placeholder="" style="width:60%" required name="mail">
-    </div>
-    <div>
-        <button type="submit">送信</button>
+        <button type="submit">日時を選択する</button>
     </div>
 
     <input type="hidden" id="userIdProps" value="" name="id">
