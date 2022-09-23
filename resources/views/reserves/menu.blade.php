@@ -17,7 +17,7 @@
     <a href="{{route('reserve.date')}}">日時選択へ</a>
     <div class="note">
     {{-- name属性つける --}}
-    <form action="{{route('member.add')}}" method="POST">
+    <form action="{{route('reserve.date')}}" method="GET">
         @csrf
         @if (isset($request))
             <p>店舗ID：{{$request->store}}</p>
