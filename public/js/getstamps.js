@@ -49,7 +49,7 @@ function initializeLiff(myLiffId) {
   });
 }
     function onclick(){
-        if(document.getElementById("qr").onclick){
+        document.getElementById("qr").onclick= function(){
         liff.scanCodeV2().then(function (string) {
             document.getElementById('stamp').value=string.value;
             document.getElementById('stamp').textContent=string.value;
