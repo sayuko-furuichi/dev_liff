@@ -15,51 +15,51 @@
 <body>
 
     <div class="note">
-    <div>
-        <p>まる屋</p>
-    </div>
-    <div class='container'>
-
-        <div class='flip_box'>
-      
-          <div class='front'>
-            <div class="store">
-            <img src="{{secure_asset('img/1.png')}}" alt="logo" class="f_logo">
-            <h1 class='f_headline'>まる屋</h1>
-            </div>
-            <p class='f_title'>stamp CARD</p>
-            <p class='f_subline'></p>
-            
-          </div>
-      
-          <div class='back'>
-            <h1 class='b_headline'>まる屋</h1>
-            <p class='b_text'><br />text TEXT テキスト てきすと text TEXT テキスト てきすと<br />text TEXT テキスト てきすと</p>
-            {{--  <button class='b_button'><span>Buy now</span></button>  --}}
-          </div>
-      
+        <div>
+            <p>まる屋</p>
         </div>
-      
-        {{--  <div class='r_wrap'>  --}}
-      
-          {{--  <div class='b_round'></div>  --}}
-          {{--  <div class='s_round'>  --}}
+        <div class='container'>
+
+            <div class='flip_box'>
+
+                <div class='front'>
+                    <div class="store">
+                        <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="f_logo">
+                        <h1 class='f_headline'>まる屋</h1>
+                    </div>
+                    <p class='f_title'>stamp CARD</p>
+                    <p class='f_subline'></p>
+
+                </div>
+
+                <div class='back'>
+                    <h1 class='b_headline'>まる屋</h1>
+                    <p class='b_text'><br />text TEXT テキスト てきすと text TEXT テキスト てきすと<br />text TEXT テキスト てきすと</p>
+                    {{--  <button class='b_button'><span>Buy now</span></button>  --}}
+                </div>
+
+            </div>
+
+            {{--  <div class='r_wrap'>  --}}
+
+            {{--  <div class='b_round'></div>  --}}
+            {{--  <div class='s_round'>  --}}
             {{--  <div class='s_arrow'></div>  --}}
-          {{--  </div>
+            {{--  </div>
         </div>
       
       </div>  --}}
 
-    <div class="return">
+            <div class="return">
+            </div>
+
+        </div>
     </div>
-    
-</div>
+    <div class="qr_btn">
+        <button type="button" id="qr" class="bild_qr_btn">GET！<img src="{{ secure_asset('img/qr_syu.png') }}"
+                alt="qrイメージ" class="qr_img"></button>
     </div>
-    <div>
-        <button type="button" id="qr" class="bild_qr_btn">GET！<img src="{{secure_asset('img/qr_syu.png')}}" alt="qrイメージ" class="qr_img"></button>
-    </div>
-        <p id="stamp"></p>
-  
+    <p id="stamp"></p>
 
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>

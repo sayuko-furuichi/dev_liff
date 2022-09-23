@@ -83,7 +83,7 @@ span {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  box-shadow: 10px 10px 25px #333;
+  box-shadow: 10px,10px,25px,#333;
 }
 
 .front {
