@@ -55,10 +55,11 @@
     
 </div>
     </div>
-    <div>
-        <button type="button" id="qr" class="bild_qr">QR立ち上げ</button>
-        <p id="stamp"></p>
+    <div class="bild_qr">
+        <input type="button" id="qr"  value="QR立ち上げ"><img src="{{secure_asset('img/qr.png')}}" alt="qrイメージ">
     </div>
+        <p id="stamp"></p>
+  
 
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
