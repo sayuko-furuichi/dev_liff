@@ -54,7 +54,10 @@
       </div>
 
     <div class="return">
-        <input type="button" onclick="bildqr();">QR立ち上げ</button>
+    </div>
+    <div>
+        <input type="button" onclick="bildqr();" value="QR立ち上げ">QR立ち上げ</button>
+        <p id="stamp" value="" ></p>
     </div>
 </div>
 

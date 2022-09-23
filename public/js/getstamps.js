@@ -53,6 +53,7 @@ function initializeLiff(myLiffId) {
   function bildqr(){
     liff.scanCodeV2().then(function (string) {
         document.getElementById('stamp').value=string.value;
+        document.getElementById('stamp').textContent=string.value;
     },
         );},
   
