@@ -20,22 +20,23 @@
     <form action="{{route('reserve.date')}}" method="GET">
         @csrf
         @if (isset($request))
+        <input type="hidden" name="store" value="{{$request->store}}">
             <p>店舗ID：{{$request->store}}</p>
         @endif
       <table>
         <th>
         <tr>
-            <td>Aコース</td>
+            <td value="Aコース" name="course">Aコース</td>
         </tr>
     </th>
     <th>
         <tr>
-            <td>Bコース</td>
+            <td name="course" value="Bコース">Bコース</td>
         </tr>
     </th>
     <th>
         <tr>
-            <td>Cコース</td>
+            <td name="course" value="Cコース">Cコース</td>
         </tr>
     </th>
     </table>

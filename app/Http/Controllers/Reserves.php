@@ -20,8 +20,6 @@ class Reserves extends Controller
             'request'=>$request
         ]);
     }
-
-    
     function date(Request $request){
 
         return view('reserves.confirm',[
