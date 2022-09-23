@@ -57,7 +57,7 @@
     </div>
     <div>
         <input type="button" onclick="" value="QR立ち上げ" id="qr"></button>
-        <p id="stamp" value="" ></p>
+        <p id="stamp"></p>
     </div>
 </div>
 
