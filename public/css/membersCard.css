@@ -226,13 +226,12 @@ a.bild_qr{
 
 } */
 .bild_qr_btn{
-  color: #fff;
   align-items: center;
-  background-color: #FE725C;
+  background-color: #FFF;
   position: fixed;
   bottom: 10px;
   width: 80%;
-  height: 20px;
+  height: 40px;
 }
 
 .bild_qr:hover,
