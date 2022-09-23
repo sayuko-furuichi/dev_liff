@@ -28,7 +28,7 @@ var s_round = '.s_round';
     return false;
   });
 
-  $(s_round).click(function() {
+  $('.flip_box').click(function() {
     $('.flip_box').toggleClass('flipped');
     $(this).addClass('s_round_click');
     $('.s_arrow').toggleClass('s_arrow_rotate');
