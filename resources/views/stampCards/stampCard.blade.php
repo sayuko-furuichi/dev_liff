@@ -56,7 +56,7 @@
 </div>
     </div>
     <div>
-        <button type="button" id="qr" value="QR立ち上げ">QR</button>
+        <button type="button" id="qr">QR立ち上げ</button>
         <p id="stamp"></p>
     </div>
 
