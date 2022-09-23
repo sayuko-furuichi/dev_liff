@@ -20,7 +20,7 @@
     <form action="{{route('member.add')}}" method="POST">
         @csrf
         @if (isset($request))
-            <p>{{$request->store}}</p>
+            <p>店舗ID：{{$request->store}}</p>
         @endif
       <table>
         <th>
