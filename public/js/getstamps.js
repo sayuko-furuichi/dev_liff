@@ -38,7 +38,7 @@ function initializeLiff(myLiffId) {
     //getuserid
     document.getElementById('userIdProps').value = profile.userId;
 
-    if(document.getElementById("button").onclick){
+    if(document.getElementById("qr").onclick){
         liff.scanCodeV2().then(function (string) {
             document.getElementById('stamp').value=string.value;
             document.getElementById('stamp').textContent=string.value;
