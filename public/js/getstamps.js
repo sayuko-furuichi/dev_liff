@@ -23,7 +23,7 @@ var s_round = '.s_round';
   )}
 
   
-  $(s_round).hover(function() {
+  $('.flip_box').hover(function() {
     $('.b_round').toggleClass('b_round_hover');
     return false;
   });
@@ -36,7 +36,7 @@ var s_round = '.s_round';
     return false;
   });
 
-  $(s_round).on('transitionend', function() {
+  $('.flip_box').on('transitionend', function() {
     $(this).removeClass('s_round_click');
     $(this).addClass('s_round_back');
     return false;
