@@ -214,22 +214,25 @@ span {
   transform: rotate(-180deg);
 }
 
-.bild_qr,
+/* .bild_qr,
 a.bild_qr{
   background-color: #FE725C;
   width: 100%;
   height: 20px;
-  display: block;
   align-items: center;
   padding: 5px;
   position: fixed;
   bottom: 10px;
 
-}
+} */
 .bild_qr_btn{
   color: #fff;
   align-items: center;
   background-color: #FE725C;
+  position: fixed;
+  bottom: 10px;
+  width: 80%;
+  height: 20px;
 }
 
 .bild_qr:hover,
