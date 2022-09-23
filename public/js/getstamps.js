@@ -27,10 +27,10 @@ function initializeLiff(myLiffId) {
 			if (!liff.isLoggedIn()) {
 				liff.login();
 			} else {
-                liff.scanCodeV2().then(function (string) {
-                    document.getElementById('stamp').value=string.value;
-                    document.getElementById('stamp').textContent=string.value;
-                  
+                // liff.scanCodeV2().then(function (string) {
+                //     document.getElementById('stamp').value=string.value;
+                //     document.getElementById('stamp').textContent=string.value;
+                
 
     if(document.getElementById("qr").onclick){
         liff.scanCodeV2().then(function (string) {
@@ -44,7 +44,7 @@ function initializeLiff(myLiffId) {
 
 
 
-       }})}}).catch(function (error) {
+       }}}).catch(function (error) {
     window.alert('Error getting profile: ' + error);
   });
 }
