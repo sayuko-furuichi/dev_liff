@@ -4,7 +4,6 @@
 
 //イベントを使ってる。表示と値の取得の順番の為に書く
 window.onload = function () {
-	const useNodeJS = false;   // if you are not using a node server, set this value to false
 	// store_tableから、LIFFIDを持ってくる？
 //	const defaultLiffId = '1657181787-2vrnwwlj';   // change the default LIFF value if you are not using a node server
 //softnext　のLIFFIDでログイン
@@ -15,14 +14,17 @@ const cloudfrontUrl = 'https://dev-liff.herokuapp.com/public/';
     //jQueryを使い、DOMの読み込みが完了したときに処理を実行
 	$(document).ready(function () {
 		initializeLiff(defaultLiffId);
-	});
-
-        document.getElementById("qr").onclick= function(){
-        liff.scanCodeV2().then(function (string) {
-            document.getElementById('stamp').value=string.value;
-            document.getElementById('stamp').textContent=string.value;
-          },
-    )}
+	
+    document.getElementById("qr").onclick= function(){
+      liff.scanCodeV2().then(function (string) {
+          document.getElementById('stamp').value=string.value;
+          document.getElementById('stamp').textContent=string.value;
+        },
+  )}
+  
+  
+  });
+       
 
 }
 
