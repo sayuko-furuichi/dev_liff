@@ -216,7 +216,6 @@ span {
 
 .bild_qr,
 a.bild_qr{
-  color: #fff;
   background-color: #FE725C;
   width: 100%;
   height: 20px;
@@ -227,6 +226,12 @@ a.bild_qr{
   bottom: 10px;
 
 }
+.bild_qr_btn{
+  color: #fff;
+  align-items: center;
+  background-color: #FE725C;
+}
+
 .bild_qr:hover,
 a.bild_qr:hover{
   color: #fff;
