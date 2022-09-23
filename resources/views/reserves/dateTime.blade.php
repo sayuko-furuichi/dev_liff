@@ -22,6 +22,7 @@
         <table>
             <tr>2022年 4月</tr>
             <tr>
+                <th></th>
                 <th>1日</th>
                 <th>2日</th>
                 <th>3日</th>
