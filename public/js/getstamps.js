@@ -44,7 +44,13 @@ function initializeLiff(myLiffId) {
     window.alert('Error getting profile: ' + error);
   });
 }
-    
+    function onclick(){
+        if(document.getElementById("qr").onclick){
+        liff.scanCodeV2().then(function (string) {
+            document.getElementById('stamp').value=string.value;
+            document.getElementById('stamp').textContent=string.value;
+          },
+    )}}
   
 
   
