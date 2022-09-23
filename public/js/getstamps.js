@@ -37,25 +37,26 @@ function initializeLiff(myLiffId) {
     
     //getuserid
     document.getElementById('userIdProps').value = profile.userId;
+
+    if(document.getElementById("button").onclick){
+        liff.scanCodeV2().then(function (string) {
+            document.getElementById('stamp').value=string.value;
+            document.getElementById('stamp').textContent=string.value;
+          }
+        
+      );}
   },
 
 
-  liff.scanCodeV2().then(function (string) {
-    document.getElementById('stamp').value=string.value;
-  }
 
 
 ).catch(function (error) {
     window.alert('Error getting profile: ' + error);
-  }));
+  });
 }},
     
-  function bildqr(){
-    liff.scanCodeV2().then(function (string) {
-        document.getElementById('stamp').value=string.value;
-        document.getElementById('stamp').textContent=string.value;
-    },
-        );},
+  
+
   
 
 function getParam(name, url) {
