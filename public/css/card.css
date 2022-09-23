@@ -232,3 +232,9 @@ a.bild_qr:hover{
   color: #fff;
   background: rgb(246, 106, 7);
 }
+
+.qr_img{
+  width: 10%;
+  background-color: #FE725C;
+ color: #fff;
+}

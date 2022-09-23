@@ -56,7 +56,7 @@
 </div>
     </div>
     <div class="bild_qr">
-        <button type="button" id="qr">GET！<img src="{{secure_asset('img/qr.png')}}" alt="qrイメージ" width="30%"></button>
+        <button type="button" id="qr">GET！<img src="{{secure_asset('img/qr.png')}}" alt="qrイメージ" class="qr_img"></button>
     </div>
         <p id="stamp"></p>
   
