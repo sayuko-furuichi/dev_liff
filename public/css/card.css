@@ -223,6 +223,9 @@ a.bild_qr{
   display: block;
   align-items: center;
   padding: 5px;
+  position: fixed;
+  bottom: 10px;
+
 }
 .bild_qr:hover,
 a.bild_qr:hover{
