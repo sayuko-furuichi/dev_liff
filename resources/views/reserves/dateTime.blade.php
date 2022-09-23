@@ -17,7 +17,7 @@
     <a href="{{route('reserve.confirm')}}">確認へ</a>
     <div class="note">
     {{-- name属性つける --}}
-    <form action="{{route('member.add')}}" method="POST">
+    <form action="{{route('reserve.confirm')}}" method="GET">
         @csrf
         <table border="3">
             <th>

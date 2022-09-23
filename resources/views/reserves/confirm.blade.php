@@ -17,7 +17,7 @@
     <a href="{{route('reserve.send')}}">お客様情報入力へ</a>
     <div class="note">
     {{-- name属性つける --}}
-    <form action="{{route('member.add')}}" method="POST">
+    <form action="{{route('reserve.send')}}" method="GET">
         @csrf
         <div>
         <p>日付</p>
@@ -31,7 +31,7 @@
     </div>
     <input type="hidden" id="userIdProps" value="" name="id">
     <input type="submit" value="この内容で予約する">
-    
+
 </form>
 </div>
 

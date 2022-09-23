@@ -74,7 +74,7 @@ Route::group(['prefix' => '/reserve', 'as' => 'reserve' ], function () {
     Route::get('/date', 'App\Http\Controllers\Reserves@date')->name('.date');
     Route::get('/date/confirm', 'App\Http\Controllers\Reserves@confirm')->name('.confirm');
     Route::get('/date/confirm/send', 'App\Http\Controllers\Reserves@send')->name('.send');
-    Route::get('/date/confirm/send/submit', 'App\Http\Controllers\Reserves@submit')->name('.submit');
+    Route::post('/date/confirm/send', 'App\Http\Controllers\Reserves@submit')->name('.submit');
 });
 
 //0921 会員登録ページ store_idのクエリつけて飛ばす？
