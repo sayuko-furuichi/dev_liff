@@ -13,39 +13,25 @@
 </head>
 {{--  会員登録後、特別な表示と会員証画面へリダイレクトさせる  --}}
 <body>
-    <h1>確認画面</h1>
-    <a href="{{route('reserve.send')}}">お客様情報入力</a>
+    <h1>ご予約内容</h1>
+    <a href="{{route('reserve.send')}}">お客様情報入力へ</a>
     <div class="note">
     {{-- name属性つける --}}
     <form action="{{route('member.add')}}" method="POST">
         @csrf
-    <div>
-        <p>名前　　<span style="color: red">必須</span></p>
-        <input type="text" placeholder="姓" style="width:30%" required name="sei">　　<input type="text" placeholder="名"
-            style="width:30%" required name="mei">
+        <div>
+        <p>日付</p>
+        <p> 2022年4月5日(火) 12:00~ </p>
     </div>
+    
     <div>
-        <p>フリガナ　　<span style="color: red">必須</span></p>
-        <input type="text" placeholder="セイ" style="width:30%" required name="fSei">　　<input type="text" placeholder="メイ"
-            style="width:30%" required name="fMei">
+        <p>お支払い情報</p>
+        <p><input type="radio" name="pay" value="genti"> 現地決済</p>
+        <p><input type="radio" name="pay" value="kureka"> クレジットカード</p>
     </div>
-    <div>
-        <p>電話番号(ハイフン無し)　　<span style="color: red">必須</span></p>
-        <input type="text" placeholder="" style="width:60%" required name="tel">
-    </div>
-    <div>
-        <p>住所　　<span style="color: red">必須</span></p>
-        <input type="text" placeholder="" style="width:60%" required name="address">
-    </div>
-    <div>
-        <p>メールアドレス　　<span style="color: red">必須</span></p>
-        <input type="text" placeholder="" style="width:60%" required name="mail">
-    </div>
-    <div>
-        <button type="submit">送信</button>
-    </div>
-
     <input type="hidden" id="userIdProps" value="" name="id">
+    <input type="submit" value="この内容で予約する">
+    
 </form>
 </div>
 
