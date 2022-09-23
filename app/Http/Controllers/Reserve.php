@@ -6,20 +6,29 @@ use Illuminate\Http\Request;
 
 class Reserve extends Controller
 {
-    //
-    function menu(){
+    private $storeId;
+    private $user_id;
+
+    function __construct(Request $request){
+        $this->storeId =$request->store;
+
+}
+
+
+    function menu(Request $request){
+
         return view('reserves.menu');
     }
-    function date(){
+    function date(Request $request){
         return view('reserves.dateTime');
     }
-    function confirm(){
+    function confirm(Request $request){
         return view('reserves.confirm');
     }
-    function send(){
+    function send(Request $request){
         return view('reserves.sendClient');
     }
-    function submit(){
+    function submit(Request $request){
         return view('reserves.submit');
     }
 }
