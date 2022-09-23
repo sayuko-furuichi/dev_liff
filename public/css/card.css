@@ -219,6 +219,8 @@ a.bild_qr{
   color: #fff;
   background-color: #FE725C;
   width: 80%;
+  height: 20px;
+  align-items: center;
 }
 .bild_qr:hover,
 a.bild_qr:hover{
