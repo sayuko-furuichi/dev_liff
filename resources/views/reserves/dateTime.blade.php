@@ -31,12 +31,12 @@
                 <th>3日</th>
                 <th>4日</th>
             </tr>
-            
+        
             <tr>
                 <th>10:00</th>
                 <td>×</td>
                 <td>×</td>
-                <td>○</td>
+                <td><input type="radio" value="2022-04-03 10:00" name="dateTime"> ○</td>
                 <td>×</td>
             </tr>
             <tr>
