@@ -36,6 +36,7 @@
         <p>住所　　<span style="color: red">必須</span></p>
         <input type="text" placeholder="" style="width:60%" required name="address">
     </div>
+    <p><input type="checkbox" name="member"> 追加情報を入力して会員登録する</p>
         <button type="submit">送信</button>
     </div>
 

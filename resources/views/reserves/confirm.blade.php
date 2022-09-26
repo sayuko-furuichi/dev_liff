@@ -21,11 +21,11 @@
         @csrf
         <div>
             <p>店舗</p>
-            <p> {{$request->store}}</p>
+            <p><input type="hidden" name="store" value="{{$request->store}}"> {{$request->store}} 店</p>
         <p>日付</p>
-        <p> {{$request->dateTime}} </p>
+        <p><input type="hidden" name="dateTime" value="{{$request->dateTime}}">  {{$request->dateTime}} </p>
         <p>コース</p>
-        <p> {{$request->course[0]}} </p>
+        <p> <input type="hidden" name="course" value="{{$request->course[0]}}"> {{$request->course[0]}} </p>
     </div>
     
     <div>
