@@ -26,19 +26,19 @@
       <table>
         <th>
         <tr>
-            <td> <img src="{{secure_asset('img/1.png')}}" alt="img" class="m_img"><input type="hidden" value="Aコース"name="courses[]" class="btn">Aコース</td>
+            <td> <img src="{{secure_asset('img/1.png')}}" alt="img" class="m_img"><input type="checkbox" value="Aコース"name="courses[]" class="btn">Aコース</td>
         </tr>
     </th>
     <hr>
     <th>
         <tr>
-            <td><img src="{{secure_asset('img/1.png')}}" alt="img" class="m_img"><input type="hidden" value="Bコース"name="courses[]" class="btn">Bコース</td>
+            <td><img src="{{secure_asset('img/1.png')}}" alt="img" class="m_img"><input type="checkbox" value="Bコース"name="courses[]" class="btn">Bコース</td>
         </tr>
     </th>
     <hr>
     <th>
         <tr>
-            <td><img src="{{secure_asset('img/1.png')}}" alt="img" class="m_img"><input type="hidden" value="Cコース"name="courses[]" class="btn">Cコース</td>
+            <td><img src="{{secure_asset('img/1.png')}}" alt="img" class="m_img"><input type="checkbox" value="Cコース"name="courses[]" class="btn">Cコース</td>
         </tr>
     </th>
     <hr>
