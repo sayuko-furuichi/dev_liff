@@ -13,7 +13,7 @@
 </head>
 {{--  会員登録後、特別な表示と会員証画面へリダイレクトさせる  --}}
 <body>
-    <h1>menu</h1>
+<img src="{{secure_asset('img/menu_bar/var_1.png')}}" alt="メニュー">
     <a href="{{route('reserve.date')}}">日時選択へ</a>
     <div class="note">
     {{-- name属性つける --}}
@@ -21,24 +21,27 @@
         @csrf
         @if (isset($request))
         <input type="hidden" name="store" value="{{$request->store}}">
-            <p>店舗ID：{{$request->store}}</p>
+            {{--  <p>店舗ID：{{$request->store}}</p>  --}}
         @endif
       <table>
         <th>
         <tr>
-            <td value="Aコース" name="course">Aコース</td>
+           <img src="{{secure_asset('img/1.png')}}" alt="img"><input type="button" value="Aコース"name="course" class="btn"><td>Aコース</td>
         </tr>
     </th>
+    <hr>
     <th>
         <tr>
-            <td name="course" value="Bコース">Bコース</td>
+            <img src="{{secure_asset('img/1.png')}}" alt="img"><input type="button" value="Bコース"name="course"><td>Aコース</td>
         </tr>
     </th>
+    <hr>
     <th>
         <tr>
-            <td name="course" value="Cコース">Cコース</td>
+            <img src="{{secure_asset('img/1.png')}}" alt="img"><input type="button" value="Cコース"name="course"><td>Aコース</td>
         </tr>
     </th>
+    <hr>
     </table>
     <div>
         <button type="submit">日時を選択する</button>
