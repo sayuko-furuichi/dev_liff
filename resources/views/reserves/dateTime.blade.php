@@ -17,6 +17,9 @@
     <a href="{{route('reserve.confirm')}}">確認へ</a>
     <div class="note">
     {{-- name属性つける --}}
+    @if (isset($request))
+        <p>{{$request->courses[0]}}</p>
+    @endif
     <form action="{{route('reserve.confirm')}}" method="GET">
         @csrf
         <table border="3">
