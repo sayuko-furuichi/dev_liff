@@ -21,7 +21,7 @@
       //  <p>{{$request->courses[0]}}</p>
 
       <input type="hidden" name="store" value="{{$request->store}}">
-      <input type="hidden" name="corse" value="{{$request->course[0]}}">
+      <input type="hidden" name="corse" value="{{$request->courses[0]}}">
     @endif
     <form action="{{route('reserve.confirm')}}" method="GET">
         @csrf
