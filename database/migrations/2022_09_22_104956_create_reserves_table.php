@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string('client_mei');
             $table->string('client_tel');
             $table->string('lineuser_id');
+            $table->Integer('state');
+            
             $table->timestamps();
         });
     }
