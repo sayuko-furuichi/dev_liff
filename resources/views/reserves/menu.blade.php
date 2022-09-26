@@ -32,13 +32,13 @@
     <hr>
     <th>
         <tr>
-            <td><img src="{{secure_asset('img/1.png')}}" alt="img" class="m_img"><input type="hidden" value="Bコース"name="course" class="btn">Bコース</td>
+            <td><img src="{{secure_asset('img/1.png')}}" alt="img" class="m_img"><input type="hidden" value="Bコース"name="courses[]" class="btn">Bコース</td>
         </tr>
     </th>
     <hr>
     <th>
         <tr>
-            <td><img src="{{secure_asset('img/1.png')}}" alt="img" class="m_img"><input type="hidden" value="Cコース"name="course" class="btn">Cコース</td>
+            <td><img src="{{secure_asset('img/1.png')}}" alt="img" class="m_img"><input type="hidden" value="Cコース"name="courses[]" class="btn">Cコース</td>
         </tr>
     </th>
     <hr>
