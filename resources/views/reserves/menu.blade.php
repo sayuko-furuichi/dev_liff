@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{-- <link rel="stylesheet" href="{{ secure_asset('css/liff.css') }}"> --}}
+    <link rel="stylesheet" href="{{ secure_asset('css/menu.css') }}">
     {{-- <link rel="stylesheet" href="{{ secure_asset('css/reset.css') }}"> --}}
     {{-- <link id="import-link" rel="import" href="./sub.html"> --}}
     <script src="https://unpkg.com/glottologist"></script>
@@ -13,7 +13,7 @@
 </head>
 {{--  会員登録後、特別な表示と会員証画面へリダイレクトさせる  --}}
 <body>
-<img src="{{secure_asset('img/menu_bar/var_1.png')}}" alt="メニュー">
+<img src="{{secure_asset('img/menu_bar/var_2.png')}}" alt="メニュー">
     <a href="{{route('reserve.date')}}">日時選択へ</a>
     <div class="note">
     {{-- name属性つける --}}
@@ -26,19 +26,19 @@
       <table>
         <th>
         <tr>
-           <img src="{{secure_asset('img/1.png')}}" alt="img"><input type="button" value="Aコース"name="course" class="btn"><td>Aコース</td>
+            <input type="hidden" value="Aコース"name="course" class="btn"><img src="{{secure_asset('img/1.png')}}" alt="img" class="m_img"><td>Aコース</td>
         </tr>
     </th>
     <hr>
     <th>
         <tr>
-            <img src="{{secure_asset('img/1.png')}}" alt="img"><input type="button" value="Bコース"name="course"><td>Aコース</td>
+            <input type="hidden" value="Bコース"name="course" class="btn"> <img src="{{secure_asset('img/1.png')}}" alt="img" class="m_img"><td>Bコース</td>
         </tr>
     </th>
     <hr>
     <th>
         <tr>
-            <img src="{{secure_asset('img/1.png')}}" alt="img"><input type="button" value="Cコース"name="course"><td>Aコース</td>
+            <input type="hidden" value="Cコース"name="course" class="btn"><input type="button" value="Cコース"name="course"><td>Cコース</td>
         </tr>
     </th>
     <hr>
