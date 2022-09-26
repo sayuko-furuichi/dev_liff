@@ -18,7 +18,10 @@
     <div class="note">
     {{-- name属性つける --}}
     @if (isset($request))
-        <p>{{$request->courses[0]}}</p>
+      //  <p>{{$request->courses[0]}}</p>
+
+      <input type="hidden" name="store" value="{{$request->store}}">
+      <input type="hidden" name="corse" value="{{$request->course[0]}}">
     @endif
     <form action="{{route('reserve.confirm')}}" method="GET">
         @csrf
