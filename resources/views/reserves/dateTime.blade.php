@@ -13,7 +13,7 @@
 </head>
 {{--  会員登録後、特別な表示と会員証画面へリダイレクトさせる  --}}
 <body>
-    <h1>希望日時選択</h1>
+    <img src="{{secure_asset('img/menu_bar/var_1.png')}}" alt="">
     <a href="{{route('reserve.confirm')}}">確認へ</a>
     <div class="note">
     {{-- name属性つける --}}
