@@ -39,7 +39,7 @@
                 <th>10:00</th>
                 <td>×</td>
                 <td>×</td>
-                <td><input type="radio" value="2022-04-03 10:00" name="dateTime"> ○</td>
+                <td><input type="hidden" name="dateTime" value="2022-04-03 10:00"><input type="submit" value="○">○</td>
                 <td>×</td>
             </tr>
             <tr>
@@ -59,6 +59,7 @@
         </table>
 
     <input type="hidden" id="userIdProps" value="" name="id">
+    <input type="submit" value="">
 </form>
 </div>
 
