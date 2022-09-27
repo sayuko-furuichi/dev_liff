@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('stores', function (Blueprint $table) {
-            //
-            $table->string('name');
-            $table->string('img');
-            $table->string('account_url');
-            
+        Schema::create('lineuser_inflow_routes', function (Blueprint $table) {
+            $table->id();
+            $table->string('store_id');
+            $table->string('lineuser_id');
+            $table->string('route');
+            $table->timestamps();
         });
     }
 
@@ -29,8 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('stores', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('lineuser_inflow_routes');
     }
 };
