@@ -43,7 +43,7 @@
                 <th>10:00</th>
                 <td>×</td>
                 <td>×</td>
-                <td><input type="hidden" name="dateTime" value="2022-04-03 10:00"><input type="submit" value="○">○</td>
+                <td><input type="hidden" name="dateTime" value="2022-04-03 10:00"><button type="submit">○</button></td>
                 <td>×</td>
             </tr>
             <tr>
