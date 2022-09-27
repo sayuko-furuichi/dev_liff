@@ -13,6 +13,11 @@
 </head>
 {{--  会員登録後、特別な表示と会員証画面へリダイレクトさせる  --}}
 <body>
+    @if (isset($request))
+    <input type="hidden" name="store" value="{{$request->store}}">
+<input type="hidden" name="dateTime" value="{{$request->dateTime}}">
+<input type="hidden" name="course" value="{{$request->courses[0]}}">
+    @endif
     <img src="{{secure_asset('img/menu_bar/var_3.png')}}" alt="ながれ">
     <div class="note">
     {{-- name属性つける --}}
