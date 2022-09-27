@@ -23,6 +23,7 @@
 
       <input type="hidden" name="store" value="{{$request->store}}">
       <input type="hidden" name="corses" value="{{$request->courses[0]}}">
+      <p>{{$request->courses[0]}}</p>
     @endif
   
         @csrf
