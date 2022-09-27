@@ -18,7 +18,7 @@
     @if (isset($request))
     <input type="hidden" name="store" value="{{$request->store}}">
 <input type="hidden" name="dateTime" value="{{$request->dateTime}}">
-<input type="hidden" name="courses" value="{{$request->courses}}">
+<input type="hidden" name="courses[]" value="{{$request->courses[0]}}">
     @endif
     <img src="{{secure_asset('img/menu_bar/var_3.png')}}" alt="ながれ">
     <div class="note">

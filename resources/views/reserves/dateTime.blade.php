@@ -20,7 +20,7 @@
     <form action="{{route('reserve.confirm')}}" method="GET">
     @if (isset($request))
       <input type="hidden" name="store" value="{{$request->store}}">
-      <input type="hidden" name="corses[0]" value="{{$request->courses[0]}}">
+      <input type="hidden" name="courses[]" value="{{$request->courses[0]}}">
       <p>{{$request->courses[0]}}</p>
     @endif
   
