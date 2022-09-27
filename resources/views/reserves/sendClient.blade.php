@@ -13,6 +13,8 @@
 </head>
 {{--  会員登録後、特別な表示と会員証画面へリダイレクトさせる  --}}
 <body>
+    <form action="{{route('reserve.submit')}}" method="POST">
+        @csrf
     @if (isset($request))
     <input type="hidden" name="store" value="{{$request->store}}">
 <input type="hidden" name="dateTime" value="{{$request->dateTime}}">
@@ -21,8 +23,7 @@
     <img src="{{secure_asset('img/menu_bar/var_3.png')}}" alt="ながれ">
     <div class="note">
     {{-- name属性つける --}}
-    <form action="{{route('reserve.submit')}}" method="POST">
-        @csrf
+
     <div>
         <p>名前　　<span style="color: red">必須</span></p>
         <input type="text" placeholder="姓" style="width:30%" required name="sei">　　<input type="text" placeholder="名"

@@ -17,13 +17,14 @@
     <a href="{{route('reserve.confirm')}}">確認へ</a>
     <div class="note">
     {{-- name属性つける --}}
+    <form action="{{route('reserve.confirm')}}" method="GET">
     @if (isset($request))
     
 
       <input type="hidden" name="store" value="{{$request->store}}">
       <input type="hidden" name="corses[]" value="{{$request->courses[0]}}">
     @endif
-    <form action="{{route('reserve.confirm')}}" method="GET">
+  
         @csrf
         <table border="3">
             <th>
