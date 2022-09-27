@@ -22,6 +22,9 @@ return new class extends Migration
             $table->string('liff_url');
             $table->string('member_menu');
             $table->string('non_member_menu');
+            $table->string('name');
+            $table->string('img');
+            $table->string('account_url');
 
             $table->timestamps();
         });
