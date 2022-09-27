@@ -37,11 +37,12 @@ class Home extends Controller
         $res=file_get_contents('https://api.line.me/v2/oauth/accessToken', false, $context);
         if (strpos($http_response_header[0], '200') === false) {
             $res='request failed';
+            return redirect('/addMember');
         }
 
           
           $store = Store::where('id',$request->store)->first();
-          
+        
          return redirect($store->account_url);
         }
         return view('entrance');
