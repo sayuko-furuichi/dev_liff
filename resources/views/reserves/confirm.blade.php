@@ -25,7 +25,7 @@
         <p>日付</p>
         <p><input type="hidden" name="dateTime" value="{{$request->dateTime}}">  {{$request->dateTime}} </p>
         <p>コース</p>
-        <p> <input type="hidden" name="courses" value="{{$request->courses}}"> {{$request->courses}} </p>
+        <p> <input type="hidden" name="courses[0]" value="{{$request->courses[0]}}"> {{$request->courses[0]}} </p>
     </div>
     
     <div>
