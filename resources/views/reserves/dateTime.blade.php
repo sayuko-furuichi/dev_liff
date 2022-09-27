@@ -19,8 +19,6 @@
     {{-- name属性つける --}}
     <form action="{{route('reserve.confirm')}}" method="GET">
     @if (isset($request))
-    
-
       <input type="hidden" name="store" value="{{$request->store}}">
       <input type="hidden" name="corses" value="{{$request->courses[0]}}">
       <p>{{$request->courses[0]}}</p>
@@ -64,7 +62,6 @@
         </table>
 
     <input type="hidden" id="userIdProps" value="" name="id">
-    <input type="submit" value="">
 </form>
 </div>
 
