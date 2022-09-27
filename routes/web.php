@@ -88,3 +88,7 @@ Route::group(['prefix' => '/addRoute', 'as' => 'addroute' ], function () {
     Route::get('/', 'App\Http\Controllers\AddInflowRoutes@index')-> name('.index');
     Route::post('/', 'App\Http\Controllers\AddInflowRoutes@add')-> name('.add');
 });
+Route::group(['prefix' => '/getInflow', 'as' => 'getinflow' ], function () {
+    Route::get('/', 'App\Http\Controllers\GetInflowRoutes@index')-> name('.index');
+    Route::post('/', 'App\Http\Controllers\GetInflowRoutes@add')-> name('.add');
+});
