@@ -14,6 +14,7 @@
 {{--  会員登録後、特別な表示と会員証画面へリダイレクトさせる  --}}
 <h1>予約完了</h1>
 <body>
+    <img src="{{secure_asset('img/menu_bar/var_4.png')}}" alt="">
     <a href="{{route('member.mypage')}}">マイページ</a>
     <div class="note">
     {{-- name属性つける --}}
