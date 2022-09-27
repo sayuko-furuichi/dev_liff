@@ -22,7 +22,7 @@
     
 
       <input type="hidden" name="store" value="{{$request->store}}">
-      <input type="hidden" name="corse" value="{{$request->course}}">
+      <input type="hidden" name="corses[]" value="{{$request->courses[0]}}">
     @endif
   
         @csrf
