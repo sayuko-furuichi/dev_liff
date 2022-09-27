@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class GetInflowRoutes extends Controller
 {
     //
-function index(){
-    
+function index(Request $request){
+    return view();
 }
 }
