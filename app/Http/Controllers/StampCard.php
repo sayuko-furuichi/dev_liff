@@ -17,9 +17,9 @@ class StampCard extends Controller
     }
     function add(Request $request){
 
-        if(isset($request->points)){
+        // if(isset($request->points)){
 
-        }
+        // }
 
         return view('stampCards.stampCard',['getpoint',$request->points]);
     }
