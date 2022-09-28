@@ -67,6 +67,9 @@
         <div class="read_text">
             <p class="result"><button id="stamp" class="stamps" type="submit"></button></p>
             <p class="get_points"> ポイント総数：<span id="points" class="get_points"></span></p>
+            @if (isset($getpoint))
+                <p>{{$getpoint}} ポイントゲットしました！！</p>
+            @endif
             {{--  <input type="submit" value="更新">  --}}
         </div>
         <input type="hidden" id="user_id" name="uid">
