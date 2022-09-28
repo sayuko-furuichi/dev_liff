@@ -19,6 +19,8 @@ var s_round = '.s_round';
 	
     document.getElementById("qr").onclick= function(){
       liff.scanCodeV2().then(function (string) {
+
+        $str =string.value;
           document.getElementById('stamp').value=string.value;
           document.getElementById('stamp').textContent=string.value;
           document.getElementById('forms').action=string.value;
