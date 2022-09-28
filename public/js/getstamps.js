@@ -2,7 +2,7 @@
 
 //多分、いちいちinitしなくていい。
 
-const { isSet } = require("lodash");
+//const { isSet } = require("lodash");
 
 //イベントを使ってる。表示と値の取得の順番の為に書く
 window.onload = function () {
