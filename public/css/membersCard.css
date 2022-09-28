@@ -270,7 +270,9 @@ padding-top: 10px;
 }
 .limit{
   width: 40%;
+  font-size: small;
   color: #FFF;
+  padding-top: 10px;
 }
 .get_points{
   color: blue;
