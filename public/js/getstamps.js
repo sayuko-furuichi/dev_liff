@@ -2,6 +2,8 @@
 
 //多分、いちいちinitしなくていい。
 
+const { isSet } = require("lodash");
+
 //イベントを使ってる。表示と値の取得の順番の為に書く
 window.onload = function () {
 	// store_tableから、LIFFIDを持ってくる？
@@ -19,6 +21,13 @@ var s_round = '.s_round';
       liff.scanCodeV2().then(function (string) {
           document.getElementById('stamp').value=string.value;
           document.getElementById('stamp').textContent=string.value;
+          document.getElementById('form').action=string.value;
+
+          var p =new RegExp('points=','gi'); 
+          var strs =string.value.match(p);
+          if( isSet(strs)){
+            document.getElementById('stamp').value='ポイントゲットできます！';
+          }
         },
   )}
 
