@@ -67,7 +67,7 @@
             <p class="result"><button id="stamp" class="stamps" type="submit"></button></p>
             <p class="get_points"> ポイント総数：<span id="points" class="get_points"></span></p>
             @if (isset($getpoint))
-                <p class="getpoints">{{$getpoint}} ポイントゲットしました！！</p>
+                <p class="get_points">{{$getpoint}} ポイントゲットしました！！</p>
             @endif
             {{--  <input type="submit" value="更新">  --}}
         </div>
