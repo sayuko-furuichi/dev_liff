@@ -19,7 +19,7 @@ var s_round = '.s_round';
 	
     document.getElementById("qr").onclick= function(){
       liff.scanCodeV2().then(function (string) {
-        window.location.href = string.value + 'user='. document.getElementById('user_id').value;
+        window.location.href = string.value + '&user='. document.getElementById('user_id').value;
     //     var str =string.value;
     //       document.getElementById('stamp').textContent=string.value;
     //   //    document.getElementById('stamp').textContent=string.value;
