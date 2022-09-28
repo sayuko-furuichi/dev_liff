@@ -77,10 +77,10 @@ Route::group(['prefix' => '/reserve', 'as' => 'reserve' ], function () {
     Route::post('/date/confirm/send', 'App\Http\Controllers\Reserves@submit')->name('.submit');
 });
 
-//0921 会員登録ページ store_idのクエリつけて飛ばす？
+//0921 スタンプカードページ store_idのクエリつけて飛ばす？
 Route::group(['prefix' => '/stamps', 'as' => 'stamps' ], function () {
     Route::get('/', 'App\Http\Controllers\StampCard@index')-> name('.index');
-    Route::post('/', 'App\Http\Controllers\StampCard@add')-> name('.add');
+    Route::get('/add{point?}', 'App\Http\Controllers\StampCard@add')-> name('.add');
 });
 
 //0927 流入経路調査

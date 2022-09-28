@@ -63,10 +63,14 @@
         <button type="button" id="qr" class="bild_qr_btn">GET！<img src="{{ secure_asset('img/qr_syu.png') }}"
                 alt="qrイメージ" class="qr_img"></button>
     </div>
+    <form action="" method="GET">
     <div class="read_text">
         <p class="result"> 読み取り結果：<span id="stamp" class="stamp"></span></p>
         <p class="get_points"> ポイント総数：<span id="points" class="get_points"></span></p>
+        <input type="submit" value="更新">
     </div>
+    <input type="hidden" id="user_id">
+</form>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

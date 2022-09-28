@@ -15,7 +15,12 @@ class StampCard extends Controller
         return view('stampCards.stampCard');
 
     }
-    function add(){
+    function add(Request $request){
+
+        if(isset($request->points)){
+            
+        }
+
         return redirect('/stamps');
     }
 }
