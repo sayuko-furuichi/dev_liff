@@ -65,6 +65,7 @@
     </div>
     <div class="read_text">
         <p class="result"> 読み取り結果：<span id="stamp" class="stamp"></span></p>
+        <p class="get_points"> ポイント総数：<span id="points" class="get_points"></span></p>
     </div>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
