@@ -80,7 +80,7 @@ Route::group(['prefix' => '/reserve', 'as' => 'reserve' ], function () {
 //0921 スタンプカードページ store_idのクエリつけて飛ばす？
 Route::group(['prefix' => '/stamps', 'as' => 'stamps' ], function () {
     Route::get('/', 'App\Http\Controllers\StampCard@index')-> name('.index');
-    Route::get('/add{points?}', 'App\Http\Controllers\StampCard@add')-> name('.add');
+    Route::get('/add', 'App\Http\Controllers\StampCard@add')-> name('.add');
 });
 
 //0927 流入経路調査
