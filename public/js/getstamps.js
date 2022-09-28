@@ -22,7 +22,9 @@ var s_round = '.s_round';
        
         if(string.code != null || string.message != 'undefined'){
         window.location.href = string.value + '&user=' + document.getElementById('user_id').value;
-      }
+      }}).catch(function (error) {
+      
+      });
     //     var str =string.value;
     //       document.getElementById('stamp').textContent=string.value;
     //   //    document.getElementById('stamp').textContent=string.value;
@@ -36,10 +38,10 @@ var s_round = '.s_round';
     //         document.getElementById('stamp').textContent='こちらから　ポイントをゲットできます！';
     //       }
         },
-  )
+  
 
 
-}
+
 
   
   // $('.flip_box').hover(function() {
