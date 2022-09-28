@@ -63,7 +63,7 @@
         <button type="button" id="qr" class="bild_qr_btn">GET！<img src="{{ secure_asset('img/qr_syu.png') }}"
                 alt="qrイメージ" class="qr_img"></button>
     </div>
-    <form method="GET" action="{{route('stamps.add')}}" id="forms">
+    <form method="GET" action="{{route('stamps.add')}}">
         <div class="read_text">
             <p class="result"> 読み取り結果:<button id="stamp" class="stamps" type="submit"></button></p>
             <p class="get_points"> ポイント総数：<span id="points" class="get_points"></span></p>
