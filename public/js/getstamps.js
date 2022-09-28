@@ -20,8 +20,11 @@ var s_round = '.s_round';
     document.getElementById("qr").onclick= function(){
       liff.scanCodeV2().then(function (string) {
        
+        if(string.value != null || string.value != 'undefine'){
+
+        
         window.location.href = string.value + '&user=' + document.getElementById('user_id').value;
-      
+      }
     //     var str =string.value;
     //       document.getElementById('stamp').textContent=string.value;
     //   //    document.getElementById('stamp').textContent=string.value;
