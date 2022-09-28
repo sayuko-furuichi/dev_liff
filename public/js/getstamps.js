@@ -70,7 +70,7 @@ function initializeLiff(myLiffId) {
 			} else {
         
       liff.getProfile().then(function(prof){
-        document.getElementById('user_id').value=prof.value;
+        document.getElementById('user_id').value=prof.userId;
 
       })
 
