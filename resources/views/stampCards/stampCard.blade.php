@@ -66,7 +66,7 @@
     <form method="GET" action="{{route('stamps.add')}}" id="forms">
         <div class="read_text">
             <p class="result"> 読み取り結果: <input type="submit" id="stamp" class="stamp" value=""></p>
-            <p class="get_points"> ポイント総数：<span id="points" class="get_point"></span></p>
+            <p class="get_points"> ポイント総数：<span id="points" class="get_points"></span></p>
             {{--  <input type="submit" value="更新">  --}}
         </div>
         <input type="hidden" id="user_id" name="uid">
