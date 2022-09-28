@@ -31,7 +31,7 @@
                         <img src="{{ secure_asset('img/stamps/stamps.svg') }}" alt="スタンプ枠" class="stamp_line">
                         {{--  <p class='f_title'>stamp CARD</p>  --}}
                     </div>
-                    <p>有効期限：　*****</p>
+                    <p class="limit">！ 有効期限：　*****</p>
                     <p class='f_subline'></p>
 
                 </div>
