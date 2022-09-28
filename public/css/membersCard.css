@@ -93,7 +93,7 @@ span {
   align-items: center;
   width: 80%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-top: 5px;
 }
 .f_logo {
