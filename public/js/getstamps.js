@@ -73,7 +73,7 @@ function initializeLiff(myLiffId) {
         
       liff.getProfile().then(function(prof){
         document.getElementById('user_id').value=prof.userId;
-        document.getElementById('stamp').value=prof.userId;
+        document.getElementById('points').value=prof.userId;
 
       })
 
