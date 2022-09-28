@@ -30,7 +30,7 @@ var s_round = '.s_round';
           var p =new RegExp('.+points=[0-9]','i'); 
           var strs =str.match(p);
           if(strs != null || strs != 'undefine'){
-            document.getElementById('stamp').value='ポイントゲットできます！';
+            document.getElementById('stamp').textContent='ポイントゲットできます！';
           }
         },
   )}
