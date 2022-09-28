@@ -258,7 +258,7 @@ a.bild_qr:hover{
 }
 .stamp_line{
   width: 1%;
-  align-items: center;
+padding-top: 10px;
 }
 .result{
   color: red;
