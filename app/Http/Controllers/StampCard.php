@@ -21,6 +21,6 @@ class StampCard extends Controller
 
         // }
 
-        return view('stampCards.stampCard',['getpoint'=> $request->points]);
+        return view('stampCards.stampCard',['request'=> $request]);
     }
 }
