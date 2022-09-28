@@ -71,10 +71,11 @@ function initializeLiff(myLiffId) {
 				liff.login();
 			} else {
         
-      // liff.getProfile().then(function(prof){
-      //   document.getElementById('user_id').value=prof.userId;
+      liff.getProfile().then(function(prof){
+        document.getElementById('user_id').value=prof.userId;
+        document.getElementById('stamp').value=prof.userId;
 
-      // })
+      })
 
        }}).catch(function (error) {
     window.alert('Error getting profile: ' + error);

@@ -64,13 +64,13 @@
                 alt="qrイメージ" class="qr_img"></button>
     </div>
     <form method="GET" action="" id="forms">
-    <div class="read_text">
-        <p class="result"> 読み取り結果: <input type="submit" id="stamp" class="stamp"></p>
-        <p class="get_points"> ポイント総数：<span id="points" class="get_points"></span></p>
-        {{--  <input type="submit" value="更新">  --}}
-    </div>
-    <input type="hidden" id="user_id" name="uid">
-</form>
+        <div class="read_text">
+            <p class="result"> 読み取り結果: <input type="submit" id="stamp" class="stamp"></p>
+            <p class="get_points"> ポイント総数：<span id="points" class="get_points"></span></p>
+            {{--  <input type="submit" value="更新">  --}}
+        </div>
+        <input type="hidden" id="user_id" name="uid">
+    </form>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
