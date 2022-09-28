@@ -27,8 +27,8 @@
                         <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="f_logo">
                         <p class='f_headline'>まる屋</p>
                     </div>
-                    <div class="stamp_line">
-                        <img src="{{ secure_asset('img/stamps/stamps.svg') }}" alt="スタンプ枠" >
+                    <div>
+                        <img src="{{ secure_asset('img/stamps/stamps.svg') }}" alt="スタンプ枠" class="stamp_line">
                         {{--  <p class='f_title'>stamp CARD</p>  --}}
                     </div>
                     <p>有効期限：　*****</p>
