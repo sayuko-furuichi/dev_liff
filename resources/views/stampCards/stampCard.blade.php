@@ -59,7 +59,7 @@
         <button type="button" id="qr" class="bild_qr_btn">GET！<img src="{{ secure_asset('img/qr_syu.png') }}"
                 alt="qrイメージ" class="qr_img"></button>
     </div>
-    <p id="stamp"></p>
+    <p> 読み取り結果：<span id="stamp"></span></p>
 
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
