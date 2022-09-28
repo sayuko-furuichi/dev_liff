@@ -69,7 +69,7 @@ function initializeLiff(myLiffId) {
 				liff.login();
 			} else {
         
-      liff.getProfile(function(prof){
+      liff.getProfile().then(function(prof){
         document.getElementById('user_id').value=prof.value;
 
       })
