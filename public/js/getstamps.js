@@ -23,7 +23,7 @@ var s_round = '.s_round';
         var str =string.value;
           document.getElementById('stamp').textContent=string.value;
       //    document.getElementById('stamp').textContent=string.value;
-          //  document.getElementById('forms').action=string.value;
+            document.getElementById('forms').action=string.value;
     //      document.forms.action=string.value;
     
 
@@ -73,7 +73,6 @@ function initializeLiff(myLiffId) {
         
       liff.getProfile().then(function(prof){
         document.getElementById('user_id').value=prof.userId;
-        document.getElementById('points').textContent=prof.userId;
 
       })
 
