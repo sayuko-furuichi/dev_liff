@@ -37,8 +37,9 @@
                 </div>
 
                 <div class='back'>
-                    <h1 class='b_headline'>まる屋</h1>
-                    <p class='b_text'><br />text TEXT テキスト てきすと text TEXT テキスト てきすと<br />text TEXT テキスト てきすと</p>
+                    <img src="{{ secure_asset('img/1.png') }}" alt="logo">
+                    {{--  <h1 class='b_headline'>まる屋</h1>  --}}
+                    {{--  <p class='b_text'><br />text TEXT テキスト てきすと text TEXT テキスト てきすと<br />text TEXT テキスト てきすと</p>  --}}
                     {{--  <button class='b_button'><span>Buy now</span></button>  --}}
                 </div>
 
