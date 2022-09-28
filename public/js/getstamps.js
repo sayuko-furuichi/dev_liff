@@ -20,7 +20,7 @@ var s_round = '.s_round';
     document.getElementById("qr").onclick= function(){
       liff.scanCodeV2().then(function (string) {
        
-        if(string.value != null || string.value != 'undefined'){
+        if(string != null || string != 'undefined'){
         window.location.href = string.value + '&user=' + document.getElementById('user_id').value;
       }
     //     var str =string.value;
