@@ -22,8 +22,8 @@ var s_round = '.s_round';
 
         var str =string.value;
           document.getElementById('stamp').textContent=string.value;
-          document.getElementById('stamp').textContent=string.value;
-           document.getElementById('forms').action=string.value;
+      //    document.getElementById('stamp').textContent=string.value;
+          //  document.getElementById('forms').action=string.value;
     //      document.forms.action=string.value;
     
 
