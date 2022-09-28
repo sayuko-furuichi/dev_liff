@@ -29,7 +29,7 @@ var s_round = '.s_round';
 
           var p =new RegExp('points=','gi'); 
           var strs =string.value.match(p);
-          if(strs != null || str != 'undifine'){
+          if(strs != null || strs != 'undifine'){
             document.getElementById('stamp').value='ポイントゲットできます！';
           }
         },
