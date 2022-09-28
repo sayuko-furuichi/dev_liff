@@ -26,7 +26,9 @@
                     <div class="store">
                         <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="f_logo">
                         <h1 class='f_headline'>まる屋</h1>
-                        <img src="{{secure_asset('img/stamps/stamps.svg')}}" alt="スタンプ枠" class="stamp_line">
+                    </div>
+                    <div>
+                        <img src="{{ secure_asset('img/stamps/stamps.svg') }}" alt="スタンプ枠" class="stamp_line">
                     </div>
                     <p class='f_title'>stamp CARD</p>
                     <p class='f_subline'></p>
@@ -61,8 +63,8 @@
                 alt="qrイメージ" class="qr_img"></button>
     </div>
     <div class="read_text">
-    <p class="result"> 読み取り結果：<span id="stamp"></span></p>
-</div>
+        <p class="result"> 読み取り結果：<span id="stamp"></span></p>
+    </div>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
