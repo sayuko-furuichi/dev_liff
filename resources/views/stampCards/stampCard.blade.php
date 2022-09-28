@@ -28,7 +28,7 @@
                         <p class='f_headline'>まる屋</p>
                     </div>
                     <div>
-                        <img src="{{ secure_asset('img/stamps/stamps.svg') }}" alt="スタンプ枠" class="stamp_line">
+                        <img src="{{ secure_asset('img/stamps/card_8.svg') }}" alt="スタンプ枠" class="stamp_line">
                         {{--  <p class='f_title'>stamp CARD</p>  --}}
                     </div>
                     <p class="limit">！ 有効期限：*****</p>
