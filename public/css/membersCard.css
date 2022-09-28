@@ -275,3 +275,8 @@ padding-top: 10px;
 .get_points{
   color: blue;
 }
+
+.b_logo{
+  width: 80%;
+  align-items: center;
+}
