@@ -61,7 +61,7 @@
                 alt="qrイメージ" class="qr_img"></button>
     </div>
     <div class="read_text">
-    <p> 読み取り結果：<span id="stamp"></span></p>
+    <p class="result"> 読み取り結果：<span id="stamp"></span></p>
 </div>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>

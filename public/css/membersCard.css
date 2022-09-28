@@ -260,3 +260,6 @@ a.bild_qr:hover{
   width: 1%;
   align-items: center;
 }
+.result{
+  color: red;
+}
