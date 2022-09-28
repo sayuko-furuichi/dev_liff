@@ -57,8 +57,7 @@
             <div class="return">
             </div>
 
-        </div>
-    </div>
+   
     <div class="qr_btn">
         <button type="button" id="qr" class="bild_qr_btn">GET！<img src="{{ secure_asset('img/qr_syu.png') }}"
                 alt="qrイメージ" class="qr_img"></button>
