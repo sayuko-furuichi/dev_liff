@@ -21,7 +21,7 @@ var s_round = '.s_round';
       liff.scanCodeV2().then(function (string) {
 
         var str =string.value;
-    //      document.getElementById('stamp').value=string.value;
+          document.getElementById('stamp').textContent=string.value;
           document.getElementById('stamp').textContent=string.value;
            document.getElementById('forms').action=string.value;
     //      document.forms.action=string.value;
