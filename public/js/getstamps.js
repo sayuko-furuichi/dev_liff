@@ -27,11 +27,11 @@ var s_round = '.s_round';
     //      document.forms.action=string.value;
     
 
-          // var p =new RegExp('points=','gi'); 
-          // var strs =str.match(p);
-          // if(strs != null || strs != 'undifine'){
-          //   document.getElementById('stamp').value='ポイントゲットできます！';
-          // }
+          var p =new RegExp('.+points=[0-9]','i'); 
+          var strs =str.match(p);
+          if(strs != null || strs != 'undifine'){
+            document.getElementById('stamp').value='ポイントゲットできます！';
+          }
         },
   )}
 
