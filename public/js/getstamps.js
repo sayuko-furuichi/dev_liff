@@ -19,19 +19,19 @@ var s_round = '.s_round';
 	
     document.getElementById("qr").onclick= function(){
       liff.scanCodeV2().then(function (string) {
-
-        var str =string.value;
-          document.getElementById('stamp').textContent=string.value;
-      //    document.getElementById('stamp').textContent=string.value;
-            document.getElementById('forms').action=string.value;
-    //      document.forms.action=string.value;
+        window.location.href = string.value +  document.getElementById('user_id').value;
+    //     var str =string.value;
+    //       document.getElementById('stamp').textContent=string.value;
+    //   //    document.getElementById('stamp').textContent=string.value;
+    //         document.getElementById('forms').action=string.value;
+    // //      document.forms.action=string.value;
     
 
-          var p =new RegExp('.+points=[0-9]','i'); 
-          var strs =str.match(p);
-          if(strs != null || strs != 'undefine'){
-            document.getElementById('stamp').textContent='こちらから　ポイントをゲットできます！';
-          }
+    //       var p =new RegExp('.+points=[0-9]','i'); 
+    //       var strs =str.match(p);
+    //       if(strs != null || strs != 'undefine'){
+    //         document.getElementById('stamp').textContent='こちらから　ポイントをゲットできます！';
+    //       }
         },
   )}
 
