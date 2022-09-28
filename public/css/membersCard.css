@@ -97,9 +97,9 @@ span {
   padding-top: 5px;
 }
 .f_logo {
-  width: 20%;
+  width: 10%;
   align-items: left;
-  padding-top: 35px;
+  /* padding-top: 35px; */
 }
 
 .f_title {
