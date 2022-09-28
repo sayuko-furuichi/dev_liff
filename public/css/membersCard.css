@@ -92,6 +92,8 @@ span {
 .store{
   align-items: center;
   width: 80%;
+  display: flex;
+  justify-content: space-between;
 }
 .f_logo {
   width: 5%;
