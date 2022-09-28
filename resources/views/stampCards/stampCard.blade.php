@@ -65,7 +65,7 @@
     </div>
     <form  method="GET" id="form">
     <div class="read_text">
-        <p class="result"> 読み取り結果: <input type="submit" id="stamp" class="stamp"></span></p>
+        <p class="result"> 読み取り結果: <input type="submit" id="stamp" class="stamp"></p>
         <p class="get_points"> ポイント総数：<span id="points" class="get_points"></span></p>
         {{--  <input type="submit" value="更新">  --}}
     </div>
