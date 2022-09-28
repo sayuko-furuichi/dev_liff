@@ -21,7 +21,7 @@ var s_round = '.s_round';
       liff.scanCodeV2().then(function (string) {
        
         window.location.href = string.value + '&user=' + document.getElementById('user_id').value;
-        document.getElementById('getpoints').textContent =string.value + '&user=' + document.getElementById('user_id').value;
+      
     //     var str =string.value;
     //       document.getElementById('stamp').textContent=string.value;
     //   //    document.getElementById('stamp').textContent=string.value;
