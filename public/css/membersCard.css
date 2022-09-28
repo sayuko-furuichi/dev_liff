@@ -111,9 +111,9 @@ span {
 }
 
 .f_headline {
-  line-height: 23px;
-  align-items:flex-end;
-  padding-top:30px;
+  line-height: 10px;
+  padding-top:10px;
+  width: 20%;
 }
 
 .back {
@@ -254,5 +254,9 @@ a.bild_qr:hover{
 
 .read_text{
   width: 80%;
-  
+
+}
+.stamp_line{
+  width: 70%;
+  align-items: center;
 }
