@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{--  <link rel="stylesheet" href="{{ secure_asset('css/membersCard.css') }}">  --}}
+    <link rel="stylesheet" href="{{ secure_asset('css/membersCard.css') }}">
     {{-- <link rel="stylesheet" href="{{ secure_asset('css/reset.css') }}"> --}}
     {{-- <link id="import-link" rel="import" href="./sub.html"> --}}
     <script src="https://unpkg.com/glottologist"></script>
