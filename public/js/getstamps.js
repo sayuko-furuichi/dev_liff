@@ -17,16 +17,16 @@ var s_round = '.s_round';
 	$(document).ready(function () {
 		initializeLiff(defaultLiffId);
 	
-    document.getElementById("qr").onclick= function(){
-      liff.scanCodeV2().then(function (string) {
+    // document.getElementById("qr").onclick= function(){
+    //   liff.scanCodeV2().then(function (string) {
        
-        if(string.code = 'undefined' || string.message != 'undefined'){
-        window.location.href = string.value + '&user=' + document.getElementById('user_id').value;
-      }}).catch(function (error) {
-      window.alert('Error getting profile: ' + error);
-      });
+    //     if(string.code = 'undefined' || string.message != 'undefined'){
+    //     window.location.href = string.value + '&user=' + document.getElementById('user_id').value;
+    //   }}).catch(function (error) {
+    //   window.alert('Error getting profile: ' + error);
+    //   });
   
-        },
+    //     },
   
 
 
