@@ -23,7 +23,7 @@ var s_round = '.s_round';
         if(string.code = null || string.message != 'undefined'){
         window.location.href = string.value + '&user=' + document.getElementById('user_id').value;
       }}).catch(function (error) {
-      
+      console.log("error",error);
       });
     //     var str =string.value;
     //       document.getElementById('stamp').textContent=string.value;
