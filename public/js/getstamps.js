@@ -6,7 +6,6 @@
 window.onload = function () {
 
 const defaultLiffId ='1657487333-JPeEg6lr';
-var s_round = '.s_round';
  
 document.getElementById("qr").onclick= function(){
   liff.scanCodeV2().then(function (string) {
