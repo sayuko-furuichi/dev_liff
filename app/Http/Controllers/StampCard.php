@@ -11,6 +11,7 @@ class StampCard extends Controller
 
         //カードの作成から
         //liff.init()後にuserIDが取得できるので、その時にカード取得判定が出来る
+        $request->userId ='debug';
     
         return view('stampCards.stampCard',['userId'=>$request->userId]);
 
