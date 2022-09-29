@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('img');
             $table->string('store_id');
             $table->string('namber');
-            $table->string('state');
+            $table->integer('state');
             $table->timestamps();
         });
     }
