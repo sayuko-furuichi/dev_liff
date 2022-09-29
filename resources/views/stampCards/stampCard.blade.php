@@ -66,7 +66,7 @@
         <div class="read_text">
             <p class="result"><button id="stamp" class="stamps" type="submit"></button></p>
             {{--  <p class="get_points"> ポイント総数：<span id="points" class="get_points"></span></p>  --}}
-            @if (session('uid') || session('point'))
+            @if (session('uid') && session('point'))
          
                 <p class="get_points">{{session('point')}} ポイントゲットしました！！</p>
                 <p class="get_points">ユーザID： {{session('uid')}}</p>
