@@ -26,7 +26,7 @@ class StampCards extends Controller{
         ->where('store_id',$request->store)
         ->get();
     //      2：保持していなければ作成する
-    if(!isset($card)){
+    if($card ==null ){
        $nwCard = new StampCard;
        $nwCard->lineuser_id=$request->userId;
        $nwCard->store_id=$request->store;
