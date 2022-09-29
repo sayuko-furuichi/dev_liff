@@ -40,14 +40,14 @@ class StampCards extends Controller{
 
       $nwCard ->save();
       return view('stampCards.stampCard',[
-        'card_no.'=>$nwCard->id,
+        'card_no'=>$nwCard->id,
         // 'expiry'=>$nwCard->expiry
       // 'points'=>$nwCard->points
 
     ]);
     }else{
         return view('stampCards.stampCard',[
-            'card_no.'=>$card->id
+            'card_no'=>$card->id
         ]);
   
     }
