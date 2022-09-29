@@ -74,8 +74,8 @@
             @endif
             {{--  <input type="submit" value="更新">  --}}
         </div>
-        <p>{{$store}}</p>
-        <p>{{$uid}}</p>
+        {{--  <p>{{$store}}</p>
+        <p>{{$uid}}</p>  --}}
         <input type="hidden" id="user_id" name="uid">
     </form>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
