@@ -29,7 +29,7 @@ class StampCards extends Controller{
       //    return view('stampCards.stampCard',['request'=>$request]);
   
    //   return view('')->with(['uid'=> $request->userId,'store'=>$request->store]);
-  return view('stampCards.stampCard',['request'=>$request]);
+  return view('stampCards.stampCard',['uid'=>$request->userId,'store'=>$request->store]);
     }
     function add(Request $request){
 
