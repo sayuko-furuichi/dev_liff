@@ -2,13 +2,9 @@
 
 //多分、いちいちinitしなくていい。
 
-//const { isSet } = require("lodash");
-
 //イベントを使ってる。表示と値の取得の順番の為に書く
 window.onload = function () {
-	// store_tableから、LIFFIDを持ってくる？
-//	const defaultLiffId = '1657181787-2vrnwwlj';   // change the default LIFF value if you are not using a node server
-//softnext　のLIFFIDでログイン
+
 const defaultLiffId ='1657487333-JPeEg6lr';
 var s_round = '.s_round';
  
