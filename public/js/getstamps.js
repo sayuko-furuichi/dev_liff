@@ -25,18 +25,7 @@ var s_round = '.s_round';
       }}).catch(function (error) {
       window.alert('Error getting profile: ' + error);
       });
-    //     var str =string.value;
-    //       document.getElementById('stamp').textContent=string.value;
-    //   //    document.getElementById('stamp').textContent=string.value;
-    //         document.getElementById('forms').action=string.value;
-    // //      document.forms.action=string.value;
-    
-
-    //       var p =new RegExp('.+points=[0-9]','i'); 
-    //       var strs =str.match(p);
-    //       if(strs != null || strs != 'undefine'){
-    //         document.getElementById('stamp').textContent='こちらから　ポイントをゲットできます！';
-    //       }
+  
         },
   
 
