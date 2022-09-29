@@ -22,13 +22,30 @@ class StampCards extends Controller{
     
     //UserIdとstore_idをrequestに保持している状態
         //1：カードの持ち主を特定する
-        // $card =StampCard::where('lineuser_id',$request->userId)
-        // ->where('store_id',$request->store)
-        // ->get();
-          //2：保持していなければ作成する
-      //    return view('stampCards.stampCard',['request'=>$request]);
+        $card =StampCard::where('lineuser_id',$request->userId)
+        ->where('store_id',$request->store)
+        ->get();
+    //      2：保持していなければ作成する
+    if(!isset($card)){
+       $nwCard = new StampCard;
+       $nwCard->lineuser_id=$request->userId;
+       $nwCard->store_id=$request->store;
+       $nwCard->namber=1;
+       // 1 は稼働中
+       $nwCard->state=1;
+
+       //有効期限・ポイントカラム作成
+      // $nwCard->expiry=
+      // $nwCard->points=0
+
+      $nwCard ->save();
+      return view('stampCards.stampCard',['request'=>$request]);
+    }else{
+        return view('stampCards.stampCard',['cards'=>$card]);
   
-    //  return redirect('/stamps/index')->with(['uid'=> $request->userId,'store'=>$request->store]);
+    }
+        
+
   return view('stampCards.stampCard',['uid'=>$request->userId,'store'=>$request->store]);
     }
     function add(Request $request){
