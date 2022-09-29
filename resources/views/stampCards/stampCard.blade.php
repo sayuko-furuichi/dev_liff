@@ -81,7 +81,7 @@
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="{{secure_asset('js/getstamps.js')}}"></script>
-    <script src="public/js/jquery-1.9.0.min.js" type="text/javascript"></script>
+    <script src="{{secure_asset('js/jquery-1.9.0.min.js')}}" type="text/javascript"></script>
 </body>
 
 </html>
