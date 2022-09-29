@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-//use App\Models\StampCard;
-class StampCard extends Controller{
+use App\Models\StampCard;
+class StampCards extends Controller{
 
 
     function login(Request $request){

@@ -79,9 +79,9 @@ Route::group(['prefix' => '/reserve', 'as' => 'reserve' ], function () {
 
 //0921 スタンプカードページ store_idのクエリつけて飛ばす？
 Route::group(['prefix' => '/stamps', 'as' => 'stamps' ], function () {
-    Route::get('/', 'App\Http\Controllers\StampCard@index')-> name('.index');
-    Route::get('/add', 'App\Http\Controllers\StampCard@add')-> name('.add');
-    Route::get('/login', 'App\Http\Controllers\StampCard@login')-> name('.login');
+    Route::get('/', 'App\Http\Controllers\StampCards@index')-> name('.index');
+    Route::get('/add', 'App\Http\Controllers\StampCards@add')-> name('.add');
+    Route::get('/login', 'App\Http\Controllers\StampCards@login')-> name('.login');
 });
 
 //0927 流入経路調査
