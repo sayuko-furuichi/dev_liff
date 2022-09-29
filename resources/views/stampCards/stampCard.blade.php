@@ -69,7 +69,7 @@
             @if (session('uid') || session('points'))
          
                 <p class="get_points">{{session('points')}} ポイントゲットしました！！</p>
-                <p class="get_points">ユーザID： {{session('uid')r}}</p>
+                <p class="get_points">ユーザID： {{session('uid')}}</p>
             @endif
             {{--  <input type="submit" value="更新">  --}}
         </div>
