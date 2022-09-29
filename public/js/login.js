@@ -27,7 +27,7 @@ window.onload = function () {
               
 
             //location.hrefにuserIdのクエリをつける
-            location.replace('https://liff.line.me/1657487333-JPeEg6lr/stamps?userId=' + prof.userId + '&store='+document.getElementById('store').value);
+    //        location.replace('https://liff.line.me/1657487333-JPeEg6lr/stamps?userId=' + prof.userId + '&store='+document.getElementById('store').value);
   
           })
         }},)}
