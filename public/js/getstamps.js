@@ -23,10 +23,6 @@ var s_round = '.s_round';
       });
   
         }
-  
-
-
-
 
   
   $('.flip_box').hover(function() {
