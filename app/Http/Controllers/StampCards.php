@@ -26,30 +26,33 @@ class StampCards extends Controller{
         ->where('store_id',$request->store)
         ->get();
     //      2：保持していなければ作成する
-    if($card !=null ){
-       $nwCard = new StampCard;
-       $nwCard->lineuser_id=$request->userId;
-       $nwCard->store_id=$request->store;
-       $nwCard->namber=1;
-       // 1 は稼働中
-       $nwCard->state=1;
-
-       //有効期限・ポイントカラム作成
-      // $nwCard->expiry=
-      // $nwCard->points=0
-
-      $nwCard ->save();
-      return view('stampCards.stampCard',[
-        'card_no'=>$nwCard->id,
-        // 'expiry'=>$nwCard->expiry
-      // 'points'=>$nwCard->points
-
-    ]);
-    }else{
+    if(isset($card)){
         return view('stampCards.stampCard',[
             'card_no'=>$card->id
         ]);
-  
+
+      
+    }else{
+    
+        $nwCard = new StampCard;
+        $nwCard->lineuser_id=$request->userId;
+        $nwCard->store_id=$request->store;
+        $nwCard->namber=1;
+        $nwCard->img=secure_asset('img/1.png');
+        // 1 は稼働中
+        $nwCard->state=1;
+ 
+        //有効期限・ポイントカラム作成
+       // $nwCard->expiry=
+       // $nwCard->points=0
+ 
+       $nwCard ->save();
+       return view('stampCards.stampCard',[
+         'card_no'=>$nwCard->id,
+         // 'expiry'=>$nwCard->expiry
+       // 'points'=>$nwCard->points
+ 
+     ]);
     }
         
 
