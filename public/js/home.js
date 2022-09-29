@@ -19,7 +19,6 @@ function initializeLiff(myLiffId) {
 // req.open('POST','/',true)
 // req.setRequestHeader('');
         liff.getProfile().then(function(prof){
-  
           //location.hrefにuserIdのクエリをつける
           location.href = '?userId=' + prof.userId;
 
