@@ -43,8 +43,6 @@ document.getElementById("qr").onclick= function(){
 	$(document).ready(function () {
 		initializeLiff(defaultLiffId);
 	
-
-
 });
   
   }
