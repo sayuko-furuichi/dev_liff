@@ -28,7 +28,7 @@ class StampCards extends Controller{
           //2：保持していなければ作成する
       //    return view('stampCards.stampCard',['request'=>$request]);
   
-      return redirect('/stamps/index')->with(['uid'=> $request->userId,'store'=>$request->store]);
+    //  return redirect('/stamps/index')->with(['uid'=> $request->userId,'store'=>$request->store]);
   return view('stampCards.stampCard',['uid'=>$request->userId,'store'=>$request->store]);
     }
     function add(Request $request){
