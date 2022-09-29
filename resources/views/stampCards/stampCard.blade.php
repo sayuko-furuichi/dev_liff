@@ -64,7 +64,7 @@
     </div>
     <form method="GET" id="forms">
         <div class="read_text">
-            <p class="result"><button id="stamp" class="stamps" type="submit"></button></p>
+        
             {{--  <p class="get_points"> ポイント総数：<span id="points" class="get_points"></span></p>  --}}
             @if (session('uid') !=null && session('point') != null)
          
