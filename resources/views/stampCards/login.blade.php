@@ -10,6 +10,6 @@
     <div id="store" value="{{$request->store}}"></div>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/login.js"></script>
-
+    <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
 </body>
 </html>
