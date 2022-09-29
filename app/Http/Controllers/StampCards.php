@@ -26,7 +26,7 @@ class StampCards extends Controller{
         ->where('store_id',$request->store)
         ->get();
     //      2：保持していなければ作成する
-    if($card ==null ){
+    if($card !=null ){
        $nwCard = new StampCard;
        $nwCard->lineuser_id=$request->userId;
        $nwCard->store_id=$request->store;
@@ -53,7 +53,7 @@ class StampCards extends Controller{
     }
         
 
-  return view('stampCards.stampCard',['uid'=>$request->userId,'store'=>$request->store]);
+ // return view('stampCards.stampCard',['uid'=>$request->userId,'store'=>$request->store]);
     }
     function add(Request $request){
 
