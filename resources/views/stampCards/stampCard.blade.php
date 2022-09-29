@@ -71,7 +71,7 @@
                 <p class="get_points">{{session('point')}} ポイントゲットしました！！</p>
                 <p class="get_points">ユーザID： {{session('uid')}}</p>
             @endif
-            @if ($userId)
+            @if (isset($userId))
                 <p class="get_points">{{$userId}}</p>
 
             @endif
