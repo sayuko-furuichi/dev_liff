@@ -24,7 +24,6 @@ var s_round = '.s_round';
   
         }
 
-  
   $('.flip_box').hover(function() {
     $('.b_round').toggleClass('b_round_hover');
     return false;
