@@ -9,7 +9,7 @@ class StampCards extends Controller{
 
 
     function login(Request $request){
-        return view('stampCards.login',['request'=>$request]);
+        return view('stampCards.login',['storeId'=>$request->storeId]);
         //カードの作成から
         //liff.init()後にuserIDが取得できるので、その時にカード取得判定が出来る
       //  $request->userId ='debug';
