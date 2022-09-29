@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 class StampCard extends Controller
 {
     //
-    function index(){
+    function index(Request $request){
 
         //カードの作成から
         //liff.init()後にuserIDが取得できるので、その時にカード取得判定が出来る
     
-        return view('stampCards.stampCard');
+        return view('stampCards.stampCard',['userId'=>$request->userId]);
 
     }
     function add(Request $request){

@@ -71,6 +71,10 @@
                 <p class="get_points">{{session('point')}} ポイントゲットしました！！</p>
                 <p class="get_points">ユーザID： {{session('uid')}}</p>
             @endif
+            @if (isset($userId))
+                <p class="get_points">{{$userId}}</p>
+
+            @endif
             {{--  <input type="submit" value="更新">  --}}
         </div>
         <input type="hidden" id="user_id" name="uid">
