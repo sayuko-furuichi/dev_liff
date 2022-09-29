@@ -26,7 +26,7 @@ class StampCards extends Controller{
         ->where('store_id',$request->store)
         ->get();
     //      2：保持していなければ作成する
-    if(isset($card[0]->id)){
+    if(isset($card[0])){
         return view('stampCards.stampCard',[
             'card_no'=>$card[0]->id
         ]);
