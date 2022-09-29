@@ -24,7 +24,7 @@ window.onload = function () {
             liff.getProfile().then(function(prof){
               
             //location.hrefにuserIdのクエリをつける
-            window.location.href ='https://liff.line.me/1657487333-JPeEg6lr/stamps/login?userId=' + prof.userId + '&store='+ document.getElementById('store').value;
+            window.location.href ='https://dev-liff.herokuapp.com/public/stamps/login?userId=' + prof.userId + '&store='+ document.getElementById('store').value;
   
           })
         }},)}
