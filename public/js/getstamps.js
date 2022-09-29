@@ -21,7 +21,7 @@ var s_round = '.s_round';
       liff.scanCodeV2().then(function (string) {
        
         if(string.code = 'undefined' || string.message != 'undefined'){
-        window.location.replace( string.value + '&user=' + document.getElementById('user_id').value);
+        window.location.href = string.value + '&user=' + document.getElementById('user_id').value;
       }}).catch(function (error) {
       window.alert('Error getting profile: ' + error);
       });
