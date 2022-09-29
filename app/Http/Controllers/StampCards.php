@@ -15,7 +15,7 @@ class StampCards extends Controller{
       ->where('store_id',$request->store)
       ->get();
         //2：保持していなければ作成する
-        return view('stampCards.stampCard',['request'=>$request]);
+        return redirect('/stamps')->with(['uid'=> $request->userId,'store'=>$request->store]);
     }
 
     //
