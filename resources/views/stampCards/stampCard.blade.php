@@ -79,7 +79,7 @@
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/getstamps.js"></script>
+    <script src="{{secure_asset(js/getstamps.js)}}"></script>
 </body>
 
 </html>
