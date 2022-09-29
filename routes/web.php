@@ -79,10 +79,8 @@ Route::group(['prefix' => '/reserve', 'as' => 'reserve' ], function () {
 
 //0921 スタンプカードページ store_idのクエリつけて飛ばす？
 Route::group(['prefix' => '/stamps', 'as' => 'stamps' ], function () {
-    Route::get('/', function(){
-        return view('stampCards.login',['storeId'=>$request->store]);
-    });
- //   Route::get('/', 'App\Http\Controllers\StampCards@login')-> name('.login');
+
+    Route::get('/', 'App\Http\Controllers\StampCards@login')-> name('.login');
     Route::get('/add', 'App\Http\Controllers\StampCards@add')-> name('.add');
     Route::get('/index', 'App\Http\Controllers\StampCards@index')-> name('.index');
 });
