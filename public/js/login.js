@@ -19,6 +19,7 @@ window.onload = function () {
   // req.open('POST','/',true)
   // req.setRequestHeader('');
           liff.getProfile().then(function(prof){
+            document.getElementById('store').textContent=prof.userId;
             //location.hrefにuserIdのクエリをつける
             window.location.href = 'https://liff.line.me/1657487333-JPeEg6lr/stamps?userId=' + prof.userId + '&store='+document.getElementById('store').value;
   
