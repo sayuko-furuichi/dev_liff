@@ -6,17 +6,24 @@
 window.onload = function () {
 
 const defaultLiffId ='1657487333-JPeEg6lr';
- 
-document.getElementById("qr").onclick= function(){
-  liff.scanCodeV2().then(function (string) {
-   
-    if(string.code = 'undefined' || string.message != 'undefined'){
-    window.location.href = string.value + '&user=' + document.getElementById('user_id').value;
-  }}).catch(function (error) {
-  window.alert('Error getting profile: ' + error);
-  });
 
+ 
+
+    //jQueryを使い、DOMの読み込みが完了したときに処理を実行
+	$(document).ready(function () {
+		initializeLiff(defaultLiffId);
+	
+    document.getElementById("qr").onclick= function(){
+      liff.scanCodeV2().then(function (string) {
+       
+        if(string.code = 'undefined' || string.message != 'undefined'){
+        window.location.href = string.value + '&user=' + document.getElementById('user_id').value;
+      }}).catch(function (error) {
+      window.alert('Error getting profile: ' + error);
+      });
   
+        }
+
   $('.flip_box').hover(function() {
     $('.b_round').toggleClass('b_round_hover');
     return false;
@@ -35,14 +42,6 @@ document.getElementById("qr").onclick= function(){
     $(this).addClass('s_round_back');
     return false;
   });
-
-    }
-
-
-    //jQueryを使い、DOMの読み込みが完了したときに処理を実行
-	$(document).ready(function () {
-		initializeLiff(defaultLiffId);
-	
 });
   
   }
