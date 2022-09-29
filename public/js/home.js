@@ -21,7 +21,7 @@ function initializeLiff(myLiffId) {
         liff.getProfile().then(function(prof){
   
           //location.hrefにuserIdのクエリをつける
-          window.location.href += '?userId=' + prof.userId;
+          location.href += '?userId=' + prof.userId;
 
         })
       }},)}
