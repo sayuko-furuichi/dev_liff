@@ -21,6 +21,6 @@ class StampCard extends Controller
 
         // }
 
-        return view('stampCards.stampCard',['request'=> $request]);
+        return redirect()->route('stampCards.stampCard')->with(['request'=> $request]);
     }
 }
