@@ -22,12 +22,12 @@ window.onload = function () {
         //     document.getElementById('store').textContent=prof.userId;
             
             liff.getProfile().then(function(prof){
-                document.getElementById('store').textContent=prof.userId;
+           //     document.getElementById('store').textContent=prof.userId;
         
               
 
             //location.hrefにuserIdのクエリをつける
-            location.href ='https://liff.line.me/1657487333-JPeEg6lr/stamps?userId=' + prof.userId + '&store='+ document.getElementById('store').value;
+            window.location.href ='https://liff.line.me/1657487333-JPeEg6lr/stamps/login?userId=' + prof.userId + '&store='+ document.getElementById('store').value;
   
           })
         }},)}
