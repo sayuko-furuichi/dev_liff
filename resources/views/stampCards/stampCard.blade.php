@@ -37,7 +37,7 @@
                 </div>
 
                 <div class='back'>
-                    <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="b_logo">
+                    {{--  <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="b_logo">  --}}
                     {{--  <h1 class='b_headline'>まる屋</h1>  --}}
                     <p class="b_text"><span>CARD NUMBER: </span>{{$card_no}}</p>
                     {{--  <p class='b_text'><br />text TEXT テキスト てきすと text TEXT テキスト てきすと<br />text TEXT テキスト てきすと</p>  --}}
