@@ -7,7 +7,7 @@
     <title>Login...</title>
 </head>
 <body>
-    <div id="store" value="{{$request->store}}"></div>
+    <input type="hidden" id="store" value="{{$request->store}}">
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/login.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
