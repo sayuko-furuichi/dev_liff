@@ -11,7 +11,7 @@ var s_round = '.s_round';
 
     //jQueryを使い、DOMの読み込みが完了したときに処理を実行
 	$(document).ready(function () {
-		initializeLiff(defaultLiffId);
+	//	initializeLiff(defaultLiffId);
 	
     document.getElementById("qr").onclick= function(){
       liff.scanCodeV2().then(function (string) {
