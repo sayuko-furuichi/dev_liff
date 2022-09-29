@@ -7,7 +7,7 @@
     <title>Login...</title>
 </head>
 <body>
-    <div id="store">{{$request->store}}</div>
+    <div id="store" value="{{$request->store}}"></div>
     <script src="js/login.js"></script>
 </body>
 </html>
