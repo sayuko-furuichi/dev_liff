@@ -20,7 +20,7 @@ function initializeLiff(myLiffId) {
 // req.setRequestHeader('');
         liff.getProfile().then(function(prof){
           //location.hrefにuserIdのクエリをつける
-          location.href = '?userId=' + prof.userId;
+          location.href = document.URL+'?userId=' + prof.userId;
 
         })
       }},)}
