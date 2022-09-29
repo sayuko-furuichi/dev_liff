@@ -26,7 +26,7 @@ var s_round = '.s_round';
       window.alert('Error getting profile: ' + error);
       });
   
-        },
+        }
   
 
 
@@ -38,19 +38,19 @@ var s_round = '.s_round';
   //   return false;
   // });
 
-  $('.flip_box').click(function() {
-    $('.flip_box').toggleClass('flipped');
-    $(this).addClass('s_round_click');
-    // $('.s_arrow').toggleClass('s_arrow_rotate');
-    // $('.b_round').toggleClass('b_round_back_hover');
-    return false;
-  });
+  // $('.flip_box').click(function() {
+  //   $('.flip_box').toggleClass('flipped');
+  //   $(this).addClass('s_round_click');
+  //   // $('.s_arrow').toggleClass('s_arrow_rotate');
+  //   // $('.b_round').toggleClass('b_round_back_hover');
+  //   return false;
+  // });
 
-  $('.flip_box').on('transitionend', function() {
-    $(this).removeClass('s_round_click');
-    $(this).addClass('s_round_back');
-    return false;
-  });
+  // $('.flip_box').on('transitionend', function() {
+  //   $(this).removeClass('s_round_click');
+  //   $(this).addClass('s_round_back');
+  //   return false;
+  // });
 });
   
   }
