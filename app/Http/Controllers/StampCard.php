@@ -22,6 +22,8 @@ class StampCard extends Controller
         // }
 
       //  return view('stampCards.stampCard',['request'=> $request]);
+    
+      //redirect->with() は、sessionに渡しているので注意。viewと配列を渡さないので注意
             return redirect('/stamps')->with(['uid'=> $request->user,'point'=>$request->points]);
     }
 }
