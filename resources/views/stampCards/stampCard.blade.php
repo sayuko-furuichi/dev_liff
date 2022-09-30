@@ -91,6 +91,8 @@
             <p>テキスト　テキスト</p>
 
         </div>
+    </div>
+    <div class="benefits" >
         <div class="bene_item">
             <h3>8ポイント<h3>
                     <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
@@ -98,6 +100,7 @@
                     <p>テキスト　テキスト</p>
 
         </div>
+    </div>
         <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
