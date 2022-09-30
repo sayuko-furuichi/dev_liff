@@ -8,7 +8,12 @@
     <title>coupon</title>
 </head>
 <body>
-    @if ($non == 'undefined')
+    @if (isset($non))
+    <div>
+        <p>利用できるクーポンがありません</p>
+    </div>
+
+    @else
     <div class="coupons">
         <form action="{{route('coupon.used')}}" method="POST">
             @csrf
@@ -23,11 +28,6 @@
        
     </form>
     </div>
-
-    @else
-        <div>
-            <p>利用できるクーポンがありません</p>
-        </div>
     @endif
     
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
