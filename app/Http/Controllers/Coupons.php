@@ -13,7 +13,7 @@ class Coupons extends Controller
         
         $used =UsedCoupon::where('coupon_id',$request->couponId)
         ->where('store_id',$request->store)
-        ->where('lineuser_id',$rewuest->user)
+        ->where('lineuser_id',$request->user)
         ->first();
 
         if(isset($used)){
