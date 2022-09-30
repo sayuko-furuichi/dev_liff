@@ -81,7 +81,8 @@ class StampCards extends Controller
       'poins'=>$toCard->points,
       'getPoints'=>$request->points,
       'card_no'=>$request->card_no,
-      'expiry' =>$toCard->expiry
+      'expiry' =>$toCard->expiry,
+      'store_id'=>$toCard->store_id
     ]);
 // }else{
 //  // 
