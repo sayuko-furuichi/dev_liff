@@ -16,7 +16,7 @@ const defaultLiffId ='1657487333-JPeEg6lr';
     document.getElementById("qr").onclick= function(){
       liff.scanCodeV2().then(function (string) {
        
-        if(string.code = 'undefined' || string.message != 'undefined'){
+        if(string.value != null){
         window.location.href = string.value + '&user=' + document.getElementById('user_id').value;
       }}).catch(function (error) {
       window.alert('Error getting profile: ' + error);
