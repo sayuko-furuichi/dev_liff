@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('lineuser_id');
             $table->string('img');
             $table->string('store_id');
-            $table->string('namber');
+            $table->string('number');
             $table->integer('state');
             $table->timestamp('expiry')->nullable(true);
             $table->integer('points');
