@@ -69,7 +69,7 @@ class StampCards extends Controller{
  // return view('stampCards.stampCard',['uid'=>$request->userId,'store'=>$request->store]);
     }
     function add(Request $request){
-
+      //pointsがクエリで投げられる時　クーポン投げられる想定はする？
 
       //  return view('stampCards.stampCard',['request'=> $request]);
     
