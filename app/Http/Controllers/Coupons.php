@@ -16,7 +16,7 @@ class Coupons extends Controller
         ->where('lineuser_id',$request->user)
         ->first();
 
-        if(isset($used)){
+        if($used == null){
             return view('coupon_sample.44.benefits_4',['request'=>$request]);
         }else{
             return view('coupon_sample.44.benefits_4',['non'=>'non']);
