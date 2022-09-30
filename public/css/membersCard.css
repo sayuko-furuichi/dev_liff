@@ -306,3 +306,12 @@ width: 15%;
   width: 80%;
   padding-top: 30px;
 }
+
+.point_mark{
+  height:50px;
+  width:50px;
+  border-radius:50%;
+  line-height:50px;
+  text-align:center;
+
+}

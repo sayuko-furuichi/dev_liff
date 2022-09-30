@@ -84,13 +84,13 @@
     <h2 class="bene_title">ポイントで獲得できる特典</h2>
     <div class="benefits">
        
-            <h3>4ポイント</h3>
+            <h3 class="point_mark">4</h3>
             <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
             <h4>お好きなドリンク 1杯無料！</h4>
             <p>テキスト　テキスト</p>
     </div>
     <div class="benefits" >
-            <h3>8ポイント<h3>
+            <h3 class="point_mark">8<h3>
                     <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
                     <h4>お好きなそば 1杯無料！</h4>
                     <p>テキスト　テキスト</p>
