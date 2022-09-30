@@ -69,10 +69,9 @@
         <div class="read_text">
         
             <p class="get_points"> ポイント総数：{{$points}}<span id="points" class="get_points"></span></p>
-            @if (session('uid') !=null && session('point') != null)
+            @if (isset($getPoints)&&)
          
-                <p class="get_points">{{session('point')}} ポイントゲットしました！！</p>
-                <p class="get_points">ユーザID： {{session('uid')}}</p>
+                <p class="get_points">{{$getPoints}} ポイントゲットしました！！</p>
             @endif
             {{--  <input type="submit" value="更新">  --}}
         </div>

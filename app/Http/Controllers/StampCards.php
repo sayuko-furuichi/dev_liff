@@ -69,13 +69,18 @@ class StampCards extends Controller
     public function add(Request $request)
     {
         //pointsがクエリで投げられる時　クーポン投げられる想定はする？
+      $toCard =StampCard::where('id',$request->card_no)->first();
 
-
-        //redirect->with() は、sessionに渡しているので注意。viewと配列を渡さないので注意
+      //card_noから検索して、ポイントを加算代入する
+      $toCard->points += $request->points;
+      $toCard->save();
+        
         return view('stampCards.stampCard', [
-          'uid'=> $request->user,
-          'point'=>$request->points,
-          'card_no'=>$request->card_no
+          'uid'=> $toCard->lineuser_id,
+          'poins'=>$toCard->points,
+          'getPoints'=>$request->points,
+          'card_no'=>$request->card_no,
+          'expiry' =>$toCard->expiry
         ]);
     }
 
