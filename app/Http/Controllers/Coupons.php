@@ -10,13 +10,30 @@ class Coupons extends Controller
 {
     //
     function index(Request $request){
+        
+        $used =UsedCoupons::where('coupon_id',$request->couponId)
+        ->where('store_id',$request->store)
+        ->where('lineuser_id',$rewuest->user)
+        ->first();
 
-        return view('coupon_sample.44.benefits_4',['request'=>$request]);
+        if(isset($used)){
+            return view('coupon_sample.44.benefits_4',['request'=>$request]);
+        }else{
+            return view('coupon_sample.44.benefits_4',['non'=>$non]);
+        }
+
+       
     }
 
     function used(Request $request){
         $nwUsed = new UsedCoupon;
-        
-        return redirect('/coupon');
+        $nwUsed->coupon_id=$request->couponId;
+        $nwUsed->lineuser_id=$request->user;
+        $nwUsed->store_id=$request->store;
+
+        $nwUsed->save();
+
+
+        return redirect('/coupon')->with(['used'=>'used']);
     }
 }

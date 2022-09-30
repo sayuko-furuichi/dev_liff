@@ -8,6 +8,7 @@
     <title>coupon</title>
 </head>
 <body>
+    @if ($non ==null)
     <div class="coupons">
         <form action="{{route('coupon.used')}}" method="POST">
             @csrf
@@ -18,6 +19,12 @@
         <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>
     </div>
 
+    @else
+        <div>
+            <p>利用できるクーポンがありません</p>
+        </div>
+    @endif
+    
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="{{secure_asset('js/coupon.js')}}"></script>
     <script src="{{secure_asset('js/jquery-1.9.0.min.js')}}" type="text/javascript"></script>
