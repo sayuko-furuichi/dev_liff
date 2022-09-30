@@ -236,10 +236,11 @@ a.bild_qr{
   background-color: #FE725C;
   position: fixed;
   bottom: 10%;
-  width: 100%;
+  width: 20%;
   height: 40px;
   color: #FFF;
   text-align: center;
+  margin-left: 50px;
 }
 
 .bild_qr:hover,
