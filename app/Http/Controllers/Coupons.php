@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\UsedCoupon;
+use App\Models\CouponMst;
 
 class Coupons extends Controller
 {

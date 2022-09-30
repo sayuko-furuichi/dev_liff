@@ -6,16 +6,14 @@ use Illuminate\Http\Request;
 
 use App\Models\StampCard;
 use App\Models\UsedCoupon;
-
+use App\Models\CouponMst;
 class StampCards extends Controller
 {
     public function login(Request $request)
     {
+      //アプリ立ち上げ時、userIdの取得のためにリダイレクトさせる
         return view('stampCards.login', ['storeId'=>$request->store]);
-        //カードの作成から
-        //liff.init()後にuserIDが取得できるので、その時にカード取得判定が出来る
-        //  $request->userId ='debug';
-        //  return view('stampCards.stampCard',['userId'=>$request->userId]);
+
     }
 
     /**
@@ -29,10 +27,12 @@ class StampCards extends Controller
     public function index(Request $request)
     {
 
-      //使用できるクーポンがあるかどうか確認する
-      $usedCop =UsedCoupon::where('coupon_id');
-    
-    
+      //発行している特典クーポンがあるかどうか確認する
+      $cp =CouponMst::where('store_id',$request->store)
+      ->where('exiry','>',date())->get();
+  //couponが無い場合の処理
+
+
       //UserIdとstore_idをrequestに保持している状態
         //1：カードの持ち主を特定する
         $card =StampCard::where('lineuser_id', $request->userId)
@@ -45,12 +45,18 @@ class StampCards extends Controller
             // if(count($card)>0){
 
             // }
+
+              //カードがある場合、使用できるクーポンも取得する
+            //  $coupon = CouponMst::where('store_id',$card[0]->store_id)->where('term_of_use_points',$points);
+
+
             return view('stampCards.stampCard', [
                 'card_no'=>$card[0]->id,
                 'store_id'=>$card[0]->store_id,
                 'uid'=>$card[0]->lineuser_id,
                 'expiry'=>$card[0]->expiry,
                 'points'=>$card[0]->points,
+                'cp'=>$cp
             ]);
         } else {
             $nwCard = new StampCard();
@@ -72,7 +78,8 @@ class StampCards extends Controller
                'expiry'=>$nwCard->expiry,
              'points'=>$nwCard->points,
              'store_id'=>$nwCard->store_id,
-             'uid' => $nwCard
+             'uid' => $nwCard,
+             'cp'=>$cp
 
      ]);
         }
