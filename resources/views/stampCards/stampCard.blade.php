@@ -83,13 +83,14 @@
     <h2 class="bene_title">ポイントで獲得できる特典</h2>
     <form action="{{ route('coupon.index') }}" method="GET">
         @foreach ($cps as $cp)
+        @if ($points >= $cp->term_of_use_point)
+        <input type="hidden" name="couponId" value="{{ $cp->id }}">
+        <input type="submit" value="使用できます！" class="submit_btn">
+    @endif
             <div class="benefits">
                 <div class="point_mark">{{$cp->term_of_use_point}}</div>
                 <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
-                @if ($points >= $cp->term_of_use_point)
-                    <input type="hidden" name="couponId" value="{{ $cp->id }}">
-                    <input type="submit" value="使用できます！">
-                @endif
+               
                 <h4>{{$cp->name}}</h4>
                 <p>テキスト　テキスト</p>
             </div>
