@@ -12,7 +12,7 @@ class Coupons extends Controller
         return view('coupon_sample.44.benefits_4');
     }
 
-    function used(){
+    function used(Request $request){
         return redirect('/coupon');
     }
 }
