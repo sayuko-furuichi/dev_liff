@@ -72,16 +72,20 @@ class StampCards extends Controller
       $toCard =StampCard::where('id',$request->card_no)->first();
 
       //card_noから検索して、ポイントを加算代入する
-      $toCard->points += $request->points;
-      $toCard->save();
-        
-        return view('stampCards.stampCard', [
-          'uid'=> $toCard->lineuser_id,
-          'poins'=>$toCard->points,
-          'getPoints'=>$request->points,
-          'card_no'=>$request->card_no,
-          'expiry' =>$toCard->expiry
-        ]);
+if (isset($toCard)) {
+    $toCard->points += $request->points;
+    $toCard->save();
+
+    return view('stampCards.stampCard', [
+      'uid'=> $toCard->lineuser_id,
+      'poins'=>$toCard->points,
+      'getPoints'=>$request->points,
+      'card_no'=>$request->card_no,
+      'expiry' =>$toCard->expiry
+    ]);
+}else{
+ // 
+}
     }
 
     public function create($param)
