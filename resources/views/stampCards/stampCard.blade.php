@@ -81,6 +81,7 @@
         <p>{{$uid}}</p>  --}}
         <input type="hidden" id="user_id" name="uid">
     </form>
+    <hr>
     <h2 class="bene_title">ポイントで獲得できる特典</h2>
     <div class="benefits">
        
