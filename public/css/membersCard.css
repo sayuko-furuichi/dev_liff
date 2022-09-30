@@ -284,3 +284,16 @@ padding-top: 10px;
   width: 25%;
   padding: 65px;
 }
+
+/* benefits CSS */
+
+.benefits{
+  width: 80%;
+}
+.bene_item{
+padding-top: 5px;
+
+}
+.bene_img{
+width: 15%;
+}
