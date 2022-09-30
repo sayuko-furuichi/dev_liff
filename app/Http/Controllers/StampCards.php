@@ -32,7 +32,9 @@ class StampCards extends Controller{
         return view('stampCards.stampCard',[
             'card_no'=>$card[0]->id,
             'store_id'=>$card[0]->store_id,
-            'uid'=>$card[0]->lineuser_id
+            'uid'=>$card[0]->lineuser_id,
+            'expiry'=>$Card[0]->expiry,
+            'points'=>$Card[0]->points,
         ]);
 
       
@@ -56,7 +58,7 @@ class StampCards extends Controller{
           'expiry'=>$nwCard->expiry,
         'points'=>$nwCard->points,
         'store_id'=>$nwCard->store_id,
-        'uid' => $nwCard->lineuser_id
+        'uid' => $nwCard
  
      ]);
     }
