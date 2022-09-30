@@ -35,7 +35,7 @@ class StampCards extends Controller{
             'card_no'=>$card[0]->id,
             'store_id'=>$card[0]->store_id,
             'uid'=>$card[0]->lineuser_id,
-            'expiry'=>date('Y-m-d',$card[0]->expiry),
+            'expiry'=>$card[0]->expiry,
             'points'=>$card[0]->points,
         ]);
 
@@ -57,7 +57,7 @@ class StampCards extends Controller{
        $nwCard ->save();
        return view('stampCards.stampCard',[
          'card_no'=>$nwCard->id,
-          'expiry'=>date('Y-m-d',$nwCard->expiry),
+          'expiry'=>$nwCard->expiry,
         'points'=>$nwCard->points,
         'store_id'=>$nwCard->store_id,
         'uid' => $nwCard
@@ -70,6 +70,7 @@ class StampCards extends Controller{
     }
     function add(Request $request){
       //pointsがクエリで投げられる時　クーポン投げられる想定はする？
+
     
       //redirect->with() は、sessionに渡しているので注意。viewと配列を渡さないので注意
             return redirect('/stamps/index')->with(['uid'=> $request->user,'point'=>$request->points]);
