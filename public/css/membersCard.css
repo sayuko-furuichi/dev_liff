@@ -92,7 +92,7 @@ span {
 }
 .store{
   align-items: center;
-  width: 80%;
+  /* width: 80%; */
   display: flex;
   justify-content: space-around;
   padding-top: 5px;
