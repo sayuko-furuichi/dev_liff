@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\StampCard;
+use App\Models\UsedCoupon;
 
 class StampCards extends Controller
 {
@@ -17,14 +18,27 @@ class StampCards extends Controller
         //  return view('stampCards.stampCard',['userId'=>$request->userId]);
     }
 
-    //
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     *   @param $request->userId
+     *   @param $request->store
+     * @return void
+     */
     public function index(Request $request)
     {
-        //UserIdとstore_idをrequestに保持している状態
+
+      //使用できるクーポンがあるかどうか確認する
+      $usedCop =UsedCoupon::where('coupon_id');
+    
+    
+      //UserIdとstore_idをrequestに保持している状態
         //1：カードの持ち主を特定する
         $card =StampCard::where('lineuser_id', $request->userId)
         ->where('store_id', $request->store)
         ->get();
+
     //      2：保持していなければ作成する
         if (isset($card[0])) {
             //複数枚ある場合は、numberで分かる
