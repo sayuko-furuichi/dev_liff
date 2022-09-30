@@ -240,7 +240,7 @@ a.bild_qr{
   height: 40px;
   color: #FFF;
   text-align: center;
-  margin-left: 200px;
+  margin-left: 250px;
 }
 
 .bild_qr:hover,
@@ -250,7 +250,7 @@ a.bild_qr:hover{
 }
 
 .qr_img{
-  width: 10%;
+  width: 30%;
   background-color: #FE725C;
   align-items: center;
 }
