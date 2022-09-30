@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('store_id');
             $table->string('namber');
             $table->integer('state');
+            $table->timestamp('expiry')->nullable(true);
+            $table->integer('points');
             $table->timestamps();
         });
     }
