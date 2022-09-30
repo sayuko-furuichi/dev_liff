@@ -85,6 +85,9 @@
        
             <div class="point_mark">4</div>
             <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
+            @if ($points >= 4)
+                <a href="{{route('coupon.index')}}">使用できます！</a>
+            @endif
             <h4>お好きなドリンク 1杯無料！</h4>
             <p>テキスト　テキスト</p>
     </div>
