@@ -28,7 +28,9 @@ class StampCards extends Controller{
     //      2：保持していなければ作成する
     if(isset($card[0])){
 //複数枚ある場合は、numberで分かる
+// if(count($card)>0){
 
+// }
         return view('stampCards.stampCard',[
             'card_no'=>$card[0]->id,
             'store_id'=>$card[0]->store_id,
