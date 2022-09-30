@@ -64,7 +64,7 @@
 
     <div class="qr_btn">
         <button type="button" id="qr" class="bild_qr_btn"><img src="{{ secure_asset('img/qr_syu.png') }}"
-            alt="qrイメージ" class="qr_img"><br>GET！</button>
+                alt="qrイメージ" class="qr_img"><br>GET！</button>
     </div>
     <form method="GET" id="forms">
         <div class="read_text">
@@ -81,32 +81,46 @@
     </form>
     <hr>
     <h2 class="bene_title">ポイントで獲得できる特典</h2>
-    <div class="benefits">
-       
-            <div class="point_mark">4</div>
-            <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
-            @if ($points >= 4)
-            <form action="{{route('coupon.index')}}" method="GET" >
-                <input type="hidden" name="store" value="{{$store_id}}">
-                <input type="hidden" name="user" value="{{$uid}}">
+    <form action="{{ route('coupon.index') }}" method="GET">
+        @foreach ($cps as $cp)
+            <div class="benefits">
+                <div class="point_mark">{{$cp->term_of_use_point}}</div>
+                <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
+                @if ($points >= $cp->term_of_use_point)
+                    <input type="hidden" name="couponId" value="{{ $cp->id }}">
+                    <input type="submit" value="使用できます！">
+                @endif
+                <h4>{{$cp->name}}</h4>
+                <p>テキスト　テキスト</p>
+            </div>
+        @endforeach
+    </form>
+    {{--  <div class="benefits">
+
+        <div class="point_mark">4</div>
+        <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
+        @if ($points >= 4)
+            <form action="{{ route('coupon.index') }}" method="GET">
+                <input type="hidden" name="store" value="{{ $store_id }}">
+                <input type="hidden" name="user" value="{{ $uid }}">
                 <input type="hidden" name="couponId" value="4">
                 <input type="submit" value="使用できます！">
             </form>
-            @endif
-            <h4>お好きなドリンク 1杯無料！</h4>
-            <p>テキスト　テキスト</p>
+        @endif
+        <h4>お好きなドリンク 1杯無料！</h4>
+        <p>テキスト　テキスト</p>
     </div>
-    <div class="benefits" >
-            <div class="point_mark">8</div>
-                    <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
-                    <h4>お好きなそば 1杯無料！</h4>
-                    <p>テキスト　テキスト</p>
-    </div>
-        <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <div class="benefits">
+        <div class="point_mark">8</div>
+        <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
+        <h4>お好きなそば 1杯無料！</h4>
+        <p>テキスト　テキスト</p>
+    </div>  --}}
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="{{ secure_asset('js/getstamps.js') }}"></script>
-        <script src="{{ secure_asset('js/jquery-1.9.0.min.js') }}" type="text/javascript"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="{{ secure_asset('js/getstamps.js') }}"></script>
+    <script src="{{ secure_asset('js/jquery-1.9.0.min.js') }}" type="text/javascript"></script>
 </body>
 
 </html>
