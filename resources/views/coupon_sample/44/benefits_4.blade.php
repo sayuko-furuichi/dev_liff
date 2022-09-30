@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="coupons">
-        <img src="{{secure_asset('img/coupon/coupon.svg')}}" alt="クーポン" class="coupon_img">
-        <img src="{{secure_asset('img/coupon/used.svg')}}" alt="used" class="used_img">
+        <img src="{{secure_asset('img/coupons/coupon.svg')}}" alt="クーポン" class="coupon_img">
+        <img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img">
     </div>
 
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
