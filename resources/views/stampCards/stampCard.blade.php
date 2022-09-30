@@ -86,7 +86,12 @@
             <div class="point_mark">4</div>
             <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
             @if ($points >= 4)
-                <a href="{{route('coupon.index')}}">使用できます！</a>
+            <form action="{{route('coupon.index')}}" method="GET" >
+                <input type="hidden" name="store" value="{{$store_id}}">
+                <input type="hidden" name="user" value="{{$uid}}">
+                <input type="hidden" name="couponId" value="4">
+                <input type="submit" value="使用できます！">
+            </form>
             @endif
             <h4>お好きなドリンク 1杯無料！</h4>
             <p>テキスト　テキスト</p>
