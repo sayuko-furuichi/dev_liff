@@ -13,6 +13,6 @@ class Coupons extends Controller
     }
 
     function used(){
-        
+        return redirect('/coupon');
     }
 }

@@ -9,8 +9,10 @@
 </head>
 <body>
     <div class="coupons">
-        <img src="{{secure_asset('img/coupons/coupon.svg')}}" alt="クーポン" class="coupon_img">
-        <img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img">
+        <form action="{{route('coupon.used')}}" method="POST"></form>
+       <input type="hidden" name="couponId" value="4"> <img src="{{secure_asset('img/coupons/coupon.svg')}}" alt="クーポン" class="coupon_img">
+        
+        <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>
     </div>
 
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
