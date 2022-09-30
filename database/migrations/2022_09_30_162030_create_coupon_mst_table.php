@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('store_id');
-            $table->integer('term_of_use');
+            $table->integer('term_of_use_point');
             $table->timestamp('exiry')->nullable(true);
             $table->timestamps();
         });
