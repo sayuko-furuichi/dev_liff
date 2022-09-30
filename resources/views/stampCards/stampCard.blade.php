@@ -31,7 +31,7 @@
                         <img src="{{ secure_asset('img/stamps/card_8.svg') }}" alt="スタンプ枠" class="stamp_line">
                         {{--  <p class='f_title'>stamp CARD</p>  --}}
                     </div>
-                    <p class="limit">！ 有効期限：*****</p>
+                    <p class="limit">！ 有効期限：{{$expiry}}</p>
                     <p class='f_subline'></p>
 
                 </div>
@@ -68,7 +68,7 @@
     <form method="GET" id="forms">
         <div class="read_text">
         
-            {{--  <p class="get_points"> ポイント総数：<span id="points" class="get_points"></span></p>  --}}
+            <p class="get_points"> ポイント総数：{{$points}}<span id="points" class="get_points"></span></p>
             @if (session('uid') !=null && session('point') != null)
          
                 <p class="get_points">{{session('point')}} ポイントゲットしました！！</p>

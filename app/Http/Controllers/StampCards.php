@@ -27,6 +27,8 @@ class StampCards extends Controller{
         ->get();
     //      2：保持していなければ作成する
     if(isset($card[0])){
+//複数枚ある場合は、numberで分かる
+
         return view('stampCards.stampCard',[
             'card_no'=>$card[0]->id,
             'store_id'=>$card[0]->store_id,
@@ -39,20 +41,20 @@ class StampCards extends Controller{
         $nwCard = new StampCard;
         $nwCard->lineuser_id=$request->userId;
         $nwCard->store_id=$request->store;
-        $nwCard->namber=1;
+        $nwCard->number=1;
         $nwCard->img=secure_asset('img/1.png');
         // 1 は稼働中
         $nwCard->state=1;
  
-        //有効期限・ポイントカラム作成
-       // $nwCard->expiry=
-       // $nwCard->points=0
+        //有効期限は発行から1年後
+        $nwCard->expiry=date("Y-m-d H:i:s",strtotime("+1 year"));;
+        $nwCard->points=0;
  
        $nwCard ->save();
        return view('stampCards.stampCard',[
          'card_no'=>$nwCard->id,
-         // 'expiry'=>$nwCard->expiry
-       // 'points'=>$nwCard->points
+          'expiry'=>$nwCard->expiry,
+        'points'=>$nwCard->points
  
      ]);
     }
