@@ -81,8 +81,9 @@
         <p>{{$uid}}</p>  --}}
         <input type="hidden" id="user_id" name="uid">
     </form>
+    <h2 class="bene_title">ポイントで獲得できる特典</h2>
     <div class="benefits">
-        <h2 class="bene_title">ポイントで獲得できる特典</h2>
+       
         <div class="bene_item">
             <h3>4ポイント</h3>
             <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
