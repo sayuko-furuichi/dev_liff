@@ -31,7 +31,7 @@ class StampCards extends Controller
             // if(count($card)>0){
 
             // }
-            return view('ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', [
+            return view('stampCards.stampCard', [
                 'card_no'=>$card[0]->id,
                 'store_id'=>$card[0]->store_id,
                 'uid'=>$card[0]->lineuser_id,
