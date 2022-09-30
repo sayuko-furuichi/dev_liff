@@ -15,8 +15,13 @@
             <input type="hidden" name="user" value="{{$request->user}}">
             <input type="hidden" name="store" value="{{$request->store}}">
        <input type="hidden" name="couponId" value="{{$request->couponId}}"> <img src="{{secure_asset('img/coupons/coupon.svg')}}" alt="クーポン" class="coupon_img">
+            @if (session('used'))
+           <img src="{{secure_asset('img/coupons/usedOn.svg')}}" alt=""> 
+            @else
+            <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>
+            @endif
+       
     </form>
-        <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>
     </div>
 
     @else
