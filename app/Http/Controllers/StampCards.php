@@ -56,7 +56,7 @@ class StampCards extends Controller
                 'uid'=>$card[0]->lineuser_id,
                 'expiry'=>$card[0]->expiry,
                 'points'=>$card[0]->points,
-                'cp'=>$cp
+                'cps'=>$cp
             ]);
         } else {
             $nwCard = new StampCard();
@@ -79,7 +79,7 @@ class StampCards extends Controller
              'points'=>$nwCard->points,
              'store_id'=>$nwCard->store_id,
              'uid' => $nwCard,
-             'cp'=>$cp
+             'cps'=>$cp
 
      ]);
         }
