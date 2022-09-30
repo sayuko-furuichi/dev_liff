@@ -69,7 +69,7 @@
         <div class="read_text">
         
             <p class="get_points"> ポイント総数：{{$points}}<span id="points" class="get_points"></span></p>
-            @if (isset($getPoints)&&)
+            @if (isset($getPoints))
          
                 <p class="get_points">{{$getPoints}} ポイントゲットしました！！</p>
             @endif
