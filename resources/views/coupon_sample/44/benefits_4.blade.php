@@ -8,7 +8,7 @@
     <title>coupon</title>
 </head>
 <body>
-    @if ($non ==null)
+    @if ($non == 'undefined')
     <div class="coupons">
         <form action="{{route('coupon.used')}}" method="POST">
             @csrf
