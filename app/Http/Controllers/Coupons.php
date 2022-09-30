@@ -11,7 +11,7 @@ class Coupons extends Controller
     //
     function index(Request $request){
         
-        $used =UsedCoupons::where('coupon_id',$request->couponId)
+        $used =UsedCoupon::where('coupon_id',$request->couponId)
         ->where('store_id',$request->store)
         ->where('lineuser_id',$rewuest->user)
         ->first();
