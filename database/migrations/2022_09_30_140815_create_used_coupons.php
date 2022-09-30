@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('coupon_id');
             $table->string('lineuser_id');
+            $table->integr('store_id');
             $table->timestamps();
         });
     }
