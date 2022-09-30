@@ -18,8 +18,8 @@ body {
 
 h1,
 p,
-a,
-span {
+a
+ {
   /* color: #fff; */
   color: black;
   letter-spacing: 0.02em;
