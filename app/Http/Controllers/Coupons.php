@@ -19,7 +19,7 @@ class Coupons extends Controller
         if(isset($used)){
             return view('coupon_sample.44.benefits_4',['request'=>$request]);
         }else{
-            return view('coupon_sample.44.benefits_4',['non'=>$non]);
+            return view('coupon_sample.44.benefits_4',['non'=>'non']);
         }
 
        
