@@ -39,9 +39,9 @@
                 <div class='back'>
                     {{--  <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="b_logo">  --}}
                     {{--  <h1 class='b_headline'>まる屋</h1>  --}}
-                    <span>CARD NUMBER: </span><p class="b_text" id="card_no">{{$card_no}}</p>
-                    <span>STORE ID: </span> <p class="b_text">{{$store_id}}</p>
-                    <span>LINE USER ID: </span><p class="b_text">{{$uid}}</p>
+                    <span class="b_text">CARD NUMBER: </span><p class="b_text" id="card_no">{{$card_no}}</p>
+                    <span class="b_text">STORE ID: </span> <p class="b_text">{{$store_id}}</p>
+                    <span class="b_text">LINE USER ID: </span><p class="b_text">{{$uid}}</p>
                     {{--  <p class='b_text'><br />text TEXT テキスト てきすと text TEXT テキスト てきすと<br />text TEXT テキスト てきすと</p>  --}}
                     {{--  <button class='b_button'><span>Buy now</span></button>  --}}
                 </div>
