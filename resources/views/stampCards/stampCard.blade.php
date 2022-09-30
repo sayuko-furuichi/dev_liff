@@ -15,9 +15,7 @@
 <body>
 
     <div class="note">
-        <div>
-            <p>まる屋</p>
-        </div>
+
         <div class='container'>
 
             <div class='flip_box'>
