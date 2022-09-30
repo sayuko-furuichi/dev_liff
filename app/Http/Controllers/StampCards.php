@@ -78,7 +78,7 @@ class StampCards extends Controller
 
     return view('stampCards.stampCard', [
       'uid'=> $toCard->lineuser_id,
-      'poins'=>$toCard->points,
+      'points'=>$toCard->points,
       'getPoints'=>$request->points,
       'card_no'=>$request->card_no,
       'expiry' =>$toCard->expiry,
