@@ -90,13 +90,10 @@
             <p>テキスト　テキスト</p>
     </div>
     <div class="benefits" >
-       
             <h3>8ポイント<h3>
                     <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
                     <h4>お好きなそば 1杯無料！</h4>
                     <p>テキスト　テキスト</p>
-
-        
     </div>
         <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
