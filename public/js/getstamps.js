@@ -17,8 +17,10 @@ const defaultLiffId ='1657487333-JPeEg6lr';
       liff.scanCodeV2().then(function (string) {
        
         if(string.value != null){
-        window.location.href = string.value + '&user=' + document.getElementById('user_id').value;
-      }}).catch(function (error) {
+      //  window.location.href = string.value + '&user=' + document.getElementById('user_id').value;
+      window.location.href = string.value + '&card_no=' + document.getElementById('card_no').textContent
+    
+    }}).catch(function (error) {
       window.alert('Error getting profile: ' + error);
       });
   

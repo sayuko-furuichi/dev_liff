@@ -70,8 +70,6 @@ class StampCards extends Controller{
     }
     function add(Request $request){
       //pointsがクエリで投げられる時　クーポン投げられる想定はする？
-
-      //  return view('stampCards.stampCard',['request'=> $request]);
     
       //redirect->with() は、sessionに渡しているので注意。viewと配列を渡さないので注意
             return redirect('/stamps/index')->with(['uid'=> $request->user,'point'=>$request->points]);
