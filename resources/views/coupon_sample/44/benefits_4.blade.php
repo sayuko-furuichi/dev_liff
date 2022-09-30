@@ -11,9 +11,9 @@
     <div class="coupons">
         <form action="{{route('coupon.used')}}" method="POST">
             @csrf
-            <input type="hidden" name="uid" value="{$request->uid}">
-            <input type="hidden" name="storeId" value="{$request->storeId}">
-       <input type="hidden" name="couponId" value="{$request->couponId}"> <img src="{{secure_asset('img/coupons/coupon.svg')}}" alt="クーポン" class="coupon_img">
+            <input type="hidden" name="uid" value="{{$request->uid}}">
+            <input type="hidden" name="storeId" value="{{$request->storeId}}">
+       <input type="hidden" name="couponId" value="{{$request->couponId}}"> <img src="{{secure_asset('img/coupons/coupon.svg')}}" alt="クーポン" class="coupon_img">
     </form>
         <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>
     </div>
