@@ -31,7 +31,7 @@ class StampCards extends Controller{
 // if(count($card)>0){
 
 // }
-        return view('stampCards.stampCard',[
+        return view('ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc',[
             'card_no'=>$card[0]->id,
             'store_id'=>$card[0]->store_id,
             'uid'=>$card[0]->lineuser_id,
@@ -73,7 +73,7 @@ class StampCards extends Controller{
 
     
       //redirect->with() は、sessionに渡しているので注意。viewと配列を渡さないので注意
-            return redirect('/stamps/index')->with(['uid'=> $request->user,'point'=>$request->points]);
+            return view('stampCards.stampCard',['uid'=> $request->user,'point'=>$request->points]);
     }
 
     function create($param){
