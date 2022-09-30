@@ -20,7 +20,8 @@ h1,
 p,
 a,
 span {
-  color: #fff;
+  /* color: #fff; */
+  color: black;
   letter-spacing: 0.02em;
   font-weight: 600;
 }
