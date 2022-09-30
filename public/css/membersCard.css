@@ -96,6 +96,8 @@ span {
   display: flex;
   justify-content: space-around;
   padding-top: 5px;
+  border: solid;
+  border-color: #FFF;
 }
 .f_logo {
   width: 10%;
