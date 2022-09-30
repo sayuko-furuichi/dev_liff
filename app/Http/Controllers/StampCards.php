@@ -35,8 +35,8 @@ class StampCards extends Controller{
             'card_no'=>$card[0]->id,
             'store_id'=>$card[0]->store_id,
             'uid'=>$card[0]->lineuser_id,
-            'expiry'=>$Card[0]->expiry,
-            'points'=>$Card[0]->points,
+            'expiry'=>$card[0]->expiry,
+            'points'=>$card[0]->points,
         ]);
 
       
