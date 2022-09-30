@@ -94,3 +94,10 @@ Route::group(['prefix' => '/getInflow', 'as' => 'getinflow' ], function () {
     Route::get('/', 'App\Http\Controllers\GetInflowRoutes@index')-> name('.index');
     Route::post('/', 'App\Http\Controllers\GetInflowRoutes@add')-> name('.add');
 });
+
+
+//0930 coupon
+Route::group(['prefix' => '/coupon', 'as' => 'coupon' ], function () {
+    Route::get('/', 'App\Http\Controllers\Coupons@index')-> name('.index');
+    Route::post('/used', 'App\Http\Controllers\Coupons@used')-> name('.used');
+});
