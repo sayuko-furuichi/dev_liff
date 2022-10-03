@@ -80,6 +80,8 @@
         <input type="hidden" id="user_id" name="uid">
     </form>
     <hr>
+    
+    {{--  表示だけにして、別ページでクーポン表示  --}}
     <h2 class="bene_title">ポイントで獲得できる特典</h2>
     <form action="{{ route('coupon.index') }}" method="GET">
         @foreach ($cps as $cp)

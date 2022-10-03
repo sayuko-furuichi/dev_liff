@@ -321,13 +321,13 @@ width: 15%;
 }
 
 .submit_btn{
-  height:30px;
-  width:30px;
+  height:40px;
+  width:40px;
   border-radius:80%;
   line-height:20px;
   text-align:center;
   background-color: blue;
   color: #FFF;
-  font-size: 10px;
+  font-size: 5px;
 
 }
