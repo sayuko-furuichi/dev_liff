@@ -21,6 +21,7 @@
        @endif    
        @if (isset($used))
            <img src="{{secure_asset('img/coupons/usedOn.svg')}}" alt="" class="used_img"> 
+           <a href="{{ route('stamps.login') }}">ショップカードに戻る</a>
             @else
             <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>
             @endif
