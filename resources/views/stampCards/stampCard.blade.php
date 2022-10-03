@@ -88,7 +88,7 @@
         
             <div class="benefits">
                 @if ($points >= $cp->term_of_use_point)
-        <input type="hidden" name="couponId" value="{{ $cp->id }}">
+        <input type="hidden" name="couponId[]" value="{{ $cp->id }}">
         {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
     @endif
                 <div class="point_mark">{{$cp->term_of_use_point}}</div>
