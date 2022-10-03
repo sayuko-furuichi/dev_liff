@@ -96,6 +96,7 @@
                
                 <h4>{{$cp->name}}</h4>
                 <p>テキスト　テキスト</p>
+                <input type="hidden" name="cps[]" value="{{$cp}}">
             </div>
         @endforeach
         <input type="hidden" id="user_id" name="uid">
