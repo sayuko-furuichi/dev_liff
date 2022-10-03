@@ -25,6 +25,10 @@
                         <div class="benefits">
                             <div class="point_mark">{{ $cp['term_of_use_point'] }}</div>
                             <input type="hidden" name="couponId" value="{{ $cp['id'] }}">
+                            <input type="hidden" name="img" value="{{ $cp['img'] }}">
+                            <input type="hidden" name="name" value="{{ $cp['name'] }}">
+                            <input type="hidden" name="name" value="{{ $cp['exiry'] }}">
+                            <input type="hidden" name="name" value="{{ $cp['detail'] }}">
                             {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
                             <img src="{{ secure_asset($cp['img']) }}" alt="img" class="bene_img">
                             <h4>{{ $cp['name'] }}</h4>
@@ -37,6 +41,8 @@
                         <input type="hidden" name="couponId" value="{{ $cps['id'] }}">
                         <input type="hidden" name="img" value="{{ $cps['img'] }}">
                         <input type="hidden" name="name" value="{{ $cps['name'] }}">
+                        <input type="hidden" name="name" value="{{ $cps['exiry'] }}">
+                        <input type="hidden" name="name" value="{{ $cps['detail'] }}">
                         {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
                         <img src="{{ secure_asset($cps['img']) }}" alt="img" class="bene_img">
                         <h4>{{ $cps['name'] }}</h4>
