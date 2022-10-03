@@ -16,7 +16,7 @@
             <a href="{{route('stamps.login')}}">ショップカードに戻る</a>
         @else
         <h2 class="bene_title">あなたが利用できるクーポン</h2>
-        <form action="{{ route('coupon.index') }}" method="GET">
+        <form action="{{ route('coupon.view') }}" method="GET">
         @if (isset($cps[0]))
        
         @foreach ($cps as $cp)
