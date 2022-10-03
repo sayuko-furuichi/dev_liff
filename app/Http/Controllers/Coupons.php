@@ -19,7 +19,7 @@ class Coupons extends Controller
 foreach ($request->cps as $cp) {
     $used=1;
     //ポイントを満たしているか
-    if ($cp->term_of_use_point <= $requesy->points) {
+    if ( $requesy->points <= $cp->term_of_use_point) {
         //使用されていないか
         $used =UsedCoupon::where('coupon_id', $cp->id)
         ->where('store_id', $request->store)
