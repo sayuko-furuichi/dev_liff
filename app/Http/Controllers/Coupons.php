@@ -17,6 +17,7 @@ class Coupons extends Controller
 
         //前ページで送信されたものだけ表示
 foreach ($request->cps as $cp) {
+    dd($request->cps);
     $used=1;
     //ポイントを満たしているか
     if ( $request->points >= $cp->term_of_use_point) {
