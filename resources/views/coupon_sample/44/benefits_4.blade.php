@@ -20,15 +20,17 @@
             <div class="img_c">
             <img src="{{secure_asset('img/1.png')}}" alt="img" class="coupon_img">
         </div>
-            <input type="hidden" name="user" value="{{$request->user}}">
+        <h1>COUPON TITLE</h1>
+        <h2>有効期限 :~</h2>
+            {{--  <input type="hidden" name="user" value="{{$request->user}}">
             <input type="hidden" name="store" value="{{$request->store}}">
-       <input type="hidden" name="couponId" value="{{$request->couponId}}"> 
+       <input type="hidden" name="couponId" value="{{$request->couponId}}">   --}}
        {{--  <img src="{{secure_asset('img/coupons/coupon.svg')}}" alt="クーポン" class="coupon_img">  --}}
-            @if (session('used'))
+            {{--  @if (session('used'))  --}}
            {{--  <img src="{{secure_asset('img/coupons/usedOn.svg')}}" alt="" class="used_img">   --}}
-            @else
+            {{--  @else  --}}
             {{--  <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>  --}}
-            @endif
+            {{--  @endif  --}}
        
     </form>
     </div>
