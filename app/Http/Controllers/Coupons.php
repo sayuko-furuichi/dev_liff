@@ -27,6 +27,7 @@ foreach ($request->cps as $cp) {
         ->where('store_id', $request->store)
         ->where('lineuser_id', $request->uid)
         ->first();
+
         if($used==null){
             $cps += $cp;
         }
@@ -79,6 +80,6 @@ if($cps == null){
         $nwUsed->save();
 
 
-        return view ('coupon_sample.44.benefits_4',['used'=>'used']);
+        return view ('coupon_sample.44.benefits_4',['used'=>'used','store'=>$nWUsed->store_id]);
     }
 }
