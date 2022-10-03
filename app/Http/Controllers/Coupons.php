@@ -11,17 +11,23 @@ class Coupons extends Controller
 {
     //
     function index(Request $request){
-        
-        $used =UsedCoupon::where('coupon_id',$request->couponId)
-        ->where('store_id',$request->store)
-        ->where('lineuser_id',$request->user)
-        ->first();
+        //まず全部表示
+        $cps =CouponMst::where('store_id',$request->store)
+        ->where('exiry','>',date('Y-m-d H:i:s'))->get();
 
-        if($used == null){
-            return view('coupon_sample.44.benefits_4',['request'=>$request]);
-        }else{
-            return view('coupon_sample.44.benefits_4',['non'=>'non']);
-        }
+return view('coupon_sample.index',['cps'=>$cps]);
+
+
+        // $used =UsedCoupon::where('coupon_id',$request->couponId)
+        // ->where('store_id',$request->store)
+        // ->where('lineuser_id',$request->user)
+        // ->first();
+
+        // if($used == null){
+        //     return view('coupon_sample.44.benefits_4',['request'=>$request]);
+        // }else{
+        //     return view('coupon_sample.44.benefits_4',['non'=>'non']);
+        // }
 
        
     }
