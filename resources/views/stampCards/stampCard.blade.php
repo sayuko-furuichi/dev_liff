@@ -87,10 +87,9 @@
         @foreach ($cps as $cp)
         
             <div class="benefits">
-                @if ($points >= $cp->term_of_use_point)
-        <input type="hidden" name="cps[]" value="{{ $cps }}">
+             
+        <input type="hidden" name="cps[]" value="{{ $cp }}">
         {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
-    @endif
                 <div class="point_mark">{{$cp->term_of_use_point}}</div>
                 <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
                
