@@ -16,27 +16,33 @@ class Coupons extends Controller
         ->where('exiry','>',date('Y-m-d H:i:s'))->get();
 
         //前ページで送信されたものだけ表示
-        foreach($request->cps as $cp){
+foreach ($request->cps as $cp) {
+    $used=1;
+    //ポイントを満たしているか
+    if ($cp->term_of_use_point <= $requesy->points) {
+        $used =UsedCoupon::where('coupon_id', $cp->id)
+        ->where('store_id', $request->store)
+        ->where('lineuser_id', $request->uid)
+        ->first();
+        if($used==null){
+            $cps[] += $cp;
+        }
+        
+    }
 
-            $used=1;
-            //ポイントを満たしているか
-            if($cp->term_of_use_point <= $requesy->points){
-                $used =UsedCoupon::where('coupon_id',$cp->id)
-                ->where('store_id',$request->store)
-                ->where('lineuser_id',$request->uid)
-                ->first();
-            }else{
-                return view('coupon_sample.index',['notFound'=>'not_found']);
-            }
-
+}
+if($cps[0] == null){
+    return view('coupon_sample.index',['notFound'=>'not_found']);
+}else{
+    return view('coupon_sample.index',['cps'=>$cps]);
+}
+           
             //store　とuidで引いておいて、forで回すときにｃｐidで検索した方が早そう
 
-    if ($used == null) {
-    }
-        }
+       
 
 
-return view('coupon_sample.index',['cps'=>$cps]);
+
 
 
         // $used =UsedCoupon::where('coupon_id',$request->couponId)
