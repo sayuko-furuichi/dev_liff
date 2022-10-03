@@ -66,7 +66,7 @@
         <button type="button" id="qr" class="bild_qr_btn"><img src="{{ secure_asset('img/qr_syu.png') }}"
                 alt="qrイメージ" class="qr_img"><br>GET！</button>
     </div>
-    <form method="GET" id="forms">
+
         <div class="read_text">
 
             <p class="get_points"> ポイント総数：{{ $points }}<span id="points" class="get_points"></span></p>
@@ -78,7 +78,6 @@
         {{--  <p>{{$store}}</p>
         <p>{{$uid}}</p>  --}}
       
-    </form>
     <hr>
     <form action="{{ route('coupon.index') }}" method="GET">
         <input type="submit" value="獲得した特典チケットを見る">
