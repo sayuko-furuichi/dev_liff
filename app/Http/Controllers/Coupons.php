@@ -79,6 +79,6 @@ if($cps == null){
         $nwUsed->save();
 
 
-        return redirect('/coupon')->with(['used'=>'used']);
+        return view ('coupon.add',['used'=>'used']);
     }
 }
