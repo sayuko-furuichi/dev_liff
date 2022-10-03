@@ -34,7 +34,7 @@ foreach ($request->cps as $cp) {
     }
 
 }
-if($cps[0] == null){
+if($cps == null){
     return view('coupon_sample.index',['notFound'=>'not_found']);
 }else{
     return view('coupon_sample.index',['cps'=>$cps]);
