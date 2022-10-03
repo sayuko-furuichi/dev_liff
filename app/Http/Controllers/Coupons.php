@@ -17,6 +17,7 @@ class Coupons extends Controller
 
         //前ページで送信されたものだけ表示
 foreach ($request->cps as $cp) {
+   $cp= json_decode($cp,true);
      dd($cp);
     $used=1;
     //ポイントを満たしているか
