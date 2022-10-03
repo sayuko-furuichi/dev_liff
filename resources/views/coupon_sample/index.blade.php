@@ -21,7 +21,7 @@
        
         @foreach ($cps as $cp)
 
-       <button type="radio" name="cps"></button>
+       
         <div class="benefits">
             <div class="point_mark">{{$cp['term_of_use_point']}}</div>
             <input type="hidden" name="couponId" value="{{ $cp['id'] }}">
@@ -30,6 +30,7 @@
             <h4>{{ $cp['name'] }}</h4>
             <p>{{$cp['detail']}}</p>
         </div>
+    
     @endforeach
             @else
 
@@ -37,6 +38,7 @@
             <div class="benefits">
                 <div class="point_mark">{{$cps['term_of_use_point']}}</div>
                 <input type="hidden" name="couponId" value="{{ $cps['id'] }}">
+                <input type="hidden" name="cp" value="{{ $cps}}">
                 {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
                 <img src="{{ secure_asset($cps['img']) }}" alt="img" class="bene_img">
                 <h4>{{ $cps['name'] }}</h4>
