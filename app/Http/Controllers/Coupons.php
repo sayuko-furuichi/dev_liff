@@ -63,7 +63,7 @@ if($cps == null){
        
     }
     function viewCoupon(Request $request){
-        return view('coupon_sample.44.benefits_4',['request'=>$request]);
+        return view('coupon_sample.44.benefits_4');
     }
 
     function used(Request $request){
