@@ -34,8 +34,8 @@
         </div>
     
     @endforeach
-            @else
 
+            @else
           
             <div class="benefits">
                 <div class="point_mark">{{$cps['term_of_use_point']}}</div>
@@ -52,9 +52,9 @@
             <input type="hidden" id="userIdProps" name="uid">
             <input type="hidden" name="store" value="{{$store}}">
             <input type="submit" value="（仮）">
-        </form>
+      
         @endif
-        
+    </form>
     </div>
 
 
