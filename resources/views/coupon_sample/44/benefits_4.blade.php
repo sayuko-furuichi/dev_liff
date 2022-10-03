@@ -23,7 +23,7 @@
            <img src="{{secure_asset('img/coupons/usedOn.svg')}}" alt="" class="used_img"> 
            <form method="GET">
            <input type="hidden" value="{{$store}}" name="store">
-           <a href="{{ route('stamps.login') }}">ショップカードへ戻る</a>
+           <input type="submit" value="ショップカードへ戻る"> 
         </form>
             @else
             <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>
