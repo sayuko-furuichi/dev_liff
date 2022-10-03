@@ -20,8 +20,10 @@
             <div class="img_c">
             <img src="{{secure_asset('img/1.png')}}" alt="img" class="coupon_img">
         </div>
+        <div class="text">
         <h1>COUPON TITLE</h1>
         <h2>有効期限 :~</h2>
+    </div>
             {{--  <input type="hidden" name="user" value="{{$request->user}}">
             <input type="hidden" name="store" value="{{$request->store}}">
        <input type="hidden" name="couponId" value="{{$request->couponId}}">   --}}
