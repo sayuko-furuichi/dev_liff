@@ -80,16 +80,17 @@
         <input type="hidden" id="user_id" name="uid">
     </form>
     <hr>
-    
+    <form action="{{ route('coupon.index') }}" method="GET">
+        <input type="submit" value="獲得した特典チケットを見る">
     {{--  表示だけにして、別ページでクーポン表示  --}}
     <h2 class="bene_title">ポイントで獲得できる特典</h2>
-    <form action="{{ route('coupon.index') }}" method="GET">
+
         @foreach ($cps as $cp)
         
             <div class="benefits">
                 @if ($points >= $cp->term_of_use_point)
         <input type="hidden" name="couponId" value="{{ $cp->id }}">
-        <input type="submit" value="GET！" class="submit_btn">
+        {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
     @endif
                 <div class="point_mark">{{$cp->term_of_use_point}}</div>
                 <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">

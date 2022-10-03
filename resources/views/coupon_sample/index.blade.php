@@ -21,7 +21,7 @@
                     <p>テキスト　テキスト</p>
                 </div>
             @endforeach
-            <input type="hidden" id="userIdProps">
+            <input type="hidden" id="userIdProps" name="uid">
         </form>
     </div>
 
