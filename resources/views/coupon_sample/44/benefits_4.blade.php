@@ -20,7 +20,7 @@
             <input type="hidden" name="user" value="{{$request['uid']}}">
             <input type="hidden" name="store" value="{{$request['store']}}">
        <input type="hidden" name="couponId" value="{{$request['couponId']}}"> <img src="{{secure_asset($request['img'])}}" alt="クーポン" class="coupon_img">
-       <p>{{$request->cp['name']}}</p>
+       <p>{{$request['name']}}</p>
        <p><span>有効期限：</span>{{$request->cp['exiry']}}</p>
        <p><span>使用方法：</span>{{$request->cp['detail']}}</p>
             @if (session('used'))
