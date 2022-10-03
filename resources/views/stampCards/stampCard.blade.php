@@ -99,6 +99,19 @@
                 <input type="hidden" name="cp['term_of_use_point']" value="{{$cp->term_of_use_point}}">  --}}
             </div>
         @endforeach
+<hr>
+<div class="info">
+<h2 >ご利用案内</h2>
+<pre>
+    - 来店1回ごとに1ポイント付与されます。
+    - 1日に複数回来店されてもポイントは1ポイントのみ付与されますので、ご了承ください。
+    - 不正利用が発覚した場合は、これまでに獲得したポイントなどがすべて無効になる場合があります。
+    - text　TEXT　テキスト　てきすと
+    - text　TEXT　テキスト　てきすと
+</pre>
+</div>
+
+
         <input type="hidden" id="user_id" name="uid">
         <input type="hidden" name="store" value="{{$store_id}}">
         <input type="hidden" name="points" value="{{$points}}">
