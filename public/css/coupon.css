@@ -1,7 +1,11 @@
+.body{
+    width: 90%;
+}
 
 .coupon{
     width: 80%;
     align-items: center;
+    background-color: blue;
 }
 .coupon_img{
     width: 80%;
