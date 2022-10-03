@@ -19,7 +19,7 @@ $cps=array();
 foreach ($request->cps as $cp) {
    $cp= json_decode($cp,true);
  //    dd($cp);
-    $used=1;
+  //  $used=1;
     //ポイントを満たしているか
     if ( $request->points >= $cp['term_of_use_point']) {
         //使用されていないか
