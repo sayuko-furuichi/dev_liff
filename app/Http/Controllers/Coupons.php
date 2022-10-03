@@ -20,7 +20,7 @@ foreach ($request->cps as $cp) {
     // dd($request->cps);
     $used=1;
     //ポイントを満たしているか
-    if ( $request->points >= $cp->term_of_use_point) {
+    if ( (int)$request->points >= (int)$cp->term_of_use_point) {
         //使用されていないか
         $used =UsedCoupon::where('coupon_id', $cp->id)
         ->where('store_id', $request->store)
