@@ -19,7 +19,7 @@ window.onload = function () {
   // req.open('POST','/',true)
   // req.setRequestHeader('');
         //   liff.getProfile().then(function(prof){
-        //     document.getElementById('store').textContent=prof.userId;
+        //     document.getElementById('user').textContent=prof.userId;
             
         //     liff.getProfile().then(function(prof){
               

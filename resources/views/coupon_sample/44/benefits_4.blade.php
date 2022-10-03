@@ -28,7 +28,6 @@
             @else
             <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>
             @endif
-       
     </form>
     </div>
     @endif
