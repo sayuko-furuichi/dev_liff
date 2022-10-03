@@ -28,4 +28,5 @@ window.onload = function () {
         //     window.location.href ='https://dev-liff.herokuapp.com/public/stamps/index?userId=' + prof.userId + '&store='+ document.getElementById('store').value;
   
         //   })
-        }},)}
+        }}).catch(function (error) {
+          window.alert('Error getting profile: ' + error);});}
