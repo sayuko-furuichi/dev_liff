@@ -20,9 +20,10 @@
             <div class="img_c">
             <img src="{{secure_asset('img/1.png')}}" alt="img" class="coupon_img">
         </div>
-        <div class="text">
-        <h1 class="text">COUPON TITLE</h1>
-        <h2 class="text">有効期限 :~</h2>
+        <div class="texts">
+          <h1 class="text">COUPON TITLE</h1>
+             <h2 class="text">有効期限 :~</h2>
+        </div>
     </div>
             {{--  <input type="hidden" name="user" value="{{$request->user}}">
             <input type="hidden" name="store" value="{{$request->store}}">
@@ -35,7 +36,7 @@
             {{--  @endif  --}}
        
     </form>
-    </div>
+  
     @endif
     
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
