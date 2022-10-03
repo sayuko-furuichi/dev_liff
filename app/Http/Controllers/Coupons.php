@@ -14,7 +14,7 @@ class Coupons extends Controller
         //まず全部表示
         // $cps =CouponMst::where('store_id',$request->store)
         // ->where('exiry','>',date('Y-m-d H:i:s'))->get();
-
+$cps[]='';
         //前ページで送信されたものだけ表示
 foreach ($request->cps as $cp) {
    $cp= json_decode($cp,true);
