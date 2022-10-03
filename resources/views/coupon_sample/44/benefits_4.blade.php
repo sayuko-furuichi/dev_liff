@@ -21,7 +21,7 @@
        @endif    
        @if (isset($used))
            <img src="{{secure_asset('img/coupons/usedOn.svg')}}" alt="" class="used_img"> 
-           <form method="GET">
+           <form method="GET" action="{{route('stamps.login')}}">
            <input type="hidden" value="{{$store}}" name="store">
            <input type="submit" value="ショップカードへ戻る"> 
         </form>
