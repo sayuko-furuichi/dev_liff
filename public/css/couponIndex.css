@@ -1,0 +1,31 @@
+/* benefits CSS */
+
+.benefits{
+    padding-top: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .bene_item{
+  padding-top: 5px;
+  
+  }
+  .bene_img{
+  width: 15%;
+  }
+  
+  .bene_title{
+    width: 80%;
+    padding-top: 30px;
+  }
+  
+  .point_mark{
+    height:20px;
+    width:20px;
+    border-radius:50%;
+    line-height:20px;
+    text-align:center;
+    background-color: #FE725C;
+    color: #FFF;
+  
+  }
