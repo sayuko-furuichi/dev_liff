@@ -24,7 +24,7 @@
             @if (session('used'))
            {{--  <img src="{{secure_asset('img/coupons/usedOn.svg')}}" alt="" class="used_img">   --}}
             @else
-            <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>
+            {{--  <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>  --}}
             @endif
        
     </form>
