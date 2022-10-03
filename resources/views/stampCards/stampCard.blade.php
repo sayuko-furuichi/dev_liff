@@ -91,10 +91,10 @@
         <input type="hidden" name="cps[]" value="{{ $cp }}">
         {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
                 <div class="point_mark">{{$cp->term_of_use_point}}</div>
-                <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
+                <img src="{{ secure_asset($cp->img) }}" alt="img" class="bene_img">
                
                 <h4>{{$cp->name}}</h4>
-                <p>テキスト　テキスト</p>
+                <p>{{$cp->detail}}</p>
                 {{--  <input type="hidden" name="cp['id']" value="{{$cp->id}}">
                 <input type="hidden" name="cp['term_of_use_point']" value="{{$cp->term_of_use_point}}">  --}}
             </div>
