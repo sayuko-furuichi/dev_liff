@@ -11,12 +11,14 @@
 
 <body>
     <div>
+
         @if (isset($notFound))
             <p>使用できるクーポンがありません</p>
             <a href="{{route('stamps.login')}}">ショップカードに戻る</a>
         @else
-        <h2 class="bene_title">あなたが利用できるクーポン</h2>
         <form action="{{ route('coupon.view') }}" method="GET">
+        <h2 class="bene_title">あなたが利用できるクーポン</h2>
+       
         @if (isset($cps[0]))
        
         @foreach ($cps as $cp)
