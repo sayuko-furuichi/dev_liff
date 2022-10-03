@@ -2,7 +2,7 @@
     width: 90%;
 }
 
-.coupon{
+.coupons{
     width: 80%;
     align-items: center;
     background-color: blue;
@@ -17,3 +17,15 @@
     width: 80%;
     align-items: center;
 }
+
+.img_c{
+    padding-top: 20%;
+        height:50px;
+        width:50px;
+        border-radius:50%;
+        line-height:50px;
+        text-align:center;
+        background-color: #FFF;
+        /* color: #FFF; */
+      
+      }
