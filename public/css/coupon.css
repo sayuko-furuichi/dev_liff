@@ -4,7 +4,7 @@
 
 .coupons{
     width: 80%;
-    height: 700px;
+    height: 500px;
     margin:0 auto;
     background-color: blue;
 }
@@ -21,10 +21,10 @@
 
 .img_c{
     padding-top: 20%;
-        height:200px;
-        width:200px;
-        border-radius:200%;
-        line-height:200px;
+        height:100px;
+        width:100px;
+        border-radius:50%;
+        line-height:100px;
         text-align:center;
         margin:0 auto;
         background-color: #FFF;
