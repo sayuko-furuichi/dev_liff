@@ -19,6 +19,7 @@
         @if (isset($cps[0]))
 
         @foreach ($cps as $cp)
+        <form action="{{ route('coupon.index') }}" method="GET">
         <div class="benefits">
             <div class="point_mark">{{$cp['term_of_use_point']}}</div>
             <input type="hidden" name="couponId" value="{{ $cp['id'] }}">
@@ -40,7 +41,7 @@
                 <p>{{$cps['detail']}}</p>
             </div>
         @endif
-        <form action="{{ route('coupon.index') }}" method="GET">
+     
         
             <input type="hidden" id="userIdProps" name="uid">
             <input type="hidden" name="store" value="{{$store}}">
