@@ -15,6 +15,9 @@ class Coupons extends Controller
         $cps =CouponMst::where('store_id',$request->store)
         ->where('exiry','>',date('Y-m-d H:i:s'))->get();
 
+        //全ページで送信されたものだけ表示
+
+
 return view('coupon_sample.index',['cps'=>$cps]);
 
 
