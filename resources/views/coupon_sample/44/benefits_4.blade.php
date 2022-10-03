@@ -18,8 +18,8 @@
 
     <div class="coupon">
         <div class="coupon-inner">
-            <div class="img_c">
-                {{--  <img src="{{ secure_asset('img/1.png') }}" alt="img" class="coupon_img">  --}}
+            <div >
+                <img src="{{ secure_asset('img/1.png') }}" alt="img" class="img">
             </div>
           <div class="price">500円</div>
           <div class="date">有効期限：2012年12月31日</div>
