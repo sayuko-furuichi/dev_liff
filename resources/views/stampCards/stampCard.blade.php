@@ -9,7 +9,7 @@
     {{-- <link rel="stylesheet" href="{{ secure_asset('css/reset.css') }}"> --}}
     {{-- <link id="import-link" rel="import" href="./sub.html"> --}}
     <script src="https://unpkg.com/glottologist"></script>
-    <title>スタンプラリー</title>
+    <title>ショップカード</title>
 </head>
 
 <body>
@@ -88,7 +88,7 @@
         
             <div class="benefits">
                 @if ($points >= $cp->term_of_use_point)
-        <input type="hidden" name="couponId[]" value="{{ $cp->id }}">
+        <input type="hidden" name="cps" value="{{ $cps }}">
         {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
     @endif
                 <div class="point_mark">{{$cp->term_of_use_point}}</div>
@@ -100,6 +100,7 @@
         @endforeach
         <input type="hidden" id="user_id" name="uid">
         <input type="hidden" name="store" value="{{$store_id}}">
+        <input type="hidden" name="points" value="{{$points}}">
     </form>
 
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>

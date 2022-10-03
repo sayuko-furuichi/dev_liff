@@ -11,7 +11,11 @@
 
 <body>
     <div>
-        <h2 class="bene_title">ポイントで獲得できる特典</h2>
+        @if (isset($notFound))
+            <p>使用できるクーポンがありません</p>
+            <a href="{{route('stamps.login')}}">ショップカードに戻る</a>
+        @else
+        <h2 class="bene_title">利用できるクーポン</h2>
         <form action="{{ route('coupon.index') }}" method="GET">
             @foreach ($cps as $cp)
                 <div class="benefits">
@@ -25,6 +29,8 @@
             @endforeach
             <input type="hidden" id="userIdProps" name="uid">
         </form>
+        @endif
+        
     </div>
 
 

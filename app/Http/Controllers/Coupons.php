@@ -15,7 +15,25 @@ class Coupons extends Controller
         $cps =CouponMst::where('store_id',$request->store)
         ->where('exiry','>',date('Y-m-d H:i:s'))->get();
 
-        //全ページで送信されたものだけ表示
+        //前ページで送信されたものだけ表示
+        foreach($request->cps as $cp){
+
+            $used=1;
+            //ポイントを満たしているか
+            if($cp->term_of_use_point <= $requesy->points){
+                $used =UsedCoupon::where('coupon_id',$cp->id)
+                ->where('store_id',$request->store)
+                ->where('lineuser_id',$request->uid)
+                ->first();
+            }else{
+                return view('coupon_sample.index',['notFound'=>'not_found']);
+            }
+
+            //store　とuidで引いておいて、forで回すときにｃｐidで検索した方が早そう
+
+    if ($used == null) {
+    }
+        }
 
 
 return view('coupon_sample.index',['cps'=>$cps]);
