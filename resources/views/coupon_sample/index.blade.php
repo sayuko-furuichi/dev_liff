@@ -20,11 +20,11 @@
 
         @foreach ($cps as $cp)
         <div class="benefits">
-            <div class="point_mark">{{$cp->term_of_use_point}}</div>
-            <input type="hidden" name="couponId" value="{{ $cp->id }}">
+            <div class="point_mark">{{$cp['term_of_use_point']}}</div>
+            <input type="hidden" name="couponId" value="{{ $cp['id'] }}">
             {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
             <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
-            <h4>{{ $cp->name }}</h4>
+            <h4>{{ $cp['name'] }}</h4>
             <p>テキスト　テキスト</p>
         </div>
     @endforeach

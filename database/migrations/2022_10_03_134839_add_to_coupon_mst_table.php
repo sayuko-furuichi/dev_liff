@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('max_points');
             $table->string('link');
             $table->string('img');
+            $table->string('detail');
         });
     }
 
