@@ -41,7 +41,7 @@
   .right::after {
     position: absolute;
     display: block;
-    content: "";
+    /* content: ; */
     border-radius: 100%;
     background: #e0e6ef;
     left: -12px;
