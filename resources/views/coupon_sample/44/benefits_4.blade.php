@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    @if (isset($non))
+    {{--  @if (isset($non))
         <div>
             <p>利用できるクーポンがありません</p>
-        </div>
-    @else
+        </div>  --}}
+    {{--  @else  --}}
         <div class="coupons">
             <form action="{{ route('coupon.used') }}" method="POST">
                 @csrf
@@ -37,10 +37,10 @@
         {{--  @endif  --}}
 
         </form>
-    @endif
+    {{--  @endif  --}}
 
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-    {{--  <script src="{{ secure_asset('js/coupon.js') }}"></script>  --}}
+    <script src="{{ secure_asset('js/coupon.js') }}"></script>
     <script src="{{ secure_asset('js/jquery-1.9.0.min.js') }}" type="text/javascript"></script>
 </body>
 
