@@ -79,6 +79,6 @@ if($cps == null){
         $nwUsed->save();
 
 
-        return view ('coupon.add',['used'=>'used']);
+        return view ('coupon_sample.44.benefits_4',['used'=>'used']);
     }
 }
