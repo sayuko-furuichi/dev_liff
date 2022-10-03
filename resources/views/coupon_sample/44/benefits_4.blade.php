@@ -21,8 +21,8 @@
             <input type="hidden" name="store" value="{{$request['store']}}">
        <input type="hidden" name="couponId" value="{{$request['couponId']}}"> <img src="{{secure_asset($request['img'])}}" alt="クーポン" class="coupon_img">
        <p>{{$request['name']}}</p>
-       <p><span>有効期限：</span>{{$request->cp['exiry']}}</p>
-       <p><span>使用方法：</span>{{$request->cp['detail']}}</p>
+       <p><span>有効期限：</span>{{$request['exiry']}}</p>
+       <p><span>使用方法：</span>{{$request['detail']}}</p>
             @if (session('used'))
            <img src="{{secure_asset('img/coupons/usedOn.svg')}}" alt="" class="used_img"> 
             @else
