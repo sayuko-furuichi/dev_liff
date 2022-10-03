@@ -36,6 +36,7 @@
                         <div class="point_mark">{{ $cps['term_of_use_point'] }}</div>
                         <input type="hidden" name="couponId" value="{{ $cps['id'] }}">
                         <input type="hidden" name="img" value="{{ $cps['img'] }}">
+                        <input type="hidden" name="name" value="{{ $cps['name'] }}">
                         {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
                         <img src="{{ secure_asset($cps['img']) }}" alt="img" class="bene_img">
                         <h4>{{ $cps['name'] }}</h4>
