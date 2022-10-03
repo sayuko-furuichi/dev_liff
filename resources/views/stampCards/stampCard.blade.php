@@ -88,7 +88,7 @@
         
             <div class="benefits">
                 @if ($points >= $cp->term_of_use_point)
-        <input type="hidden" name="cps" value="{{ $cps }}">
+        {{--  <input type="hidden" name="cps" value="{{ $cps }}">  --}}
         {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
     @endif
                 <div class="point_mark">{{$cp->term_of_use_point}}</div>
@@ -96,7 +96,8 @@
                
                 <h4>{{$cp->name}}</h4>
                 <p>テキスト　テキスト</p>
-                <input type="hidden" name="cps[]" value="{{$cp}}">
+                <input type="hidden" name="cp['id']" value="{{$cp->id}}">
+                <input type="hidden" name="cp['term_of_use_point']" value="{{$cp->term_of_use_point}}">
             </div>
         @endforeach
         <input type="hidden" id="user_id" name="uid">
