@@ -45,7 +45,7 @@
         {{--  <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>  --}}
         {{--  @endif  --}}
 
-        </form>
+       
     {{--  @endif  --}}
 
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
