@@ -8,12 +8,7 @@
     <title>coupon</title>
 </head>
 <body>
-    @if (isset($non))
-    <div>
-        <p>利用できるクーポンがありません</p>
-    </div>
-
-    @else
+    @if (isset($request))
     <div class="coupons">
         <form action="{{route('coupon.used')}}" method="POST">
             @csrf
@@ -23,14 +18,15 @@
        <p>{{$request['name']}}</p>
        <p><span>有効期限：</span>{{$request['exiry']}}</p>
        <p><span>使用方法：</span>{{$request['detail']}}</p>
-            @if (session('used'))
+       @endif    
+       @if (isset($used))
            <img src="{{secure_asset('img/coupons/usedOn.svg')}}" alt="" class="used_img"> 
             @else
             <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>
             @endif
     </form>
     </div>
-    @endif
+
     
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="{{secure_asset('js/coupon.js')}}"></script>
