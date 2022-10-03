@@ -16,7 +16,7 @@
             <a href="{{route('stamps.login')}}">ショップカードに戻る</a>
         @else
         <h2 class="bene_title">利用できるクーポン</h2>
-        @if (is_array($cps))
+        @if (is_array($cps[0]))
 
         @foreach ($cps as $cp)
         <div class="benefits">
