@@ -27,8 +27,8 @@
                             <input type="hidden" name="couponId" value="{{ $cp['id'] }}">
                             <input type="hidden" name="img" value="{{ $cp['img'] }}">
                             <input type="hidden" name="name" value="{{ $cp['name'] }}">
-                            <input type="hidden" name="name" value="{{ $cp['exiry'] }}">
-                            <input type="hidden" name="name" value="{{ $cp['detail'] }}">
+                            <input type="hidden" name="exiry" value="{{ $cp['exiry'] }}">
+                            <input type="hidden" name="detail" value="{{ $cp['detail'] }}">
                             {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
                             <img src="{{ secure_asset($cp['img']) }}" alt="img" class="bene_img">
                             <h4>{{ $cp['name'] }}</h4>
