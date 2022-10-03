@@ -15,12 +15,19 @@
             <p>利用できるクーポンがありません</p>
         </div>  --}}
     {{--  @else  --}}
-        <div class="coupons">
-            {{--  <form action="{{ route('coupon.used') }}" method="POST">
-                @csrf  --}}
-                <div class="img_c">
-                    <img src="{{ secure_asset('img/1.png') }}" alt="img" class="coupon_img">
-                </div>
+
+    <div class="coupon">
+        <div class="coupon-inner">
+            <div class="img_c">
+                <img src="{{ secure_asset('img/1.png') }}" alt="img" class="coupon_img">
+            </div>
+          <div class="price">500円</div>
+          <div class="date">有効期限：2012年12月31日</div>
+        </div>
+       
+      </div>
+        
+
                 <div class="texts">
                     <h1 class="text">COUPON TITLE</h1>
                     <h2 class="text">有効期限 :~</h2>

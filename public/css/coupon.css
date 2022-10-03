@@ -2,23 +2,14 @@ body{
     width: 90%;
 }
 
-.coupons{
-    width: 80%;
-    height: 70%;
-    margin:0 auto;
-    background-color: blue;
-    padding-top: 20px;
-}
+
 .coupon_img{
     width: 40%;
     align-items: center;
     padding-left: 45px;
 
 }
-.used_img{
-    width: 80%;
-    align-items: center;
-}
+
 
 .img_c{
     padding-top: 20px;
@@ -36,3 +27,56 @@ body{
     color: #FFF;
     font-size: medium;
 }
+
+.coupon {
+    display: flex;
+    width: 100%;
+    max-width: 620px;
+    background: #FFF;
+  }
+  .price {
+    font-size: 30px;
+    font-weight: 900;
+    color: #f56359;
+  }
+  .date {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .left {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 40px 20px;
+  }
+  .right {
+    position: relative;
+    display: flex;
+    width: 160px;
+    padding: 40px 20px;
+    border-left: 2px dashed #e0e6ef;
+    justify-content: center;
+  }
+  
+  /* circle-css */
+  
+  .right::before,
+  .right::after {
+    position: absolute;
+    display: block;
+    content: "";
+    border-radius: 100%;
+    background: #e0e6ef;
+    left: -12px;
+    width: 22px;
+    height: 22px;
+  }
+  .right::before {
+    top: -11px;
+  }
+  .right::after {
+    bottom: -11px;
+  }
