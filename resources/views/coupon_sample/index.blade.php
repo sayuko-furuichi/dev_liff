@@ -43,6 +43,7 @@
         <form action="{{ route('coupon.index') }}" method="GET">
         
             <input type="hidden" id="userIdProps" name="uid">
+            <input type="hidden" name="store" value="{{$store}}">
         </form>
         @endif
         

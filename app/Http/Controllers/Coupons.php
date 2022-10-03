@@ -38,7 +38,7 @@ foreach ($request->cps as $cp) {
 if($cps == null){
     return view('coupon_sample.index',['notFound'=>'not_found']);
 }else{
-    return view('coupon_sample.index',['cps'=>$cps]);
+    return view('coupon_sample.index',['cps'=>$cps,'store'=>$request->store]);
 }
            
             //store　とuidで引いておいて、forで回すときにｃｐidで検索した方が早そう
