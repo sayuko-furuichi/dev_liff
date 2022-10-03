@@ -17,9 +17,10 @@
         @else
         <h2 class="bene_title">あなたが利用できるクーポン</h2>
         @if (isset($cps[0]))
-
-        @foreach ($cps as $cp)
         <form action="{{ route('coupon.index') }}" method="GET">
+        @foreach ($cps as $cp)
+
+       <button type="radio" name="cps"></button>
         <div class="benefits">
             <div class="point_mark">{{$cp['term_of_use_point']}}</div>
             <input type="hidden" name="couponId" value="{{ $cp['id'] }}">
@@ -45,6 +46,7 @@
         
             <input type="hidden" id="userIdProps" name="uid">
             <input type="hidden" name="store" value="{{$store}}">
+            <input type="submit" value="（仮）">
         </form>
         @endif
         
