@@ -16,8 +16,8 @@
         </div>  --}}
     {{--  @else  --}}
         <div class="coupons">
-            <form action="{{ route('coupon.used') }}" method="POST">
-                @csrf
+            {{--  <form action="{{ route('coupon.used') }}" method="POST">
+                @csrf  --}}
                 <div class="img_c">
                     <img src="{{ secure_asset('img/1.png') }}" alt="img" class="coupon_img">
                 </div>
