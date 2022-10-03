@@ -18,7 +18,7 @@
         <form action="{{route('coupon.used')}}" method="POST">
             @csrf
             <div class="img_c">
-            <img src="{{secure_asset('img/1.png')}}" alt="img">
+            <img src="{{secure_asset('img/1.png')}}" alt="img" class="coupon_img">
         </div>
             <input type="hidden" name="user" value="{{$request->user}}">
             <input type="hidden" name="store" value="{{$request->store}}">
