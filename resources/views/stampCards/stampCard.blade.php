@@ -77,7 +77,7 @@
         </div>
         {{--  <p>{{$store}}</p>
         <p>{{$uid}}</p>  --}}
-        <input type="hidden" id="user_id" name="uid">
+      
     </form>
     <hr>
     <form action="{{ route('coupon.index') }}" method="GET">
@@ -99,28 +99,10 @@
                 <p>テキスト　テキスト</p>
             </div>
         @endforeach
+        <input type="hidden" id="user_id" name="uid">
+        <input type="hidden" name="store" value="{{$store_id}}">
     </form>
-    {{--  <div class="benefits">
 
-        <div class="point_mark">4</div>
-        <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
-        @if ($points >= 4)
-            <form action="{{ route('coupon.index') }}" method="GET">
-                <input type="hidden" name="store" value="{{ $store_id }}">
-                <input type="hidden" name="user" value="{{ $uid }}">
-                <input type="hidden" name="couponId" value="4">
-                <input type="submit" value="使用できます！">
-            </form>
-        @endif
-        <h4>お好きなドリンク 1杯無料！</h4>
-        <p>テキスト　テキスト</p>
-    </div>
-    <div class="benefits">
-        <div class="point_mark">8</div>
-        <img src="{{ secure_asset('img/1.png') }}" alt="img" class="bene_img">
-        <h4>お好きなそば 1杯無料！</h4>
-        <p>テキスト　テキスト</p>
-    </div>  --}}
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
