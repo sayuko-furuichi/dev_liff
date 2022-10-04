@@ -26,7 +26,7 @@
                     @foreach ($cps as $cp)
                     <form action="{{ route('coupon.view') }}" method="GET" >
                         <div class="benefits">
-                            <button type="submit" id="bene.{{$cp['id']}}">
+                            <button type="submit">
                                 <div class="point_mark">{{ $cp['term_of_use_point'] }}</div>
                                 <input type="hidden" name="couponId" value="{{ $cp['id'] }}">
                                 <input type="hidden" name="img" value="{{ $cp['img'] }}">
