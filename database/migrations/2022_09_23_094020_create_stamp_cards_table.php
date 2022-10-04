@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('state');
             $table->timestamp('expiry')->nullable(true)->comment('有効期限');
             $table->integer('points')->comment('total_points');
+            $table->integer('now_points');
             $table->integer('max_points');
             $table->timestamps();
         });
