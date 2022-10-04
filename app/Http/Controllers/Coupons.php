@@ -26,9 +26,9 @@ foreach ($request->cps as $cp) {
         //使用されていないか
       $usedC= $usedC->where('coupon_id', $cp['id']);
 
-        if(isEmpty($usedC)){
+        if($usedC->isEmpty()){
             $cps += $cp;
-
+            next();
         }
         
     }
