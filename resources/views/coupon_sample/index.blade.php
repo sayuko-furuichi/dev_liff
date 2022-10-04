@@ -18,14 +18,15 @@
             <input type="hidden" id="user" name="uid">
         @else
         <form action="{{ route('coupon.view') }}" method="GET">
+    
                 <h2 class="bene_title">あなたが利用できるクーポン</h2>
 
                 @if (isset($cps[0]))
 
                     @foreach ($cps as $cp)
-                   
-                    <input type="radio"  name="bene" class="radio_btn" id="beneInput.{{$cp['id']}}">
+
                         <div class="benefits">
+                            <input type="radio"  name="bene" class="radio_btn" id="beneInput.{{$cp['id']}}">
                             <label for="beneInput.{{$cp['id']}}">
                             <div class="point_mark">{{ $cp['term_of_use_point'] }}</div>
                             <input type="hidden" name="couponId" value="{{ $cp['id'] }}">
