@@ -32,9 +32,10 @@ foreach ($request->cps as $cp) {
       $useds= $usedC->where('coupon_id', $cp['id']);
 
         if($useds->isEmpty()){
-            $cps[$i] =$cp;
-            $i++;
-           
+            // $cps[$i] =$cp;
+            // $i++;
+            $cps =$cp;
+            
 
         }
        
