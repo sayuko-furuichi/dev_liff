@@ -30,8 +30,8 @@ class StampCards extends Controller
       //発行された特典クーポンがあるかどうか確認
       $date =date('Y-m-d H:i:s');
       $cp =CouponMst::where('store_id',$request->store)
-      ->get();
-
+      ->whereDate('exiry','>',$date)->get();
+      
   //couponが無い場合の処理
 
 
