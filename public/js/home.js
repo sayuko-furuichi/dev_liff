@@ -4,16 +4,17 @@ window.onload = function () {
 var req;
   //ペーじが出来上がったら、liffIDを渡してinitさせる
   $(document).ready(function () {
-    initializeLiff(defaultLiffId);
-  });
-}
-function initializeLiff(myLiffId) {
-  liff
+    liff
     .init({
-      liffId: myLiffId
+      liffId: defaultLiffId
     })
     .then(() => {
       if (!liff.isLoggedIn()) {
         liff.login();
       }}) .catch(function (error) {
         window.alert('エラーです' + error);});}
+   
+  );}
+
+
+ 
