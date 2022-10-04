@@ -80,7 +80,7 @@
 
     <hr>
     <form action="{{ route('coupon.index') }}" method="GET">
-        <input type="submit" value="獲得した特典チケットを見る">
+        <input type="submit" value="獲得した特典チケットを見る" class="input_btn">
         {{--  表示だけにして、別ページでクーポン表示  --}}
         <h2 class="bene_title">ポイントで獲得できる特典</h2>
 
