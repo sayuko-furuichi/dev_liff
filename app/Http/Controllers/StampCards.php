@@ -133,8 +133,6 @@ class StampCards extends Controller
     $nwCard->expiry=date("Y-m-d H:i:s", strtotime("+1 year"));
     
     $nwCard->points += $toCard->points;
-   $bug= (($toCard->now_points) - ($toCard->max_points));
-    dd($toCard->now_points);
   //ポイントが増えすぎた分は繰り越し
     $nwCard->now_points= (($toCard->now_points) - ($toCard->max_points));
   $toCard->now_points=$toCard->max_points;
