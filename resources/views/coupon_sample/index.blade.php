@@ -25,9 +25,9 @@
                 <h2 class="bene_title">あなたが利用できるクーポン</h2>
 
                 @if (isset($cps[0]))
-             
+                <form action="{{ route('coupon.view') }}" method="GET" >
                     @foreach ($cps as $cp)
-                    <form action="{{ route('coupon.view') }}" method="GET" >
+                   
                         <div class="benefits">
                             <button type="submit">
                                 <div class="point_mark">{{ $cp['term_of_use_point'] }}</div>
@@ -41,16 +41,13 @@
                                     class="bene_img">
                                 <h4>{{ $cp['name'] }}</h4>
                                 <p>{{ $cp['detail'] }}</p>
-                          
-                              
-            
+                            </button>
+                     
                             </div>
                     @endforeach
                     <input type="hidden" id="user" name="uid">
                     <input type="hidden" name="store" value="{{ $store }}">
-                </button>
                 </form>
-           
                 @else
                 <form action="{{ route('coupon.view') }}" method="GET">
                     <button type="submit">
