@@ -19,7 +19,7 @@ class Coupons extends Controller
 //foreachで使用する
        $cps=array();
        $i=0;
-       
+
        //クーポンを使えるか確認
 foreach ($request->cps as $cp) {
    $cp= json_decode($cp,true);
@@ -41,7 +41,7 @@ foreach ($request->cps as $cp) {
 
 }
 
-
+dd($cps);
 
 if($cps == null){
     return view('coupon_sample.index',['notFound'=>'not_found']);
