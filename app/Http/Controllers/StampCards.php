@@ -111,7 +111,7 @@ class StampCards extends Controller
       //card_noから検索して、ポイントを加算代入する
 // if (isset($toCard)) {
     $toCard->now_points += (int)$request->points;
-    
+    $toCard->points += (int)$request->points;
 
     //ポイント数がmaxを超えたとき新カード発行
   if($toCard->now_points >= $toCard->max_points){
@@ -131,7 +131,7 @@ class StampCards extends Controller
     //有効期限は発行から1年後
     $nwCard->expiry=date("Y-m-d H:i:s", strtotime("+1 year"));
     
-    $nwCard->points += $toCard->points + $toCard->now_points;
+    $nwCard->points += $toCard->points;
   
   //ポイントが増えすぎた分は繰り越し
     $nwCard->now_points= $toCard->now_points - $toCard->max_points;
