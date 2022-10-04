@@ -31,15 +31,9 @@ function initializeLiff(myLiffId) {
 
   liff.getProfile().then(function (profile) {
 
-    // document.getElementById('displayNameField').textContent = profile.displayName;
-
-    //valueに追加 fromのname.子要素のname.value
-
-    
-    //getuserid
-    document.getElementById('userIdProps').value = profile.userId;
-
-
+	if(document.getElementById('userIdProps')){
+		document.getElementById('userIdProps').value = profile.userId;
+	}
 
 
 }).catch(function (error) {
