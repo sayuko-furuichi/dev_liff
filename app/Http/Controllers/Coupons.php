@@ -16,7 +16,6 @@ $cps=array();
         //前ページで送信されたものだけ表示
         $usedC =UsedCoupon::where('store_id', $request->store)->get();
        $usedC= $usedC->whereIn('lineuser_id', $request->uid);
-      dd($request->cps);
 
 foreach ($request->cps as $cp) {
    $cp= json_decode($cp,true);
@@ -29,6 +28,7 @@ foreach ($request->cps as $cp) {
 
         if($usedC->isEmpty()){
             $cps = $cps+ $cp;
+            
         }
         
     }
@@ -36,6 +36,7 @@ foreach ($request->cps as $cp) {
 }
 
 
+dd($cps);
 if($cps == null){
     return view('coupon_sample.index',['notFound'=>'not_found']);
 }else{
