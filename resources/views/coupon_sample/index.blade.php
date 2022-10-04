@@ -22,9 +22,9 @@
                 <h2 class="bene_title">あなたが利用できるクーポン</h2>
 
                 @if (isset($cps[0]))
-
+                <form action="{{ route('coupon.view') }}" method="GET">
                     @foreach ($cps as $cp)
-                    <form action="{{ route('coupon.view') }}" method="GET">
+
                         <div class="benefits">
                      
                             <button type="submit">
