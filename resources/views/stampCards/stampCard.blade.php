@@ -30,7 +30,7 @@
                         {{--  <p class='f_title'>stamp CARD</p>  --}}
                     </div>
                     <p class="limit">！ 有効期限：{{ $expiry }}</p>
-                    <p class='f_subline'></p>
+                    {{--  <p class='f_subline'></p>  --}}
 
                 </div>
 
