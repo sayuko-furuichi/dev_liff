@@ -166,6 +166,7 @@ class StampCards extends Controller
               'expiry' =>$toCard->expiry,
               'store_id'=>$toCard->store_id,
               'max_points'=>$toCard->max_points,
+              'now_points'=>$toCard->now_points,
               'number'=>$toCard->number
             ]);
         }
