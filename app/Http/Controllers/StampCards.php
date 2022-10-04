@@ -41,9 +41,10 @@ class StampCards extends Controller
         //UserIdとstore_idをrequestに保持している状態
         //1：カードの持ち主を特定する
         $card =StampCard::where('lineuser_id', $request->userId)->get();
-        $card= $card->where('store_id', $request->store)->sortByDesc('id');
+        //TODO:debug用　新しいもののみ表示
+        $card= $card->where('store_id', $request->store)->where('state',1)->sortByDesc('id');
 
-        dd($card);
+
 
     //      2：保持していなければ作成する
         if (isset($card[0])) {
