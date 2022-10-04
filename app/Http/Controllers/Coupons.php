@@ -28,7 +28,6 @@ foreach ($request->cps as $cp) {
 
         if($usedC->isEmpty()){
             $cps += $cp;
-            next();
         }
         
     }
