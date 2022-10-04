@@ -42,14 +42,14 @@
                                 <h4>{{ $cp['name'] }}</h4>
                                 <p>{{ $cp['detail'] }}</p>
                                 </button>
-                                <input type="hidden" id="user" name="uid">
-                                <input type="hidden" name="store" value="{{ $store }}">
+                              
             
-                            </form>
-                        </div>
+                          
                     @endforeach
-                 
-           
+                    <input type="hidden" id="user" name="uid">
+                    <input type="hidden" name="store" value="{{ $store }}">
+                </form>
+            </div>
                 @else
                 <form action="{{ route('coupon.view') }}" method="GET">
                     <button type="submit">
