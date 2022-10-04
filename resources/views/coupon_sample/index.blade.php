@@ -41,13 +41,14 @@
                                     class="bene_img">
                                 <h4>{{ $cp['name'] }}</h4>
                                 <p>{{ $cp['detail'] }}</p>
-                                </button>
+                          
                               
             
                             </div>
                     @endforeach
                     <input type="hidden" id="user" name="uid">
                     <input type="hidden" name="store" value="{{ $store }}">
+                </button>
                 </form>
            
                 @else
