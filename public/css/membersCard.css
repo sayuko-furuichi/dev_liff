@@ -317,10 +317,14 @@ width: 15%;
   color: #FFF;
 
 }
+.input_btn{
+  background-color: #FE725C;
+  color: #FFF;
 
+}
 
 /* input button */
-.input_btn:checked{
+input[type="submit"]:checked{
   text-align:center;
   background: #FE725C;/* マウス選択時の背景色を指定する */
 color: #ffffff; /* マウス選択時のフォント色を指定する */
