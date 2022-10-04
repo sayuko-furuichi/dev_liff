@@ -31,9 +31,9 @@ function initializeLiff(myLiffId) {
 
   liff.getProfile().then(function (profile) {
 
-	if(document.getElementById('userIdProps')){
+
 		document.getElementById('userIdProps').value = profile.userId;
-	}
+	
 
 
 }).catch(function (error) {
