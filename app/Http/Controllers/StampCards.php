@@ -148,7 +148,7 @@ class StampCards extends Controller
       'uid'=> $nwCard->lineuser_id,
       'points'=>$nwCard->points,
       'getPoints'=>$request->points,
-      'card_no'=>$nwCard->card_no,
+      'card_no'=>$nwCard->id,
       'expiry' =>$nwCard->expiry,
       'store_id'=>$nwCard->store_id,
       'max_points'=>$nwCard->max_points,
