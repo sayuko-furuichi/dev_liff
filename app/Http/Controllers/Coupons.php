@@ -32,6 +32,7 @@ foreach ($request->cps as $cp) {
         if($useds->isEmpty()){
             $cps[$i] =$cp;
             $i++;
+            $useds=collect([]);
 
         }
         
