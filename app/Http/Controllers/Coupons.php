@@ -25,9 +25,10 @@ foreach ($request->cps as $cp) {
     if ( $request->points >= $cp['term_of_use_point']) {
         //使用されていないか
       $usedC= $usedC->where('coupon_id', $cp['id']);
-      dd($usedC);
-        if($usedC==null){
+
+        if(isEmpty($usedC)){
             $cps += $cp;
+
         }
         
     }
