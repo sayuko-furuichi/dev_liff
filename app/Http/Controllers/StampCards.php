@@ -7,13 +7,13 @@ use Illuminate\Http\Request;
 use App\Models\StampCard;
 use App\Models\UsedCoupon;
 use App\Models\CouponMst;
+
 class StampCards extends Controller
 {
     public function login(Request $request)
     {
-      //アプリ立ち上げ時、userIdの取得のためにリダイレクトさせる
+        //アプリ立ち上げ時、userIdの取得のためにリダイレクトさせる
         return view('stampCards.login', ['storeId'=>$request->store]);
-
     }
 
     /**
@@ -26,25 +26,24 @@ class StampCards extends Controller
      */
     public function index(Request $request)
     {
+        //発行された特典クーポンがあるかどうか確認
+        $date =date('Y-m-d H:i:s');
+        //   $cp =CouponMst::whereDate('exiry','>',$date)->get();
+        //  $cp= $cp->whereIn('store_id',$request->store)->sortBy('term_of_use_point');
 
-      //発行された特典クーポンがあるかどうか確認
-      $date =date('Y-m-d H:i:s');
-    //   $cp =CouponMst::whereDate('exiry','>',$date)->get();
-    //  $cp= $cp->whereIn('store_id',$request->store)->sortBy('term_of_use_point');
+        $cp =CouponMst::where('store_id', $request->store)->get();
 
-    $cp =CouponMst::where('store_id',$request->store)->get();
-     
-    $cp= $cp->where('exiry','>',$date)->sortBy('term_of_use_point');
+        $cp= $cp->where('exiry', '>', $date)->sortBy('term_of_use_point');
 
-  //couponが無い場合の処理
+        //couponが無い場合の処理
 
 
-      //UserIdとstore_idをrequestに保持している状態
+        //UserIdとstore_idをrequestに保持している状態
         //1：カードの持ち主を特定する
         $card =StampCard::where('lineuser_id', $request->userId)->get();
-    $card=  $card->where('store_id', $request->store)->sortByDesc('id');
-        
-      
+        $card= $card->where('store_id', $request->store)->sortByDesc('id');
+
+
 
     //      2：保持していなければ作成する
         if (isset($card[0])) {
@@ -53,7 +52,7 @@ class StampCards extends Controller
 
             // }
 
-              //カードがある場合、使用できるクーポンも取得する
+            //カードがある場合、使用できるクーポンも取得する
             //  $coupon = CouponMst::where('store_id',$card[0]->store_id)->where('term_of_use_points',$points);
 
 
@@ -79,7 +78,7 @@ class StampCards extends Controller
 
             //有効期限は発行から1年後
             $nwCard->expiry=date("Y-m-d H:i:s", strtotime("+1 year"));
-            
+
             $nwCard->points=0;
             $nwCard->now_points=0;
 
@@ -107,76 +106,71 @@ class StampCards extends Controller
     public function add(Request $request)
     {
         //pointsがクエリで投げられる時　クーポン投げられる想定はする？
-      $toCard =StampCard::where('id',$request->card_no)->first();
+        $toCard =StampCard::where('id', $request->card_no)->first();
 
-      //card_noから検索して、ポイントを加算代入する
-// if (isset($toCard)) {
-    $toCard->now_points += (int)$request->points;
-    $toCard->points += (int)$request->points;
+        //card_noから検索して、ポイントを加算代入する
+        // if (isset($toCard)) {
+        $toCard->now_points += (int)$request->points;
+        $toCard->points += (int)$request->points;
 
-    //ポイント数がmaxを超えたとき新カード発行
-  if($toCard->now_points >= $toCard->max_points){
-    $nwCard = new StampCard();
-    $nwCard->lineuser_id=$toCard->lineuser_id;
-    $nwCard->store_id=$request->store;
-    $nwCard->number=$toCard->number +1;
-    $nwCard->img=secure_asset('img/1.png');
-    
-    // 1 は稼働中
-    $nwCard->state=1;
+        //ポイント数がmaxを超えたとき新カード発行
+        if ($toCard->now_points >= $toCard->max_points) {
+            $nwCard = new StampCard();
+            $nwCard->lineuser_id=$toCard->lineuser_id;
+            $nwCard->store_id=$request->store;
+            $nwCard->number=$toCard->number +1;
+            $nwCard->img=secure_asset('img/1.png');
 
-    //古いカードをnegativeにする
-    $toCard->state=0;
+            // 1 は稼働中
+            $nwCard->state=1;
+
+            //古いカードをnegativeにする
+            $toCard->state=0;
 
 
-    //有効期限は発行から1年後
-    $nwCard->expiry=date("Y-m-d H:i:s", strtotime("+1 year"));
-    
-    $nwCard->points += $toCard->points;
-  //ポイントが増えすぎた分は繰り越し
-    $nwCard->now_points= (($toCard->now_points) - ($toCard->max_points));
-  $toCard->now_points=$toCard->max_points;
-    //TODO:とりあえず8ポイントがmax
-    $nwCard->max_points=8;
+            //有効期限は発行から1年後
+            $nwCard->expiry=date("Y-m-d H:i:s", strtotime("+1 year"));
 
-    $nwCard ->save();
-    $toCard->save();
+            $nwCard->points += $toCard->points;
+            //ポイントが増えすぎた分は繰り越し
+            $nwCard->now_points= (($toCard->now_points) - ($toCard->max_points));
+            $toCard->now_points=$toCard->max_points;
+            //TODO:とりあえず8ポイントがmax
+            $nwCard->max_points=8;
 
-//表示の仕方が謎だが、とりあえず作成はしておく
+            $nwCard ->save();
+            $toCard->save();
 
- return view('stampCards.stampCard', [
-      'uid'=> $nwCard->lineuser_id,
-      'points'=>$nwCard->points,
-      'getPoints'=>$request->points,
-      'card_no'=>$nwCard->id,
-      'expiry' =>$nwCard->expiry,
-      'store_id'=>$nwCard->store_id,
-      'max_points'=>$nwCard->max_points,
-      'now_points'=>$nwCard->now_points,
-      'number'=>$nwCard->number,
-      'new'=>'新しいカードを作成しました'
-    ]);
+            //表示の仕方が謎だが、とりあえず作成はしておく
 
-  }else{
-    $toCard->save();
-    return view('stampCards.stampCard', [
-      'uid'=> $toCard->lineuser_id,
-      'points'=>$toCard->points,
-      'getPoints'=>$request->points,
-      'card_no'=>$request->card_no,
-      'expiry' =>$toCard->expiry,
-      'store_id'=>$toCard->store_id,
-      'max_points'=>$toCard->max_points,
-      'number'=>$toCard->number
-    ]);
-}
-
+            return view('stampCards.stampCard', [
+                 'uid'=> $nwCard->lineuser_id,
+                 'points'=>$nwCard->points,
+                 'getPoints'=>$request->points,
+                 'card_no'=>$nwCard->id,
+                 'expiry' =>$nwCard->expiry,
+                 'store_id'=>$nwCard->store_id,
+                 'max_points'=>$nwCard->max_points,
+                 'now_points'=>$nwCard->now_points,
+                 'number'=>$nwCard->number,
+                 'new'=>'新しいカードを作成しました'
+               ]);
+        } else {
+            $toCard->save();
+            return view('stampCards.stampCard', [
+              'uid'=> $toCard->lineuser_id,
+              'points'=>$toCard->points,
+              'getPoints'=>$request->points,
+              'card_no'=>$request->card_no,
+              'expiry' =>$toCard->expiry,
+              'store_id'=>$toCard->store_id,
+              'max_points'=>$toCard->max_points,
+              'number'=>$toCard->number
+            ]);
+        }
     }
 
     public function create($param)
     {
-
-
-
     }
 }
