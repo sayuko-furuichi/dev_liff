@@ -143,12 +143,12 @@ class StampCards extends Controller
 //表示の仕方が謎だが、とりあえず作成はしておく
 
  return view('stampCards.stampCard', [
-      'uid'=> $toCard->lineuser_id,
-      'points'=>$toCard->points,
+      'uid'=> $nwCard->lineuser_id,
+      'points'=>$nwCard->points,
       'getPoints'=>$request->points,
-      'card_no'=>$request->card_no,
-      'expiry' =>$toCard->expiry,
-      'store_id'=>$toCard->store_id,
+      'card_no'=>$nwCard->card_no,
+      'expiry' =>$nwCard->expiry,
+      'store_id'=>$nwCard->store_id,
       'max_points'=>$nwCard->max_points,
       'now_points'=>$nwCard->now_points,
       'number'=>$nwCard->number,
