@@ -134,7 +134,7 @@ class StampCards extends Controller
     
     $nwCard->points += $toCard->points;
    $bug= (($toCard->now_points) - ($toCard->max_points));
-    dd($bug);
+    dd($toCard->now_points);
   //ポイントが増えすぎた分は繰り越し
     $nwCard->now_points= (($toCard->now_points) - ($toCard->max_points));
   $toCard->now_points=$toCard->max_points;
