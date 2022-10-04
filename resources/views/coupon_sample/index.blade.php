@@ -17,13 +17,14 @@
             <a href="{{ route('stamps.login') }}">ショップカードに戻る</a>
             <input type="hidden" id="user" name="uid">
         @else
-            <form action="{{ route('coupon.view') }}" method="GET">
 
+       
                 <h2 class="bene_title">あなたが利用できるクーポン</h2>
 
                 @if (isset($cps[0]))
 
                     @foreach ($cps as $cp)
+                    <form action="{{ route('coupon.view') }}" method="GET">
                         <div class="benefits">
                             <input type="radio" name="bene" class="radio_btn" id="beneInput.{{ $cp['id'] }}">
                             <label for="beneInput.{{ $cp['id'] }}">
@@ -41,7 +42,12 @@
                             </label>
                         </div>
                     @endforeach
+                    <input type="hidden" id="user" name="uid">
+                    <input type="hidden" name="store" value="{{ $store }}">
+                    <input type="submit" value="（仮）">
+                </form>
                 @else
+                <form action="{{ route('coupon.view') }}" method="GET">
                     <div class="benefits">
                         <div class="point_mark">{{ $cps['term_of_use_point'] }}</div>
                         <input type="hidden" name="couponId" value="{{ $cps['id'] }}">
@@ -56,11 +62,10 @@
                     </div>
                 @endif
 
-
                 <input type="hidden" id="user" name="uid">
                 <input type="hidden" name="store" value="{{ $store }}">
                 <input type="submit" value="（仮）">
-            </form>
+                </form>
         @endif
 
     </div>
