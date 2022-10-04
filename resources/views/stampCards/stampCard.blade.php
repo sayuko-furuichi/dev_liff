@@ -67,54 +67,50 @@
                 alt="qrイメージ" class="qr_img"><br>GET！</button>
     </div>
 
-        <div class="read_text">
+    <div class="read_text">
 
-            <p class="get_points"> ポイント総数：{{ $points }}<span id="points" class="get_points"></span></p>
-            @if (isset($getPoints))
-                <p class="get_points">{{ $getPoints }} ポイントゲットしました！！</p>
-            @endif
-            {{--  <input type="submit" value="更新">  --}}
-        </div>
-        {{--  <p>{{$store}}</p>
+        <p class="get_points"> ポイント総数：{{ $points }}<span id="points" class="get_points"></span></p>
+        @if (isset($getPoints))
+            <p class="get_points">{{ $getPoints }} ポイントゲットしました！！</p>
+        @endif
+        {{--  <input type="submit" value="更新">  --}}
+    </div>
+    {{--  <p>{{$store}}</p>
         <p>{{$uid}}</p>  --}}
-      
+
     <hr>
     <form action="{{ route('coupon.index') }}" method="GET">
         <input type="submit" value="獲得した特典チケットを見る">
-    {{--  表示だけにして、別ページでクーポン表示  --}}
-    <h2 class="bene_title">ポイントで獲得できる特典</h2>
+        {{--  表示だけにして、別ページでクーポン表示  --}}
+        <h2 class="bene_title">ポイントで獲得できる特典</h2>
 
         @foreach ($cps as $cp)
-        
             <div class="benefits">
-             
-        <input type="hidden" name="cps[]" value="{{ $cp }}">
-        {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
-                <div class="point_mark">{{$cp->term_of_use_point}}</div>
-                <img src="{{ secure_asset('img/coupons/'. $cp->img) }}" alt="img" class="bene_img">
-               
-                <h4>{{$cp->name}}</h4>
-                <p>{{$cp->detail}}</p>
-                {{--  <input type="hidden" name="cp['id']" value="{{$cp->id}}">
-                <input type="hidden" name="cp['term_of_use_point']" value="{{$cp->term_of_use_point}}">  --}}
+
+                <input type="hidden" name="cps[]" value="{{ $cp }}">
+                <div class="point_mark">{{ $cp->term_of_use_point }}</div>
+                <img src="{{ secure_asset('img/coupons/' . $cp->img) }}" alt="img" class="bene_img">
+
+                <h4>{{ $cp->name }}</h4>
+                <p>{{ $cp->detail }}</p>
             </div>
         @endforeach
-<hr>
-<div class="info">
-<h2 >ご利用案内</h2>
-<pre>
+        <hr>
+        <div class="info">
+            <h2>ご利用案内</h2>
+            <pre>
     - 来店1回ごとに1ポイント付与されます。
     - 1日に複数回来店されてもポイントは1ポイントのみ付与されますので、ご了承ください。
     - 不正利用が発覚した場合は、これまでに獲得したポイントなどがすべて無効になる場合があります。
     - text　TEXT　テキスト　てきすと
     - text　TEXT　テキスト　てきすと
 </pre>
-</div>
+        </div>
 
 
         <input type="hidden" id="user_id" name="uid">
-        <input type="hidden" name="store" value="{{$store_id}}">
-        <input type="hidden" name="points" value="{{$points}}">
+        <input type="hidden" name="store" value="{{ $store_id }}">
+        <input type="hidden" name="points" value="{{ $points }}">
     </form>
 
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
