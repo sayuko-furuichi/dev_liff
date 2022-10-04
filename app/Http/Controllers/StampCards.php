@@ -133,7 +133,7 @@ class StampCards extends Controller
   
   //ポイントが増えすぎた分は繰り越し
     $nwCard->now_points= $toCard->now_points - $toCard->max_points;
-  
+  $toCard->now_points=$toCard->max_points;
     //TODO:とりあえず8ポイントがmax
     $nwCard->max_points=8;
 
@@ -150,6 +150,8 @@ class StampCards extends Controller
       'expiry' =>$toCard->expiry,
       'store_id'=>$toCard->store_id,
       'max_points'=>$nwCard->max_points,
+      'now_points'=>$nwCard->now_points,
+      'number'=>$nwCard->number,
       'new'=>'新しいカードを作成しました'
     ]);
 
