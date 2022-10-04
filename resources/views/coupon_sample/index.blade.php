@@ -25,7 +25,7 @@
                     @foreach ($cps as $cp)
                     <input type="radio"  name="bene" class="radio_btn" id="beneInput">
                         <div class="benefits">
-                            <label for="beneInput">
+                            <label for="beneInput.{{$cp['id']}}">
                             <div class="point_mark">{{ $cp['term_of_use_point'] }}</div>
                             <input type="hidden" name="couponId" value="{{ $cp['id'] }}">
                             <input type="hidden" name="img" value="{{ $cp['img'] }}">
