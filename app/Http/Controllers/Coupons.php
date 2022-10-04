@@ -18,13 +18,13 @@ $cps=array();
        $usedC= $usedC->whereIn('lineuser_id', $request->uid);
 
 
-
+       $i=0;
 foreach ($request->cps as $cp) {
    $cp= json_decode($cp,true);
    
   //  $used=1;
 
-  $i=0;
+ 
     //ポイントを満たしているか
     if ( $request->points >= $cp['term_of_use_point']) {
         //使用されていないか
