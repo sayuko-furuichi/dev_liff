@@ -17,9 +17,9 @@ $cps=array();
         $usedC =UsedCoupon::where('store_id', $request->store)->get();
        $usedC= $usedC->whereIn('lineuser_id', $request->uid);
 
-$i=0;
-$n=0;
-foreach ($request->cps[$i] as $cp) {
+
+
+foreach ($request->cps as $cp) {
    $cp= json_decode($cp,true);
    
   //  $used=1;
@@ -32,14 +32,14 @@ foreach ($request->cps[$i] as $cp) {
       $useds= $usedC->where('coupon_id', $cp['id']);
 
         if($useds->isEmpty()){
-            $cps[$n] =$cp;
+            $cps[$i] =$cp;
             $n++;
             $useds=collect([]);
 
         }
         
     }
-$i++;
+
 }
 
 
