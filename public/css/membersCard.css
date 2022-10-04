@@ -55,8 +55,8 @@ span {
 .flip-box,
 .front,
 .back {
-  width: 370px;
-  height: 240px;
+  width: 380px;
+  height: 250px;
   border-radius: 10%;
 }
 
@@ -112,10 +112,7 @@ span {
   color: #BDAD5E;
 }
 
-.f_subline {
-  padding-top: 100px;
-  color: #B1D4E8;
-}
+
 
 .f_headline {
   /* line-height: 10px; */
