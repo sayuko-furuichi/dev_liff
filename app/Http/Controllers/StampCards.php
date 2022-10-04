@@ -143,6 +143,7 @@ class StampCards extends Controller
       'card_no'=>$request->card_no,
       'expiry' =>$toCard->expiry,
       'store_id'=>$toCard->store_id,
+      'max_points'=>$nwCard->max_points,
       'new'=>'新しいカードを作成しました'
     ]);
 
@@ -154,7 +155,8 @@ class StampCards extends Controller
       'getPoints'=>$request->points,
       'card_no'=>$request->card_no,
       'expiry' =>$toCard->expiry,
-      'store_id'=>$toCard->store_id
+      'store_id'=>$toCard->store_id,
+      'max_points'=>$nwCard->max_points,
     ]);
 // }else{
 //  // 
