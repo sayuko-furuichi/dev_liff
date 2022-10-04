@@ -22,7 +22,7 @@ window.onload = function () {
         //     document.getElementById('store').textContent=prof.userId;
             
             liff.getProfile().then(function(prof){
-              
+              document.getElementById('user').textContent=prof.userId;
             //location.hrefにuserIdのクエリをつける
             // LIFFURLを使用すると、何度もredirectするので注意
             window.location.href ='https://dev-liff.herokuapp.com/public/stamps/index?userId=' + prof.userId + '&store='+ document.getElementById('store').value;
