@@ -16,6 +16,11 @@ class Coupons extends Controller
         // ->where('exiry','>',date('Y-m-d H:i:s'))->get();
 $cps=array();
         //前ページで送信されたものだけ表示
+        $usedC = new UsedCoupon;
+        $usedC =UsedCoupon::where('store_id', $request->store)
+        ->where('lineuser_id', $request->uid)
+        ->get();
+
 foreach ($request->cps as $cp) {
    $cp= json_decode($cp,true);
  //    dd($cp);
@@ -23,9 +28,7 @@ foreach ($request->cps as $cp) {
     //ポイントを満たしているか
     if ( $request->points >= $cp['term_of_use_point']) {
         //使用されていないか
-        $used =UsedCoupon::where('coupon_id', $cp['id'])
-        ->where('store_id', $request->store)
-        ->where('lineuser_id', $request->uid)
+      $used= $usedC::where('coupon_id', $cp['id'])
         ->first();
 
         if($used==null){
