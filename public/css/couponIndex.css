@@ -7,6 +7,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
 
+/* radio button */
+
+.radio_btn{
+  display:none
+}
+
 
 /* benefits CSS */
 
