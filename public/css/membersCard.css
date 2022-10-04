@@ -335,3 +335,8 @@ color: #ffffff; /* マウス選択時のフォント色を指定する */
 width: 80%;
 
 }
+
+.i_btn{
+
+  align-items: center;
+}
