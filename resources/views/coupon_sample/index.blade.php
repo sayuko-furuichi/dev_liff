@@ -27,6 +27,7 @@
                     <form action="{{ route('coupon.view') }}" method="GET">
                         <div class="benefits">
                             <input type="radio" name="bene" class="radio_btn" id="beneInput.{{ $cp['id'] }}">
+                            <button type="submit">
                             <label for="beneInput.{{ $cp['id'] }}">
                                 <div class="point_mark">{{ $cp['term_of_use_point'] }}</div>
                                 <input type="hidden" name="couponId" value="{{ $cp['id'] }}">
@@ -40,11 +41,12 @@
                                 <h4>{{ $cp['name'] }}</h4>
                                 <p>{{ $cp['detail'] }}</p>
                             </label>
+                        </button>
                         </div>
                     @endforeach
                     <input type="hidden" id="user" name="uid">
                     <input type="hidden" name="store" value="{{ $store }}">
-                    <input type="submit" value="（仮）">
+
                 </form>
                 @else
                 <form action="{{ route('coupon.view') }}" method="GET">
