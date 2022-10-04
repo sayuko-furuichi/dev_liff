@@ -23,7 +23,7 @@
                 @if (isset($cps[0]))
 
                     @foreach ($cps as $cp)
-                    <button type="radio" name="bene"></button>
+                    <input type="radio" name="bene" class="radio_btn">
                         <div class="benefits">
                             <div class="point_mark">{{ $cp['term_of_use_point'] }}</div>
                             <input type="hidden" name="couponId" value="{{ $cp['id'] }}">
