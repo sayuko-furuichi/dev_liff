@@ -111,7 +111,7 @@ class StampCards extends Controller
     //ポイント数がmaxを超えたとき新カード発行
   if($toCard->points >= $toCard->max_points){
     $nwCard = new StampCard();
-    $nwCard->lineuser_id=$request->userId;
+    $nwCard->lineuser_id=$toCard->lineuser_id;
     $nwCard->store_id=$request->store;
     $nwCard->number=$toCard->number +1;
     $nwCard->img=secure_asset('img/1.png');
