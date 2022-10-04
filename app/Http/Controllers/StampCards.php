@@ -64,6 +64,7 @@ class StampCards extends Controller
                 'points'=>$card[0]->points,
                 'now_points'=>$card[0]->now_points,
                 'max_points'=>$card[0]->max_points,
+                'number'=>$card[0]->number,
                 'cps'=>$cp
             ]);
         } else {
@@ -92,6 +93,7 @@ class StampCards extends Controller
              'now_points'=>$nwCard->now_points,
              'store_id'=>$nwCard->store_id,
              'max_points'=>$nwCard->max_points,
+             'number'=>$nwCard->number,
              'uid' => $nwCard,
              'cps'=>$cp
 
@@ -155,8 +157,8 @@ class StampCards extends Controller
       'new'=>'新しいカードを作成しました'
     ]);
 
-  }
-  $toCard->save();
+  }else{
+    $toCard->save();
     return view('stampCards.stampCard', [
       'uid'=> $toCard->lineuser_id,
       'points'=>$toCard->points,
@@ -164,11 +166,11 @@ class StampCards extends Controller
       'card_no'=>$request->card_no,
       'expiry' =>$toCard->expiry,
       'store_id'=>$toCard->store_id,
-      'max_points'=>$nwCard->max_points,
+      'max_points'=>$toCard->max_points,
+      'number'=>$toCard->number
     ]);
-// }else{
-//  // 
-// }
+}
+
     }
 
     public function create($param)
