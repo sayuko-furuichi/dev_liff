@@ -320,6 +320,8 @@ width: 15%;
 .input_btn{
   background-color: #FE725C;
   color: #FFF;
+  border-color: #FE725C;
+  border-radius: 80%;
 
 }
 
