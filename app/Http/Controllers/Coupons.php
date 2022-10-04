@@ -26,7 +26,7 @@ foreach ($request->cps as $cp) {
     //ポイントを満たしているか
     if ( $request->points >= $cp['term_of_use_point']) {
         //使用されていないか
-        $usedC=collection([]);
+        $usedC=[];
       $usedC= $usedC->where('coupon_id', $cp['id']);
 
         if($usedC->isEmpty()){
