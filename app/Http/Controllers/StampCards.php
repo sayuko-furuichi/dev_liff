@@ -94,7 +94,7 @@ class StampCards extends Controller
              'store_id'=>$nwCard->store_id,
              'max_points'=>$nwCard->max_points,
              'number'=>$nwCard->number,
-             'uid' => $nwCard,
+             'uid' => $nwCard->lineuser_id,
              'cps'=>$cp
 
      ]);
