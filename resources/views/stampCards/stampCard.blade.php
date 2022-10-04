@@ -89,18 +89,34 @@
     </div>
         {{--  表示だけにして、別ページでクーポン表示  --}}
         <h2 class="bene_title">ポイントで獲得できる特典</h2>
+    @if (isset($cps))
+    @foreach ($cps as $cp)
+    <div class="benefits">
 
-        @foreach ($cps as $cp)
-            <div class="benefits">
+        <input type="hidden" name="cps[]" value="{{ $cp }}">
+        <div class="point_mark">{{ $cp->term_of_use_point }}</div>
+        <img src="{{ secure_asset('img/coupons/' . $cp->img) }}" alt="img" class="bene_img">
 
-                <input type="hidden" name="cps[]" value="{{ $cp }}">
-                <div class="point_mark">{{ $cp->term_of_use_point }}</div>
-                <img src="{{ secure_asset('img/coupons/' . $cp->img) }}" alt="img" class="bene_img">
+        <h4>{{ $cp->name }}</h4>
+        <p>{{ $cp->detail }}</p>
+    </div>
+@endforeach
 
-                <h4>{{ $cp->name }}</h4>
-                <p>{{ $cp->detail }}</p>
-            </div>
-        @endforeach
+    @elseif(isset($cp))
+    <div class="benefits">
+
+        <input type="hidden" name="cps[]" value="{{ $cp }}">
+        <div class="point_mark">{{ $cp->term_of_use_point }}</div>
+        <img src="{{ secure_asset('img/coupons/' . $cp->img) }}" alt="img" class="bene_img">
+
+        <h4>{{ $cp->name }}</h4>
+        <p>{{ $cp->detail }}</p>
+    </div>
+    @else
+    <p>--獲得できる特典がありません--</p>
+
+    @endif
+
         <hr>
         <div class="info">
             <h2>ご利用案内</h2>
