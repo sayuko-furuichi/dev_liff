@@ -34,7 +34,7 @@ class StampCards extends Controller
 
     $cp =CouponMst::where('store_id',$request->store)->get();
      
-    $cp= $cp->whereDate('exiry','>',$date)->sortBy('term_of_use_point');
+    $cp= $cp->whereIn('exiry','>',$date)->sortBy('term_of_use_point');
 
   //couponが無い場合の処理
 
