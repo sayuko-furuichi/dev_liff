@@ -17,12 +17,14 @@ $cps=array();
         $usedC =UsedCoupon::where('store_id', $request->store)->get();
        $usedC= $usedC->whereIn('lineuser_id', $request->uid);
 
-foreach ($request->cps as $cp) {
+$i=0;
+$n=0;
+foreach ($request->cps[$i] as $cp) {
    $cp= json_decode($cp,true);
    
   //  $used=1;
 
-  $i=0;
+  
     //ポイントを満たしているか
     if ( $request->points >= $cp['term_of_use_point']) {
         //使用されていないか
@@ -30,14 +32,14 @@ foreach ($request->cps as $cp) {
       $useds= $usedC->where('coupon_id', $cp['id']);
 
         if($useds->isEmpty()){
-            $cps[$i] =$cp;
-            $i++;
+            $cps[$n] =$cp;
+            $n++;
             $useds=collect([]);
 
         }
         
     }
-
+$i++;
 }
 
 
