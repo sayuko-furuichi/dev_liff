@@ -27,8 +27,8 @@ foreach ($request->cps as $cp) {
       $usedC= $usedC->where('coupon_id', $cp['id']);
 
         if($usedC->isEmpty()){
-            $cps = $cps+ $cp;
-            next;
+            $cps = array_push($cps, $cp);
+
         }
         
     }
