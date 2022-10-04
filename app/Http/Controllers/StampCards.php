@@ -106,6 +106,15 @@ class StampCards extends Controller
     }
     public function add(Request $request)
     {
+
+       //TODO:indexにredirectさせる？　発行された特典クーポンがあるかどうか確認
+       $date =date('Y-m-d H:i:s');
+       //   $cp =CouponMst::whereDate('exiry','>',$date)->get();
+       //  $cp= $cp->whereIn('store_id',$request->store)->sortBy('term_of_use_point');
+
+       $cp =CouponMst::where('store_id', $request->store)->get();
+
+       $cp= $cp->where('exiry', '>', $date)->sortBy('term_of_use_point');
         //pointsがクエリで投げられる時　クーポン投げられる想定はする？
         $toCard =StampCard::where('id', $request->card_no)->first();
 
@@ -154,6 +163,7 @@ class StampCards extends Controller
                  'max_points'=>$nwCard->max_points,
                  'now_points'=>$nwCard->now_points,
                  'number'=>$nwCard->number,
+                 'cps'=>$cp,
                  'new'=>'新しいカードを作成しました'
                ]);
         } else {
@@ -167,7 +177,8 @@ class StampCards extends Controller
               'store_id'=>$toCard->store_id,
               'max_points'=>$toCard->max_points,
               'now_points'=>$toCard->now_points,
-              'number'=>$toCard->number
+              'number'=>$toCard->number,
+              'cps'=>$cp
             ]);
         }
     }
