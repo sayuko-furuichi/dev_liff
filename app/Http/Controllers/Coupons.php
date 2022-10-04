@@ -43,7 +43,7 @@ foreach ($request->cps as $cp) {
 
 
 if($cps == null){
-    return view('coupon_sample.index',['notFound'=>'not_found']);
+    return view('coupon_sample.index',['notFound'=>'not_found','store'=>$request->store]);
 }else{
     return view('coupon_sample.index',['cps'=>$cps,'store'=>$request->store]);
 }
