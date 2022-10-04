@@ -74,6 +74,9 @@
         @if (isset($getPoints))
             <p class="get_points">{{ $getPoints }} ポイントゲットしました！！</p>
         @endif
+        @if (isset($new))
+            <p>{{$new}} !!</p>
+        @endif
         {{--  <input type="submit" value="更新">  --}}
     </div>
     {{--  <p>{{$store}}</p>

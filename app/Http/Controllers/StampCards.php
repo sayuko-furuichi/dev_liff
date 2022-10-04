@@ -106,8 +106,48 @@ class StampCards extends Controller
       //card_noから検索して、ポイントを加算代入する
 // if (isset($toCard)) {
     $toCard->points += $request->points;
+    
+
+    //ポイント数がmaxを超えたとき新カード発行
+  if($toCard->points >= $toCard->max_points){
+    $nwCard = new StampCard();
+    $nwCard->lineuser_id=$request->userId;
+    $nwCard->store_id=$request->store;
+    $nwCard->number=$toCard->number +1;
+    $nwCard->img=secure_asset('img/1.png');
+    
+    // 1 は稼働中
+    $nwCard->state=1;
+
+    //古いカードをnegativeにする
+    $toCard->state=0;
+
+
+    //有効期限は発行から1年後
+    $nwCard->expiry=date("Y-m-d H:i:s", strtotime("+1 year"));
+    
+    $nwCard->points += $toCard->points;
+
+    //TODO:とりあえず8ポイントがmax
+    $nwCard->max_points=8;
+
+    $nwCard ->save();
     $toCard->save();
 
+//表示の仕方が謎だが、とりあえず作成はしておく
+
+ return view('stampCards.stampCard', [
+      'uid'=> $toCard->lineuser_id,
+      'points'=>$toCard->points,
+      'getPoints'=>$request->points,
+      'card_no'=>$request->card_no,
+      'expiry' =>$toCard->expiry,
+      'store_id'=>$toCard->store_id,
+      'new'=>'新しいカードを作成しました'
+    ]);
+
+  }
+  $toCard->save();
     return view('stampCards.stampCard', [
       'uid'=> $toCard->lineuser_id,
       'points'=>$toCard->points,
@@ -123,5 +163,8 @@ class StampCards extends Controller
 
     public function create($param)
     {
+
+
+
     }
 }
