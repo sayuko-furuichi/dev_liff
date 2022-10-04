@@ -319,7 +319,7 @@ width: 15%;
   color: #FFF;
   border: none;
   border-radius: 20%;
-  margin:auto;
+  margin:0 auto;
  width: 90%;
  height: 50px;
 }
@@ -331,6 +331,7 @@ input[type="submit"]:checked{
 color: #ffffff; /* マウス選択時のフォント色を指定する */
 width: 80%;
 
+
 }
 
 .i_btn{
@@ -338,4 +339,5 @@ width: 80%;
   align-items: center;
   margin: auto;
   display: block;
+  margin:0 auto;
 }
