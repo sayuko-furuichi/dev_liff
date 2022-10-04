@@ -14,8 +14,11 @@
 
         @if (isset($notFound))
             <p>使用できるクーポンがありません</p>
-            <a href="{{ route('stamps.login') }}">ショップカードに戻る</a>
+            <form method="GET" action="{{route('stamps.login')}}">
+                <input type="hidden" value="{{$store}}" name="store">
+                <input type="submit" value="ショップカードへ戻る"> 
             <input type="hidden" id="user" name="uid">
+            </form>
         @else
 
        
