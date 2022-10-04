@@ -12,13 +12,15 @@ class Coupons extends Controller
     //
     function index(Request $request){
 
-$cps=array();
         //前ページで送信されたものだけ表示
         $usedC =UsedCoupon::where('store_id', $request->store)->get();
        $usedC= $usedC->whereIn('lineuser_id', $request->uid);
 
-
+//foreachで使用する
+       $cps=array();
        $i=0;
+       
+       //クーポンを使えるか確認
 foreach ($request->cps as $cp) {
    $cp= json_decode($cp,true);
 
