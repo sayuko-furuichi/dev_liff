@@ -15,7 +15,7 @@ class Coupons extends Controller
 $cps=array();
         //前ページで送信されたものだけ表示
         $usedC =UsedCoupon::where('store_id', $request->store)->get();
-       $usedC= $usedC->where('lineuser_id', $request->uid);
+       $usedC= $usedC->where('lineuser_id', $request->uid)->get();
        dd($usedC);
 foreach ($request->cps as $cp) {
    $cp= json_decode($cp,true);
