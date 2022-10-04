@@ -68,8 +68,9 @@
     </div>
 
     <div class="read_text">
-
+        
         <p class="get_points"> ポイント総数：{{ $points }}<span id="points" class="get_points"></span></p>
+        <p class="get_points"> 現在のカード : / {{$max_points}}</p>
         @if (isset($getPoints))
             <p class="get_points">{{ $getPoints }} ポイントゲットしました！！</p>
         @endif
