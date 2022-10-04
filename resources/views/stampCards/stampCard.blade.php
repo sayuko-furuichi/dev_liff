@@ -91,7 +91,7 @@
         <input type="hidden" name="cps[]" value="{{ $cp }}">
         {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
                 <div class="point_mark">{{$cp->term_of_use_point}}</div>
-                <img src="{{ secure_asset($cp->img) }}" alt="img" class="bene_img">
+                <img src="{{ secure_asset('img/coupons/'. $cp->img) }}" alt="img" class="bene_img">
                
                 <h4>{{$cp->name}}</h4>
                 <p>{{$cp->detail}}</p>

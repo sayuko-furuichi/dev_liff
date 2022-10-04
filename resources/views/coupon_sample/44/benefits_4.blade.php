@@ -14,7 +14,7 @@
             @csrf
             <input type="hidden" name="user" value="{{$request['uid']}}">
             <input type="hidden" name="store" value="{{$request['store']}}">
-       <input type="hidden" name="couponId" value="{{$request['couponId']}}"> <img src="{{secure_asset($request['img'])}}" alt="クーポン" class="coupon_img">
+       <input type="hidden" name="couponId" value="{{$request['couponId']}}"> <img src="{{secure_asset('img/coupons/'.$request['img'])}}" alt="クーポン" class="coupon_img">
        <p>{{$request['name']}}</p>
        <p><span>有効期限：</span>{{$request['exiry']}}</p>
        <p><span>使用方法：</span>{{$request['detail']}}</p>
