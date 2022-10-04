@@ -11,15 +11,11 @@ class Coupons extends Controller
 {
     //
     function index(Request $request){
-        //まず全部表示
-        // $cps =CouponMst::where('store_id',$request->store)
-        // ->where('exiry','>',date('Y-m-d H:i:s'))->get();
+
 $cps=array();
         //前ページで送信されたものだけ表示
-
-        $usedC =UsedCoupon::where('store_id', $request->store)
-        ->where('lineuser_id', $request->uid)
-        ->get();
+        $usedC =UsedCoupon::where('store_id', $request->store)->get();
+       $usedC= $usedC->where('lineuser_id', $request->uid);
 
 foreach ($request->cps as $cp) {
    $cp= json_decode($cp,true);
