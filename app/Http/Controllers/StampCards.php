@@ -110,7 +110,7 @@ class StampCards extends Controller
 
       //card_noから検索して、ポイントを加算代入する
 // if (isset($toCard)) {
-    $toCard->now_points += $request->points;
+    $toCard->now_points += (int)$request->points;
     
 
     //ポイント数がmaxを超えたとき新カード発行
