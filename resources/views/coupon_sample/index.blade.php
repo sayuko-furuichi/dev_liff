@@ -17,28 +17,28 @@
             <a href="{{ route('stamps.login') }}">ショップカードに戻る</a>
             <input type="hidden" id="user" name="uid">
         @else
-        <form action="{{ route('coupon.view') }}" method="GET">
-    
+            <form action="{{ route('coupon.view') }}" method="GET">
+
                 <h2 class="bene_title">あなたが利用できるクーポン</h2>
 
                 @if (isset($cps[0]))
 
                     @foreach ($cps as $cp)
-
                         <div class="benefits">
-                            <input type="radio"  name="bene" class="radio_btn" id="beneInput.{{$cp['id']}}">
-                            <label for="beneInput.{{$cp['id']}}">
-                            <div class="point_mark">{{ $cp['term_of_use_point'] }}</div>
-                            <input type="hidden" name="couponId" value="{{ $cp['id'] }}">
-                            <input type="hidden" name="img" value="{{ $cp['img'] }}">
-                            <input type="hidden" name="name" value="{{ $cp['name'] }}">
-                            <input type="hidden" name="exiry" value="{{ $cp['exiry'] }}">
-                            <input type="hidden" name="detail" value="{{ $cp['detail'] }}">
-                            {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
-                            <img src="{{ secure_asset('img/coupons/'.$cp['img']) }}" alt="img" class="bene_img">
-                            <h4>{{ $cp['name'] }}</h4>
-                            <p>{{ $cp['detail'] }}</p>
-                        </label>
+                            <input type="radio" name="bene" class="radio_btn" id="beneInput.{{ $cp['id'] }}">
+                            <label for="beneInput.{{ $cp['id'] }}">
+                                <div class="point_mark">{{ $cp['term_of_use_point'] }}</div>
+                                <input type="hidden" name="couponId" value="{{ $cp['id'] }}">
+                                <input type="hidden" name="img" value="{{ $cp['img'] }}">
+                                <input type="hidden" name="name" value="{{ $cp['name'] }}">
+                                <input type="hidden" name="exiry" value="{{ $cp['exiry'] }}">
+                                <input type="hidden" name="detail" value="{{ $cp['detail'] }}">
+                                {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
+                                <img src="{{ secure_asset('img/coupons/' . $cp['img']) }}" alt="img"
+                                    class="bene_img">
+                                <h4>{{ $cp['name'] }}</h4>
+                                <p>{{ $cp['detail'] }}</p>
+                            </label>
                         </div>
                     @endforeach
                 @else
@@ -50,7 +50,7 @@
                         <input type="hidden" name="exiry" value="{{ $cps['exiry'] }}">
                         <input type="hidden" name="detail" value="{{ $cps['detail'] }}">
                         {{--  <input type="submit" value="GET！" class="submit_btn">  --}}
-                        <img src="{{ secure_asset('img/coupons/'.$cps['img']) }}" alt="img" class="bene_img">
+                        <img src="{{ secure_asset('img/coupons/' . $cps['img']) }}" alt="img" class="bene_img">
                         <h4>{{ $cps['name'] }}</h4>
                         <p>{{ $cps['detail'] }}</p>
                     </div>
@@ -62,7 +62,7 @@
                 <input type="submit" value="（仮）">
             </form>
         @endif
-    
+
     </div>
 
 
