@@ -41,7 +41,6 @@ foreach ($request->cps as $cp) {
 
 }
 
-dd($cps);
 
 if($cps == null){
     return view('coupon_sample.index',['notFound'=>'not_found']);
