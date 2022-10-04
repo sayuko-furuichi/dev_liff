@@ -49,6 +49,7 @@
            
                 @else
                 <form action="{{ route('coupon.view') }}" method="GET">
+                    <button type="submit">
                     <div class="benefits">
                         <div class="point_mark">{{ $cps['term_of_use_point'] }}</div>
                         <input type="hidden" name="couponId" value="{{ $cps['id'] }}">
@@ -60,6 +61,7 @@
                         <img src="{{ secure_asset('img/coupons/' . $cps['img']) }}" alt="img" class="bene_img">
                         <h4>{{ $cps['name'] }}</h4>
                         <p>{{ $cps['detail'] }}</p>
+                    </button>
                     </div>
                     <input type="hidden" id="user" name="uid">
                     <input type="hidden" name="store" value="{{ $store }}">
