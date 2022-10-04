@@ -60,12 +60,13 @@
                         <h4>{{ $cps['name'] }}</h4>
                         <p>{{ $cps['detail'] }}</p>
                     </div>
+                    <input type="hidden" id="user" name="uid">
+                    <input type="hidden" name="store" value="{{ $store }}">
+                    <input type="submit" value="（仮）">
+                    </form>
                 @endif
 
-                <input type="hidden" id="user" name="uid">
-                <input type="hidden" name="store" value="{{ $store }}">
-                <input type="submit" value="（仮）">
-                </form>
+         
         @endif
 
     </div>
