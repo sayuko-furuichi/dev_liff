@@ -77,7 +77,7 @@ class StampCards extends Controller
 
             //有効期限は発行から1年後
             $nwCard->expiry=date("Y-m-d H:i:s", strtotime("+1 year"));
-            ;
+            
             $nwCard->points=0;
             $nwCard->now_points=0;
 
