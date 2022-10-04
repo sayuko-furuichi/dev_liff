@@ -62,6 +62,7 @@ class StampCards extends Controller
                 'uid'=>$card[0]->lineuser_id,
                 'expiry'=>$card[0]->expiry,
                 'points'=>$card[0]->points,
+                'max_points'=>$card[0]->max_points,
                 'cps'=>$cp
             ]);
         } else {
@@ -78,12 +79,16 @@ class StampCards extends Controller
             ;
             $nwCard->points=0;
 
+            //TODO:とりあえず8ポイントがmax
+            $nwCard->max_points=8;
+
             $nwCard ->save();
             return view('stampCards.stampCard', [
               'card_no'=>$nwCard->id,
                'expiry'=>$nwCard->expiry,
              'points'=>$nwCard->points,
              'store_id'=>$nwCard->store_id,
+             'max_points'=>$nwCard->max_points,
              'uid' => $nwCard,
              'cps'=>$cp
 
