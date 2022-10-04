@@ -62,6 +62,7 @@ class StampCards extends Controller
                 'uid'=>$card[0]->lineuser_id,
                 'expiry'=>$card[0]->expiry,
                 'points'=>$card[0]->points,
+                'now_points'=>$card[0]->now_points,
                 'max_points'=>$card[0]->max_points,
                 'cps'=>$cp
             ]);
@@ -78,6 +79,7 @@ class StampCards extends Controller
             $nwCard->expiry=date("Y-m-d H:i:s", strtotime("+1 year"));
             ;
             $nwCard->points=0;
+            $nwCard->now_points=0;
 
             //TODO:とりあえず8ポイントがmax
             $nwCard->max_points=8;
@@ -87,6 +89,7 @@ class StampCards extends Controller
               'card_no'=>$nwCard->id,
                'expiry'=>$nwCard->expiry,
              'points'=>$nwCard->points,
+             'now_points'=>$nwCard->now_points,
              'store_id'=>$nwCard->store_id,
              'max_points'=>$nwCard->max_points,
              'uid' => $nwCard,
@@ -105,11 +108,11 @@ class StampCards extends Controller
 
       //card_noから検索して、ポイントを加算代入する
 // if (isset($toCard)) {
-    $toCard->points += $request->points;
+    $toCard->now_points += $request->points;
     
 
     //ポイント数がmaxを超えたとき新カード発行
-  if($toCard->points >= $toCard->max_points){
+  if($toCard->now_points >= $toCard->max_points){
     $nwCard = new StampCard();
     $nwCard->lineuser_id=$toCard->lineuser_id;
     $nwCard->store_id=$request->store;
@@ -127,7 +130,10 @@ class StampCards extends Controller
     $nwCard->expiry=date("Y-m-d H:i:s", strtotime("+1 year"));
     
     $nwCard->points += $toCard->points;
-
+  
+  //ポイントが増えすぎた分は繰り越し
+    $nwCard->now_points= $toCard->now_points - $toCard->max_points;
+  
     //TODO:とりあえず8ポイントがmax
     $nwCard->max_points=8;
 
