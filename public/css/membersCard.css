@@ -333,7 +333,7 @@ width: 15%;
 /* input button */
 input[type="submit"]:checked{
   text-align:center;
-  background: #FE725C;/* マウス選択時の背景色を指定する */
+  background: #cb5b4a;/* マウス選択時の背景色を指定する */
 color: #ffffff; /* マウス選択時のフォント色を指定する */
 width: 80%;
 
