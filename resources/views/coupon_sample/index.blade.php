@@ -24,6 +24,7 @@
 
                     @foreach ($cps as $cp)
                         <div class="benefits">
+
                             <div class="point_mark">{{ $cp['term_of_use_point'] }}</div>
                             <input type="hidden" name="couponId" value="{{ $cp['id'] }}">
                             <input type="hidden" name="img" value="{{ $cp['img'] }}">
@@ -52,7 +53,7 @@
                 @endif
 
 
-                <input type="hidden" id="userIdProps" name="uid">
+                <input type="hidden" id="user" name="uid">
                 <input type="hidden" name="store" value="{{ $store }}">
                 <input type="submit" value="（仮）">
             </form>
