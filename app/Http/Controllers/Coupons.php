@@ -19,19 +19,14 @@ $cps=array();
 
 foreach ($request->cps as $cp) {
    $cp= json_decode($cp,true);
-   
-  //  $used=1;
-
-  $i=0;
     //ポイントを満たしているか
     if ( $request->points >= $cp['term_of_use_point']) {
         //使用されていないか
       $usedC= $usedC->where('coupon_id', $cp['id']);
 
         if($usedC->isEmpty()){
-            $cps[$i] =$cp;
-            $i++;
-
+            $cps->push($cp);
+            
         }
         
     }
