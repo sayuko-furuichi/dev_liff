@@ -279,9 +279,6 @@ padding-top: 10px;
   color: #FFF;
   padding-top: 10px;
 }
-.get_points{
-  color: blue;
-}
 
 .b_logo{
   width: 25%;
@@ -292,7 +289,7 @@ padding-top: 10px;
 
 .benefits{
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   width: 80%;
   display: flex;
   justify-content: space-around;
