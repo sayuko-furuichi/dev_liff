@@ -30,6 +30,7 @@
                class="carousel__next">Go to next slide</a>
           </div>
         </li>
+        {{$i-1}}
         @endif
 
         //最後の要素だったら
@@ -45,7 +46,8 @@
                class="carousel__next">Go to next slide</a>
           </div>
         </li>
-        @endif
+        {{$i+1}}
+       @else
 
         <li id="carousel__slide.{{$cards[$i]->id}}"
             tabindex="0"
@@ -54,11 +56,12 @@
           <div class="carousel__snapper">
             <a href="#carousel__slide.{{$cards[$i-1]->id}}"
                class="carousel__prev">Go to last slide</a>
-            <a href="#carousel__slide.{{$cards[$i+1]->id}}"
+            <a href="#carousel__slide.{{$cards[$i+2]->id}}"
                class="carousel__next">Go to next slide</a>
           </div>
         </li>
-
+{{$i-1}}
+@endif
         @endfor
     </ol> 
          
