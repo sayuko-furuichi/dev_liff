@@ -44,11 +44,9 @@
 
                             </button>
                             </div>
-                            <input type="hidden" id="user" name="uid">
                             <input type="hidden" name="store" value="{{ $store }}">
-                      
                         </form>
-                   
+                    
                     @endforeach
                    
                 @else
