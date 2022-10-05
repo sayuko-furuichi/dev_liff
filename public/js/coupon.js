@@ -13,7 +13,7 @@ window.onload = function () {
 
       }else{
         liff.getProfile().then(function(prof){
-          document.getElementById('user').value=prof.userId;
+          document.getElementById('userId').value=prof.userId;
       })
     }}) .catch(function (error) {
         window.alert('エラー :' + error);});}
