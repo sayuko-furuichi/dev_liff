@@ -75,8 +75,12 @@ class StampCards extends Controller
         //1：カードの持ち主を特定する
         $card =StampCard::where('lineuser_id', $request->userId)->get();
         //TODO:debug用　新しいもののみ表示
-        $card= $card->where('store_id', $request->store)->where('state',1)->sortByDesc('id');
+     //   $card= $card->where('store_id', $request->store)->where('state',1)->sortByDesc('id');
+     $card= $card->where('store_id', $request->store)->sortBy('id');
 
+     //先頭とlast取得
+     $lastC =$card->last();
+     $firstC =$card->first();
 
 
     //      2：保持していなければ作成する
@@ -91,14 +95,17 @@ class StampCards extends Controller
 
 
             return view('stampCards.stampCard', [
-                'card_no'=>$card[0]->id,
-                'store_id'=>$card[0]->store_id,
-                'uid'=>$card[0]->lineuser_id,
-                'expiry'=>$card[0]->expiry,
-                'points'=>$card[0]->points,
-                'now_points'=>$card[0]->now_points,
-                'max_points'=>$card[0]->max_points,
-                'number'=>$card[0]->number,
+                // 'card_no'=>$card[0]->id,
+                // 'store_id'=>$card[0]->store_id,
+                // 'uid'=>$card[0]->lineuser_id,
+                // 'expiry'=>$card[0]->expiry,
+                // 'points'=>$card[0]->points,
+                // 'now_points'=>$card[0]->now_points,
+                // 'max_points'=>$card[0]->max_points,
+                // 'number'=>$card[0]->number,
+                'cards' =>$card,
+                'last'=>$lastC,
+                'first' =>$firstC,
                 'cps'=>$cp
             ]);
         } else {
