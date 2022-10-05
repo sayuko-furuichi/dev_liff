@@ -13,7 +13,6 @@ window.onload = function () {
 	  .then(() => {
 		if (!liff.isLoggedIn()) {
 		  liff.login();
-  
 		}else{
 		  liff.getProfile().then(function(prof){
 				
