@@ -27,7 +27,7 @@ class StampCards extends Controller
  function dev(Request $request){
     $card =StampCard::where('lineuser_id', $request->userId)->get();
     //TODO:debug用　新しいもののみ表示
-    $card= $card->where('store_id', $request->store)->sortBy('id');
+    $card= $card->where('store_id', $request->store)->sortByDesc('id');
 
     //先頭とlast取得
     $lastC =$card->last();
