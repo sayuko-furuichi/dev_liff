@@ -49,8 +49,7 @@
                         <p class="b_text">{{ $cards[$i]->store_id }}</p>
                         <span class='b_text'>LINE USER ID: </span>
                         <p class="b_text">{{ $cards[$i]->uid }}</p>
-                        {{--  <p class='b_text'><br />text TEXT テキスト てきすと text TEXT テキスト てきすと<br />text TEXT テキスト てきすと</p>  --}}
-                        {{--  <button class='b_button'><span>Buy now</span></button>  --}}
+
                     </div>
     
                 </div>
