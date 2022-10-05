@@ -194,7 +194,7 @@ ol, li {
   border-radius: 50%;
   font-size: 0;
   outline: 0;
-  color: #FFF;
+ background-color: #FFF;
 }
 
 .carousel::before,
