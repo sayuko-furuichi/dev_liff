@@ -16,7 +16,7 @@
     <section class="carousel" aria-label="Gallery">
       <ol class="carousel__viewport">
         {{--  @foreach()  --}}
-        @for ( $i=0 ; $i<= count($cards); $i++)
+        @for ( $i=0 ; $i< count($cards); $i++)
         {{--  先頭だったら  --}}
         @if ($cards[$i]->id == $first->id)
         <li id="carousel__slide.{{$first->id}}"
@@ -48,7 +48,7 @@
                class="carousel__next">Go to next slide</a>
           </div>
         </li>
-        {{$i+1}}
+        {{--  {{$i+1}}  --}}
        @else
 
         <li id="carousel__slide.{{$cards[$i]->id}}"
