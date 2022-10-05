@@ -16,9 +16,9 @@
     <section class="carousel" aria-label="Gallery">
       <ol class="carousel__viewport">
         {{--  @foreach()  --}}
-        @for ( $i=0 ;  $card[$i]->id==null; $i++)
+        @for ( $i=0 ;  $cards[$i]->id==null; $i++)
         //先頭だったら
-        @if ($card[$i]->id == $first->id)
+        @if ($cards[$i]->id == $first->id)
         <li id="carousel__slide{{$first->id}}"
             tabindex="0"
             class="carousel__slide">
@@ -33,13 +33,13 @@
         @endif
 
         //最後の要素だったら
-        @if ($card[$i]->id == $last->id)
+        @if ($cards[$i]->id == $last->id)
         <li id="carousel__slide{{$last->id}}"
             tabindex="0"
             class="carousel__slide">
             <div> {{$cards[$i]->id}}</div>
           <div class="carousel__snapper">
-            <a href="#carousel__slide{{$card[$i-1]->id}}"
+            <a href="#carousel__slide{{$cards[$i-1]->id}}"
                class="carousel__prev">Go to last slide</a>
             <a href="#carousel__slide{{$first->id}}"
                class="carousel__next">Go to next slide</a>
@@ -47,14 +47,14 @@
         </li>
         @endif
 
-        <li id="carousel__slide{{$card[$i]->id}}"
+        <li id="carousel__slide{{$cards[$i]->id}}"
             tabindex="0"
             class="carousel__slide">
-            <div> {{$card[$i]->id}}</div>
+            <div> {{$cards[$i]->id}}</div>
           <div class="carousel__snapper">
-            <a href="#carousel__slide{{$card[$i-1]->id}}"
+            <a href="#carousel__slide{{$cards[$i-1]->id}}"
                class="carousel__prev">Go to last slide</a>
-            <a href="#carousel__slide{{$card[$i+1]->id}}"
+            <a href="#carousel__slide{{$cards[$i+1]->id}}"
                class="carousel__next">Go to next slide</a>
           </div>
 
