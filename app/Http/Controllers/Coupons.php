@@ -82,7 +82,7 @@ if($cps == null){
         $nwUsed->coupon_id=$request->couponId;
         $nwUsed->lineuser_id=$request->userId;
         $nwUsed->store_id=$request->store;
-
+dd($request);
         $nwUsed->save();
 
 
