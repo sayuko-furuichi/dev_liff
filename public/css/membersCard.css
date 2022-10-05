@@ -188,8 +188,8 @@ ol, li {
   position: absolute;
   top: 0;
   margin-top: 70%;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   transform: translateY(-50%);
   border-radius: 50%;
   font-size: 0;
@@ -198,12 +198,12 @@ ol, li {
 
 .carousel::before,
 .carousel__prev {
-  left: -2rem;
+  left: 2rem;
 }
 
 .carousel::after,
 .carousel__next {
-  right: -2rem;
+  right: 2rem;
 }
 
 .carousel::before,
