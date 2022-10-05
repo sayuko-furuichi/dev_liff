@@ -191,14 +191,14 @@ class StampCards extends Controller
             $nwCard ->save();
             $toCard->save();
 
-            $card =StampCard::where('lineuser_id', $request->userId)->get();
+            $allCard =StampCard::where('lineuser_id', $request->userId)->get();
 
             //   $card= $card->where('store_id', $request->store)->where('state',1)->sortByDesc('id');
-            $card= $card->where('store_id', $request->store)->sortBy('id');
+            $allCard= $allCard->where('store_id', $request->store)->sortBy('id');
        
             //先頭とlast取得
-            $lastC =$card->last();
-            $firstC =$card->first();
+            $lastC =$allCard->last();
+            $firstC =$allCard->first();
             dd($lastC);
 
             //表示の仕方が謎だが、とりあえず作成はしておく
