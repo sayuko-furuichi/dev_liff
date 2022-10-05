@@ -191,34 +191,60 @@ class StampCards extends Controller
             $nwCard ->save();
             $toCard->save();
 
+            $card =StampCard::where('lineuser_id', $request->userId)->get();
+
+            //   $card= $card->where('store_id', $request->store)->where('state',1)->sortByDesc('id');
+            $card= $card->where('store_id', $request->store)->sortBy('id');
+       
+            //先頭とlast取得
+            $lastC =$card->last();
+            $firstC =$card->first();
+       
+
             //表示の仕方が謎だが、とりあえず作成はしておく
 
             return view('stampCards.stampCard', [
-                 'uid'=> $nwCard->lineuser_id,
-                 'points'=>$nwCard->points,
-                 'getPoints'=>$request->points,
-                 'card_no'=>$nwCard->id,
-                 'expiry' =>$nwCard->expiry,
-                 'store_id'=>$nwCard->store_id,
-                 'max_points'=>$nwCard->max_points,
-                 'now_points'=>$nwCard->now_points,
-                 'number'=>$nwCard->number,
+                //  'uid'=> $nwCard->lineuser_id,
+                //  'points'=>$nwCard->points,
+                //  'getPoints'=>$request->points,
+                //  'card_no'=>$nwCard->id,
+                //  'expiry' =>$nwCard->expiry,
+                //  'store_id'=>$nwCard->store_id,
+                //  'max_points'=>$nwCard->max_points,
+                //  'now_points'=>$nwCard->now_points,
+                //  'number'=>$nwCard->number,
+                'cards' =>$card,
+                'last'=>$lastC,
+                'first' =>$firstC,
                  'cps'=>$cp,
                  'new'=>'新しいカードを作成しました'
                ]);
         } else {
+            $card =StampCard::where('lineuser_id', $request->userId)->get();
+
+            //   $card= $card->where('store_id', $request->store)->where('state',1)->sortByDesc('id');
+            $card= $card->where('store_id', $request->store)->sortBy('id');
+       
+            //先頭とlast取得
+            $lastC =$card->last();
+            $firstC =$card->first();
+
             $toCard->save();
             return view('stampCards.stampCard', [
-              'uid'=> $toCard->lineuser_id,
-              'points'=>$toCard->points,
-              'getPoints'=>$request->points,
-              'card_no'=>$request->card_no,
-              'expiry' =>$toCard->expiry,
-              'store_id'=>$toCard->store_id,
-              'max_points'=>$toCard->max_points,
-              'now_points'=>$toCard->now_points,
-              'number'=>$toCard->number,
-              'cps'=>$cp
+            //   'uid'=> $toCard->lineuser_id,
+            //   'points'=>$toCard->points,
+            //   'getPoints'=>$request->points,
+            //   'card_no'=>$request->card_no,
+            //   'expiry' =>$toCard->expiry,
+            //   'store_id'=>$toCard->store_id,
+            //   'max_points'=>$toCard->max_points,
+            //   'now_points'=>$toCard->now_points,
+            //   'number'=>$toCard->number,
+            //   'cps'=>$cp
+            'cards' =>$card,
+            'last'=>$lastC,
+            'first' =>$firstC,
+             'cps'=>$cp,
             ]);
         }
     }
