@@ -1,6 +1,7 @@
 window.onload = function () {
 	const defaultLiffId = '1657487333-JPeEg6lr';   // change the default LIFF value if you are not using a node server
   liffInit(defaultLiffId);
+},
 
 	//ペーじが出来上がったら、liffIDを渡してinitさせる
 	function liffInit(defaultLiffId){
@@ -21,5 +22,4 @@ window.onload = function () {
     })
 	  }}) .catch(function (error) {
 		  window.alert('エラー :' + error);});}
-	 
-	);}}
+   );}
