@@ -32,10 +32,10 @@
           </div>
         </li>
         {{--  {{$i-1}}  --}}
-        @endif
+       
 
         {{--  最後の要素だったら  --}}
-        @if ($cards[$i]->id == $last->id)
+        @elseif ($cards[$i]->id == $last->id)
         <li id="carousel__slide.{{$last->id}}"
             tabindex="0"
             class="carousel__slide">
