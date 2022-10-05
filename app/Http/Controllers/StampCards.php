@@ -30,7 +30,7 @@ class StampCards extends Controller
     $card= $card->where('store_id', $request->store)->sortByDesc('id');
 
     if (isset($card[0])) {
-        return view('stampCards.stampCard', [
+        return view('stampCards.dev_scr', [
             // 'card_no'=>$card[0]->id,
             // 'store_id'=>$card[0]->store_id,
             // 'uid'=>$card[0]->lineuser_id,
