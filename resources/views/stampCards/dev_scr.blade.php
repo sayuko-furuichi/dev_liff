@@ -57,10 +57,10 @@
             <a href="#carousel__slide{{$cards[$i+1]->id}}"
                class="carousel__next">Go to next slide</a>
           </div>
-
+        </li>
 
         @endfor
-          
+    </ol> 
          
         {{--  <li id="carousel__slide{{$card->id}}"
             tabindex="0"
