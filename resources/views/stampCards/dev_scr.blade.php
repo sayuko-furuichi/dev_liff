@@ -73,8 +73,9 @@
             <a href="#carousel__slide4"
                class="carousel__navigation-button">Go to slide 4</a>
           </li>
-        </ol>  --}}
+        </ol>  
       </aside>
+      --}}
     </section>
 <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 {{--  <script src="{{secure_asset('js/coupon.js')}}"></script>  --}}
