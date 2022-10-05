@@ -200,7 +200,7 @@ class StampCards extends Controller
             //先頭とlast取得
             $lastC =$card->last();
             $firstC =$card->first();
-            dd($lastC);
+
 
             //表示の仕方が謎だが、とりあえず作成はしておく
 
@@ -231,7 +231,7 @@ class StampCards extends Controller
             //先頭とlast取得
             $lastC =$card->last();
             $firstC =$card->first();
-            dd( $lastC);
+       
             return view('stampCards.stampCard', [
             //   'uid'=> $toCard->lineuser_id,
             //   'points'=>$toCard->points,
