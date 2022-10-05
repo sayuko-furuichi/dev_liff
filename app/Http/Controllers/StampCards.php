@@ -33,7 +33,6 @@ class StampCards extends Controller
     $lastC =$card->last();
     $firstC =$card->first();
 
-dd($card[0+1]);
 
     if (isset($card[0])) {
         return view('stampCards.dev_scr', [
