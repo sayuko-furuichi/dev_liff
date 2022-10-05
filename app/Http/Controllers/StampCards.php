@@ -25,9 +25,28 @@ class StampCards extends Controller
      * @return void
      */
  function dev(){
+    $card =StampCard::where('lineuser_id', $request->userId)->get();
+    //TODO:debug用　新しいもののみ表示
+    $card= $card->where('store_id', '44')->sortByDesc('id');
 
-    return view('stampCards.dev_scr');
- }
+    if (isset($card[0])) {
+        return view('stampCards.stampCard', [
+            // 'card_no'=>$card[0]->id,
+            // 'store_id'=>$card[0]->store_id,
+            // 'uid'=>$card[0]->lineuser_id,
+            // 'expiry'=>$card[0]->expiry,
+            // 'points'=>$card[0]->points,
+            // 'now_points'=>$card[0]->now_points,
+            // 'max_points'=>$card[0]->max_points,
+            // 'number'=>$card[0]->number,
+            'cards' =>$card,
+            'cps'=>$cp
+        ]);
+
+        return view('stampCards.dev_scr');
+    }
+}
+
 
 
     public function index(Request $request)
