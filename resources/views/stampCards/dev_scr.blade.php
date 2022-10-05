@@ -39,7 +39,7 @@
             class="carousel__slide">
             <div> {{$cards[$i]->id}}</div>
           <div class="carousel__snapper">
-            <a href="#carousel__slide.{{$cards[$i-1]->id}}"
+            <a href="#carousel__slide.{{$cards[($i-1)]->id}}"
                class="carousel__prev">Go to last slide</a>
             <a href="#carousel__slide.{{$first->id}}"
                class="carousel__next">Go to next slide</a>
