@@ -19,15 +19,15 @@
         @for ( $i=0 ; $i< count($cards); $i++)
         {{--  先頭だったら  --}}
         @if ($cards[$i]->id == $first->id)
-        <li id="carousel__slide.{{$first->id}}"
+        <li id="carousel__slide{{$first->id}}"
             tabindex="0"
             class="carousel__slide">
             <div> {{$cards[$i]->id}}</div>
           <div class="carousel__snapper">
-            <a href="#carousel__slide.{{$last->id}}"
+            <a href="#carousel__slide{{$last->id}}"
                class="carousel__prev">Go to last slide</a>
                {{--  {{$i+1}}  --}}
-            <a href="#carousel__slide.{{$cards[$i+1]->id}}"
+            <a href="#carousel__slide{{$cards[$i+1]->id}}"
                class="carousel__next">Go to next slide</a>
           </div>
         </li>
@@ -36,31 +36,31 @@
 
         {{--  最後の要素だったら  --}}
         @elseif ($cards[$i]->id == $last->id)
-        <li id="carousel__slide.{{$last->id}}"
+        <li id="carousel__slide{{$last->id}}"
             tabindex="0"
             class="carousel__slide">
             <div> {{$cards[$i]->id}}</div>
           <div class="carousel__snapper">
             {{--  {{$i-1}}  --}}
-            <a href="#carousel__slide.{{$cards[$i-1]->id}}"
+            <a href="#carousel__slide{{$cards[$i-1]->id}}"
                class="carousel__prev">Go to last slide</a>
-            <a href="#carousel__slide.{{$first->id}}"
+            <a href="#carousel__slide{{$first->id}}"
                class="carousel__next">Go to next slide</a>
           </div>
         </li>
         {{--  {{$i+1}}  --}}
        @else
 
-        <li id="carousel__slide.{{$cards[$i]->id}}"
+        <li id="carousel__slide{{$cards[$i]->id}}"
             tabindex="0"
             class="carousel__slide">
             <div> {{$cards[$i]->id}}</div>
           <div class="carousel__snapper">
             {{--  {{$i-1}}  --}}
-            <a href="#carousel__slide.{{$cards[$i-1]->id}}"
+            <a href="#carousel__slide{{$cards[$i-1]->id}}"
                class="carousel__prev">Go to last slide</a>
                {{--  {{$i+2}}  --}}
-            <a href="#carousel__slide.{{$cards[$i+1]->id}}"
+            <a href="#carousel__slide{{$cards[$i+1]->id}}"
                class="carousel__next">Go to next slide</a>
           </div>
         </li>
