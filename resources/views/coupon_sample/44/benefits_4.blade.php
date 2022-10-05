@@ -12,7 +12,7 @@
     <div class="coupons">
         <form action="{{route('coupon.used')}}" method="GET">
             @csrf
-            <input type="hidden" name="userId" id="userId">
+            <input type="hidden" name="userId" id="user">
             <input type="hidden" name="store" value="{{$request['store']}}">
        <input type="hidden" name="couponId" value="{{$request['couponId']}}"> <img src="{{secure_asset('img/coupons/'.$request['img'])}}" alt="クーポン" class="coupon_img">
        <p>{{$request['name']}}</p>
@@ -27,7 +27,7 @@
            <img src="{{secure_asset('img/coupons/usedOn.svg')}}" alt="" class="used_img"> 
            <form method="GET" action="{{route('stamps.login')}}">
            <input type="hidden" value="{{$store}}" name="store">
-           <input type="hidden" name="user" id="user">
+           <input type="hidden" name="user" id="userId">
            <input type="submit" value="ショップカードへ戻る"> 
              </form>
             </div>
