@@ -184,10 +184,10 @@
           
                   </div>
                   <div class="read_text">
-        
-                    <p class="get_points"> ポイント総数：{{ $last->points }}<span id="points" class="get_points"></span></p>
-                    <p class="get_points">  {{$cards[$i]->now_points}} / {{$cards[$i]->max_points}} </p>
                     <p class="get_points">{{$cards[$i]->number}} / {{$last->number}}</p>
+                    <p class="get_points">  {{$cards[$i]->now_points}} / {{$cards[$i]->max_points}} </p>
+                    <p class="get_points"> ポイント総数：{{ $last->points }}<span id="points" class="get_points"></span></p>
+                    
                     @if (isset($getPoints))
                         <p class="get_points">{{ $getPoints }} ポイントゲットしました！！</p>
                     @endif
