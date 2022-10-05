@@ -271,7 +271,7 @@
 
 
         <input type="hidden" id="user_id" name="uid">
-        <input type="hidden" name="store" value="{{ $cards[$i]->store_id }}">
+        <input type="hidden" name="store" value="{{ $cards[0]->store_id }}">
         {{--  <input type="hidden" name="points" value="{{ $cards[$i]->points }}">  --}}
     </form>
 
