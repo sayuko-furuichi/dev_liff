@@ -489,7 +489,7 @@
   .read_text{
     width: 80%;
     padding-top: 30px;
-    text-align: center;
+    margin: 0 auto;
   
   }
   .stamp_line{
