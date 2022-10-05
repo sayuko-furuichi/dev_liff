@@ -198,12 +198,12 @@ ol, li {
 
 .carousel::before,
 .carousel__prev {
-  left: -1rem;
+  left: -2rem;
 }
 
 .carousel::after,
 .carousel__next {
-  right: -1rem;
+  right: -2rem;
 }
 
 .carousel::before,
