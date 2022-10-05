@@ -19,10 +19,10 @@ window.onload = function () {
               
           //location.hrefにuserIdのクエリをつける
           // LIFFURLを使用すると、何度もredirectするので注意
-    //     window.location.href ='https://dev-liff.herokuapp.com/public/stamps/index?userId=' + prof.userId + '&store='+ document.getElementById('store').value;
+         window.location.href ='https://dev-liff.herokuapp.com/public/stamps/index?userId=' + prof.userId + '&store='+ document.getElementById('store').value;
 
           //TODO:dev
-          window.location.href ='https://dev-liff.herokuapp.com/public/stamps/dev?userId=' + prof.userId + '&store='+ document.getElementById('store').value;
+    //      window.location.href ='https://dev-liff.herokuapp.com/public/stamps/dev?userId=' + prof.userId + '&store='+ document.getElementById('store').value;
 
       })
     }}) .catch(function (error) {
