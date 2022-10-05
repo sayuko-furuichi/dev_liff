@@ -26,7 +26,8 @@
           <div class="carousel__snapper">
             <a href="#carousel__slide.{{$last->id}}"
                class="carousel__prev">Go to last slide</a>
-            <a href="#carousel__slide.{{$cards[$i+1]->id}}"
+               {{$i+1}}
+            <a href="#carousel__slide.{{$cards[$i]->id}}"
                class="carousel__next">Go to next slide</a>
           </div>
         </li>
@@ -40,7 +41,8 @@
             class="carousel__slide">
             <div> {{$cards[$i]->id}}</div>
           <div class="carousel__snapper">
-            <a href="#carousel__slide.{{$cards[($i-1)]->id}}"
+            {{$i-1}}
+            <a href="#carousel__slide.{{$cards[$i]->id}}"
                class="carousel__prev">Go to last slide</a>
             <a href="#carousel__slide.{{$first->id}}"
                class="carousel__next">Go to next slide</a>
@@ -54,9 +56,11 @@
             class="carousel__slide">
             <div> {{$cards[$i]->id}}</div>
           <div class="carousel__snapper">
-            <a href="#carousel__slide.{{$cards[$i-1]->id}}"
+            {{$i-1}}
+            <a href="#carousel__slide.{{$cards[$i]->id}}"
                class="carousel__prev">Go to last slide</a>
-            <a href="#carousel__slide.{{$cards[$i+2]->id}}"
+               {{$i+2}}
+            <a href="#carousel__slide.{{$cards[$i]->id}}"
                class="carousel__next">Go to next slide</a>
           </div>
         </li>
