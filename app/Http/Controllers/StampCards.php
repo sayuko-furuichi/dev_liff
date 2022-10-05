@@ -32,7 +32,7 @@ class StampCards extends Controller
     //先頭とlast取得
     $lastC =$card->last();
     $firstC =$card->first();
-    dd($card[0]);
+ //   dd($card[0]);
 
 
     if (isset($card[0])) {
