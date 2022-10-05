@@ -27,6 +27,7 @@
            <img src="{{secure_asset('img/coupons/usedOn.svg')}}" alt="" class="used_img"> 
            <form method="GET" action="{{route('stamps.login')}}">
            <input type="hidden" value="{{$store}}" name="store">
+           <input type="hidden" name="user" id="user">
            <input type="submit" value="ショップカードへ戻る"> 
              </form>
             </div>
