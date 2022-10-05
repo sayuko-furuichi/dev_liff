@@ -15,6 +15,7 @@
     
     <section class="carousel" aria-label="Gallery">
       <ol class="carousel__viewport">
+        {{--  @foreach()  --}}
         <li id="carousel__slide1"
             tabindex="0"
             class="carousel__slide">
@@ -25,6 +26,7 @@
                class="carousel__next">Go to next slide</a>
           </div>
         </li>
+        {{--    --}}
         <li id="carousel__slide2"
             tabindex="0"
             class="carousel__slide">
@@ -52,7 +54,7 @@
           <a href="#carousel__slide1"
              class="carousel__next">Go to first slide</a>
         </li>
-      </ol>
+      {{--  </ol>
       <aside class="carousel__navigation">
         <ol class="carousel__navigation-list">
           <li class="carousel__navigation-item">
@@ -71,7 +73,7 @@
             <a href="#carousel__slide4"
                class="carousel__navigation-button">Go to slide 4</a>
           </li>
-        </ol>
+        </ol>  --}}
       </aside>
     </section>
 <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
