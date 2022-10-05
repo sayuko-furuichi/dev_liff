@@ -24,6 +24,12 @@ class StampCards extends Controller
      *   @param $request->store
      * @return void
      */
+ function dev(){
+
+    return view('stampCards.dev_scr');
+ }
+
+
     public function index(Request $request)
     {
         //発行された特典クーポンがあるかどうか確認

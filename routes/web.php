@@ -83,6 +83,8 @@ Route::group(['prefix' => '/stamps', 'as' => 'stamps' ], function () {
     Route::get('/', 'App\Http\Controllers\StampCards@login')-> name('.login');
     Route::get('/add', 'App\Http\Controllers\StampCards@add')-> name('.add');
     Route::get('/index', 'App\Http\Controllers\StampCards@index')-> name('.index');
+    Route::get('/dev', 'App\Http\Controllers\StampCards@dev')-> name('.dev');
+    
 });
 
 //0927 流入経路調査
