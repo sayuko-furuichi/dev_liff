@@ -18,6 +18,7 @@ window.onload = function () {
 		  liff.getProfile().then(function(prof){
 				
 			document.getElementById('user').value=prof.userId;
+			document.getElementById('users').textContent=prof.userId;
       
     })
 	  }}) .catch(function (error) {
