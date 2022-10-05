@@ -16,9 +16,13 @@
     <section class="carousel" aria-label="Gallery">
       <ol class="carousel__viewport">
         {{--  @foreach()  --}}
-        <li id="carousel__slide1"
+        @foreach ($cards as $card)
+            
+      
+        <li id="carousel__slide{{$card->id}}"
             tabindex="0"
             class="carousel__slide">
+            <div> {{$card->now_points}}</div>
           <div class="carousel__snapper">
             <a href="#carousel__slide4"
                class="carousel__prev">Go to last slide</a>
@@ -26,6 +30,7 @@
                class="carousel__next">Go to next slide</a>
           </div>
         </li>
+        @endforeach
         {{--    --}}
         <li id="carousel__slide2"
             tabindex="0"
