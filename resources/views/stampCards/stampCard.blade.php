@@ -49,19 +49,10 @@
 
             </div>
 
-            {{--  <div class='r_wrap'>  --}}
-
-            {{--  <div class='b_round'></div>  --}}
-            {{--  <div class='s_round'>  --}}
-            {{--  <div class='s_arrow'></div>  --}}
-            {{--  </div> --}}
         </div>
 
 
     </div>
-    <div class="return">
-    </div>
-
     <div class="qr_btn">
         <button type="button" id="qr" class="bild_qr_btn"><img src="{{ secure_asset('img/qr_syu.png') }}"
                 alt="qrイメージ" class="qr_img"><br>GET！</button>
