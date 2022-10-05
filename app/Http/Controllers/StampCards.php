@@ -191,14 +191,15 @@ class StampCards extends Controller
             $nwCard ->save();
             $toCard->save();
 
-            $allCard =StampCard::where('lineuser_id', $request->userId)->get();
+            //lineユーザIDは送信してないのでToCardから持ってくる
+            $card =StampCard::where('lineuser_id', $toCard->lineuser_id)->get();
 
             //   $card= $card->where('store_id', $request->store)->where('state',1)->sortByDesc('id');
-            $allCard= $allCard->where('store_id', $request->store)->sortBy('id');
+            $card= $card->where('store_id', $request->store)->sortBy('id');
        
             //先頭とlast取得
-            $lastC =$allCard->last();
-            $firstC =$allCard->first();
+            $lastC =$card->last();
+            $firstC =$card->first();
             dd($lastC);
 
             //表示の仕方が謎だが、とりあえず作成はしておく
@@ -221,16 +222,16 @@ class StampCards extends Controller
                ]);
         } else {
             $toCard->save();
-            $card =StampCard::where('lineuser_id', $request->userId)->get();
+            $card =StampCard::where('lineuser_id',  $toCard->lineuser_id)->get();
 
             //   $card= $card->where('store_id', $request->store)->where('state',1)->sortByDesc('id');
             $card= $card->where('store_id', $request->store)->sortBy('id');
             
-            dd($card);
+      
             //先頭とlast取得
             $lastC =$card->last();
             $firstC =$card->first();
-
+            dd( $lastC);
             return view('stampCards.stampCard', [
             //   'uid'=> $toCard->lineuser_id,
             //   'points'=>$toCard->points,
