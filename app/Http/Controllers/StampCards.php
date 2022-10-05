@@ -29,6 +29,10 @@ class StampCards extends Controller
     //TODO:debug用　新しいもののみ表示
     $card= $card->where('store_id', $request->store)->sortByDesc('id');
 
+    //先頭とlast取得
+    $lastC =$card->last();
+    $firstC =$card->first();
+
     if (isset($card[0])) {
         return view('stampCards.dev_scr', [
             // 'card_no'=>$card[0]->id,
@@ -40,6 +44,8 @@ class StampCards extends Controller
             // 'max_points'=>$card[0]->max_points,
             // 'number'=>$card[0]->number,
             'cards' =>$card,
+            'last'=>$lastC,
+            'first' =>$firstC
             //'cps'=>$cp
         ]);
 

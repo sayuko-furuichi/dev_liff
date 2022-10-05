@@ -16,23 +16,65 @@
     <section class="carousel" aria-label="Gallery">
       <ol class="carousel__viewport">
         {{--  @foreach()  --}}
-        @foreach ($cards as $card)
-            
-      
-        <li id="carousel__slide{{$card->id}}"
+        @for ( $i=0 ;  $card[$i]->id==null; $i++)
+        //先頭だったら
+        @if ($card[$i]->id == $first->id)
+        <li id="carousel__slide{{$first->id}}"
             tabindex="0"
             class="carousel__slide">
-            <div> {{$card->now_points}}</div>
+            <div> {{$cards[$i]->id}}</div>
           <div class="carousel__snapper">
-            <a href="#carousel__slide4"
+            <a href="#carousel__slide{{$last->id}}"
+               class="carousel__prev">Go to last slide</a>
+            <a href="#carousel__slide{{$cards[$i+1]->id}}"
+               class="carousel__next">Go to next slide</a>
+          </div>
+        </li>
+        @endif
+
+        //最後の要素だったら
+        @if ($card[$i]->id == $last->id)
+        <li id="carousel__slide{{$last->id}}"
+            tabindex="0"
+            class="carousel__slide">
+            <div> {{$cards[$i]->id}}</div>
+          <div class="carousel__snapper">
+            <a href="#carousel__slide{{$card[$i-1]->id}}"
+               class="carousel__prev">Go to last slide</a>
+            <a href="#carousel__slide{{$first->id}}"
+               class="carousel__next">Go to next slide</a>
+          </div>
+        </li>
+        @endif
+
+        <li id="carousel__slide{{$card[$i]->id}}"
+            tabindex="0"
+            class="carousel__slide">
+            <div> {{$card[$i]->id}}</div>
+          <div class="carousel__snapper">
+            <a href="#carousel__slide{{$card[$i-1]->id}}"
+               class="carousel__prev">Go to last slide</a>
+            <a href="#carousel__slide{{$card[$i+1]->id}}"
+               class="carousel__next">Go to next slide</a>
+          </div>
+
+
+        @endfor
+          
+         
+        {{--  <li id="carousel__slide{{$card->id}}"
+            tabindex="0"
+            class="carousel__slide">
+            <div> {{$card->id}}</div>
+          <div class="carousel__snapper">
+            <a href="#carousel__slide{{$cards[]}}"
                class="carousel__prev">Go to last slide</a>
             <a href="#carousel__slide2"
                class="carousel__next">Go to next slide</a>
           </div>
-        </li>
-        @endforeach
+        </li>  --}}
         {{--    --}}
-        <li id="carousel__slide2"
+        {{--  <li id="carousel__slide2"
             tabindex="0"
             class="carousel__slide">
           <div class="carousel__snapper"></div>
@@ -58,7 +100,7 @@
              class="carousel__prev">Go to previous slide</a>
           <a href="#carousel__slide1"
              class="carousel__next">Go to first slide</a>
-        </li>
+        </li>  --}}
       {{--  </ol>
       <aside class="carousel__navigation">
         <ol class="carousel__navigation-list">
