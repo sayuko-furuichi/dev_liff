@@ -20,17 +20,19 @@
        <p><span>使用方法：</span>{{$request['detail']}}</p>
        <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>
         </form>
+    </div>
        @endif    
        @if (isset($used))
+       <div class="coupons">
            <img src="{{secure_asset('img/coupons/usedOn.svg')}}" alt="" class="used_img"> 
            <form method="GET" action="{{route('stamps.login')}}">
            <input type="hidden" value="{{$store}}" name="store">
            <input type="submit" value="ショップカードへ戻る"> 
              </form>
-           
+            </div>
             @endif
 
-    </div>
+
 
     
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
