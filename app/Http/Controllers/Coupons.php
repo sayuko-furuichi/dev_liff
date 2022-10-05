@@ -80,7 +80,7 @@ if($cps == null){
     function used(Request $request){
         $nwUsed = new UsedCoupon;
         $nwUsed->coupon_id=$request->couponId;
-        $nwUsed->lineuser_id=$request->user;
+        $nwUsed->lineuser_id=$request->userId;
         $nwUsed->store_id=$request->store;
 
         $nwUsed->save();
