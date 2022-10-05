@@ -1,8 +1,10 @@
 window.onload = function () {
 	const defaultLiffId = '1657487333-JPeEg6lr';   // change the default LIFF value if you are not using a node server
-  
+  liffInit(defaultLiffId);
+
 	//ペーじが出来上がったら、liffIDを渡してinitさせる
-	$(document).ready(function () {
+	function liffInit(defaultLiffId){
+   $(document).ready(function () {
 	  liff
 	  .init({
 		liffId: defaultLiffId
@@ -15,21 +17,9 @@ window.onload = function () {
 		  liff.getProfile().then(function(prof){
 				
 			document.getElementById('user').value=prof.userId;
-  
-		})
+      
+    })
 	  }}) .catch(function (error) {
-		  window.alert('エラーです' + error);});}
+		  window.alert('エラー :' + error);});}
 	 
-	);}
-
-// function getParam(name, url) {
-// //表示ページのURLを取得
-// if (!url) url = window.location.href;
-// name = name.replace(/[\[\]]/g, "\\$&").replace(/[()]/g, "");
-// var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-// results = regex.exec(url);
-// if (!results) return null;
-// if (!results[2]) return '';
-// return decodeURIComponent(results[2].replace(/\+/g, " "));
-// }
-//   }})}
+	);}}
