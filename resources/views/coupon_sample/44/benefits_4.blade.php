@@ -18,6 +18,8 @@
        <p>{{$request['name']}}</p>
        <p><span>有効期限：</span>{{$request['exiry']}}</p>
        <p><span>使用方法：</span>{{$request['detail']}}</p>
+       <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>
+        </form>
        @endif    
        @if (isset($used))
            <img src="{{secure_asset('img/coupons/usedOn.svg')}}" alt="" class="used_img"> 
@@ -25,10 +27,9 @@
            <input type="hidden" value="{{$store}}" name="store">
            <input type="submit" value="ショップカードへ戻る"> 
              </form>
-            @else
-            <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>
+           
             @endif
-    </form>
+
     </div>
 
     
