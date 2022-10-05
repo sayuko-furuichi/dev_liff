@@ -31,7 +31,7 @@
                class="carousel__next">Go to next slide</a>
           </div>
         </li>
-        {{$i-1}}
+        {{--  {{$i-1}}  --}}
         @endif
 
         {{--  最後の要素だったら  --}}
@@ -64,7 +64,7 @@
                class="carousel__next">Go to next slide</a>
           </div>
         </li>
-{{$i-1}}
+{{--  {{$i-1}}  --}}
 @endif
         @endfor
     </ol> 
