@@ -59,6 +59,20 @@
                       </div>
           
                   </div>
+                  
+    <div class="read_text">
+        
+        <p class="get_points"> ポイント総数：{{ $cards[$i]->points }}<span id="points" class="get_points"></span></p>
+        <p class="get_points">  {{$cards[$i]->now_points}} / {{$cards[$i]->max_points}} </p>
+        <p class="get_points">{{$cards[$i]->number}} 枚目</p>
+        @if (isset($getPoints))
+            <p class="get_points">{{ $getPoints }} ポイントゲットしました！！</p>
+        @endif
+        @if (isset($new))
+            <p>{{$new}} !!</p>
+        @endif
+        {{--  <input type="submit" value="更新">  --}}
+    </div>
                 <div class="carousel__snapper">
                   <a href="#carousel__slide{{$last->id}}"
                      class="carousel__prev">Go to last slide</a>
@@ -108,6 +122,19 @@
                       </div>
           
                   </div>
+                  <div class="read_text">
+        
+                    <p class="get_points"> ポイント総数：{{ $cards[$i]->points }}<span id="points" class="get_points"></span></p>
+                    <p class="get_points">  {{$cards[$i]->now_points}} / {{$cards[$i]->max_points}} </p>
+                    <p class="get_points">{{$cards[$i]->number}} 枚目</p>
+                    @if (isset($getPoints))
+                        <p class="get_points">{{ $getPoints }} ポイントゲットしました！！</p>
+                    @endif
+                    @if (isset($new))
+                        <p>{{$new}} !!</p>
+                    @endif
+                    {{--  <input type="submit" value="更新">  --}}
+                </div>
                 <div class="carousel__snapper">
                   {{--  {{$i-1}}  --}}
                   <a href="#carousel__slide{{$cards[$i-1]->id}}"
@@ -156,6 +183,19 @@
                       </div>
           
                   </div>
+                  <div class="read_text">
+        
+                    <p class="get_points"> ポイント総数：{{ $cards[$i]->points }}<span id="points" class="get_points"></span></p>
+                    <p class="get_points">  {{$cards[$i]->now_points}} / {{$cards[$i]->max_points}} </p>
+                    <p class="get_points">{{$cards[$i]->number}} 枚目</p>
+                    @if (isset($getPoints))
+                        <p class="get_points">{{ $getPoints }} ポイントゲットしました！！</p>
+                    @endif
+                    @if (isset($new))
+                        <p>{{$new}} !!</p>
+                    @endif
+                    {{--  <input type="submit" value="更新">  --}}
+                </div>
                 <div class="carousel__snapper">
                   {{--  {{$i-1}}  --}}
                   <a href="#carousel__slide{{$cards[$i-1]->id}}"
@@ -179,19 +219,6 @@
                 alt="qrイメージ" class="qr_img"><br>GET！</button>
     </div>
 
-    <div class="read_text">
-        
-        <p class="get_points"> ポイント総数：{{ $points }}<span id="points" class="get_points"></span></p>
-        <p class="get_points">  {{$now_points}} / {{$max_points}} </p>
-        <p class="get_points">{{$number}} 枚目</p>
-        @if (isset($getPoints))
-            <p class="get_points">{{ $getPoints }} ポイントゲットしました！！</p>
-        @endif
-        @if (isset($new))
-            <p>{{$new}} !!</p>
-        @endif
-        {{--  <input type="submit" value="更新">  --}}
-    </div>
     {{--  <p>{{$store}}</p>
         <p>{{$uid}}</p>  --}}
 
