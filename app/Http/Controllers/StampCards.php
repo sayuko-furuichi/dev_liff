@@ -24,10 +24,10 @@ class StampCards extends Controller
      *   @param $request->store
      * @return void
      */
- function dev(){
+ function dev(Request $request){
     $card =StampCard::where('lineuser_id', $request->userId)->get();
     //TODO:debug用　新しいもののみ表示
-    $card= $card->where('store_id', '44')->sortByDesc('id');
+    $card= $card->where('store_id', $request->store)->sortByDesc('id');
 
     if (isset($card[0])) {
         return view('stampCards.stampCard', [
