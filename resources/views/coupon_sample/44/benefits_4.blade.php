@@ -12,7 +12,7 @@
     <div class="coupons">
         <form action="{{route('coupon.used')}}" method="POST">
             @csrf
-            <input type="hidden" name="user" value="{{$request['uid']}}">
+            <input type="hidden" name="user" id="user">
             <input type="hidden" name="store" value="{{$request['store']}}">
        <input type="hidden" name="couponId" value="{{$request['couponId']}}"> <img src="{{secure_asset('img/coupons/'.$request['img'])}}" alt="クーポン" class="coupon_img">
        <p>{{$request['name']}}</p>
@@ -24,10 +24,10 @@
            <form method="GET" action="{{route('stamps.login')}}">
            <input type="hidden" value="{{$store}}" name="store">
            <input type="submit" value="ショップカードへ戻る"> 
-        </form>
+             </form>
             @else
             <button type="submit"><img src="{{secure_asset('img/coupons/used.svg')}}" alt="used" class="used_img"></button>
-            @endif
+            @endifs
     </form>
     </div>
 
