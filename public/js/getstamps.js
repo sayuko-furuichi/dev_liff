@@ -18,7 +18,7 @@ const defaultLiffId ='1657487333-JPeEg6lr';
        
         if(string.value != null){
       //  window.location.href = string.value + '&user=' + document.getElementById('user_id').value;
-      window.location.href = string.value + '&card_no=' + document.getElementById('card_no').textContent
+      window.location.href = string.value + '&card_no=' + document.getElementById('card_no').value
     
     }}).catch(function (error) {
       window.alert('Error getting profile: ' + error);

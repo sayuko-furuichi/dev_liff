@@ -47,7 +47,7 @@
                               {{--  <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="b_logo">  --}}
                               {{--  <h1 class='b_headline'>まる屋</h1>  --}}
                               <span class='b_text'>CARD NUMBER: </span>
-                              <p class="b_text" id="card_no">{{ $cards[$i]->card_no }}</p>
+                              {{--  <p class="b_text" id="card_no">{{ $cards[$i]->card_no }}</p>  --}}
                               <span class='b_text'>STORE ID: </span>
                               <p class="b_text">{{ $cards[$i]->store_id }}</p>
                               <span class='b_text'>LINE USER ID: </span>
@@ -110,7 +110,7 @@
                               {{--  <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="b_logo">  --}}
                               {{--  <h1 class='b_headline'>まる屋</h1>  --}}
                               <span class='b_text'>CARD NUMBER: </span>
-                              <p class="b_text" id="card_no">{{ $cards[$i]->card_no }}</p>
+                              {{--  <p class="b_text" id="card_no">{{ $cards[$i]->card_no }}</p>  --}}
                               <span class='b_text'>STORE ID: </span>
                               <p class="b_text">{{ $cards[$i]->store_id }}</p>
                               <span class='b_text'>LINE USER ID: </span>
@@ -171,7 +171,7 @@
                               {{--  <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="b_logo">  --}}
                               {{--  <h1 class='b_headline'>まる屋</h1>  --}}
                               <span class='b_text'>CARD NUMBER: </span>
-                              <p class="b_text" id="card_no">{{ $cards[$i]->card_no }}</p>
+                              {{--  <p class="b_text" id="card_no">{{ $cards[$i]->card_no }}</p>  --}}
                               <span class='b_text'>STORE ID: </span>
                               <p class="b_text">{{ $cards[$i]->store_id }}</p>
                               <span class='b_text'>LINE USER ID: </span>
@@ -269,7 +269,7 @@
 </pre>
         </div>
 
-
+        <input type="hidden" id="card_no" value="{{$last->id}}">
         <input type="hidden" id="user_id" name="uid">
         <input type="hidden" name="store" value="{{ $cards[0]->store_id }}">
         {{--  <input type="hidden" name="points" value="{{ $cards[$i]->points }}">  --}}
