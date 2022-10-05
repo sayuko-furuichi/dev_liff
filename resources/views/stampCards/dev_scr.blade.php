@@ -22,16 +22,48 @@
         <li id="carousel__slide{{$first->id}}"
             tabindex="0"
             class="carousel__slide">
-            <div> {{$cards[$i]->id}}</div>
+            <div class='container'>
+
+                <div class='flip_box'>
+    
+                    <div class='front'>
+                        <div class="store">
+                            <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="f_logo">
+                            <p class='f_headline'>まる屋</p>
+                        </div>
+                        <div>
+                            <img src="{{ secure_asset('img/stamps/card_8.svg') }}" alt="スタンプ枠" class="stamp_line">
+                            {{--  <p class='f_title'>stamp CARD</p>  --}}
+                        </div>
+                        <p class="limit">！ 有効期限：{{ $cards[$i]->expiry }}</p>
+                        {{--  <p class='f_subline'></p>  --}}
+    
+                    </div>
+    
+                    <div class='back'>
+                        {{--  <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="b_logo">  --}}
+                        {{--  <h1 class='b_headline'>まる屋</h1>  --}}
+                        <span class='b_text'>CARD NUMBER: </span>
+                        <p class="b_text" id="card_no">{{ $cards[$i]->card_no }}</p>
+                        <span class='b_text'>STORE ID: </span>
+                        <p class="b_text">{{ $cards[$i]->store_id }}</p>
+                        <span class='b_text'>LINE USER ID: </span>
+                        <p class="b_text">{{ $cards[$i]->uid }}</p>
+                        {{--  <p class='b_text'><br />text TEXT テキスト てきすと text TEXT テキスト てきすと<br />text TEXT テキスト てきすと</p>  --}}
+                        {{--  <button class='b_button'><span>Buy now</span></button>  --}}
+                    </div>
+    
+                </div>
+    
+            </div>
           <div class="carousel__snapper">
             <a href="#carousel__slide{{$last->id}}"
                class="carousel__prev">Go to last slide</a>
-               {{--  {{$i+1}}  --}}
             <a href="#carousel__slide{{$cards[$i+1]->id}}"
                class="carousel__next">Go to next slide</a>
           </div>
         </li>
-        {{--  {{$i-1}}  --}}
+
        
 
         {{--  最後の要素だったら  --}}
@@ -39,7 +71,40 @@
         <li id="carousel__slide{{$last->id}}"
             tabindex="0"
             class="carousel__slide">
-            <div> {{$cards[$i]->id}}</div>
+            <div class='container'>
+
+                <div class='flip_box'>
+    
+                    <div class='front'>
+                        <div class="store">
+                            <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="f_logo">
+                            <p class='f_headline'>まる屋</p>
+                        </div>
+                        <div>
+                            <img src="{{ secure_asset('img/stamps/card_8.svg') }}" alt="スタンプ枠" class="stamp_line">
+                            {{--  <p class='f_title'>stamp CARD</p>  --}}
+                        </div>
+                        <p class="limit">！ 有効期限：{{ $cards[$i]->expiry }}</p>
+                        {{--  <p class='f_subline'></p>  --}}
+    
+                    </div>
+    
+                    <div class='back'>
+                        {{--  <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="b_logo">  --}}
+                        {{--  <h1 class='b_headline'>まる屋</h1>  --}}
+                        <span class='b_text'>CARD NUMBER: </span>
+                        <p class="b_text" id="card_no">{{ $cards[$i]->card_no }}</p>
+                        <span class='b_text'>STORE ID: </span>
+                        <p class="b_text">{{ $cards[$i]->store_id }}</p>
+                        <span class='b_text'>LINE USER ID: </span>
+                        <p class="b_text">{{ $cards[$i]->uid }}</p>
+                        {{--  <p class='b_text'><br />text TEXT テキスト てきすと text TEXT テキスト てきすと<br />text TEXT テキスト てきすと</p>  --}}
+                        {{--  <button class='b_button'><span>Buy now</span></button>  --}}
+                    </div>
+    
+                </div>
+    
+            </div>
           <div class="carousel__snapper">
             {{--  {{$i-1}}  --}}
             <a href="#carousel__slide{{$cards[$i-1]->id}}"
@@ -54,7 +119,40 @@
         <li id="carousel__slide{{$cards[$i]->id}}"
             tabindex="0"
             class="carousel__slide">
-            <div> {{$cards[$i]->id}}</div>
+            <div class='container'>
+
+                <div class='flip_box'>
+    
+                    <div class='front'>
+                        <div class="store">
+                            <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="f_logo">
+                            <p class='f_headline'>まる屋</p>
+                        </div>
+                        <div>
+                            <img src="{{ secure_asset('img/stamps/card_8.svg') }}" alt="スタンプ枠" class="stamp_line">
+                            {{--  <p class='f_title'>stamp CARD</p>  --}}
+                        </div>
+                        <p class="limit">！ 有効期限：{{ $cards[$i]->expiry }}</p>
+                        {{--  <p class='f_subline'></p>  --}}
+    
+                    </div>
+    
+                    <div class='back'>
+                        {{--  <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="b_logo">  --}}
+                        {{--  <h1 class='b_headline'>まる屋</h1>  --}}
+                        <span class='b_text'>CARD NUMBER: </span>
+                        <p class="b_text" id="card_no">{{ $cards[$i]->card_no }}</p>
+                        <span class='b_text'>STORE ID: </span>
+                        <p class="b_text">{{ $cards[$i]->store_id }}</p>
+                        <span class='b_text'>LINE USER ID: </span>
+                        <p class="b_text">{{ $cards[$i]->uid }}</p>
+                        {{--  <p class='b_text'><br />text TEXT テキスト てきすと text TEXT テキスト てきすと<br />text TEXT テキスト てきすと</p>  --}}
+                        {{--  <button class='b_button'><span>Buy now</span></button>  --}}
+                    </div>
+    
+                </div>
+    
+            </div>
           <div class="carousel__snapper">
             {{--  {{$i-1}}  --}}
             <a href="#carousel__slide{{$cards[$i-1]->id}}"
