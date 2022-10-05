@@ -10,7 +10,7 @@
 <body>
     @if (isset($request))
     <div class="coupons">
-        <form action="{{route('coupon.used')}}" method="GET">
+        <form action="{{route('coupon.used')}}" method="POST">
             @csrf
             <input type="hidden" name="userId" id="user">
             <input type="hidden" name="store" value="{{$request['store']}}">

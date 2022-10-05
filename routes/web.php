@@ -99,7 +99,7 @@ Route::group(['prefix' => '/getInflow', 'as' => 'getinflow' ], function () {
 //0930 coupon
 Route::group(['prefix' => '/coupon', 'as' => 'coupon' ], function () {
     Route::get('/', 'App\Http\Controllers\Coupons@index')-> name('.index');
-    Route::get('/used', 'App\Http\Controllers\Coupons@used')-> name('.used');
+    Route::post('/', 'App\Http\Controllers\Coupons@used')-> name('.used');
     Route::get('/view', 'App\Http\Controllers\Coupons@viewCoupon')-> name('.view');
     
 });
