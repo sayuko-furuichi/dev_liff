@@ -12,8 +12,9 @@
     <div class="coupons">
         <form action="{{route('coupon.used')}}" method="POST">
             @csrf
-            <div id="users"><input type="hidden" name="userId" id="user"></div>
+            <div><input type="hidden" name="userId" id="user">
             <input type="hidden" name="store" value="{{$request['store']}}">
+        </div>
        <input type="hidden" name="couponId" value="{{$request['couponId']}}"> <img src="{{secure_asset('img/coupons/'.$request['img'])}}" alt="クーポン" class="coupon_img">
        <p>{{$request['name']}}</p>
        <p><span>有効期限：</span>{{$request['exiry']}}</p>
