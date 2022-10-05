@@ -17,7 +17,7 @@
       <ol class="carousel__viewport">
         {{--  @foreach()  --}}
         @for ( $i=0 ; $i< count($cards); $i++)
-        //先頭だったら
+        {{--  先頭だったら  --}}
         @if ($cards[$i]->id == $first->id)
         <li id="carousel__slide.{{$first->id}}"
             tabindex="0"
@@ -34,7 +34,7 @@
         {{$i-1}}
         @endif
 
-        //最後の要素だったら
+        {{--  最後の要素だったら  --}}
         @if ($cards[$i]->id == $last->id)
         <li id="carousel__slide.{{$last->id}}"
             tabindex="0"
