@@ -82,7 +82,7 @@ class StampCards extends Controller
      $lastC =$card->last();
      $firstC =$card->first();
 
-dd(count($card));
+
     //      2：保持していなければ作成する
         if (isset($card[0])) {
             //複数枚ある場合は、numberで分かる
