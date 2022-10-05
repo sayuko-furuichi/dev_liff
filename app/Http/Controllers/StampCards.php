@@ -40,7 +40,7 @@ class StampCards extends Controller
             // 'max_points'=>$card[0]->max_points,
             // 'number'=>$card[0]->number,
             'cards' =>$card,
-            'cps'=>$cp
+            //'cps'=>$cp
         ]);
 
         return view('stampCards.dev_scr');
