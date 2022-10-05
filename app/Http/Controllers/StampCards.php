@@ -207,7 +207,7 @@ class StampCards extends Controller
             return view('stampCards.stampCard', [
                 //  'uid'=> $nwCard->lineuser_id,
                 //  'points'=>$nwCard->points,
-                //  'getPoints'=>$request->points,
+                  'getPoints'=>$request->points,
                 //  'card_no'=>$nwCard->id,
                 //  'expiry' =>$nwCard->expiry,
                 //  'store_id'=>$nwCard->store_id,
@@ -235,7 +235,7 @@ class StampCards extends Controller
             return view('stampCards.stampCard', [
             //   'uid'=> $toCard->lineuser_id,
             //   'points'=>$toCard->points,
-            //   'getPoints'=>$request->points,
+               'getPoints'=>$request->points,
             //   'card_no'=>$request->card_no,
             //   'expiry' =>$toCard->expiry,
             //   'store_id'=>$toCard->store_id,
