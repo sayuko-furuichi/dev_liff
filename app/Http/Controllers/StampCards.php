@@ -225,7 +225,8 @@ class StampCards extends Controller
 
             //   $card= $card->where('store_id', $request->store)->where('state',1)->sortByDesc('id');
             $card= $card->where('store_id', $request->store)->sortBy('id');
-       
+            
+            dd($card);
             //先頭とlast取得
             $lastC =$card->last();
             $firstC =$card->first();
