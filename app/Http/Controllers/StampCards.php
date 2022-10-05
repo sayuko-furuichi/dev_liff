@@ -220,6 +220,7 @@ class StampCards extends Controller
                  'new'=>'新しいカードを作成しました'
                ]);
         } else {
+            $toCard->save();
             $card =StampCard::where('lineuser_id', $request->userId)->get();
 
             //   $card= $card->where('store_id', $request->store)->where('state',1)->sortByDesc('id');
@@ -229,7 +230,6 @@ class StampCards extends Controller
             $lastC =$card->last();
             $firstC =$card->first();
 
-            $toCard->save();
             return view('stampCards.stampCard', [
             //   'uid'=> $toCard->lineuser_id,
             //   'points'=>$toCard->points,
