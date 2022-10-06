@@ -71,7 +71,11 @@ function initializeLiff(myLiffId) {
   });
 }
 
-  
+  // function createStamp(){
+  //   document.getElementById('')
+  // }
+
+
 
   
 
