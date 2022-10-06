@@ -504,6 +504,13 @@ width: 15%;
 float: left;
 }
 
+.on_stamp{
+  width: calc(15% - 5px);
+  width: 12%;
+    padding-top: 10px;
+  float: left;
+}
+
 .stamp_box{
 display: flex;
 /* justify-content: space-around; */
