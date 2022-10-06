@@ -43,7 +43,7 @@
                                 @endif
                                 @if($n % 5 === 0)
                               </div>
-                              <div>
+                              <div class="stamp_box">
                                 @endif
                                 @endfor
                               </div>
