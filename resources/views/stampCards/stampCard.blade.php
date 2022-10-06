@@ -42,9 +42,11 @@
                                 <img src="{{ secure_asset('img/stamps/empty_stampC.svg') }}" alt="スタンプ枠" class="stamp_line">
                                 @endif
                                 @if($n % 5 === 0)
-                                &lt;p&gt;
+                              </div>
+                              <div>
                                 @endif
                                 @endfor
+                              </div>
                                   {{--  <p class='f_title'>stamp CARD</p>  --}}
                               </div>
                               <p class="limit">！ 有効期限：{{ $cards[$i]->expiry }}</p>
