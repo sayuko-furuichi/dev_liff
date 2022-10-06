@@ -73,12 +73,12 @@
         @endif
         {{--  <input type="submit" value="更新">  --}}
     </div>
-                <div class="carousel__snapper">
+                {{--  <div class="carousel__snapper">  --}}
                   <a href="#carousel__slide{{$last->id}}"
                      class="carousel__prev">Go to last slide</a>
                   <a href="#carousel__slide{{$cards[$i+1]->id}}"
                      class="carousel__next">Go to next slide</a>
-                </div>
+                {{--  </div>  --}}
               </li>
       
              
