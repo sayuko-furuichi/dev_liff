@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="207" height="215" viewBox="0 0 207 215">
+  <g id="楕円形_10" data-name="楕円形 10" fill="#aaa" stroke="#fff" stroke-width="8" stroke-dasharray="20">
+    <ellipse cx="103.5" cy="107.5" rx="103.5" ry="107.5" stroke="none"/>
+    <ellipse cx="103.5" cy="107.5" rx="99.5" ry="103.5" fill="none"/>
+  </g>
+  <text id="GOAL" transform="translate(47 127)" fill="rgba(226,222,222,0.98)" font-size="45" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">GOAL</tspan></text>
+</svg>
