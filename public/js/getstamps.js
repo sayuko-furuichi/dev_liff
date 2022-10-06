@@ -23,8 +23,8 @@ const defaultLiffId ='1657487333-JPeEg6lr';
     }}).catch(function (error) {
       window.alert('Error getting profile: ' + error);
       });
-  
-        }
+ 
+    }
 
   $('.flip_box').hover(function() {
     $('.b_round').toggleClass('b_round_hover');
@@ -46,6 +46,7 @@ const defaultLiffId ='1657487333-JPeEg6lr';
   });
 });
   
+createStamp();
   }
        
 
@@ -71,9 +72,14 @@ function initializeLiff(myLiffId) {
   });
 }
 
-  // function createStamp(){
-  //   document.getElementById('')
-  // }
+  function createStamp(){
+    for (let index = 0; index <document.getElementById('total_p').textContent; index++) {
+      // const element = array[index];
+      document.getElementById('emp_stamp').src = document.getElementById('logo_img').src;
+    }
+
+   
+  }
 
 
 

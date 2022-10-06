@@ -30,14 +30,14 @@
           
                           <div class='front'>
                               <div class="store">
-                                  <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="f_logo">
+                                  <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="f_logo" id="logo_img">
                                   <p class='f_headline'>まる屋</p>
                               </div>
                               <div class="stamp_box">
                                 @for ( $n=1 ;  $n<= $cards[$i]->max_points ; $n++)
                                 {{--  5の倍数の時改行する  --}}
                                 @if($n==$cards[$i]->max_points)
-                                <img src="{{ secure_asset('img/stamps/goal.svg') }}" alt="goalスタンプ枠" class="stamp_line">
+                                <img src="{{ secure_asset('img/stamps/goal.svg') }}" alt="goalスタンプ枠" class="stamp_line" id="emp_stamp">
                                 @else
                                 <img src="{{ secure_asset('img/stamps/empty_stampC.svg') }}" alt="スタンプ枠" class="stamp_line">
                                 @endif
@@ -70,7 +70,7 @@
         
         <p class="get_points">{{$cards[$i]->number}} / {{$last->number}}</p>
         <p class="get_points">  {{$cards[$i]->now_points}} / {{$cards[$i]->max_points}} </p>
-        <p class="get_points"> ポイント総数：{{ $last->points }}<span id="points" class="get_points"></span></p>
+        <p class="get_points"> ポイント総数：<span id="total_p" class="get_points">{{ $last->points }}</span></p>
         @if (isset($getPoints))
             <p class="get_points">{{ $getPoints }} ポイントゲットしました！！</p>
         @endif
