@@ -505,6 +505,7 @@ padding-top: 10px;
 .stamp_box{
 display: flex;
 justify-content: space-around;
+left: 5px;
 
 }
 .result{
