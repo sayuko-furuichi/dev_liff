@@ -20,8 +20,7 @@
             <ol class="carousel__viewport">
               {{--  @foreach()  --}}
               @for ( $i=0 ; $i <= count($cards)-1 ; $i++)
-              {{--  先頭だったら  --}}
-           
+
               <li id="carousel__slide{{$cards[$i]->id}}"
                   tabindex="0"
                   class="carousel__slide">
@@ -69,6 +68,8 @@
         @endif
         {{--  <input type="submit" value="更新">  --}}
     </div>
+
+                  {{--  先頭だったら  --}}
     @if ($cards[$i]->id == $first->id)
                 <div class="carousel__snapper">
                   <a href="#carousel__slide{{$last->id}}"
@@ -107,7 +108,7 @@
               </li>
       {{--  {{$i-1}}  --}}
       @endif
-              @endfor
+        @endfor
           </ol> 
          
           </section>
