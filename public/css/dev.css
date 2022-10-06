@@ -1,4 +1,4 @@
-@keyframes tonext {
+/* @keyframes tonext {
     75% {
       left: 0;
     }
@@ -42,7 +42,7 @@
       scroll-snap-align: center;
     }
   }
-  
+   */
   /* body {
     max-width: 37.5rem;
     margin: 0 auto;
