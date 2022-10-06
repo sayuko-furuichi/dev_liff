@@ -35,7 +35,9 @@
                               </div>
                               <div class="stamp_box">
                                 @for ( $n=1 ;  $n<= $cards[$i]->now_points ; $n++)
-                                @if($n==$cards[$i]->max_points)
+                                @if ($n <= $cards[$i]->now_points)
+                                <img src="{{ secure_asset('img/'.$cards[$i]->img) }}" alt="スタンプ" class="stamp_line">
+                                @elseif($n==$cards[$i]->max_points)
                                 <img src="{{ secure_asset('img/stamps/goal.svg') }}" alt="goalスタンプ枠" class="stamp_line">
                                 @else
                                 <img src="{{ secure_asset('img/stamps/empty_stampC.svg') }}" alt="スタンプ枠" class="stamp_line">
