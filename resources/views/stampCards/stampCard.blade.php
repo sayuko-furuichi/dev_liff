@@ -34,7 +34,9 @@
                                   <p class='f_headline'>まる屋</p>
                               </div>
                               <div>
-                                  <img src="{{ secure_asset('img/stamps/card_8.svg') }}" alt="スタンプ枠" class="stamp_line">
+                                @for ( $n=1 ;  $n< $cards[$i]->max_points ; $n++)
+                                <img src="{{ secure_asset('img/stamps/emptyStamp.svg') }}" alt="スタンプ枠" class="stamp_line">
+                                @endfor
                                   {{--  <p class='f_title'>stamp CARD</p>  --}}
                               </div>
                               <p class="limit">！ 有効期限：{{ $cards[$i]->expiry }}</p>
