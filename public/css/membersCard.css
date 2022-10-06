@@ -507,7 +507,7 @@ float: left;
 display: flex;
 /* justify-content: space-around; */
 left: 5px;
-flex-wrap: wrap
+flex-wrap: wrap;
 
 
 }
