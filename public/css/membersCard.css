@@ -500,6 +500,7 @@ a.bild_qr:hover{
 .stamp_line{
   width: 10%;
 padding-top: 10px;
+float: left;
 }
 
 .stamp_box{
