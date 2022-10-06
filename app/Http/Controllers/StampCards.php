@@ -144,6 +144,8 @@ class StampCards extends Controller
 
         // return view('stampCards.stampCard',['uid'=>$request->userId,'store'=>$request->store]);
     }
+
+    //ポイント付与のQRコードを読みこみ　→ＪＳでクエリを付ける
     public function add(Request $request)
     {
 
@@ -169,7 +171,7 @@ class StampCards extends Controller
             $nwCard->lineuser_id=$toCard->lineuser_id;
             $nwCard->store_id=$request->store;
             $nwCard->number=$toCard->number +1;
-            $nwCard->img=secure_asset('img/1.png');
+            $nwCard->img='img/1.png';
 
             // 1 は稼働中
             $nwCard->state=1;
