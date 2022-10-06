@@ -34,9 +34,9 @@
                                   <p class='f_headline'>まる屋</p>
                               </div>
                               <div class="stamp_box">
-                                @for ( $n=1 ;  $n<= $cards[$i]->now_points ; $n++)
+                                @for ( $n=1 ;  $n<= $cards[$i]->max_points ; $n++)
                                 @if ($n <= $cards[$i]->now_points)
-                                <img src="{{ secure_asset('img/'.$cards[$i]->img) }}" alt="スタンプ" class="stamp_line">
+                                <img src="{{ secure_asset('img/'.$cards[$i]->img) }}" alt="スタンプ" class="on_stamp">
                                 @elseif($n==$cards[$i]->max_points)
                                 <img src="{{ secure_asset('img/stamps/goal.svg') }}" alt="goalスタンプ枠" class="stamp_line">
                                 @else
