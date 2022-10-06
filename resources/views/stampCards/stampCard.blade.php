@@ -35,8 +35,14 @@
                               </div>
                               <div>
                                 @for ( $n=1 ;  $n< $cards[$i]->max_points ; $n++)
-                             
-                                <img src="{{ secure_asset('img/stamps/empty_stamp.svg') }}" alt="スタンプ枠" class="stamp_line">
+                                {{--  5の倍数の時改行する  --}}
+                                @if($n==$cards[$i]->max_points)
+                                <img src="{{ secure_asset('img/stamps/goal.svg') }}" alt="goalスタンプ枠" class="stamp_line">
+                                @else
+                                <img src="{{ secure_asset('img/stamps/empty_stampC.svg') }}" alt="スタンプ枠" class="stamp_line">
+                                @if($n % 5 === 0)
+                                <br>
+                                @endif
                                 @endfor
                                   {{--  <p class='f_title'>stamp CARD</p>  --}}
                               </div>
