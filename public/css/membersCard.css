@@ -501,6 +501,12 @@ a.bild_qr:hover{
   width: 30%;
 padding-top: 10px;
 }
+
+.stamp_box{
+display: flex;
+justify-content: space-around;
+
+}
 .result{
   color: red;
 }

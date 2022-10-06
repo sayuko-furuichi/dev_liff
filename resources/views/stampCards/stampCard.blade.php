@@ -33,7 +33,7 @@
                                   <img src="{{ secure_asset('img/1.png') }}" alt="logo" class="f_logo">
                                   <p class='f_headline'>まる屋</p>
                               </div>
-                              <div>
+                              <div class="stamp_box">
                                 @for ( $n=1 ;  $n< $cards[$i]->max_points ; $n++)
                                 {{--  5の倍数の時改行する  --}}
                                 @if($n==$cards[$i]->max_points)
