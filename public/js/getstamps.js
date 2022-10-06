@@ -46,7 +46,7 @@ const defaultLiffId ='1657487333-JPeEg6lr';
   });
 });
   
-createStamp();
+// createStamp();
   }
        
 
@@ -73,8 +73,9 @@ function initializeLiff(myLiffId) {
 }
 
   function createStamp(){
-    for (let index = 0; index <document.getElementById('total_p').textContent; index++) {
+    for (let index = 0; index < document.getElementById('total_p').textContent; index++) {
       // const element = array[index];
+      //document.getElementsByClassName('stamp_line');
       document.getElementById('emp_stamp').src = document.getElementById('logo_img').src;
     }
 
