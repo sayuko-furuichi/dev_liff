@@ -46,7 +46,7 @@
                               <div class="stamp_box">
                                 @endif
                                 @endfor
-                              </div>
+                             
                                   {{--  <p class='f_title'>stamp CARD</p>  --}}
                               </div>
                               <p class="limit">！ 有効期限：{{ $cards[$i]->expiry }}</p>
