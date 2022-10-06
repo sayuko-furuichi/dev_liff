@@ -42,7 +42,7 @@
                                 <img src="{{ secure_asset('img/stamps/empty_stampC.svg') }}" alt="スタンプ枠" class="stamp_line">
                                 @endif
                                 @if($n % 5 === 0)
-                                <br>
+                                <p><br></p>
                                 @endif
                                 @endfor
                                   {{--  <p class='f_title'>stamp CARD</p>  --}}
