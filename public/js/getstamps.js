@@ -25,7 +25,7 @@ const defaultLiffId ='1657487333-JPeEg6lr';
       });
  
     }
- createStamp();
+ //createStamp();
 
 
   $('.flip_box').hover(function() {

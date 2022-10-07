@@ -35,10 +35,13 @@
                               </div>
                               <div class="stamp_box">
                                 @for ( $n=1 ;  $n<= $cards[$i]->max_points ; $n++)
+                                @foreach ($cps as $cc)
                                 @if ($n <= $cards[$i]->now_points)
                                 <img src="{{ secure_asset('img/stamps/'.$cards[$i]->img) }}" alt="スタンプ" class="on_stamp">
                                 @elseif($n==$cards[$i]->max_points)
                                 <img src="{{ secure_asset('img/stamps/goal.svg') }}" alt="goalスタンプ枠" class="stamp_line">
+                                @elseif($n==$cc->term_of_use_points)
+                                <img src="{{ secure_asset('img/stamps/present.svg') }}" alt="スタンプ枠" class="stamp_line">
                                 @else
                                 <img src="{{ secure_asset('img/stamps/empty_stampC.svg') }}" alt="スタンプ枠" class="emp_stamp_line">
                                 @endif
@@ -47,6 +50,7 @@
                               </div>
                               <div class="stamp_box">
                                 @endif
+                                @endforeach
                                 @endfor   
                                   {{--  <p class='f_title'>stamp CARD</p>  --}}
                               </div>
@@ -172,7 +176,6 @@
     @endif
 
         <hr>
-        <img src="{{ secure_asset('img/stamps/empty_stampC.svg') }}" alt="スタンプ枠" class="emp_stamp_lines">
         <div class="info">
             <h2>ご利用案内</h2>
             <pre>
