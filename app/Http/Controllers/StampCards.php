@@ -69,7 +69,6 @@ class StampCards extends Controller
         $cp= $cp->where('exiry', '>', $date)->sortBy('term_of_use_point');
 
         //couponが無い場合の処理
-        dd($cp[1-1]->term_of_use_point);
 
         //UserIdとstore_idをrequestに保持している状態
         //1：カードの持ち主を特定する
