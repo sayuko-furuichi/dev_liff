@@ -172,6 +172,7 @@
     @endif
 
         <hr>
+        <img src="{{ secure_asset('img/stamps/empty_stampC.svg') }}" alt="スタンプ枠" class="emp_stamp_lines">
         <div class="info">
             <h2>ご利用案内</h2>
             <pre>
