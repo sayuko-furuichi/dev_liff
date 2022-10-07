@@ -45,6 +45,7 @@
                             </button>
                             </div>
                             <input type="hidden" name="store" value="{{ $store }}">
+                            <input type="hidden" value="{{$card_id}}" name="card_id">
                         </form>
                     
                     @endforeach
@@ -67,7 +68,7 @@
                     </div>
                     <input type="hidden" id="user" name="uid">
                     <input type="hidden" name="store" value="{{ $store }}">
-                    <input type="submit" value="（仮）">
+                    <input type="hidden" value="{{$card_id}}" name="card_id">
                     </form>
                 @endif
 
