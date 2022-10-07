@@ -41,7 +41,7 @@ foreach ($request->cps as $cp) {
 
 }
 
-dd($cps[$n-1]->term_of_use_points);
+
 
 if($cps == null){
     return view('coupon_sample.index',['notFound'=>'not_found','store'=>$request->store]);
