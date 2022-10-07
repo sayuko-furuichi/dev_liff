@@ -173,7 +173,6 @@ class StampCards extends Controller
             $nwCard->lineuser_id=$toCard->lineuser_id;
             $nwCard->store_id=$request->store;
             $nwCard->number=$toCard->number +1;
-
          
 
             $nwCard->img='1.png';
