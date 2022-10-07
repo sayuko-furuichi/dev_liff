@@ -41,7 +41,7 @@
                                 @elseif($n==$cards[$i]->max_points)
                                 <img src="{{ secure_asset('img/stamps/goal.svg') }}" alt="goalスタンプ枠" class="stamp_line">
 
-                                @elseif (isset($cps[$n-1])&& $n ==$cps[$n-1]->term_of_use_point)
+                                @elseif ($cps[$n-1] != null&& $n ==$cps[$n-1]->term_of_use_point)
                                 <img src="{{ secure_asset('img/stamps/present.svg') }}" alt="スタンプ枠" class="stamp_line">
                                 @else
                                 <img src="{{ secure_asset('img/stamps/empty_stampC.svg') }}" alt="スタンプ枠" class="emp_stamp_line">
