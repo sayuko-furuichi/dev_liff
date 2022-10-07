@@ -75,13 +75,12 @@ function initializeLiff(myLiffId) {
 }
 
   function createStamp(){
-    for (let index = 0; index < document.getElementById('total_p').textContent; index++) {
       // const element = array[index];
       document.getElementsByClassName('emp_stamp_line').src='https://dev-liff.herokuapp.com/img/stamps/present.svg';
 
       //クーポンの
       document.getElementsByClassName('point_mark').textContent;
-    }
+    
 
    
   }
