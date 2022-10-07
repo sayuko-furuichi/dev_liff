@@ -44,8 +44,7 @@
                                 @elseif (isset($cps[$n-1])&& $n ==$cps[$n-1]->term_of_use_point)
                                 <img src="{{ secure_asset('img/stamps/present.svg') }}" alt="スタンプ枠" class="stamp_line">
                                 @else
-                                <img src="{{ secure_asset('img/stamps/present.svg') }}" alt="スタンプ枠" class="stamp_line">
-                                {{--  <img src="{{ secure_asset('img/stamps/empty_stampC.svg') }}" alt="スタンプ枠" class="emp_stamp_line">  --}}
+                                <img src="{{ secure_asset('img/stamps/empty_stampC.svg') }}" alt="スタンプ枠" class="emp_stamp_line">
                                 @endif
                                 {{--  5の倍数の時改行する  --}}
                                 @if($n % 5 === 0)
