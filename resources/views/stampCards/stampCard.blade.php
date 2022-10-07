@@ -34,8 +34,9 @@
                                   <p class='f_headline'>まる屋</p>
                               </div>
                               <div class="stamp_box">
-                                @for ( $n=1 ;  $n<= $cards[$i]->max_points ; $n++)
                                 @foreach ($cps as $cc)
+                                @for ( $n=1 ;  $n<= $cards[$i]->max_points ; $n++)
+                            
                                 @if ($n <= $cards[$i]->now_points)
                                 <img src="{{ secure_asset('img/stamps/'.$cards[$i]->img) }}" alt="スタンプ" class="on_stamp">
                                 @elseif($n==$cards[$i]->max_points)
@@ -50,8 +51,9 @@
                               </div>
                               <div class="stamp_box">
                                 @endif
-                                @endforeach
+                          
                                 @endfor   
+                                @endforeach
                                   {{--  <p class='f_title'>stamp CARD</p>  --}}
                               </div>
                               <p class="limit">！ 有効期限：{{ $cards[$i]->expiry }}</p>
