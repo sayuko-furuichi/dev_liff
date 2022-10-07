@@ -24,11 +24,11 @@ class Coupons extends Controller
 foreach ($request->cps as $cp) {
    $cp= json_decode($cp,true);
 
-    //ポイントを満たしているか
+    //最新のカードがポイントを満たしているか
     if ( $request->points >= $cp['term_of_use_point']) {
         //使用されていないか
         $useds=collect([]);
-      $useds= $usedC->where('coupon_id', $cp['id']);
+      $useds= $usedC->where('coupon_id', $cp['id'])->where('card_id',$request->card_no);
 
         if($useds->isEmpty()){
             $cps[$i] =$cp;
