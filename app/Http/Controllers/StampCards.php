@@ -193,13 +193,13 @@ class StampCards extends Controller
             //TODO:とりあえず8ポイントがmax
             $nwCard->max_points=8;
 
-            if($nwCard->number != $toCard->number){
+            if($nwCard->number == $toCard->number){
+                $message="エラーが発生しました。\nもう一度やり直してください";
+            }else{
+               
                 $nwCard ->save();
                 $toCard->save();
                 $message='新しいカードを作成しました！';
-            }else{
-                $message="エラーが発生しました。\nもう一度やり直してください";
-
             }
 
           
