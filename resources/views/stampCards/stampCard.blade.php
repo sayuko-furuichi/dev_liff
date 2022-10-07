@@ -40,7 +40,7 @@
                                 @elseif($n==$cards[$i]->max_points)
                                 <img src="{{ secure_asset('img/stamps/goal.svg') }}" alt="goalスタンプ枠" class="stamp_line">
                                 @else
-                                <img src="{{ secure_asset('img/stamps/empty_stampC.svg') }}" alt="スタンプ枠" class="stamp_line">
+                                <img src="{{ secure_asset('img/stamps/empty_stampC.svg') }}" alt="スタンプ枠" class="emp_stamp_line">
                                 @endif
                                 {{--  5の倍数の時改行する  --}}
                                 @if($n % 5 === 0)
@@ -185,8 +185,8 @@
 
         <input type="hidden" id="card_no" value="{{$last->id}}">
         <input type="hidden" id="user_id" name="uid">
-        <input type="hidden" name="store" value="{{ $cards[0]->store_id }}">
-        {{--  <input type="hidden" name="points" value="{{ $cards[$i]->points }}">  --}}
+        <input type="hidden" name="store" value="{{ $last->store_id }}">
+        <input type="hidden" name="points" value="{{ $last->now_points }}">
     </form>
 
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
