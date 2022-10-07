@@ -158,6 +158,9 @@ class StampCards extends Controller
 
        $cp= $cp->where('exiry', '>', $date)->sortBy('term_of_use_point');
         //pointsがクエリで投げられる時　クーポン投げられる想定はする？
+
+        //Tocardは正常だが、nwCardが重複して作成されてしまう
+        //すでに新しいNoがある場合は、そちらを利用する
         $toCard =StampCard::where('id', $request->card_no)->first();
 
         //card_noから検索して、ポイントを加算代入する
