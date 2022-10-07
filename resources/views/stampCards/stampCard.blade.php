@@ -183,7 +183,7 @@
 </pre>
         </div>
 
-        <input type="hidden" id="card_no" value="{{$last->id}}">
+        <input type="hidden" id="card_no" value="{{$last->id}}" name="card_id">
         <input type="hidden" id="user_id" name="uid">
         <input type="hidden" name="store" value="{{ $last->store_id }}">
 

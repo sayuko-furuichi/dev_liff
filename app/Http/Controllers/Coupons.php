@@ -28,7 +28,7 @@ foreach ($request->cps as $cp) {
     if ( $request->points >= $cp['term_of_use_point']) {
         //使用されていないか
         $useds=collect([]);
-      $useds= $usedC->where('coupon_id', $cp['id'])->where('card_id',$request->card_no);
+      $useds= $usedC->where('coupon_id', $cp['id'])->where('card_id',$request->card_id);
 
         if($useds->isEmpty()){
             $cps[$i] =$cp;
@@ -45,7 +45,7 @@ dd($request->card_no);
 if($cps == null){
     return view('coupon_sample.index',['notFound'=>'not_found','store'=>$request->store]);
 }else{
-    return view('coupon_sample.index',['cps'=>$cps,'store'=>$request->store,'card_id'=>$request->card_no]);
+    return view('coupon_sample.index',['cps'=>$cps,'store'=>$request->store,'card_id'=>$request->card_id]);
 }
            
             //store　とuidで引いておいて、forで回すときにｃｐidで検索した方が早そう
