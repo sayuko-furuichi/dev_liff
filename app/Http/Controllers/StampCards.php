@@ -113,7 +113,7 @@ class StampCards extends Controller
             $nwCard->lineuser_id=$request->userId;
             $nwCard->store_id=$request->store;
             $nwCard->number=1;
-            $nwCard->img=secure_asset('img/1.png');
+            $nwCard->img='1.png';
             // 1 は稼働中
             $nwCard->state=1;
 
