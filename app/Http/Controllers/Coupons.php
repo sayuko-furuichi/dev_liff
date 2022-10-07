@@ -40,7 +40,6 @@ foreach ($request->cps as $cp) {
     }
 
 }
-dd($request->card_id);
 
 if($cps == null){
     return view('coupon_sample.index',['notFound'=>'not_found','store'=>$request->store]);
