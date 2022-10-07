@@ -174,7 +174,7 @@ class StampCards extends Controller
 
          
 
-            $nwCard->img='img/1.png';
+            $nwCard->img='1.png';
 
             // 1 は稼働中
             $nwCard->state=1;
