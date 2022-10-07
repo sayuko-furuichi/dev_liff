@@ -25,6 +25,8 @@ const defaultLiffId ='1657487333-JPeEg6lr';
       });
  
     }
+    createStamp();
+
 
   $('.flip_box').hover(function() {
     $('.b_round').toggleClass('b_round_hover');
@@ -46,7 +48,7 @@ const defaultLiffId ='1657487333-JPeEg6lr';
   });
 });
   
- createStamp();
+
   }
        
 
@@ -75,7 +77,7 @@ function initializeLiff(myLiffId) {
   function createStamp(){
     for (let index = 0; index < document.getElementById('total_p').textContent; index++) {
       // const element = array[index];
-      document.getElementsByClassName('emp_stamp_line').src=url('../img/stamps/present.svg');
+      document.getElementsByClassName('emp_stamp_line').src=url('public/img/stamps/present.svg');
 
       //クーポンの
       document.getElementsByClassName('point_mark').textContent;
