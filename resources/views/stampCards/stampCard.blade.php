@@ -186,6 +186,7 @@
         <input type="hidden" id="card_no" value="{{$last->id}}">
         <input type="hidden" id="user_id" name="uid">
         <input type="hidden" name="store" value="{{ $last->store_id }}">
+        <input type="hidden" name="card_id" value="{{$request->card_no}}">
         {{--  カード毎に特典が取得できる  --}}
         <input type="hidden" name="points" value="{{ $last->now_points }}">
     </form>

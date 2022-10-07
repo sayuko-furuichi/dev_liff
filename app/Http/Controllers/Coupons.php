@@ -45,16 +45,10 @@ foreach ($request->cps as $cp) {
 if($cps == null){
     return view('coupon_sample.index',['notFound'=>'not_found','store'=>$request->store]);
 }else{
-    return view('coupon_sample.index',['cps'=>$cps,'store'=>$request->store]);
+    return view('coupon_sample.index',['cps'=>$cps,'store'=>$request->store,'card_id'=>$request->card_no]);
 }
            
             //store　とuidで引いておいて、forで回すときにｃｐidで検索した方が早そう
-
-       
-
-
-
-
 
         // $used =UsedCoupon::where('coupon_id',$request->couponId)
         // ->where('store_id',$request->store)
@@ -82,6 +76,7 @@ if($cps == null){
         $nwUsed->coupon_id=$request->couponId;
         $nwUsed->lineuser_id=$request->userId;
         $nwUsed->store_id=$request->store;
+        $nwUsed->card_id=$request->card_id;
 
         $nwUsed->save();
 

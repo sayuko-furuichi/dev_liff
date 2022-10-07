@@ -14,6 +14,7 @@
             @csrf
             <div><input type="hidden" name="userId" id="user">
             <input type="hidden" name="store" value="{{$request['store']}}">
+            <input type="hidden" name="card_id" value="{{$request->card_id}}">
         </div>
        <input type="hidden" name="couponId" value="{{$request['couponId']}}"> <img src="{{secure_asset('img/coupons/'.$request['img'])}}" alt="クーポン" class="coupon_img">
        <p>{{$request['name']}}</p>
