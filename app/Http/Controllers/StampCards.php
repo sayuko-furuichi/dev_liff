@@ -171,6 +171,9 @@ class StampCards extends Controller
             $nwCard->lineuser_id=$toCard->lineuser_id;
             $nwCard->store_id=$request->store;
             $nwCard->number=$toCard->number +1;
+
+         
+
             $nwCard->img='img/1.png';
 
             // 1 は稼働中
@@ -190,8 +193,16 @@ class StampCards extends Controller
             //TODO:とりあえず8ポイントがmax
             $nwCard->max_points=8;
 
-            $nwCard ->save();
-            $toCard->save();
+            if($nwCard->number != $toCard->number){
+                $nwCard ->save();
+                $toCard->save();
+                $message='新しいカードを作成しました！';
+            }else{
+                $message="エラーが発生しました。\nもう一度やり直してください";
+
+            }
+
+          
 
             //lineユーザIDは送信してないのでToCardから持ってくる
             $card =StampCard::where('lineuser_id', $toCard->lineuser_id)->get();
@@ -220,7 +231,7 @@ class StampCards extends Controller
                 'last'=>$lastC,
                 'first' =>$firstC,
                  'cps'=>$cp,
-                 'new'=>'新しいカードを作成しました'
+                 'new'=>$message
                ]);
         } else {
             $toCard->save();
