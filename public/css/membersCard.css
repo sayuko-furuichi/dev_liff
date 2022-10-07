@@ -498,23 +498,23 @@ a.bild_qr:hover{
 
 }
 .stamp_line{
-  width: calc(15% - 5px);
-width: 15%;
+  width: calc(10% - 5px);
+/* width: 10%; */
   padding-top: 10px;
 float: left;
 }
 
 .emp_stamp_line{
-  width: calc(15% - 5px);
-width: 15%;
+  width: calc(10% - 5px);
+/* width: 10%; */
   padding-top: 10px;
 float: left;
 }
 
 
 .on_stamp{
-  width: calc(15% - 5px);
-  width: 15%;
+  width: calc(10% - 5px);
+  /* width: 10%; */
     padding-top: 10px;
   float: left;
 }
