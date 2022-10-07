@@ -175,7 +175,7 @@
     <p>--獲得できる特典がありません--</p>
 
     @endif
-
+    <img src="{{ secure_asset('img/stamps/present.svg') }}" alt="スタンプ枠" class="stamp_line">
         <hr>
         <div class="info">
             <h2>ご利用案内</h2>
