@@ -1,28 +1,31 @@
-body{
+body {
     width: 90%;
     margin: 0 auto;
 }
 
-.sub_title{
+.sub_title {
     border: 3px;
     background-color: #6A6A68;
     color: #FFFFFF;
     height: 150%;
 }
 
-.must{
+.must {
     background-color: #C95C54;
     color: #FFFFFF;
     height: 100%;
 }
 
-button{
+button {
     background-color: #52B24C;
     color: #FFFFFF;
     text-align: center;
-        position: fixed;
-        bottom: 10%;
-        width: 100%;
-        height: 40px;
-      }
+    position: fixed;
+    bottom: 10%;
+    width: 100%;
+    height: 40px;
+}
 
+.item {
+    margin: 10px;
+}
