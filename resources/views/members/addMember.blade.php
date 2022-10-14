@@ -20,25 +20,25 @@
         @csrf
     <div>
         <p class="sub_title">名前　　<span  class="must">必須</span></p>
-        <input type="text" placeholder="姓" style="width:30%" required name="sei">　　<input type="text" placeholder="名"
-            style="width:30%" required name="mei">
+        <input type="text" placeholder="姓"required name="sei">　　<input type="text" placeholder="名"
+            style="width:40%" required name="mei">
     </div>
     <div>
         <p class="sub_title">フリガナ　　<span  class="must">必須</span></p>
-        <input type="text" placeholder="セイ" style="width:30%" required name="fSei">　　<input type="text" placeholder="メイ"
-            style="width:30%" required name="fMei">
+        <input type="text" placeholder="セイ"  required name="fSei">　　<input type="text" placeholder="メイ"
+             required name="fMei">
     </div>
     <div>
         <p class="sub_title">電話番号(ハイフン無し)　　<span class="must">必須</span></p>
-        <input type="text" placeholder="" style="width:60%" required name="tel">
+        <input type="text" placeholder=""  required name="tel">
     </div>
     <div>
         <p class="sub_title">住所　　<span  class="must">必須</span></p>
-        <input type="text" placeholder="" style="width:60%" required name="address">
+        <input type="text" placeholder=""  required name="address">
     </div>
     <div>
         <p class="sub_title">メールアドレス　　<span class="must">必須</span></p>
-        <input type="text" placeholder="" style="width:60%" required name="mail">
+        <input type="text" placeholder=""required name="mail">
     </div>
     <div>
         <button type="submit" class="submit_btn">送信</button>
