@@ -168,7 +168,14 @@ class StampCards extends Controller
         $toCard->points += (int)$request->points;
 
         //ポイント数がmaxを超えたとき新カード発行
+        //同じNoで作られてしまう問題
         if ($toCard->now_points >= $toCard->max_points) {
+            $double =StampCard::where('state',1)->get();
+            $double->where('lineuser_id',$toCard->lineuser_id)->where('number',$toCard->number)->get();
+            // if(!$double->isEmpty()){
+            //     $double->
+            //   //他にstate1があるとき？  
+            // }
             $nwCard = new StampCard();
             $nwCard->lineuser_id=$toCard->lineuser_id;
             $nwCard->store_id=$request->store;
