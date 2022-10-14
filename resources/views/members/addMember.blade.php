@@ -20,25 +20,25 @@
         @csrf
     <div class="item">
         <p class="sub_title">名前　　<span  class="must">必須</span></p>
-        <input type="text" placeholder="姓"required name="sei">　　<input type="text" placeholder="名"
-            style="width:40%" required name="mei">
+        <input type="text" placeholder="姓"required name="sei" class="half_txt">　　<input type="text" placeholder="名"
+            required name="mei" class="half_txt">
     </div>
     <div  class="item">
         <p class="sub_title">フリガナ　　<span  class="must">必須</span></p>
-        <input type="text" placeholder="セイ"  required name="fSei">　　<input type="text" placeholder="メイ"
-             required name="fMei">
+        <input type="text" placeholder="セイ"  required name="fSei" class="half_txt">　　<input type="text" placeholder="メイ"
+             required name="fMei" class="half_txt">
     </div>
     <div  class="item">
         <p class="sub_title">電話番号(ハイフン無し)　　<span class="must">必須</span></p>
-        <input type="text" placeholder=""  required name="tel">
+        <input type="text" placeholder=""  required name="tel" class="txt">
     </div>
     <div  class="item">
         <p class="sub_title">住所　　<span  class="must">必須</span></p>
-        <input type="text" placeholder=""  required name="address">
+        <input type="text" placeholder=""  required name="address" class="txt">
     </div>
     <div  class="item">
         <p class="sub_title">メールアドレス　　<span class="must">必須</span></p>
-        <input type="text" placeholder=""required name="mail">
+        <input type="text" placeholder=""required name="mail" class="txt">
     </div>
     <div  class="item">
         <button type="submit" class="submit_btn">送信</button>

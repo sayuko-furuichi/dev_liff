@@ -8,6 +8,7 @@ body {
     background-color: #6A6A68;
     color: #FFFFFF;
     height: 150%;
+    
 }
 
 .must {
@@ -22,10 +23,22 @@ button {
     text-align: center;
     position: fixed;
     bottom: 10%;
-    width: 100%;
+    width: 90%;
     height: 40px;
+    border-color: #52B24C;
+    border-radius: 10%;
+    
 }
 
 .item {
     margin: 10px;
+}
+.txt{
+width: 90%;
+margin: -10%;
+}
+
+.half_txt{
+    width: 40%;
+    margin: -10%;
 }
