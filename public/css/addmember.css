@@ -31,14 +31,15 @@ button {
 }
 
 .item {
-    margin: 10px;
+    /* margin: 10px; */
+    padding: 10px;
 }
 .txt{
 width: 90%;
-margin: -10%;
+/* margin: -10%; */
 }
 
 .half_txt{
     width: 40%;
-    margin: -10%;
+    /* margin: -10%; */
 }
