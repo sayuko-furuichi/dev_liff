@@ -37,11 +37,11 @@
         <input type="text" placeholder="" style="width:60%" required name="address">
     </div>
     <div>
-        <p class="sub_title">メールアドレス　　<spanclass="must">必須</span></p>
+        <p class="sub_title">メールアドレス　　<span class="must">必須</span></p>
         <input type="text" placeholder="" style="width:60%" required name="mail">
     </div>
     <div>
-        <button type="submit">送信</button>
+        <button type="submit" class="">送信</button>
     </div>
 
     <input type="hidden" id="userIdProps" value="" name="id">
