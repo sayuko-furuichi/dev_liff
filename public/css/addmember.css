@@ -1,3 +1,7 @@
+body{
+    width: 90%;
+    margin: 0 auto;
+}
 
 .sub_title{
     border: 3px;
@@ -8,4 +12,9 @@
 .must{
     background-color: #C95C54;
     color: #FFFFFF;
+}
+
+.submit_btn{
+
+
 }

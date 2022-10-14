@@ -41,7 +41,7 @@
         <input type="text" placeholder="" style="width:60%" required name="mail">
     </div>
     <div>
-        <button type="submit" class="">送信</button>
+        <button type="submit" class="submit_btn">送信</button>
     </div>
 
     <input type="hidden" id="userIdProps" value="" name="id">
