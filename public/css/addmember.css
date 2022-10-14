@@ -16,7 +16,7 @@ body{
     height: 100%;
 }
 
-.submit_btn{
+button{
     background-color: #52B24C;
     color: #FFFFFF;
     text-align: center;
