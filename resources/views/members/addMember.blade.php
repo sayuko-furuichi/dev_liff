@@ -19,25 +19,25 @@
     <form action="{{route('member.add')}}" method="POST">
         @csrf
     <div>
-        <p class="sub_title">名前　　<span style="color: red" class="must">必須</span></p>
+        <p class="sub_title">名前　　<span  class="must">必須</span></p>
         <input type="text" placeholder="姓" style="width:30%" required name="sei">　　<input type="text" placeholder="名"
             style="width:30%" required name="mei">
     </div>
     <div>
-        <p class="sub_title">フリガナ　　<span style="color: red" class="must">必須</span></p>
+        <p class="sub_title">フリガナ　　<span  class="must">必須</span></p>
         <input type="text" placeholder="セイ" style="width:30%" required name="fSei">　　<input type="text" placeholder="メイ"
             style="width:30%" required name="fMei">
     </div>
     <div>
-        <p class="sub_title">電話番号(ハイフン無し)　　<span style="color: red" class="must">必須</span></p>
+        <p class="sub_title">電話番号(ハイフン無し)　　<span class="must">必須</span></p>
         <input type="text" placeholder="" style="width:60%" required name="tel">
     </div>
     <div>
-        <p class="sub_title">住所　　<span style="color: red"  class="must">必須</span></p>
+        <p class="sub_title">住所　　<span  class="must">必須</span></p>
         <input type="text" placeholder="" style="width:60%" required name="address">
     </div>
     <div>
-        <p class="sub_title">メールアドレス　　<span style="color: red" class="must">必須</span></p>
+        <p class="sub_title">メールアドレス　　<spanclass="must">必須</span></p>
         <input type="text" placeholder="" style="width:60%" required name="mail">
     </div>
     <div>
