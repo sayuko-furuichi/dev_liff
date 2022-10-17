@@ -95,7 +95,7 @@ class Members extends Controller
             ]);
             
             //Botが起動するURLへPostする。 store_idをクエリで付けてください
-            $res=  file_get_contents('https://dev1.softnext.co.jp/commons/linebot/public/api/callback?store_id='.$request->store_id, false, $context);
+            $res=  file_get_contents('https://dev1.softnext.co.jp/syokusapo/linebot/public/api/callback?store_id='.$request->store_id, false, $context);
             
     
     
