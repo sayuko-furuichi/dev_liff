@@ -42,11 +42,11 @@ body {
 .txt{
 width: 90%;
 /* margin: -10%; */
-height: 45px;
+/* height: 45px; */
 }
 
 .half_txt{
     width: 44%;
-    height: 45px;
+    /* height: 45px; */
     /* margin: -10%; */
 }
