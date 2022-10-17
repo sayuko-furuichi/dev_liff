@@ -18,7 +18,7 @@ class Members extends Controller
 
     public function add(Request $request)
     {
-       $old= Client::where('line_user_id',$request->userId)->where('store_id',$store_id)->first('id');
+       $old= Client::where('line_user_id',$request->userId)->where('store_id',$request->store_id)->first('id');
         if($old->id){
             return redirect('/addMember')->with('result', 'あなたはすでに会員です');
         }else{
