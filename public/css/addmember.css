@@ -34,7 +34,7 @@ p{
     color: #FFFFFF;
     text-align: center;
     /* position: fixed; */
-    bottom: 10%;
+    bottom: 10px;
     /* padding-top: 10px; */
     box-sizing: content-box;
     width: 100%;
