@@ -39,7 +39,7 @@
         <p class="sub_title">　メールアドレス　　<span class="must">必須</span></p>
         <input type="text" placeholder=""required name="mail" class="txt">
     </div>
-    <div  class="item">
+    <div  class="btn">
         <button type="submit" class="submit_btn">送信</button>
     </div>
 

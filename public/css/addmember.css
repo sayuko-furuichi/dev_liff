@@ -43,7 +43,7 @@ p{
     border-color: #52B24C;
     border-radius: 10px;
     outline: none;
-    padding: 40px 0px 10px 0px;
+    /* padding: 40px 0px 10px 0px; */
     
 }
 
@@ -53,6 +53,14 @@ p{
     box-sizing: content-box;
 width: 100%;
 }
+
+.btn {
+    /* margin: 10px; */
+    padding: 40px 0px 10px 0px;
+    box-sizing: content-box;
+width: 100%;
+}
+
 .txt{
     box-sizing: content-box;
     width: 98%;
