@@ -37,12 +37,13 @@ p{
     bottom: 5%;
     /* padding-top: 10px; */
     box-sizing: content-box;
-    width: 100%;
+    width: 90%;
 
     height: 45px;
     border-color: #52B24C;
     border-radius: 10px;
     outline: none;
+    padding: 10px 0px 10px 0px;
     
 }
 
