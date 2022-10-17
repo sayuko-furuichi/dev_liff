@@ -23,8 +23,8 @@
             required name="mei" class="half_txt">
     </div>
     <div  class="item">
-        <p class="sub_title">　フリガナ　　<span  class="must">必須</span></p>
-        <input type="text" placeholder="セイ"  required name="fSei" class="half_txt">　<input type="text" placeholder="メイ"
+        <p class="sub_title">　ふりがな　　<span  class="must">必須</span></p>
+        <input type="text" placeholder="せい"  required name="fSei" class="half_txt">　<input type="text" placeholder="めい"
              required name="fMei" class="half_txt">
     </div>
     <div  class="item">
@@ -43,7 +43,7 @@
         <button type="submit" class="submit_btn">送信</button>
     </div>
 
-    <input type="hidden" id="userIdProps" value="" name="id">
+    <input type="hidden" id="userIdProps" value="" name="userId">
 </form>
 </div>
 
