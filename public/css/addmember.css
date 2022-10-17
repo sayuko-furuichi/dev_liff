@@ -72,3 +72,9 @@ padding-top: -10px;
     width: 45.8%;
     /* margin: -10%; */
 }
+.onethird_txt{
+       /* width: 44%; */
+       height: 30px;
+       box-sizing: content-box;
+       width: 30%;
+}
