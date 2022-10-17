@@ -3,6 +3,15 @@ body {
     margin: 0 auto;
 }
 
+button {
+	background: none;
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
 .sub_title {
     border: 3px;
     background-color: #6A6A68;
@@ -23,7 +32,7 @@ button {
     color: #FFFFFF;
     text-align: center;
     position: fixed;
-    bottom: 10%;
+    bottom: 5%;
     width: 90%;
     height: 60px;
     border-color: #52B24C;
