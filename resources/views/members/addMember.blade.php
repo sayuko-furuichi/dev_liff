@@ -29,7 +29,7 @@
              required name="fMei" class="half_txt">
     </div>
     <div  class="item">
-        <p class="sub_title"　>電話番号(ハイフン無し)　　<span class="must">必須</span></p>
+        <p class="sub_title">　電話番号(ハイフン無し)　　<span class="must">必須</span></p>
         <input type="text" placeholder=""  required name="tel" class="txt">
     </div>
     <div  class="item">
