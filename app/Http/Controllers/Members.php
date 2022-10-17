@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Client;
+use App\Models\Prefecture;
 
 class Members extends Controller
 {
     //
     function index(){
-        return view('members.addMember');
+        $prefectutes= Prefecture::all();
+
+        return view('members.addMember',['prefecture'=>$prefectutes ]);
     }
 
     function add(Request $request){
@@ -20,7 +23,10 @@ class Members extends Controller
        $nwClient->mei = $request->fmei;
        $nwClient->sei = $request->fsei;
        $nwClient->phone_number = $request->phone_number;
+       $nwClient->prefecture_id = $request->prefecture_id;
        $nwClient->email = $request->email;
+       $nwClient->municipality = $request->municipality;
+       $nwClient->house_number = $request->house_number;
 
 
 

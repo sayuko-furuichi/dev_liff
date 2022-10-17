@@ -34,8 +34,8 @@
     <div  class="item">
         <p class="sub_title">　住所　　<span  class="must">必須</span></p>
         {{--  <input type="text" placeholder=""  required name="address" class="txt">  --}}
-        <input type="text" placeholder="都道府県"required name="pre" class="onethird_txt">　<input type="text" placeholder="市区町村"
-        required name="mei" class="onethird_txt">　 <input type="text" placeholder="番地" required name="番地" class="onethird_txt">
+        <input type="text" placeholder="都道府県"required name="prefecture_id" class="onethird_txt">　<input type="text" placeholder="市区町村"
+        required name="municipality" class="onethird_txt">　 <input type="text" placeholder="番地" required name="house_number" class="onethird_txt">
     </div>
     <div  class="item">
         <p class="sub_title">　メールアドレス　　<span class="must">必須</span></p>
