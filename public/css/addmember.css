@@ -46,6 +46,8 @@ p{
 .item {
     /* margin: 10px; */
     padding: 10px;
+    box-sizing: content-box;
+width: 100%;
 }
 .txt{
 width: 95%;
