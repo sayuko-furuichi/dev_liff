@@ -33,7 +33,7 @@ p{
     background-color: #52B24C;
     color: #FFFFFF;
     text-align: center;
-    position: fixed;
+    /* position: fixed; */
     bottom: 5%;
     /* padding-top: 10px; */
     box-sizing: content-box;
