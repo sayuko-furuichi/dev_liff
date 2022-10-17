@@ -1,7 +1,12 @@
 
 window.onload = function () {
   const defaultLiffId = '1657487333-JPeEg6lr';   // change the default LIFF value if you are not using a node server
-var req;
+liff(defaultLiffId);
+
+
+  function liff(defaultLiffId){
+  //https://liff.line.me/1657487333-wakMRydO
+
   //ペーじが出来上がったら、liffIDを渡してinitさせる
   $(document).ready(function () {
     liff
@@ -15,6 +20,6 @@ var req;
         window.alert('エラーです' + error);});}
    
   );}
-
+}
 
  
