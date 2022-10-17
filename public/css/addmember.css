@@ -38,7 +38,7 @@ p{
     /* padding-top: 10px; */
     box-sizing: content-box;
     width: 90%;
-    font-size: 25px;
+    font-size: 22px;
     height: 30px;
     border-color: #52B24C;
     border-radius: 10px;
@@ -54,14 +54,18 @@ p{
 width: 100%;
 }
 .txt{
-width: 90%;
+    box-sizing: content-box;
+    width: 100%;
+    
 /* margin: -10%; */
 height: 30px;
 padding-top: -10px;
 }
 
 .half_txt{
-    width: 44%;
+    /* width: 44%; */
     height: 30px;
+    box-sizing: content-box;
+    width: 44%;
     /* margin: -10%; */
 }
