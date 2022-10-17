@@ -20,12 +20,12 @@
         @csrf
     <div class="item">
         <p class="sub_title">名前　　<span  class="must">必須</span></p>
-        <input type="text" placeholder="姓"required name="sei" class="half_txt">　　<input type="text" placeholder="名"
+        <input type="text" placeholder="姓"required name="sei" class="half_txt">　<input type="text" placeholder="名"
             required name="mei" class="half_txt">
     </div>
     <div  class="item">
         <p class="sub_title">フリガナ　　<span  class="must">必須</span></p>
-        <input type="text" placeholder="セイ"  required name="fSei" class="half_txt">　　<input type="text" placeholder="メイ"
+        <input type="text" placeholder="セイ"  required name="fSei" class="half_txt">　<input type="text" placeholder="メイ"
              required name="fMei" class="half_txt">
     </div>
     <div  class="item">
