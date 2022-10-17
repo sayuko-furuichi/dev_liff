@@ -76,5 +76,10 @@ padding-top: -10px;
        /* width: 44%; */
        height: 30px;
        box-sizing: content-box;
-       width: 25%;
+       width: 30%;
+}
+.pre_txt{
+    height: 30px;
+    box-sizing: content-box;
+    width: 15%;
 }
