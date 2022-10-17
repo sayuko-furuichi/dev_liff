@@ -24,7 +24,7 @@ class Members extends Controller
         $nwClient->last_name = $request->sei;
         $nwClient->mei = $request->fMei;
         $nwClient->sei = $request->fSei;
-        $nwClient->phone_number = $request->phone_number;
+        $nwClient->phone_number = $request->tel;
         $nwClient->prefecture_id = $request->prefecture_id;
         $nwClient->email = $request->email;
         $nwClient->municipality = $request->municipality;
