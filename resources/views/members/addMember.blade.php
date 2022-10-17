@@ -52,7 +52,7 @@
     </div>
 
     <input type="hidden" id="userIdProps" value="" name="userId">
-    <input type="hidden"  value="{{$store}}" name="store_id">
+    <input type="hidden"  value="{{$store_id}}" name="store_id">
 </form>
 </div>
 
