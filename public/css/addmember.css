@@ -30,8 +30,8 @@ body {
     width: 90%;
     height: 60px;
     border-color: #52B24C;
-    border-radius: 30%;
-    outline: none;
+    /* border-radius: 30%; */
+    /* outline: none; */
     
 }
 
@@ -42,11 +42,11 @@ body {
 .txt{
 width: 90%;
 /* margin: -10%; */
-/* height: 45px; */
+height: 45px;
 }
 
 .half_txt{
     width: 44%;
-    /* height: 45px; */
+    height: 45px;
     /* margin: -10%; */
 }
