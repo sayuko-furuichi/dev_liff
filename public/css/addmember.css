@@ -12,7 +12,7 @@ p{
     background-color: #6A6A68;
     color: #FFFFFF;
     height: 30px;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 10px 10px 0px 0;
     
 }
@@ -20,8 +20,10 @@ p{
 .must {
     background-color: #C95C54;
     color: #FFFFFF;
-    height: 20px;
+    height: 25px;
     border-radius: 40%;
+    font-size: 15px;
+    
 }
 
 .submit_btn {
