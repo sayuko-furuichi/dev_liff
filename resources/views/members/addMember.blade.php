@@ -15,7 +15,7 @@
 <body>
     <div class="note">
         @if(session('result'))
-        <p>session('result') 会員画面に遷移します</p>
+    <p>{{session('result')}} 会員画面に遷移します</p>
         @endif
     {{-- name属性つける --}}
     <form action="{{route('member.add')}}" method="POST">
