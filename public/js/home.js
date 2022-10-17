@@ -1,10 +1,10 @@
 
 window.onload = function () {
   const defaultLiffId = '1657487333-JPeEg6lr';   // change the default LIFF value if you are not using a node server
-liff(defaultLiffId);
+liffInit(defaultLiffId);
 
 
-  function liff(defaultLiffId){
+  function liffInit(defaultLiffId){
   //https://liff.line.me/1657487333-wakMRydO
 
   //ペーじが出来上がったら、liffIDを渡してinitさせる
