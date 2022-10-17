@@ -3,6 +3,9 @@ body {
     margin: 0 auto;
 }
 
+p{
+    font-family: Arial;
+}
 
 .sub_title {
     border: 3px;
