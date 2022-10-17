@@ -40,6 +40,60 @@ class Members extends Controller
 
         //JSONでBotにpostする
 
+        //requestBody 後でjson_encodeします
+        //commonsは固定だけど、他はstore_idがいるな...
+        // $detail=([
+        //             'events'=> [
+        //               [
+        //                 'type'=> 'message',
+        //                 'message'=> [
+        //                   'type'=> 'message',
+        //                   'text'=>  '完了',
+        //                   //text2 に line_user_idをつける
+        //                   'userId'=>  $request->userId,
+        //                   'storeId'=>$request->store_id
+        //               ],
+        //                 'timestamp'=> $_SERVER['REQUEST_TIME'],
+        //                 'source'=> [
+        //                   'type'=> 'web',
+        //                 ],
+        //                 'mode'=> 'active',
+        //                 'deliveryContext'=> [
+        //                   'isRedelivery'=> false
+        //                 ]
+        //               ],
+        
+        //             ]
+        //           ]);
+        
+        // //チャネルアクセストークンを秘密鍵として、requestBodyをハッシュ化する
+        // #commons風アカウントのCS
+        // $channelSecret=Store::;
+        
+        // $encode=json_encode($detail);
+        
+        // $hash = hash_hmac('sha256', $encode, $channelSecret, true);
+        // $signature = base64_encode($hash);
+        
+        // //ハッシュ化したものを[x_demo_signature]としてheaderにつける
+        // $header = array(
+        //     'Content-Type: application/json',
+        //   'x_demo_signature:'. $signature,
+        // );
+        
+        // //JSON形式でPOST送信する
+        // $context = stream_context_create([
+        //     'http' => [
+        //         'ignore_errors' => true,
+        //         'method' => 'POST',
+        //         'header' => implode("\r\n", $header),
+        //         'content' => $encode
+        //     ],
+        // ]);
+        
+        // //Botが起動するURLへPostする。 store_idをクエリで付けてください
+        // $res=  file_get_contents('https://dev1.softnext.co.jp/commons/linebot/public/api/callback?store_id=1', false, $context);
+        
 
 
 
