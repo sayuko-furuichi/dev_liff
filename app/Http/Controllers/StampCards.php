@@ -64,6 +64,9 @@ class StampCards extends Controller
         //   $cp =CouponMst::whereDate('exiry','>',$date)->get();
         //  $cp= $cp->whereIn('store_id',$request->store)->sortBy('term_of_use_point');
 
+        //TODO:debug用　code
+        $request->store=44;
+
         $cp =CouponMst::where('store_id', $request->store)->get();
 
         $cp= $cp->where('exiry', '>', $date)->sortBy('term_of_use_point');
