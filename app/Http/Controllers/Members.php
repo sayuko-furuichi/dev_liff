@@ -9,10 +9,10 @@ use App\Models\Prefecture;
 class Members extends Controller
 {
     //
-    function index(){
+    function index(Request $request){
         $prefectutes= Prefecture::all();
 
-        return view('members.addMember',['prefecture'=>$prefectutes ]);
+        return view('members.addMember',['prefecture'=>$prefectutes ,'store_id'=>$request->store]);
     }
 
     function add(Request $request){
@@ -28,11 +28,16 @@ class Members extends Controller
        $nwClient->municipality = $request->municipality;
        $nwClient->house_number = $request->house_number;
 
+       $nwClient->building_name ='';
+       $nwClient->store_id = $request->store_id;
+       $nwClient->c_corporate_number='';
+       $nwClient->c_corporate_name='';
+       $nwClient->referral_number ='';
+
+     $nwClient->save();
 
 
-
-
-        return redirect('/addMember');
+        return redirect('/addMember')->with('result','登録が完了しました！');
     }
 
     function myPage(){

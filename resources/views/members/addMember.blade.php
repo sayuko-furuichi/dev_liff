@@ -14,6 +14,9 @@
 {{--  会員登録後、特別な表示と会員証画面へリダイレクトさせる  --}}
 <body>
     <div class="note">
+        @if(session('result'))
+        <p>{{$result}} 会員画面に遷移します</p>
+        @endif
     {{-- name属性つける --}}
     <form action="{{route('member.add')}}" method="POST">
         @csrf
@@ -49,6 +52,7 @@
     </div>
 
     <input type="hidden" id="userIdProps" value="" name="userId">
+    <input type="hidden"  value="{{$store}}" name="store_id">
 </form>
 </div>
 
