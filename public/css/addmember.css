@@ -26,7 +26,7 @@ button {
     width: 90%;
     height: 60px;
     border-color: #52B24C;
-    border-radius: 10%;
+    border-radius: 30%;
     
 }
 
@@ -37,9 +37,11 @@ button {
 .txt{
 width: 90%;
 /* margin: -10%; */
+height: 45px;
 }
 
 .half_txt{
     width: 40%;
+    height: 45px;
     /* margin: -10%; */
 }
