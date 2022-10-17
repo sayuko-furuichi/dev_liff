@@ -38,6 +38,10 @@ class Members extends Controller
 
         $nwClient->save();
 
+        //JSONでBotにpostする
+
+
+
 
         return redirect('/addMember')->with('result', '登録が完了しました！');
     }
