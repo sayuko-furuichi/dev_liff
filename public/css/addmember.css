@@ -26,12 +26,12 @@ body {
     color: #FFFFFF;
     text-align: center;
     position: fixed;
-    /* bottom: 5px; */
-    padding-top: 10px;
+    bottom: 5px;
+    /* padding-top: 10px; */
     width: 90%;
     height: 60px;
     border-color: #52B24C;
-    border-radius: 30%;
+    border-radius: 10px;
     outline: none;
     
 }
