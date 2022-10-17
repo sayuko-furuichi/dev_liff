@@ -34,7 +34,7 @@ p{
     color: #FFFFFF;
     text-align: center;
     /* position: fixed; */
-    bottom: 30px;
+    
     /* padding-top: 10px; */
     box-sizing: content-box;
     width: 100%;
@@ -43,7 +43,7 @@ p{
     border-color: #52B24C;
     border-radius: 10px;
     outline: none;
-    padding: 10px 0px 10px 0px;
+    padding: 40px 0px 10px 0px;
     
 }
 
