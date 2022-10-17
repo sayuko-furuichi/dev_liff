@@ -18,7 +18,7 @@ button {
     color: #FFFFFF;
     height: 35px;
     font-size: 20px;
-    border-radius: 10px;
+    border-radius: 20px 20px 0px 0;
     
 }
 
