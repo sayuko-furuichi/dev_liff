@@ -34,7 +34,6 @@
     <div  class="item">
         <p class="sub_title">　住所　　<span  class="must">必須</span></p>
         {{--  <input type="text" placeholder=""  required name="address" class="txt">  --}}
-        <input type="text"required>
         <select name="prefecture_id" size="1" required  placeholder="都道府県" class="onethird_txt">
             @foreach ($prefecture as $pre)
             <option value="{{$pre->id}}">{{$pre->prefecture}}</option>
