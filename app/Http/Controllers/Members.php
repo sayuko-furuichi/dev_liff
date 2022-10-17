@@ -32,9 +32,9 @@ class Members extends Controller
         $nwClient->line_user_id = $request->userId;
         $nwClient->building_name ='';
         $nwClient->store_id = $request->store_id;
-        $nwClient->c_corporate_number='';
+        $nwClient->c_corporate_number=0;
         $nwClient->c_corporate_name='';
-        $nwClient->referral_number ='';
+        $nwClient->referral_number =0;
 
         $nwClient->save();
 
