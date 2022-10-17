@@ -51,7 +51,7 @@
         <button type="submit" class="submit_btn">送信</button>
     </div>
 
-    <input type="hidden" id="userIdProps" value="" name="userId">
+    <input type="hidden" id="user" value="" name="userId">
     <input type="hidden"  value="{{$store_id}}" name="store_id">
 </form>
 </div>
