@@ -28,7 +28,7 @@ button {
     height: 20px;
 }
 
-button {
+.submit_btn {
     background-color: #52B24C;
     color: #FFFFFF;
     text-align: center;
