@@ -8,18 +8,17 @@ liff(defaultLiffId);
   //https://liff.line.me/1657487333-wakMRydO
 
   //ペーじが出来上がったら、liffIDを渡してinitさせる
-  $(document).ready(function () {
-    liff
-    .init({
+  document.ready(
+    liff.init({
       liffId: defaultLiffId
     })
     .then(() => {
       if (!liff.isLoggedIn()) {
         liff.login();
       }}) .catch(function (error) {
-        window.alert('エラーです' + error);});}
+        window.alert('エラーです' + error);}));}
    
-  );}
-}
+  ;}
+
 
  
