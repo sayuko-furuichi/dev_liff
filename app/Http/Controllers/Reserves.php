@@ -57,7 +57,7 @@ class Reserves extends Controller
 
         //Authorization　に、秘密鍵を渡す
         $header = array(
-            'Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7',  
+            'Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:tribe0819',  
              'Content-type: application/x-www-form-urlencoded'
         );
 
