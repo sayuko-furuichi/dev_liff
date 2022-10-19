@@ -56,6 +56,7 @@ class Reserves extends Controller
         $request->credit_token;
 
         $header = array(
+            'Content-type: application/x-www-form-urlencoded',
             'Authorization: Bearer sk_test_c62fade9d045b54cd76d7036:',
         );
 
