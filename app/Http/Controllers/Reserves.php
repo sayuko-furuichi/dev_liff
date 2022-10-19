@@ -56,58 +56,58 @@ class Reserves extends Controller
         $request->credit_token;
 
         //Authorization　に、秘密鍵を渡す
-        $header = array(
-            'Authorization: Bearer sk_test_e7c71bc57ca67b1092849ac7',  
-             'Content-type: application/x-www-form-urlencoded',
-        );
+        // $header = array(
+        //     'Authorization: Bearer sk_test_e7c71bc57ca67b1092849ac7',  
+        //      'Content-type: application/x-www-form-urlencoded',
+        // );
 
-        //クエリでくっつけてよいらしい
-        $param =[
-            'amount'=>2980,
-            'currency' => 'jpy',
-            'card' => $request->credit_token,
-            'capture'=>true
+        // //クエリでくっつけてよいらしい
+        // $param =[
+        //     'amount'=>2980,
+        //     'currency' => 'jpy',
+        //     'card' => $request->credit_token,
+        //     'capture'=>true
 
-        ];
-        //配列をHTTPクエリパラメータにしてくれる！
-        $param=http_build_query($param, "", "&");
+        // ];
+        // //配列をHTTPクエリパラメータにしてくれる！
+        // $param=http_build_query($param, "", "&");
 
 
-        $context = stream_context_create([
-            'http' => [
-                'ignore_errors' => true,
-                'method' => 'GET',
-                'header' => implode("\r\n", $header),
-                'content' => $param,
-            ],
-        ]);
+        // $context = stream_context_create([
+        //     'http' => [
+        //         'ignore_errors' => true,
+        //         'method' => 'GET',
+        //         'header' => implode("\r\n", $header),
+        //         'content' => $param,
+        //     ],
+        // ]);
 
       
-        $response = file_get_contents('https://api.pay.jp/v1/charges', false, $context);
-        if (strpos($http_response_header[0], '200') === false) {
-            error_log('Request failed: ' . $response);
-        }
-        dd($response);
+        // $response = file_get_contents('https://api.pay.jp/v1/charges', false, $context);
+        // if (strpos($http_response_header[0], '200') === false) {
+        //     error_log('Request failed: ' . $response);
+        // }
+        // dd($response);
 
-        // $api_url ='https://api.pay.jp/v1/charges'.$param;
+        $api_url ='https://api.pay.jp/v1/charges'.$param;
 
-        // //エンコードされたURLでPOST通信する
-        // $headers = [ 'Authorization: sk_test_e7c71bc57ca67b1092849ac7' ];
+        //エンコードされたURLでPOST通信する
+        $headers = [ 'Authorization: sk_test_e7c71bc57ca67b1092849ac7'];
     
-        // $curl_handle = curl_init();
+        $curl_handle = curl_init();
     
-        // curl_setopt($curl_handle, CURLOPT_POST, true);
-        // curl_setopt($curl_handle, CURLOPT_URL, $api_url);
-        // curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $headers);
-        // // curl_exec()の結果を文字列にする
-        // curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
-        // //実行
-        // $res = curl_exec($curl_handle);
+        curl_setopt($curl_handle, CURLOPT_POST, true);
+        curl_setopt($curl_handle, CURLOPT_URL, $api_url);
+        curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $headers);
+        // curl_exec()の結果を文字列にする
+        curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
+        //実行
+        $res = curl_exec($curl_handle);
     
-        // //close
-        // curl_close($curl_handle);
+        //close
+        curl_close($curl_handle);
     
-        // return $res;
+       dd($res);
 
 
 
