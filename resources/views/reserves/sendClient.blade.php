@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{-- <link rel="stylesheet" href="{{ secure_asset('css/liff.css') }}"> --}}
+    <link rel="stylesheet" href="{{ secure_asset('css/addmember.css') }}">
     {{-- <link rel="stylesheet" href="{{ secure_asset('css/reset.css') }}"> --}}
     {{-- <link id="import-link" rel="import" href="./sub.html"> --}}
     <script src="https://unpkg.com/glottologist"></script>
@@ -24,37 +24,34 @@
     <div class="note">
     {{-- name属性つける --}}
 
-    <div>
-        <p>名前　　<span style="color: red">必須</span></p>
-        <input type="text" placeholder="姓" style="width:30%" required name="sei">　　<input type="text" placeholder="名"
-            style="width:30%" required name="mei">
+    <div class="item">
+        <p class="sub_title">　名前　　<span class="must">必須</span></p>
+        <input type="text" placeholder="姓"required name="sei" class="half_txt" pattern="^[^ 　0-9\$/_\[\]\t]+$">　<input type="text"
+            placeholder="名" required name="mei" class="half_txt" pattern="^[^ 　0-9\$/_\[\]\t]+$">
     </div>
-    <div>
-        <p>フリガナ　　<span style="color: red">必須</span></p>
-        <input type="text" placeholder="セイ" style="width:30%" required name="fSei">　　<input type="text" placeholder="メイ"
-            style="width:30%" required name="fMei">
+    <div class="item">
+        <p class="sub_title">　ふりがな　　<span class="must">必須</span></p>
+        <input type="text" placeholder="せい" required name="fSei" class="half_txt" pattern="^[ぁ-ん]{1,30}+$|^[ァ-ヶ]{1,30}+$">　<input type="text"
+            placeholder="めい" required name="fMei" class="half_txt" pattern="^[ぁ-ん]{1,30}+$|^[ァ-ヶ]{1,30}+$">
     </div>
-    <div>
-        <p>電話番号(ハイフン無し)　　<span style="color: red">必須</span></p>
-        <input type="text" placeholder="" style="width:60%" required name="tel">
+    <div class="item">
+        <p class="sub_title">　電話番号(ハイフン無し)　　<span class="must">必須</span></p>
+        <input type="text" placeholder="" required name="tel" class="txt" pattern="^[0-9]{8,14}+$">
     </div>
-    <div>
-        <p>住所　　<span style="color: red">必須</span></p>
-        <input type="text" placeholder="" style="width:60%" required name="address">
-    </div>
+       
     @if($credit===1)
     @csrf
     <p id="creditForm">クレジットカード情報入力</p>
-        <span>カード番号</span>
+        <span>カード番号：</span>
     {{--  ここにカード番号入力フォームが生成されます  --}}
    <div id="number-form" class="payjs-outer"></div>
 
 
     {{--  <!-- ここに有効期限入力フォームが生成されます -->  --}}
-    <span>カード有効期限</span><div id="expiry-form" class="payjs-outer"></div>
+    <span>カード有効期限：</span><div id="expiry-form" class="payjs-outer"></div>
     {{--  <!-- ここにCVC入力フォームが生成されます -->  --}}
-    <span>セキュリティコード</span><div id="cvc-form" class="payjs-outer"></div>
-    <span>カード名義氏名</span><input type="text" name="credit_name" id="credit_name" required>
+    <span>セキュリティコード：</span><div id="cvc-form" class="payjs-outer"></div>
+    <span>カード名義氏名：</span><input type="text" name="credit_name" id="credit_name" required>
     <button id="create_tkn">カードを照会する</button>
     <span id="token2"></span>
 
