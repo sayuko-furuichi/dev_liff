@@ -34,4 +34,4 @@ POST https://api.pay.jp/v1/charges
 # Content-Type:application/x-www-form-urlencoded
 Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:
 
-amount=2980&currency=jpy&card=tok_214059f45f4a9ddae002b6a7d0d2
+amount=2980&currency=jpy&card=tok_d067b902b7c240d08e3286e89bc6

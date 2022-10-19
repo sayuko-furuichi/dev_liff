@@ -56,7 +56,7 @@ class Reserves extends Controller
         $request->credit_token;
 
         //Authorization　に、秘密鍵を渡す
-        // $pass =base64_encode('tribe0819');
+       
         // $header = array(
         //     'Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:',  
         //      'Content-type: application/x-www-form-urlencoded'
@@ -94,13 +94,14 @@ class Reserves extends Controller
 
         //エンコードされたURLでPOST通信する
         $headers = array('Authorization:Basic'.$sc);
-  
+        $pass =base64_encode($headers);
+
         $curl_handle = curl_init();
     
         // curl_setopt($curl_handle, CURLOPT_POST, true);
         // curl_setopt($curl_handle, CURLOPT_HTTPGET, true);
         curl_setopt($curl_handle, CURLOPT_URL, $api_url);
-      $res=  curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $headers);
+      $res=  curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $pass);
       var_dump($res);
         // curl_setopt($curl_handle, CURLOPT_POSTFIELDS,$urlenc);
         // curl_exec()の結果を文字列にする
