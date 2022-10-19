@@ -40,7 +40,6 @@
     </div>
        
     @if($credit===1)
-    @csrf
     <div class="item">
     <p id="creditForm" class="sub_title">　クレジットカード情報入力　　<span class="must">必須</span></p>
 </div>
