@@ -30,7 +30,7 @@
     
     <div>
         <p>お支払い情報</p>
-        <p>合計(消費税込み) ***円</p>
+        <p>合計(消費税込み) 2980円</p>
         <p><input type="radio" name="pay" value="genti" required> 現地決済</p>
         <p><input type="radio" name="pay" value="kureka" required> クレジットカード</p>
     </div>
