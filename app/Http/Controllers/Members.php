@@ -177,8 +177,9 @@ class Members extends Controller
     }
 
 
-    public function myPage()
+    public function myPage(Request $request)
     {
+      $member=Client::where('store_id',$request->store) ;
         return view('members.mypage');
     }
 }

@@ -35,8 +35,13 @@ class Reserves extends Controller
        
     }
     function send(Request $request){
+        $credittForm=0;
+        if($request->pay=='kureka'){
+            $creditForm=1;
+        }
         return view('reserves.sendClient',[
-            'request'=>$request
+            'request'=>$request,
+            'cregit'=>$creditForm
         ]);
     }
     function submit(Request $request){

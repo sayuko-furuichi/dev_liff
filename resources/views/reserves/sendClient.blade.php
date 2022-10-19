@@ -42,7 +42,19 @@
         <p>住所　　<span style="color: red">必須</span></p>
         <input type="text" placeholder="" style="width:60%" required name="address">
     </div>
-    <p><input type="checkbox" name="member"> 追加情報を入力して会員登録する</p>
+    @if($credit===1)
+    <p id="creditForm">クレジットカード情報入力</p>
+    {{--  ここにカード番号入力フォームが生成されます  --}}
+    <div id="number-form" class="payjs-outer"></div>
+    {{--  <!-- ここに有効期限入力フォームが生成されます -->  --}}
+    <div id="expiry-form" class="payjs-outer"></div>
+    {{--  <!-- ここにCVC入力フォームが生成されます -->  --}}
+    <div id="cvc-form" class="payjs-outer"></div>
+    <button onclick="onSubmit2(event)">トークン作成</button>
+    <span id="token2"></span>
+
+    @endif
+    {{--  <p><input type="checkbox" name="member"> 追加情報を入力して会員登録する</p>  --}}
         <button type="submit">送信</button>
     </div>
 
@@ -52,8 +64,9 @@
 
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
+    <script src="https://js.pay.jp/v2/pay.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/getuserid.js"></script>
+    <script src="js/getclient.js"></script>
 </body>
 
 </html>
