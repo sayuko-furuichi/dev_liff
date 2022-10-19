@@ -88,20 +88,20 @@ class Reserves extends Controller
         // if (strpos($http_response_header[0], '200') === false) {
         //     error_log('Request failed: ' . $response);
         // }
+        $urlenc =urlencode($param);
 
-
-        $api_url ='https://api.pay.jp/v1/charges';
+        $api_url ='https://api.pay.jp/v1/charges?'.$urlenc;
 
         //エンコードされたURLでPOST通信する
         $headers = ['Authorization:Basic sk_test_e7c71bc57ca67b1092849ac7:'];
-    $urlenc =urlencode($param);
+  
         $curl_handle = curl_init();
     
-        curl_setopt($curl_handle, CURLOPT_POST, true);
-        // curl_setopt($curl_handle, CURLOPT_HTTPGET, true);
+        // curl_setopt($curl_handle, CURLOPT_POST, true);
+        curl_setopt($curl_handle, CURLOPT_HTTPGET, true);
         curl_setopt($curl_handle, CURLOPT_URL, $api_url);
         curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($curl_handle, CURLOPT_POSTFIELDS,$urlenc);
+        // curl_setopt($curl_handle, CURLOPT_POSTFIELDS,$urlenc);
         // curl_exec()の結果を文字列にする
         curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
         //実行
