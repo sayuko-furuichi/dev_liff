@@ -58,7 +58,7 @@ class Reserves extends Controller
         //Authorization　に、秘密鍵を渡す
         $header = array(
             'Authorization: Bearer sk_test_e7c71bc57ca67b1092849ac7',  
-             'Content-type: application/x-www-form-urlencoded',
+             'Content-type: application/x-www-form-urlencoded'
         );
 
         // //クエリでくっつけてよいらしい
@@ -83,7 +83,7 @@ class Reserves extends Controller
         ]);
 
       
-        $response = file_get_contents('https://api.pay.jp/v1/charges', false, $context);
+        $response = file_get_contents('https://api.pay.jp/v1/charges?', false, $context);
         if (strpos($http_response_header[0], '200') === false) {
             error_log('Request failed: ' . $response);
         }
