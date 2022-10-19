@@ -45,14 +45,14 @@ class Reserves extends Controller
         ]);
     }
     function submit(Request $request){
-        $request->store;
-        $request->dateTime;
-        $request->courses[0];
-        $request->sei;
-        $request->mei;
-        $request->FSei;
-        $request->FMei;
-        $request->tel;
+        // $request->store;
+        // $request->dateTime;
+        // $request->courses[0];
+        // $request->sei;
+        // $request->mei;
+        // $request->FSei;
+        // $request->FMei;
+        // $request->tel;
         $request->credit_token;
 
         //Authorization　に、秘密鍵を渡す
