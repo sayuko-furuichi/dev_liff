@@ -43,6 +43,7 @@
         <input type="text" placeholder="" style="width:60%" required name="address">
     </div>
     @if($credit===1)
+    @csrf
     <p id="creditForm">クレジットカード情報入力</p>
     {{--  ここにカード番号入力フォームが生成されます  --}}
     <div id="number-form" class="payjs-outer"></div>
@@ -50,7 +51,7 @@
     <div id="expiry-form" class="payjs-outer"></div>
     {{--  <!-- ここにCVC入力フォームが生成されます -->  --}}
     <div id="cvc-form" class="payjs-outer"></div>
-    <button id="create_tkn">トークン作成</button>
+    <button id="create_tkn">カードを照会する</button>
     <span id="token2"></span>
 
     @endif
