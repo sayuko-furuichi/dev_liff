@@ -93,7 +93,7 @@ class Reserves extends Controller
         $api_url ='https://api.pay.jp/v1/charges';
 
         //エンコードされたURLでPOST通信する
-        $headers = ["Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:"];
+        $headers = ['Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:'];
     
         $curl_handle = curl_init();
     
