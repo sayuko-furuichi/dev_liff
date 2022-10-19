@@ -89,9 +89,9 @@ class Reserves extends Controller
         //     error_log('Request failed: ' . $response);
         // }
         $urlenc =urlencode($param);
-            $sc='sk_test_e7c71bc57ca67b1092849ac7:';
+            $sc='sk_test_e7c71bc57ca67b1092849ac7';
         $api_url ='https://api.pay.jp/v1/charges';
-        $pass =base64_encode('Authorization:Basic'.$sc);
+        $pass =base64_encode('Authorization:'.$sc);
         //エンコードされたURLでPOST通信する
         $headers = array($pass);
         
