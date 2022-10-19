@@ -56,7 +56,7 @@
     <p>カード名義氏名：</p>
     <input type="text" name="credit_name" id="credit_name" required>
     {{--  <button >カードを照会する</button>  --}}
-    <span id="token2"></span>
+    <span id="token2" class="must"></span>
     <input type="hidden" id="credit_token" name="credit_token" value="" required>
     @endif
     {{--  <p><input type="checkbox" name="member"> 追加情報を入力して会員登録する</p>  --}}
