@@ -2,18 +2,19 @@ window.onload = function () {
 	const defaultLiffId = '1657487333-JPeEg6lr';   // change the default LIFF value if you are not using a node server
 	liffInit(defaultLiffId);
 
+	//公開鍵を渡す
+	const payjp = Payjp('pk_test_9f39566bd5b48e9d0334cbd2');
+	// 大元のElementsインスタンスを生成する
+	var elements4 = payjp.elements();
+	//各インスタンスを個別に生成する
+	var numberElement = elements4.create('cardNumber');
+	var expiryElement = elements4.create('cardExpiry');
+	var cvcElement = elements4.create('cardCvc');
+	//HTMLの要素にフォームを作成する
+	numberElement.mount('#number-form');
+	expiryElement.mount('#expiry-form');
+	cvcElement.mount('#cvc-form');
 
-		const payjp =Payjp('pk_test_9f39566bd5b48e9d0334cbd2');
-		var elements4 = payjp.elements();
-
-		var numberElement = elements4.create('cardNumber');
-		var expiryElement = elements4.create('cardExpiry');
-		var cvcElement = elements4.create('cardCvc');
-
-		numberElement.mount('#number-form');
-		expiryElement.mount('#expiry-form');
-		cvcElement.mount('#cvc-form');
-	
 
 	//ペーじが出来上がったら、liffIDを渡してinitさせる
 	function liffInit(defaultLiffId) {
@@ -30,7 +31,7 @@ window.onload = function () {
 
 							document.getElementById('user').value = prof.userId;
 
-							
+
 						})
 					}
 				}).catch(function (error) {
@@ -39,13 +40,13 @@ window.onload = function () {
 		}
 		);
 	}
-	document.getElementById("create_tkn").onclick= function(){
+	document.getElementById("create_tkn").onclick = function () {
 		payjp.createToken(numberElement).then(function (r) {
 			document.querySelector('#token2').innerText = r.error ? r.error.message : r.id
 		})
 
 
-}
+	}
 }
 
 
