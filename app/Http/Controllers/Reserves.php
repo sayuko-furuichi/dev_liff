@@ -88,12 +88,11 @@ class Reserves extends Controller
         // if (strpos($http_response_header[0], '200') === false) {
         //     error_log('Request failed: ' . $response);
         // }
-        $urlenc =urlencode($param);
-            $sc='sk_test_e7c71bc57ca67b1092849ac7';
+
         $api_url ='https://api.pay.jp/v1/charges';
-        $pass =base64_encode('Authorization:'.$sc);
+        // $pass =base64_encode('Authorization:Basic'.$sc);
         //エンコードされたURLでPOST通信する
-        $headers = array($pass);
+        $headers = array('Authorization:sk_test_e7c71bc57ca67b1092849ac7');
         
 
         $curl_handle = curl_init();
@@ -103,7 +102,7 @@ class Reserves extends Controller
         curl_setopt($curl_handle, CURLOPT_URL, $api_url);
       curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $headers);
     
-         curl_setopt($curl_handle, CURLOPT_POSTFIELDS, $urlenc);
+         curl_setopt($curl_handle, CURLOPT_POSTFIELDS,$param);
         // curl_exec()の結果を文字列にする
         curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
         //実行
@@ -114,14 +113,8 @@ class Reserves extends Controller
     
      var_dump($res);
 
-//     \Payjp\Payjp::setApiKey('sk_test_e7c71bc57ca67b1092849ac7');
-//     $charge = \Payjp\Charge::create(array(
-//       'card' =>  $request->credit_token,
-//       'amount' => 2000,
-//       'currency' => 'jpy'
-//     ));
-//     echo $charge->amount; // 2000
-// dd($charge);
+
+
 
         return view('reserves.submit',[
             'response'=>$res
