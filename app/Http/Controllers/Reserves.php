@@ -57,10 +57,10 @@ class Reserves extends Controller
 
         //Authorization　に、秘密鍵を渡す
         $pass =base64_encode('tribe0819');
-        // $header = array(
-        //     'Authorization: sk_test_e7c71bc57ca67b1092849ac7:',  
-        //      'Content-type: application/x-www-form-urlencoded'
-        // );
+        $header = array(
+            'Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:',  
+             'Content-type: application/x-www-form-urlencoded'
+        );
 
         // //クエリでくっつけてよいらしい
         $param =[
@@ -74,41 +74,41 @@ class Reserves extends Controller
          $param=http_build_query($param, "", "&");
 
 
-        // $context = stream_context_create([
-        //     'http' => [
-        //         'ignore_errors' => true,
-        //         'method' => 'POST',
-        //         'header' => implode("\r\n", $header),
-        //         'content' => $param,
-        //     ],
-        // ]);
+        $context = stream_context_create([
+            'http' => [
+                'ignore_errors' => true,
+                'method' => 'POST',
+                'header' => implode("\r\n", $header),
+                'content' => $param,
+            ],
+        ]);
 
       
-        // $response = file_get_contents('https://api.pay.jp/v1/charges', false, $context);
-        // if (strpos($http_response_header[0], '200') === false) {
-        //     error_log('Request failed: ' . $response);
-        // }
+        $response = file_get_contents('https://api.pay.jp/v1/charges', false, $context);
+        if (strpos($http_response_header[0], '200') === false) {
+            error_log('Request failed: ' . $response);
+        }
 
 
-        $api_url ='https://api.pay.jp/v1/charges';
+        // $api_url ='https://api.pay.jp/v1/charges';
 
-        //エンコードされたURLでPOST通信する
-        $headers = ["Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:"];
+        // //エンコードされたURLでPOST通信する
+        // $headers = ["Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:"];
     
-        $curl_handle = curl_init();
+        // $curl_handle = curl_init();
     
-        curl_setopt($curl_handle, CURLOPT_POST, true);
-        // curl_setopt($curl_handle, CURLOPT_HTTPGET, true);
-        curl_setopt($curl_handle, CURLOPT_URL, $api_url);
-        curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($curl_handle, CURLOPT_POSTFIELDS,$param);
-        // curl_exec()の結果を文字列にする
-        curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
-        //実行
-        $res = curl_exec($curl_handle);
+        // curl_setopt($curl_handle, CURLOPT_POST, true);
+        // // curl_setopt($curl_handle, CURLOPT_HTTPGET, true);
+        // curl_setopt($curl_handle, CURLOPT_URL, $api_url);
+        // curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $headers);
+        // curl_setopt($curl_handle, CURLOPT_POSTFIELDS,$param);
+        // // curl_exec()の結果を文字列にする
+        // curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
+        // //実行
+        // $res = curl_exec($curl_handle);
     
-        //close
-        curl_close($curl_handle);
+        // //close
+        // curl_close($curl_handle);
     
     dd($param);
 
