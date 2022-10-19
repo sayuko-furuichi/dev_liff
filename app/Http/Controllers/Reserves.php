@@ -62,15 +62,15 @@ class Reserves extends Controller
         // );
 
         // //クエリでくっつけてよいらしい
-        // $param =[
-        //     'amount'=>2980,
-        //     'currency' => 'jpy',
-        //     'card' => $request->credit_token,
-        //     'capture'=>true
+        $param =[
+            'amount'=>2980,
+            'currency' => 'jpy',
+            'card' => $request->credit_token,
+            'capture'=>true
 
-        // ];
-        // //配列をHTTPクエリパラメータにしてくれる！
-        // $param=http_build_query($param, "", "&");
+        ];
+        //配列をHTTPクエリパラメータにしてくれる！
+        $param=http_build_query($param, "", "&");
 
 
         // $context = stream_context_create([
