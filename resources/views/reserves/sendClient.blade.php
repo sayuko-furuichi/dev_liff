@@ -45,12 +45,11 @@
     @if($credit===1)
     @csrf
     <p id="creditForm">クレジットカード情報入力</p>
-    <table>
-        <tr><td>カード番号</td>
+        <span>カード番号</span>
     {{--  ここにカード番号入力フォームが生成されます  --}}
-   <td><div id="number-form" class="payjs-outer"></div></td>
-</tr>
-</table>
+   <div id="number-form" class="payjs-outer"></div>
+
+
     {{--  <!-- ここに有効期限入力フォームが生成されます -->  --}}
     <span>カード有効期限</span><div id="expiry-form" class="payjs-outer"></div>
     {{--  <!-- ここにCVC入力フォームが生成されます -->  --}}
