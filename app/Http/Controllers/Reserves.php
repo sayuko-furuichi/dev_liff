@@ -117,7 +117,7 @@ class Reserves extends Controller
 
 
         return view('reserves.submit',[
-            'response'=>$response
+            'response'=>$res
         ]);
     }
 }
