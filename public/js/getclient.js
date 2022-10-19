@@ -18,7 +18,9 @@ window.onload = function () {
 						liff.getProfile().then(function (prof) {
 
 							document.getElementById('user').value = prof.userId;
+
 							if(document.getElementById('creditForm').textContent != null){
+								const payjp =Payjp('pk_test_9f39566bd5b48e9d0334cbd2')
 							var elements4 = payjp.elements()
 							var numberElement = elements4.create('cardNumber')
 							var expiryElement = elements4.create('cardExpiry')
