@@ -45,8 +45,48 @@ class Reserves extends Controller
         ]);
     }
     function submit(Request $request){
+        $request->store;
+        $request->dateTime;
+        $request->courses[0];
+        $request->sei;
+        $request->mei;
+        $request->FSei;
+        $request->FMei;
+        $request->tel;
+        $request->credit_token;
+
+        $header = array(
+            'Authorization: Bearer sk_test_c62fade9d045b54cd76d7036:',
+        );
+
+        //クエリでくっつけてよいらしい
+        $param =[
+            'amount'=>2980,
+            'currency' => 'jpy',
+            'card' => $request->credit_token
+
+        ];
+        //配列をHTTPクエリパラメータにしてくれる！
+        $param=http_build_query($param, "", "&");
+
+
+        $context = stream_context_create([
+            'http' => [
+                'ignore_errors' => true,
+                'method' => 'GET',
+                'header' => implode("\r\n", $header),
+                'content' => $param,
+            ],
+        ]);
+
+        $response = file_get_contents('https://api.pay.jp/v1/charges', false, $context);
+        if (strpos($http_response_header[0], '200') === false) {
+            error_log('Request failed: ' . $response);
+        }
+
+
         return view('reserves.submit',[
-            'request'=>$request
+            'response'=>$reponse
         ]);
     }
 }
