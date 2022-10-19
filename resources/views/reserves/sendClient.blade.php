@@ -57,9 +57,10 @@
     {{--  <button >カードを照会する</button>  --}}
     <span id="token2" class="must"></span>
     <input type="hidden" id="credit_token" name="credit_token" value="">
+    <button class="btn" id="create_tkn">照会する</button>
     @endif
     {{--  <p><input type="checkbox" name="member"> 追加情報を入力して会員登録する</p>  --}}
-        <button type="submit" class="submit_btn" id="create_tkn">送信</button>
+        <button type="submit" class="submit_btn">送信</button>
     </div>
 
     <input type="hidden" id="user" value="" name="id">
