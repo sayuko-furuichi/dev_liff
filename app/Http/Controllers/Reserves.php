@@ -58,7 +58,7 @@ class Reserves extends Controller
         //Authorization　に、秘密鍵を渡す
         $pass =base64_encode('tribe0819');
         $header = array(
-            'Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:',  
+            'Authorization: sk_test_e7c71bc57ca67b1092849ac7:',  
              'Content-type: application/x-www-form-urlencoded'
         );
 
