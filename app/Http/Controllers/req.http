@@ -30,8 +30,8 @@ Authorization:Bearer F2ePo4WWFbfZz7i28+yhjJYENhRwIgA9SRChmtCbDWZ3An7jK5pB2UJH9fN
 
 ###
 
-GET https://api.pay.jp/v1/charges?amount=2980&currency=jpy&card=tok_f940be39ae23afd4f346656f4923&capture=true
+POST https://api.pay.jp/v1/charges
 Content-Type:application/x-www-form-urlencoded
 Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:
 
-
+amount=2980&currency=jpy&card=tok_f940be39ae23afd4f346656f4923&capture=true
