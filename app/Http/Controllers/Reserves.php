@@ -70,7 +70,7 @@ class Reserves extends Controller
 
         ];
         //配列をHTTPクエリパラメータにしてくれる！
-        $param=http_build_query($param, "", "&");
+        // $param=http_build_query($param, "", "&");
 
 
         $context = stream_context_create([
