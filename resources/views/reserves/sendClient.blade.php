@@ -57,7 +57,7 @@
     <input type="text" name="credit_name" id="credit_name" required>
     <button id="create_tkn">カードを照会する</button>
     <span id="token2"></span>
-    <input type="hidden" id="credit_token" name="credit_token">
+    <input type="hidden" id="credit_token" name="credit_token" value="" required>
     @endif
     {{--  <p><input type="checkbox" name="member"> 追加情報を入力して会員登録する</p>  --}}
         <button type="submit" class="submit_btn">送信</button>
