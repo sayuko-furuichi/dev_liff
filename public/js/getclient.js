@@ -13,11 +13,14 @@ window.onload = function () {
 		style:{
 			base:{
 				backgroundColor:'#FECEC6',
-				width:'90%',
+				fontSize: '30px',
 				'::placeholder':{
 					color:'#FFFFFF',
 				}
-			}
+			},
+			invalid: {
+				color: 'red'
+			  }
 		}
 	});
 	var expiryElement = elements4.create('cardExpiry');
