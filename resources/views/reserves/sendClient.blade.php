@@ -58,7 +58,7 @@
         <button type="submit">送信</button>
     </div>
 
-    <input type="hidden" id="userIdProps" value="" name="id">
+    <input type="hidden" id="user" value="" name="id">
 </form>
 </div>
 
