@@ -48,7 +48,7 @@
     <table>
         <tr><td>カード番号</td>
     {{--  ここにカード番号入力フォームが生成されます  --}}
-   <td id="number-form" class="payjs-outer"></td>
+   <td><div id="number-form" class="payjs-outer"></div></td>
 </tr>
     {{--  <!-- ここに有効期限入力フォームが生成されます -->  --}}
     <span>カード有効期限</span><div id="expiry-form" class="payjs-outer"></div>
