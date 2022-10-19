@@ -64,7 +64,8 @@ class Reserves extends Controller
         $param =[
             'amount'=>2980,
             'currency' => 'jpy',
-            'card' => $request->credit_token
+            'card' => $request->credit_token,
+            'capture'=>true
 
         ];
         //配列をHTTPクエリパラメータにしてくれる！
@@ -87,7 +88,7 @@ class Reserves extends Controller
 
 
         return view('reserves.submit',[
-            'response'=>$reponse
+            'response'=>$response
         ]);
     }
 }
