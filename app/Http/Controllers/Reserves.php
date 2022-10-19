@@ -55,10 +55,10 @@ class Reserves extends Controller
         $request->tel;
         $request->credit_token;
 
-        //Bearer　に、秘密鍵を渡す
+        //Authorization　に、秘密鍵を渡す
         $header = array(
             'Content-type: application/x-www-form-urlencoded',
-            'Authorization: Bearer sk_test_e7c71bc57ca67b1092849ac7',
+            'Authorization: sk_test_e7c71bc57ca67b1092849ac7',
         );
 
         //クエリでくっつけてよいらしい
