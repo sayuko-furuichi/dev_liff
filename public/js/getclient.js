@@ -83,7 +83,7 @@ window.onload = function () {
 	}
 	document.getElementById("create_tkn").onclick = function () {
 		payjp.createToken(numberElement).then(function (r) {
-			document.querySelector('#token2').innerText = r.error ? r.error.message : r.id
+			document.querySelector('#token2').innerText = r.error ? r.error.message : document.getElementById('credit_token').value=r.id
 		})
 
 
