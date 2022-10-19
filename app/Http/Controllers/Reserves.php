@@ -58,7 +58,7 @@ class Reserves extends Controller
         //Authorization　に、秘密鍵を渡す
        
         $header = array(
-            '-u sk_test_e7c71bc57ca67b1092849ac7:',  
+            'Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:',  
              'Content-type: application/x-www-form-urlencoded'
         );
 
@@ -83,7 +83,7 @@ class Reserves extends Controller
             ],
         ]);
 
-      
+      dd( implode("\r\n", $header));
         $response = file_get_contents('https://api.pay.jp/v1/charges', false, $context);
         if (strpos($http_response_header[0], '200') === false) {
             error_log('Request failed: ' . $response);
