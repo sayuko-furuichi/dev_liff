@@ -35,7 +35,7 @@ window.onload = function () {
 		}
 		);
 	}
-	function onSubmit2(event) {
+	document.getElementById("create_tkn").onclick= function(){
 		payjp.createToken(numberElement).then(function (r) {
 			document.querySelector('#token2').innerText = r.error ? r.error.message : r.id
 		})

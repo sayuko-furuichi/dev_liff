@@ -41,7 +41,7 @@ class Reserves extends Controller
         }
         return view('reserves.sendClient',[
             'request'=>$request,
-            'cregit'=>$creditForm
+            'credit'=>$creditForm
         ]);
     }
     function submit(Request $request){

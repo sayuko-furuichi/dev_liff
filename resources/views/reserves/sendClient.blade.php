@@ -50,7 +50,7 @@
     <div id="expiry-form" class="payjs-outer"></div>
     {{--  <!-- ここにCVC入力フォームが生成されます -->  --}}
     <div id="cvc-form" class="payjs-outer"></div>
-    <button onclick="onSubmit2(event)">トークン作成</button>
+    <button id="create_tkn">トークン作成</button>
     <span id="token2"></span>
 
     @endif
