@@ -83,7 +83,7 @@ class Reserves extends Controller
         ]);
 
       
-        $response = file_get_contents('https://api.pay.jp/v1/charges', false, $context);
+        $response = file_get_contents('https://api.pay.jp/v1/charges?', false, $context);
         if (strpos($http_response_header[0], '200') === false) {
             error_log('Request failed: ' . $response);
         }
