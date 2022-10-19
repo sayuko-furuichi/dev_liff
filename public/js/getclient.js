@@ -2,7 +2,7 @@ window.onload = function () {
 	const defaultLiffId = '1657487333-JPeEg6lr';   // change the default LIFF value if you are not using a node server
 	liffInit(defaultLiffId);
 
-	if(document.getElementById('creditForm').textContent){
+
 		const payjp =Payjp('pk_test_9f39566bd5b48e9d0334cbd2');
 		var elements4 = payjp.elements();
 
@@ -13,7 +13,7 @@ window.onload = function () {
 		numberElement.mount('#number-form');
 		expiryElement.mount('#expiry-form');
 		cvcElement.mount('#cvc-form');
-	}
+	
 
 	//ペーじが出来上がったら、liffIDを渡してinitさせる
 	function liffInit(defaultLiffId) {
