@@ -41,7 +41,9 @@
        
     @if($credit===1)
     @csrf
-    <p id="creditForm">クレジットカード情報入力</p>
+    <div class="item">
+    <p id="creditForm" class="sub_title">　クレジットカード情報入力　　<span class="must">必須</span></p>
+</div>
         <span>カード番号：</span>
     {{--  ここにカード番号入力フォームが生成されます  --}}
    <div id="number-form" class="payjs-outer"></div>
@@ -60,7 +62,7 @@
     {{--  <p><input type="checkbox" name="member"> 追加情報を入力して会員登録する</p>  --}}
         <button type="submit" class="submit_btn">送信</button>
     </div>
-
+    <input type="hidden" id="credit_token" name="credit_token">
     <input type="hidden" id="user" value="" name="id">
 </form>
 </div>
