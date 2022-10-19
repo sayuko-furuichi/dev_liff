@@ -46,11 +46,12 @@
     @csrf
     <p id="creditForm">クレジットカード情報入力</p>
     {{--  ここにカード番号入力フォームが生成されます  --}}
-    <div id="number-form" class="payjs-outer"></div>
+    <span>カード番号</span><div id="number-form" class="payjs-outer"></div>
     {{--  <!-- ここに有効期限入力フォームが生成されます -->  --}}
-    <div id="expiry-form" class="payjs-outer"></div>
+    <span>カード有効期限</span><div id="expiry-form" class="payjs-outer"></div>
     {{--  <!-- ここにCVC入力フォームが生成されます -->  --}}
-    <div id="cvc-form" class="payjs-outer"></div>
+    <span>セキュリティコード</span><div id="cvc-form" class="payjs-outer"></div>
+    <span>カード名義氏名</span><input type="text" name="credit_name" id="credit_name" required>
     <button id="create_tkn">カードを照会する</button>
     <span id="token2"></span>
 

@@ -7,9 +7,18 @@ window.onload = function () {
 	// 大元のElementsインスタンスを生成する
 	var elements4 = payjp.elements();
 	//各インスタンスを個別に生成する
-	
+
 	//CSSはcreate時にstyleタグとして渡す
-	var numberElement = elements4.create('cardNumber');
+	var numberElement = elements4.create('cardNumber',{
+		style:{
+			base:{
+				backgroundColor:'#2800C8',
+				'::placeholder':{
+					color:'#000000',
+				}
+			}
+		}
+	});
 	var expiryElement = elements4.create('cardExpiry');
 	var cvcElement = elements4.create('cardCvc');
 	//HTMLの要素にフォームを作成する
