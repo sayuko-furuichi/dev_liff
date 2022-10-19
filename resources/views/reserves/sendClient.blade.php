@@ -46,7 +46,7 @@
     @csrf
     <p id="creditForm">クレジットカード情報入力</p>
     {{--  ここにカード番号入力フォームが生成されます  --}}
-    <div id="number-form" class="payjs-outer"><span>カード番号</span></div>
+    <p><span>カード番号</span><div id="number-form" class="payjs-outer"></div></p>
     {{--  <!-- ここに有効期限入力フォームが生成されます -->  --}}
     <span>カード有効期限</span><div id="expiry-form" class="payjs-outer"></div>
     {{--  <!-- ここにCVC入力フォームが生成されます -->  --}}

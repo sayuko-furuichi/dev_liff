@@ -12,7 +12,7 @@ window.onload = function () {
 	var numberElement = elements4.create('cardNumber',{
 		style:{
 			base:{
-				backgroundColor:rgba(40,0,200,100),
+				backgroundColor:'rgba(40,0,200,100)',
 				'::placeholder':{
 					color:'#000000',
 				}
