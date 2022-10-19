@@ -107,7 +107,7 @@ class Reserves extends Controller
         //close
         curl_close($curl_handle);
     
-       dd($res);
+       dd($param);
 
 
 
