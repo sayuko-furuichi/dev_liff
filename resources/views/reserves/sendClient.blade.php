@@ -50,6 +50,7 @@
     {{--  ここにカード番号入力フォームが生成されます  --}}
    <td><div id="number-form" class="payjs-outer"></div></td>
 </tr>
+</table>
     {{--  <!-- ここに有効期限入力フォームが生成されます -->  --}}
     <span>カード有効期限</span><div id="expiry-form" class="payjs-outer"></div>
     {{--  <!-- ここにCVC入力フォームが生成されます -->  --}}
@@ -57,7 +58,7 @@
     <span>カード名義氏名</span><input type="text" name="credit_name" id="credit_name" required>
     <button id="create_tkn">カードを照会する</button>
     <span id="token2"></span>
-</table>
+
     @endif
     {{--  <p><input type="checkbox" name="member"> 追加情報を入力して会員登録する</p>  --}}
         <button type="submit">送信</button>
