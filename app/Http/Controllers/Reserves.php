@@ -67,7 +67,7 @@ class Reserves extends Controller
             'amount'=>2980,
             'currency' => 'jpy',
             'card' => $request->credit_token,
-            'capture'=>true
+            'capture'=>'true'
 
         ];
         //配列をHTTPクエリパラメータにしてくれる！
