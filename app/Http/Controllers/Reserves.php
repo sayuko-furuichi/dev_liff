@@ -59,7 +59,7 @@ class Reserves extends Controller
        
         $header = array(
             'Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:',  
-            //  'Content-type: application/x-www-form-urlencoded'
+              'Content-type: application/x-www-form-urlencoded'
         );
 
         // //クエリでくっつけてよいらしい
