@@ -30,8 +30,10 @@ Authorization:Bearer F2ePo4WWFbfZz7i28+yhjJYENhRwIgA9SRChmtCbDWZ3An7jK5pB2UJH9fN
 
 ###
 
-POST https://api.line.me/oauth2/v2.1/verify
+POST https://api.pay.jp/v1/charges
 Content-Type:application/x-www-form-urlencoded
+Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:
+
 
 {
     "id_token": "26eDIaHgKritUm4W4ZoSJKHEB8CTcGbyJjnUoEjq",
