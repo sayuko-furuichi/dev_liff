@@ -13,6 +13,7 @@ window.onload = function () {
 		style:{
 			base:{
 				backgroundColor:'#FECEC6',
+				width:'90%',
 				'::placeholder':{
 					color:'#FFFFFF',
 				}
