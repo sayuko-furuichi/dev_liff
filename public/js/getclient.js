@@ -13,7 +13,7 @@ window.onload = function () {
 		style:{
 			base:{
 				backgroundColor:'#FECEC6',
-				fontSize: '30px',
+				fontSize: '15px',
 				'::placeholder':{
 					color:'#FFFFFF',
 				}
@@ -23,8 +23,34 @@ window.onload = function () {
 			  }
 		}
 	});
-	var expiryElement = elements4.create('cardExpiry');
-	var cvcElement = elements4.create('cardCvc');
+	var expiryElement = elements4.create('cardExpiry',{
+		style:{
+			base:{
+				backgroundColor:'#FECEC6',
+				fontSize: '15px',
+				'::placeholder':{
+					color:'#FFFFFF',
+				}
+			},
+			invalid: {
+				color: 'red'
+			  }
+		}
+	});
+	var cvcElement = elements4.create('cardCvc',{
+		style:{
+			base:{
+				backgroundColor:'#FECEC6',
+				fontSize: '15px',
+				'::placeholder':{
+					color:'#FFFFFF',
+				}
+			},
+			invalid: {
+				color: 'red'
+			  }
+		}
+	});
 	//HTMLの要素にフォームを作成する
 	numberElement.mount('#number-form');
 	expiryElement.mount('#expiry-form');
