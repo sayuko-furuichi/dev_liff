@@ -91,18 +91,18 @@ class Reserves extends Controller
         $urlenc =urlencode($param);
             $sc='sk_test_e7c71bc57ca67b1092849ac7:';
         $api_url ='https://api.pay.jp/v1/charges?'.$urlenc;
-
+        $pass =base64_encode('Authorization:Basic'.$sc);
         //エンコードされたURLでPOST通信する
-        $headers = array('Authorization:Basic'.$sc);
-        $pass =base64_encode($headers);
+        $headers = array($pass);
+        
 
         $curl_handle = curl_init();
     
         // curl_setopt($curl_handle, CURLOPT_POST, true);
         // curl_setopt($curl_handle, CURLOPT_HTTPGET, true);
         curl_setopt($curl_handle, CURLOPT_URL, $api_url);
-      $res=  curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $pass);
-      var_dump($res);
+      curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $headers);
+    
         // curl_setopt($curl_handle, CURLOPT_POSTFIELDS,$urlenc);
         // curl_exec()の結果を文字列にする
         curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
