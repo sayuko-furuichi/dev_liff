@@ -35,7 +35,7 @@ class Reserves extends Controller
        
     }
     function send(Request $request){
-        $credittForm=0;
+        $creditForm=0;
         if($request->pay=='kureka'){
             $creditForm=1;
         }
