@@ -67,7 +67,7 @@ class Reserves extends Controller
             'amount'=>2980,
             'currency' => 'jpy',
             'card' => $request->credit_token,
-            'capture'=>'true'
+            // 'capture'=>'true'
 
         ];
         //配列をHTTPクエリパラメータにしてくれる！
@@ -93,8 +93,7 @@ class Reserves extends Controller
         $api_url ='https://api.pay.jp/v1/charges';
 
         //エンコードされたURLでPOST通信する
-        $headers = ["Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:",
-        'Content-Type:application/x-www-form-urlencoded'];
+        $headers = ["Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:"];
     
         $curl_handle = curl_init();
     
