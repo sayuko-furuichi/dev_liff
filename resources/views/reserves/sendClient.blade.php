@@ -66,7 +66,7 @@
     <script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
     <script src="https://js.pay.jp/v2/pay.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/getclient.js"></script>
+    <script src="{{secure_asset('js/getclient.js')}}"></script>
 </body>
 
 </html>
