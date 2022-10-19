@@ -71,7 +71,7 @@ class Reserves extends Controller
 
         ];
         //配列をHTTPクエリパラメータにしてくれる！
-        // $param=http_build_query($param, "", "&");
+         $param=http_build_query($param, "", "&");
 
 
         // $context = stream_context_create([
@@ -100,6 +100,7 @@ class Reserves extends Controller
         curl_setopt($curl_handle, CURLOPT_HTTPGET, true);
         curl_setopt($curl_handle, CURLOPT_URL, $api_url);
         curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($curl_handle, CURLOPT_POSTFIELDS,$param);
         // curl_exec()の結果を文字列にする
         curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
         //実行
