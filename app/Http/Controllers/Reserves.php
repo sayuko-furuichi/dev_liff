@@ -56,8 +56,9 @@ class Reserves extends Controller
         $request->credit_token;
 
         //Authorization　に、秘密鍵を渡す
+        $pass =base64_encode('tribe0819');
         $header = array(
-            'Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:tribe0819',  
+            'Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:'.$pass,  
              'Content-type: application/x-www-form-urlencoded'
         );
 
