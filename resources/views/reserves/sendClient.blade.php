@@ -60,7 +60,7 @@
     <button class="btn" id="create_tkn">照会する</button>
     @endif
     {{--  <p><input type="checkbox" name="member"> 追加情報を入力して会員登録する</p>  --}}
-        <button type="submit" class="submit_btn">送信</button>
+        <input type="submit" class="submit_btn" value="送信">
     </div>
 
     <input type="hidden" id="user" value="" name="userId">
