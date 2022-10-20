@@ -53,7 +53,7 @@
     {{--  <!-- ここにCVC入力フォームが生成されます -->  --}}
     <span>セキュリティコード：</span><div id="cvc-form" class="payjs-outer"></div>
     <p>カード名義氏名：</p>
-    <input type="text" name="credit_name" id="credit_name" required class="holder_nm">
+    <input type="text" name="credit_name" id="credit_name" required class="holder_nm" placeholder="NAGETA REIGAI">
     {{--  <button >カードを照会する</button>  --}}
     <span id="token2" class="must"></span>
     <input type="hidden" id="credit_token" name="credit_token" value="">
