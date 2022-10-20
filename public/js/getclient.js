@@ -15,7 +15,7 @@ window.onload = function () {
 				backgroundColor: '#FECEC6',
 				fontSize: '15px',
 				'::placeholder': {
-					color: '#FFFFFF',
+					color: '#757575',
 				}
 			},
 			invalid: {
@@ -29,7 +29,7 @@ window.onload = function () {
 				backgroundColor: '#FECEC6',
 				fontSize: '15px',
 				'::placeholder': {
-					color: '#FFFFFF',
+					color: '#757575',
 				}
 			},
 			invalid: {
@@ -43,7 +43,7 @@ window.onload = function () {
 				backgroundColor: '#FECEC6',
 				fontSize: '15px',
 				'::placeholder': {
-					color: '#FFFFFF',
+					color: '#757575',
 				}
 			},
 			invalid: {
