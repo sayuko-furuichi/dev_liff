@@ -20,7 +20,7 @@
 <input type="hidden" name="dateTime" value="{{$request->dateTime}}">
 <input type="hidden" name="courses[]" value="{{$request->courses[0]}}">
     @endif
-    <img src="{{secure_asset('img/menu_bar/var_3.png')}}" alt="ながれ">
+    <img src="{{secure_asset('img/menu_bar/var_3.png')}}" alt="ながれ" class="menu_bar">
     <div class="note">
     {{-- name属性つける --}}
 
