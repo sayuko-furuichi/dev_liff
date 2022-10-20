@@ -56,89 +56,86 @@ class Reserves extends Controller
         // $request->FSei;
         // $request->FMei;
         // $request->tel;
-        $request->credit_token;
+        
+if (isset($request->credit_token)) {
+    //POSTする内容を連想配列にまとめる
+    $param =[
+        'amount'=>2980,
+        'currency' => 'jpy',
+        'card' => $request->credit_token,
+        'capture'=>'true'
 
-        //POSTする内容を連想配列にまとめる
-        $param =[
-            'amount'=>2980,
-            'currency' => 'jpy',
-            'card' => $request->credit_token,
-            'capture'=>'true'
-
-        ];
-        //配列を hoge=hoge& のHTTPクエリパラメータにする
-        $param=http_build_query($param, "", "&");
-
-
-        $api_url ='https://api.pay.jp/v1/charges';
-
-        //headerをsetする。authoriは付けない。POSTするので指定のtypeで
-        $headers = array('Content-type: application/x-www-form-urlencoded');
+    ];
+    //配列を hoge=hoge& のHTTPクエリパラメータにする
+    $param=http_build_query($param, "", "&");
 
 
-        $curl_handle = curl_init();
+    $api_url ='https://api.pay.jp/v1/charges';
 
-        //POST送信する
-        curl_setopt($curl_handle, CURLOPT_POST, true);
-        curl_setopt($curl_handle, CURLOPT_URL, $api_url);
-        curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $headers);
+    //headerをsetする。authoriは付けない。POSTするので指定のtypeで
+    $headers = array('Content-type: application/x-www-form-urlencoded');
 
-        curl_setopt($curl_handle, CURLOPT_POSTFIELDS, $param);
-        // curl_exec()の結果を文字列にする
-        curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
-        //オプションとして、ユーザ名:パスワードを付ける
-        curl_setopt($curl_handle, CURLOPT_USERPWD, 'sk_test_e7c71bc57ca67b1092849ac7:');
-        //実行
-        $res = curl_exec($curl_handle);
 
-        //close
-        curl_close($curl_handle);
+    $curl_handle = curl_init();
 
-        $charge=json_decode($res,true);
+    //POST送信する
+    curl_setopt($curl_handle, CURLOPT_POST, true);
+    curl_setopt($curl_handle, CURLOPT_URL, $api_url);
+    curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $headers);
 
-        if (strpos(curl_getinfo($curl_handle,CURLINFO_RESPONSE_CODE), '200') === false) {
-            $message= '決済に失敗しました　';
-        }elseif(($charge['failure_message']) != ''){
-            $message= "決済に失敗しました\n
+    curl_setopt($curl_handle, CURLOPT_POSTFIELDS, $param);
+    // curl_exec()の結果を文字列にする
+    curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
+    //オプションとして、ユーザ名:パスワードを付ける
+    curl_setopt($curl_handle, CURLOPT_USERPWD, 'sk_test_e7c71bc57ca67b1092849ac7:');
+    //実行
+    $res = curl_exec($curl_handle);
+
+    //close
+    curl_close($curl_handle);
+
+    $charge=json_decode($res, true);
+
+    if (strpos(curl_getinfo($curl_handle, CURLINFO_RESPONSE_CODE), '200') === false) {
+        $message= '決済に失敗しました　';
+    } elseif (($charge['failure_message']) != '') {
+        $message= "決済に失敗しました\n
              エラーコード:".$charge['failure_code'].
-             "\nエラー：".$charge['failure_message'];
-            
-        }else{
-            $message='決済が完了しました！';
-
-          
-
-            //支払の登録
-            $cardOb=$charge['card'];
-    
-            $nwCharge =new ClientCharge;
-            $nwCharge->amount= $charge['amount'];
-    
-            $nwCharge->store_id= $request->store;       
-            $nwCharge->line_user_id= $request->userId;    
-    
-            //3項演算子で、NULLだった場合は空文字代入する
-            $nwCharge->reserve_id= 0;       
-            $nwCharge->expired_at= $charge['expired_at']==NULL ? NULL : date('Y-m-d H:i:s',$charge['expired_at']);       
-            $nwCharge->captured_at= $charge['captured_at']==NULL ?  NULL : date('Y-m-d H:i:s',$charge['captured_at'] );       
-            $nwCharge->customer_id= $cardOb['customer']==NULL ? '' :  $cardOb['customer'];       
-            $nwCharge->description= $charge['description']==NULL ? '' : $charge['description'];       
-    
-            $nwCharge->refunded= $charge['refunded']==NULL ? 0 : $charge['refunded'];   
-            $nwCharge->amount_refunded= $charge['amount_refunded']==NULL ? 0 : $charge['amount_refunded'];       
-            $nwCharge->refund_reason= $charge['refund_reason']==NULL ? '' : $charge['refund_reason'];       
-            $nwCharge->fee_rate= $charge['fee_rate']==NULL ? '' : $charge['fee_rate'];       
-            $nwCharge->failure_message= $charge['failure_message']==NULL ? '' : $charge['failure_message'];       
-    
-            $nwCharge->charge_id= $charge['id']==NULL ? '' : $charge['id'];       
-            $nwCharge->captured= $charge['captured']==NULL ? 0 : $charge['captured'];       
-            $nwCharge->holder_name= $cardOb['name']==NULL ? 0 : $cardOb['name'];       
-      
-            $nwCharge->save();
-    
-        }
+         "\nエラー：".$charge['failure_message'];
+    } else {
+        $message='決済が完了しました！';
 
 
+
+        //支払の登録
+        $cardOb=$charge['card'];
+
+        $nwCharge =new ClientCharge();
+        $nwCharge->amount= $charge['amount'];
+
+        $nwCharge->store_id= $request->store;
+        $nwCharge->line_user_id= $request->userId;
+
+        //3項演算子で、NULLだった場合は空文字代入する
+        $nwCharge->reserve_id= 0;
+        $nwCharge->expired_at= $charge['expired_at']==null ? null : date('Y-m-d H:i:s', $charge['expired_at']);
+        $nwCharge->captured_at= $charge['captured_at']==null ? null : date('Y-m-d H:i:s', $charge['captured_at']);
+        $nwCharge->customer_id= $cardOb['customer']==null ? '' : $cardOb['customer'];
+        $nwCharge->description= $charge['description']==null ? '' : $charge['description'];
+
+        $nwCharge->refunded= $charge['refunded']==null ? 0 : $charge['refunded'];
+        $nwCharge->amount_refunded= $charge['amount_refunded']==null ? 0 : $charge['amount_refunded'];
+        $nwCharge->refund_reason= $charge['refund_reason']==null ? '' : $charge['refund_reason'];
+        $nwCharge->fee_rate= $charge['fee_rate']==null ? '' : $charge['fee_rate'];
+        $nwCharge->failure_message= $charge['failure_message']==null ? '' : $charge['failure_message'];
+
+        $nwCharge->charge_id= $charge['id']==null ? '' : $charge['id'];
+        $nwCharge->captured= $charge['captured']==null ? 0 : $charge['captured'];
+        $nwCharge->holder_name= $cardOb['name']==null ? 0 : $cardOb['name'];
+
+        $nwCharge->save();
+    }
+}
       
 
 
