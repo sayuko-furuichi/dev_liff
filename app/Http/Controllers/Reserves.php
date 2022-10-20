@@ -104,7 +104,7 @@ class Reserves extends Controller
 
         if (strpos(curl_getinfo($curl_handle,CURLINFO_RESPONSE_CODE), '200') === false) {
             $message= '決済に失敗しました　';
-        }elseif(isset($charge['failure_message'])){
+        }elseif(($charge['failure_message']) != ''){
             $message= "決済に失敗しました\n
              エラーコード:".$charge['failure_code'].
              "\nエラー：".$charge['failure_message'];
