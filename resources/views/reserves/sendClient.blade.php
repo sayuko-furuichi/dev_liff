@@ -58,7 +58,7 @@
     @endif
     {{--  <p><input type="checkbox" name="member"> 追加情報を入力して会員登録する</p>  --}}
 </div>
-        <button type="submit" class="submit_btn" id="sub" onclick="return false;">送信</button>
+        <button type="submit" class="submit_btn" id="sub" >送信</button>
    
 
     <input type="hidden" id="user" value="" name="userId">
