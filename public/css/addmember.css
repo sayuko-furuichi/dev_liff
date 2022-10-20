@@ -104,5 +104,10 @@ text-align: center;
 border-radius: 10%;
 box-shadow: #FECEC6;
 
+}
 
+.btn:hover{
+    background-color: #ff462a;
+    color: #FECEC6;
+    
 }
