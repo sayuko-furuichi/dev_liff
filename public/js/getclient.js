@@ -83,7 +83,11 @@ window.onload = function () {
 	}
 	//トークンを生成する
 	document.getElementById("create_tkn").onclick = function () {
-		payjp.createToken(numberElement).then(function (r) {
+		payjp.createToken(numberElement,{
+			card:{
+				name:document.getElementById('credit_name').textContent
+			}
+		}).then(function (r) {
 			
 			document.querySelector('#token2').innerText = r.error ? r.error.message:'照会が完了しました';
 			if(r.id!='undefined'){
