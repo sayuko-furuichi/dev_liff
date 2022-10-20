@@ -119,8 +119,8 @@ class Reserves extends Controller
     
             //3項演算子で、NULLだった場合は空文字代入する
             $nwCharge->reserve_id= 0;       
-            $nwCharge->expired_at= $charge['expired_at']==NULL ? 0 : date('Y-m-d h:i:s',$charge['expired_at']);       
-            $nwCharge->captured_at= $charge['captured_at']==NULL ?  '' : date('Y-m-d h:i:s',$charge['captured_at'] );       
+            $nwCharge->expired_at= $charge['expired_at']==NULL ? 0 : date('Y-m-d H:i:s',$charge['expired_at']);       
+            $nwCharge->captured_at= $charge['captured_at']==NULL ?  '' : date('Y-m-d H:i:s',$charge['captured_at'] );       
             $nwCharge->customer_id= $cardOb['customer']==NULL ? '' :  $cardOb['customer'];       
             $nwCharge->description= $charge['description']==NULL ? '' : $charge['description'];       
     
