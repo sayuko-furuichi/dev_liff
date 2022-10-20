@@ -94,6 +94,11 @@ padding-top: -10px;
     width: 100%;
     outline-color: none;
 }
+
+.d_btn{
+    padding-top: 30px;
+}
+
 .btn{
 border: #FE725C;
 background-color: #FE725C;
