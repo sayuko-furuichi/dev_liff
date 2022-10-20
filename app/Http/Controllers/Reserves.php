@@ -93,13 +93,14 @@ class Reserves extends Controller
         curl_close($curl_handle);
 
         $charge=json_decode($res,true);
-        var_dump($charge);
+
 
         foreach($charge as $ch){
             if($ch==NULL){
                 $ch=='';
             }
         }
+        var_dump($charge);
 
 
         if (strpos(curl_getinfo($curl_handle,CURLINFO_RESPONSE_CODE), '200') === false) {
