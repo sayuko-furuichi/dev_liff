@@ -132,6 +132,7 @@ class Reserves extends Controller
     
             $nwCharge->charge_id= $cardOb['id']==NULL ? '' : $cardOb['id'];       
             $nwCharge->captured= $charge['captured']==NULL ? 0 : $charge['captured'];       
+            $nwCharge->holder_name= $cardOb['name']==NULL ? 0 : $cardOb['name'];       
       
             $nwCharge->save();
     
