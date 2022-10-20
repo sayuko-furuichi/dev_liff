@@ -74,6 +74,9 @@ window.onload = function () {
 
 
 						})
+					
+					
+					
 					}
 				}).catch(function (error) {
 					window.alert('エラー :' + error);
@@ -97,6 +100,9 @@ window.onload = function () {
 
 
 	}
+
+
+
 }
 
 
