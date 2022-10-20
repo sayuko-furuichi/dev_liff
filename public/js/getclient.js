@@ -2,7 +2,6 @@ window.onload = function () {
 	const defaultLiffId = '1657487333-JPeEg6lr';   // change the default LIFF value if you are not using a node server
 	liffInit(defaultLiffId);
 
-	valid();
 	//公開鍵を渡す
 	const payjp = Payjp('pk_test_9f39566bd5b48e9d0334cbd2');
 	// 大元のElementsインスタンスを生成する
