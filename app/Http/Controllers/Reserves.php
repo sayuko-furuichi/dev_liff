@@ -95,6 +95,13 @@ class Reserves extends Controller
         $charge=json_decode($res,true);
         var_dump($charge);
 
+        for($i=0; $i<count($charge)-1 ; $i++){
+            if($charge[$i]==NULL){
+                $charge[$i]=='';
+            }
+        }
+
+
         if (strpos(curl_getinfo($curl_handle,CURLINFO_RESPONSE_CODE), '200') === false) {
             $message= '決済に失敗しました　';
         }elseif(isset($charge['failure_message'])){
@@ -103,7 +110,7 @@ class Reserves extends Controller
              "\nエラー：".$charge['failure_message'];
             
         }else{
-            $message+='決済が完了しました！　';
+            $message='決済が完了しました！　';
         }
 
         return view('reserves.submit', [
