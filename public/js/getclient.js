@@ -9,46 +9,46 @@ window.onload = function () {
 	//各インスタンスを個別に生成する
 
 	//CSSはcreate時にstyleタグとして渡す
-	var numberElement = elements4.create('cardNumber',{
-		style:{
-			base:{
-				backgroundColor:'#FECEC6',
+	var numberElement = elements4.create('cardNumber', {
+		style: {
+			base: {
+				backgroundColor: '#FECEC6',
 				fontSize: '15px',
-				'::placeholder':{
-					color:'#FFFFFF',
+				'::placeholder': {
+					color: '#FFFFFF',
 				}
 			},
 			invalid: {
 				color: 'red'
-			  }
+			}
 		}
 	});
-	var expiryElement = elements4.create('cardExpiry',{
-		style:{
-			base:{
-				backgroundColor:'#FECEC6',
+	var expiryElement = elements4.create('cardExpiry', {
+		style: {
+			base: {
+				backgroundColor: '#FECEC6',
 				fontSize: '15px',
-				'::placeholder':{
-					color:'#FFFFFF',
+				'::placeholder': {
+					color: '#FFFFFF',
 				}
 			},
 			invalid: {
 				color: 'red'
-			  }
+			}
 		}
 	});
-	var cvcElement = elements4.create('cardCvc',{
-		style:{
-			base:{
-				backgroundColor:'#FECEC6',
+	var cvcElement = elements4.create('cardCvc', {
+		style: {
+			base: {
+				backgroundColor: '#FECEC6',
 				fontSize: '15px',
-				'::placeholder':{
-					color:'#FFFFFF',
+				'::placeholder': {
+					color: '#FFFFFF',
 				}
 			},
 			invalid: {
 				color: 'red'
-			  }
+			}
 		}
 	});
 	//HTMLの要素にフォームを作成する
@@ -83,16 +83,16 @@ window.onload = function () {
 	}
 	//トークンを生成する
 	document.getElementById("create_tkn").onclick = function () {
-		payjp.createToken(numberElement,{
-			card:{
-				name:document.getElementById('credit_name').value
+		payjp.createToken(numberElement, {
+			card: {
+				name: document.getElementById('credit_name').value
 			}
 		}).then(function (r) {
-			
-			document.querySelector('#token2').innerText = r.error ? r.error.message:'照会が完了しました';
-			if(r.id!='undefined'){
-			document.getElementById('credit_token').value=r.id;
-		}
+
+			document.querySelector('#token2').innerText = r.error ? r.error.message : '照会が完了しました';
+			if (r.id != 'undefined') {
+				document.getElementById('credit_token').value = r.id;
+			}
 		})
 
 
