@@ -31,7 +31,7 @@
     </div>
     <div class="item">
         <p class="sub_title">　ふりがな　　<span class="must">必須</span></p>
-        <input type="text" placeholder="せい"  name="fSei" class="half_txt" pattern="^[ぁ-ん]{1,30}+$|^[ァ-ヶ]{1,30}+$">　<input type="text"
+        <input type="text" placeholder="せい"  name="fSei" class="half_txt" pattern="^[ぁ-ん]{1,30}+$?^[ァ-ヶ]{1,30}+$">　<input type="text"
             placeholder="めい"  name="fMei" class="half_txt" pattern="^[ぁ-ん]{1,30}+$|^[ァ-ヶ]{1,30}+$">
     </div>
     <div class="item">
