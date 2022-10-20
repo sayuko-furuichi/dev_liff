@@ -105,9 +105,9 @@ window.onload = function () {
 		var valid =document.getElementById('token2').textContent;
 
 		if (valid != '照会が完了しました'){
-			return true;
-		}else{
 			return false;
+		}else{
+			return true;
 		}
 	}
 }
