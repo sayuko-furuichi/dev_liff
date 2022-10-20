@@ -55,14 +55,7 @@ class Reserves extends Controller
         // $request->tel;
         $request->credit_token;
 
-        //Authorization　に、秘密鍵を渡す
-       
-        // $header = array(
-        //     'Authorization: Basic sk_test_e7c71bc57ca67b1092849ac7:',  
-        //       'Content-type: application/x-www-form-urlencoded'
-        // );
-
-        // //クエリでくっつけてよいらしい
+        //POSTする内容を連想配列にまとめる
         $param =[
             'amount'=>2980,
             'currency' => 'jpy',
@@ -70,41 +63,27 @@ class Reserves extends Controller
             'capture'=>'true'
 
         ];
-        //配列をHTTPクエリパラメータにしてくれる！
+        //配列を hoge=hoge& のHTTPクエリパラメータにする
          $param=http_build_query($param, "", "&");
 
 
-        // $context = stream_context_create([
-        //     'http' => [
-        //         'ignore_errors' => true,
-        //         'method' => 'POST',
-        //         'header' =>  $header,
-        //         'content' => $param,
-        //     ],
-        // ]);
-
-    // //   dd( implode("\r\n", $header));
-        // $response = file_get_contents('https://api.pay.jp/v1/charges', false, $context);
-        // if (strpos($http_response_header[0], '200') === false) {
-        //     error_log('Request failed: ' . $response);
-        // }
-
         $api_url ='https://api.pay.jp/v1/charges';
 
-        //エンコードされたURLでPOST通信する
+        //headerをsetする。authoriは付けない。POSTするので指定のtypeで
         $headers = array('Content-type: application/x-www-form-urlencoded');
         
 
         $curl_handle = curl_init();
-    
+        
+        //POST送信する
          curl_setopt($curl_handle, CURLOPT_POST, true);
-        // curl_setopt($curl_handle, CURLOPT_HTTPGET, true);
         curl_setopt($curl_handle, CURLOPT_URL, $api_url);
          curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $headers);
     
          curl_setopt($curl_handle, CURLOPT_POSTFIELDS,$param);
         // curl_exec()の結果を文字列にする
         curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
+        //オプションとして、ユーザ名:パスワードを付ける
         curl_setopt($curl_handle, CURLOPT_USERPWD, 'sk_test_e7c71bc57ca67b1092849ac7:');
         //実行
         $res = curl_exec($curl_handle);
@@ -112,11 +91,6 @@ class Reserves extends Controller
         //close
         curl_close($curl_handle);
     
-     dd($res);
-
-
-
-
         return view('reserves.submit',[
             'response'=>$res
         ]);
