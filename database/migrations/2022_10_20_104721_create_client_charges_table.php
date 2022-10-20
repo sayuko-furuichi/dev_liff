@@ -31,7 +31,7 @@ return new class () extends Migration {
             $table->string('refund_reason')->comment('返金理由');
 
             $table->string('fee_rate')->comment('決済手数料率');
-            $table->string('failure_message ')->comment('失敗した支払いの説明');
+            $table->string('failure_message')->comment('失敗した支払いの説明');
 
             $table->string('charge_id')->comment('ch_で始まる一意なオブジェクトを示す文字列');
             $table->tinyInteger('captured')->comment('支払い処理を確定しているかどうか');
