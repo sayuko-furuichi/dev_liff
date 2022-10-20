@@ -46,17 +46,15 @@
         <span>カード番号：</span>
     {{--  ここにカード番号入力フォームが生成されます  --}}
    <div id="number-form" class="payjs-outer"></div>
-
-
     {{--  <!-- ここに有効期限入力フォームが生成されます -->  --}}
-    <span>カード有効期限：</span><div id="expiry-form" class="payjs-outer" required></div>
+    <span>カード有効期限：</span><div id="expiry-form" class="payjs-outer" ></div>
     {{--  <!-- ここにCVC入力フォームが生成されます -->  --}}
-    <span>セキュリティコード：</span><div id="cvc-form" class="payjs-outer" required></div>
+    <span>セキュリティコード：</span><div id="cvc-form" class="payjs-outer" ></div>
     <p>カード名義氏名：</p>
-    <input type="text" name="credit_name" id="credit_name" required class="holder_nm" placeholder="NAGETA REIGAI">
+    <input type="text" name="credit_name" id="credit_name" required class="holder_nm" placeholder="NAGETA　REIGAI">
     {{--  <button >カードを照会する</button>  --}}
     <input type="hidden" id="credit_token" name="credit_token" value="">
-    <div class="d_btn"><span class="btn" id="create_tkn">　照会する　</span><span id="token2" class="alert"></span></div>
+    <div class="d_btn"><span class="btn" id="create_tkn">　照会する　</span><span id="token2" class="alert" pattern="照会が完了しました"></span></div>
     @endif
     {{--  <p><input type="checkbox" name="member"> 追加情報を入力して会員登録する</p>  --}}
 </div>
