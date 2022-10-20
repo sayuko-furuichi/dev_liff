@@ -67,21 +67,21 @@ class Reserves extends Controller
             'amount'=>2980,
             'currency' => 'jpy',
             'card' => $request->credit_token,
-            // 'capture'=>'true'
+            'capture'=>'true'
 
         ];
         //配列をHTTPクエリパラメータにしてくれる！
          $param=http_build_query($param, "", "&");
 
 
-    //     $context = stream_context_create([
-    //         'http' => [
-    //             'ignore_errors' => true,
-    //             'method' => 'POST',
-    //             'header' =>  $header,
-    //             'content' => $param,
-    //         ],
-    //     ]);
+        // $context = stream_context_create([
+        //     'http' => [
+        //         'ignore_errors' => true,
+        //         'method' => 'POST',
+        //         'header' =>  $header,
+        //         'content' => $param,
+        //     ],
+        // ]);
 
     // //   dd( implode("\r\n", $header));
         // $response = file_get_contents('https://api.pay.jp/v1/charges', false, $context);
@@ -90,7 +90,7 @@ class Reserves extends Controller
         // }
 
         $api_url ='https://api.pay.jp/v1/charges';
-         $pass =base64_encode('sk_test_e7c71bc57ca67b1092849ac7:');
+
         //エンコードされたURLでPOST通信する
         $headers = array('Content-type: application/x-www-form-urlencoded');
         
