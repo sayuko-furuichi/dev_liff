@@ -86,3 +86,10 @@ padding-top: -10px;
 .menu_bar{
     width: 90%;
 }
+
+.holder_nm{
+    border: none;
+    background-color: '#FECEC6';
+    font-size: 15px;
+    width: 80%;
+}
