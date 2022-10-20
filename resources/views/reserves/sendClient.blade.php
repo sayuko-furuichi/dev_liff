@@ -13,7 +13,7 @@
 </head>
 {{--  会員登録後、特別な表示と会員証画面へリダイレクトさせる  --}}
 <body>
-    <form action="{{route('reserve.submit')}}" method="POST">
+    <form action="{{route('reserve.submit')}}" method="POST" id="atai">
         @csrf
     @if (isset($request))
     <input type="hidden" name="store" value="{{$request->store}}">
@@ -61,7 +61,7 @@
     @endif
     {{--  <p><input type="checkbox" name="member"> 追加情報を入力して会員登録する</p>  --}}
 </div>
-        <button type="submit" class="submit_btn">送信</button>
+        <button type="submit" class="submit_btn" form="atai">送信</button>
    
 
     <input type="hidden" id="user" value="" name="userId">
