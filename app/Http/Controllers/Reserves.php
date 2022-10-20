@@ -96,14 +96,33 @@ class Reserves extends Controller
 
         $charge=json_decode($res,true);
 
+        //支払の登録
+        $cardOb=$charge['card'];
 
-        foreach($charge as $ch){
-            var_dump($ch);
-            if($ch===NULL){
-                $ch=='';
-            }
-        }
-        var_dump($charge);
+        $nwCharge =new ClientCharge;
+        $nwCharge->amount= $charge['amount'];
+
+        $nwCharge->store_id= $request->store;       
+        $nwCharge->line_user_id= $request->userId;    
+
+        //3項演算子で、NULLだった場合は空文字代入する
+        $nwCharge->reserve_id= 0;       
+        $nwCharge->expired_at= $charge['expired_at']==NULL ? '' : date('Y-m-d h:i:s',$charge['expired_at']);       
+        $nwCharge->captured_at= $charge['captured_at']==NULL ?  '' : date('Y-m-d h:i:s',$charge['captured_at'] );       
+        $nwCharge->customer_id= $cardOb['customer_id']==NULL ? '' :  $cardOb['customer_id'];       
+        $nwCharge->description= $charge['description']==NULL ? '' : $charge['description'];       
+
+        $nwCharge->description= $charge['refunded']==NULL ? 0 : $charge['refunded'];   
+        $nwCharge->description= $charge['amount_refunded']==NULL ? 0 : $charge['amount_refunded'];       
+        $nwCharge->description= $charge['refund_reason']==NULL ? '' : $charge['refund_reason'];       
+        $nwCharge->description= $charge['fee_rate']==NULL ? '' : $charge['fee_rate'];       
+        $nwCharge->description= $charge['failure_message']==NULL ? '' : $charge['failure_message'];       
+
+        $nwCharge->description= $cardOb['charge_id']==NULL ? '' : $cardOb['charge_id'];       
+        $nwCharge->description= $charge['captured']==NULL ? 0 : $charge['captured'];       
+  
+        $nwCarge->save();
+
 
 
         if (strpos(curl_getinfo($curl_handle,CURLINFO_RESPONSE_CODE), '200') === false) {

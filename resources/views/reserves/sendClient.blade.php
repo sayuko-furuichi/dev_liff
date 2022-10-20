@@ -63,7 +63,7 @@
         <button type="submit" class="submit_btn">送信</button>
     </div>
 
-    <input type="hidden" id="user" value="" name="id">
+    <input type="hidden" id="user" value="" name="userId">
 </form>
 </div>
 
