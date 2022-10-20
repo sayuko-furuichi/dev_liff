@@ -56,7 +56,7 @@
     <input type="text" name="credit_name" id="credit_name" required class="holder_nm" placeholder="NAGETA REIGAI">
     {{--  <button >カードを照会する</button>  --}}
     <input type="hidden" id="credit_token" name="credit_token" value="">
-    <div class="btn" id="create_tkn">照会する</div><span id="token2" class="must"></span>
+    <div><span class="btn" id="create_tkn">照会する</span><span id="token2" class="must"></span></div>
     @endif
     {{--  <p><input type="checkbox" name="member"> 追加情報を入力して会員登録する</p>  --}}
 </div>
