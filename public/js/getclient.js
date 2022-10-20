@@ -102,7 +102,7 @@ window.onload = function () {
 	}
 
 	document.getElementById('sub').onclick =function(){
-		var valid =document.getElementById('token2').innerText;
+		var valid =document.getElementById('token2').textContent;
 
 		if (valid != '照会が完了しました'){
 			return true;
