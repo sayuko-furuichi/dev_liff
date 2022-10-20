@@ -109,17 +109,17 @@ class Reserves extends Controller
         $nwCharge->reserve_id= 0;       
         $nwCharge->expired_at= $charge['expired_at']==NULL ? '' : date('Y-m-d h:i:s',$charge['expired_at']);       
         $nwCharge->captured_at= $charge['captured_at']==NULL ?  '' : date('Y-m-d h:i:s',$charge['captured_at'] );       
-        $nwCharge->customer_id= $cardOb['customer_id']==NULL ? '' :  $cardOb['customer_id'];       
+        $nwCharge->customer_id= $cardOb['customer']==NULL ? '' :  $cardOb['customer'];       
         $nwCharge->description= $charge['description']==NULL ? '' : $charge['description'];       
 
-        $nwCharge->description= $charge['refunded']==NULL ? 0 : $charge['refunded'];   
-        $nwCharge->description= $charge['amount_refunded']==NULL ? 0 : $charge['amount_refunded'];       
-        $nwCharge->description= $charge['refund_reason']==NULL ? '' : $charge['refund_reason'];       
-        $nwCharge->description= $charge['fee_rate']==NULL ? '' : $charge['fee_rate'];       
-        $nwCharge->description= $charge['failure_message']==NULL ? '' : $charge['failure_message'];       
+        $nwCharge->refunded= $charge['refunded']==NULL ? 0 : $charge['refunded'];   
+        $nwCharge->amount_refunded= $charge['amount_refunded']==NULL ? 0 : $charge['amount_refunded'];       
+        $nwCharge->refund_reason= $charge['refund_reason']==NULL ? '' : $charge['refund_reason'];       
+        $nwCharge->fee_rate= $charge['fee_rate']==NULL ? '' : $charge['fee_rate'];       
+        $nwCharge->failure_message= $charge['failure_message']==NULL ? '' : $charge['failure_message'];       
 
-        $nwCharge->description= $cardOb['charge_id']==NULL ? '' : $cardOb['charge_id'];       
-        $nwCharge->description= $charge['captured']==NULL ? 0 : $charge['captured'];       
+        $nwCharge->id= $cardOb['charge_id']==NULL ? '' : $cardOb['charge_id'];       
+        $nwCharge->captured= $charge['captured']==NULL ? 0 : $charge['captured'];       
   
         $nwCarge->save();
 
