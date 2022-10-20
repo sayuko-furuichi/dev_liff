@@ -94,6 +94,8 @@ class Reserves extends Controller
         //close
         curl_close($curl_handle);
 
+        $charge=json_decode($res,true);
+
         if (strpos(curl_getinfo($curl_handle,CURLINFO_RESPONSE_CODE), '200') === false) {
             $message= '決済に失敗しました　';
         }elseif(($charge['failure_message']) != ''){
@@ -104,7 +106,7 @@ class Reserves extends Controller
         }else{
             $message='決済が完了しました！';
 
-            $charge=json_decode($res,true);
+          
 
             //支払の登録
             $cardOb=$charge['card'];
