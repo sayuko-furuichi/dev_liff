@@ -96,6 +96,7 @@ class Reserves extends Controller
 
 
         foreach($charge as $ch){
+            var_dump($ch);
             if($ch==NULL){
                 $ch=='';
             }
@@ -111,7 +112,7 @@ class Reserves extends Controller
              "\nエラー：".$charge['failure_message'];
             
         }else{
-            $message='決済が完了しました！　';
+            $message='決済が完了しました！';
         }
 
         return view('reserves.submit', [
