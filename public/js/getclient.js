@@ -100,7 +100,7 @@ window.onload = function () {
 
 
 	}
-
+	//照会が完了していないと送信出来ない
 	document.getElementById('sub').onclick =function(){
 		var valid =document.getElementById('token2').textContent;
 
