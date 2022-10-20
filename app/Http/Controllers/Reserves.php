@@ -135,6 +135,8 @@ if (isset($request->credit_token)) {
 
         $nwCharge->save();
     }
+}else{
+    $message='';
 }
       
 
