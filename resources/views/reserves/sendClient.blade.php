@@ -49,9 +49,9 @@
 
 
     {{--  <!-- ここに有効期限入力フォームが生成されます -->  --}}
-    <span>カード有効期限：</span><div id="expiry-form" class="payjs-outer"></div>
+    <span>カード有効期限：</span><div id="expiry-form" class="payjs-outer" required></div>
     {{--  <!-- ここにCVC入力フォームが生成されます -->  --}}
-    <span>セキュリティコード：</span><div id="cvc-form" class="payjs-outer"></div>
+    <span>セキュリティコード：</span><div id="cvc-form" class="payjs-outer" required></div>
     <p>カード名義氏名：</p>
     <input type="text" name="credit_name" id="credit_name" required class="holder_nm" placeholder="NAGETA REIGAI">
     {{--  <button >カードを照会する</button>  --}}
