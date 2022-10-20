@@ -95,9 +95,9 @@ class Reserves extends Controller
         $charge=json_decode($res,true);
         var_dump($charge);
 
-        for($i=0; $i<count($charge)-1 ; $i++){
-            if($charge[$i]==NULL){
-                $charge[$i]=='';
+        foreach($charge as $ch){
+            if($ch==NULL){
+                $ch=='';
             }
         }
 
