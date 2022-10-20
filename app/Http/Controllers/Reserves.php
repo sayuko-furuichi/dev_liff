@@ -130,7 +130,7 @@ class Reserves extends Controller
             $nwCharge->fee_rate= $charge['fee_rate']==NULL ? '' : $charge['fee_rate'];       
             $nwCharge->failure_message= $charge['failure_message']==NULL ? '' : $charge['failure_message'];       
     
-            $nwCharge->charge_id= $cardOb['id']==NULL ? '' : $cardOb['id'];       
+            $nwCharge->charge_id= $charge['id']==NULL ? '' : $charge['id'];       
             $nwCharge->captured= $charge['captured']==NULL ? 0 : $charge['captured'];       
             $nwCharge->holder_name= $cardOb['name']==NULL ? 0 : $cardOb['name'];       
       
