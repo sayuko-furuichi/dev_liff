@@ -99,7 +99,7 @@ class Reserves extends Controller
 
         foreach($charge as $ch){
             var_dump($ch);
-            if($ch==NULL){
+            if($ch[0]==NULL){
                 $ch=='';
             }
         }
