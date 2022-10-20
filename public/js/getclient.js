@@ -85,7 +85,7 @@ window.onload = function () {
 	document.getElementById("create_tkn").onclick = function () {
 		payjp.createToken(numberElement,{
 			card:{
-				name:document.getElementById('credit_name').textContent
+				name:document.getElementById('credit_name').value
 			}
 		}).then(function (r) {
 			
