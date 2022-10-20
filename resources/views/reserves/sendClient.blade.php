@@ -57,7 +57,7 @@
     {{--  <button >カードを照会する</button>  --}}
     <span id="token2" class="must"></span>
     <input type="hidden" id="credit_token" name="credit_token" value="">
-    <div class="btn" id="create_tkn" form="none">照会する</div>
+    <div class="btn" id="create_tkn">照会する</div>
     @endif
     {{--  <p><input type="checkbox" name="member"> 追加情報を入力して会員登録する</p>  --}}
 </div>
