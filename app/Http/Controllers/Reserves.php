@@ -158,11 +158,11 @@ public function createCharge($request)
 
         $param =[
             'amount'=>2980,
-            'refund_reason ' => '予約キャンセルの為',
+            'refund_reason' => '予約キャンセルの為'
       
           ];
           //配列を hoge=hoge& のHTTPクエリパラメータにする
-          $param=http_build_query($param, "", "&");
+          $param = http_build_query($param, "", "&");
       
       
           $api_url ='https://api.pay.jp/v1/charges/'. $request->charge_id.'/refund';
