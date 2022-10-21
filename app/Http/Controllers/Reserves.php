@@ -151,10 +151,47 @@ public function createCharge($request)
 }
 
 
-    function cancel()
+    function cancel(Request $request)
     {
+        $request->charge_id;
+
+        $param =[
+            'amount'=>2980,
+            'refund_reason ' => '予約キャンセルの為',
+      
+          ];
+          //配列を hoge=hoge& のHTTPクエリパラメータにする
+          $param=http_build_query($param, "", "&");
+      
+      
+          $api_url ='https://api.pay.jp/v1/charges'. $request->charge_id.'/refund';
+      
+          //headerをsetする。authoriは付けない。POSTするので指定のtypeで
+          $headers = array('Content-type: application/x-www-form-urlencoded');
+      
+      
+          $curl_handle = curl_init();
+      
+          //POST送信する
+          curl_setopt($curl_handle, CURLOPT_POST, true);
+          curl_setopt($curl_handle, CURLOPT_URL, $api_url);
+          curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $headers);
+      
+          curl_setopt($curl_handle, CURLOPT_POSTFIELDS, $param);
+          // curl_exec()の結果を文字列にする
+          curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
+          //オプションとして、ユーザ名:パスワードを付ける
+          curl_setopt($curl_handle, CURLOPT_USERPWD, 'sk_test_e7c71bc57ca67b1092849ac7:');
+          //実行
+          $res = curl_exec($curl_handle);
+      
+          //close
+          curl_close($curl_handle);
+      
+          $charge=json_decode($res, true);
+
         return view('reserves.submit', [
-            'response'=>$message
+            'response'=>$  $res 
         ]);
     }
 
