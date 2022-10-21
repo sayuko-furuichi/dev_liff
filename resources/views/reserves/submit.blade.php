@@ -16,7 +16,7 @@
     <img src="{{secure_asset('img/menu_bar/var_4.png')}}" alt="">
     <div class="note">
     {{-- name属性つける --}}
-    <form action="{{route('reserve.cancel')}}" method="POST">
+    <form action="{{route('reserve.cancel')}}" method="get">
         @csrf
         <div class="center">
             @if (isset($response))
