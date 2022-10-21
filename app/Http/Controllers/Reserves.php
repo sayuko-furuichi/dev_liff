@@ -224,7 +224,9 @@ public function createCharge($request)
                   "\n返金額:".$charge['amount_refunded'];
 
         return view('reserves.submit', [
-            'response'=>$message
+            'response'=>$message,
+            'store'=>$request->store
+        
         ]);
     }
 }
