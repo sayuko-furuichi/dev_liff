@@ -23,8 +23,11 @@
                 <p>{{$response}}</p>
             @endif
         <p>予約完了しました！ご来店をお待ちしております</p>
+        @if (isset($charge))
         <input type="hidden" value="{{$charge['id']}}" name="charge_id">
         <p>{{$charge['id']}}</p>
+        @endif
+
        <td><img src="{{secure_asset('img/1.png')}}" alt="ロゴマーク" width="25%"><p>まる屋</p></td>
     </div>
     <button type="submit">予約をキャンセルする</button>
