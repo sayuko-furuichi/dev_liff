@@ -75,7 +75,7 @@ Route::group(['prefix' => '/reserve', 'as' => 'reserve' ], function () {
     Route::get('/date/confirm', 'App\Http\Controllers\Reserves@confirm')->name('.confirm');
     Route::get('/date/confirm/send', 'App\Http\Controllers\Reserves@send')->name('.send');
     Route::post('/date/confirm/send', 'App\Http\Controllers\Reserves@submit')->name('.submit');
-    Route::get('/date/confirm/send/{reserve_id}', 'App\Http\Controllers\Reserves@cancel')->name('.cancel');
+    Route::get('/date/confirm/send/cancel', 'App\Http\Controllers\Reserves@cancel')->name('.cancel');
 });
 
 //0921 スタンプカードページ store_idのクエリつけて飛ばす？
