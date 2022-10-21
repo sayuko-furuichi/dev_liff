@@ -165,7 +165,7 @@ public function createCharge($request)
           $param=http_build_query($param, "", "&");
       
       
-          $api_url ='https://api.pay.jp/v1/charges'. $request->charge_id.'/refund';
+          $api_url ='https://api.pay.jp/v1/charges/'. $request->charge_id.'/refund';
       
           //headerをsetする。authoriは付けない。POSTするので指定のtypeで
           $headers = array('Content-type: application/x-www-form-urlencoded');
