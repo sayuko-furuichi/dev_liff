@@ -221,7 +221,7 @@ public function createCharge($request)
 
         $message ="キャンセルを受け付けました。
                    \nお支払い金額:" .$charge['amount'].
-                  "\n返金額:".$charge['amount_refunded'];
+                  "円\n返金額:".$charge['amount_refunded'].'円';
 
         return view('reserves.submit', [
             'response'=>$message,
