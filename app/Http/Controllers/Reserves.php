@@ -62,6 +62,7 @@ class Reserves extends Controller
                 'charge'=> $charges['charge']
             ]);
         } else {
+            
             return view('reserves.submit');
         }
     }
@@ -191,7 +192,7 @@ public function createCharge($request)
           $charge=json_decode($res, true);
 
         return view('reserves.submit', [
-            'response'=>$  $res 
+            'response'=>$res 
         ]);
     }
 
