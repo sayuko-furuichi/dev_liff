@@ -30,6 +30,7 @@
 
        <td><img src="{{secure_asset('img/1.png')}}" alt="ロゴマーク" width="25%"><p>まる屋</p></td>
     </div>
+    <input type="hidden" value="{{$store}}" name="store">
     <button type="submit">予約をキャンセルする</button>
 </form>
 </div>
