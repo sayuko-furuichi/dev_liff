@@ -14,10 +14,9 @@
 {{--  会員登録後、特別な表示と会員証画面へリダイレクトさせる  --}}
 <body>
     <img src="{{secure_asset('img/menu_bar/var_4.png')}}" alt="">
-    <a href="{{route('member.mypage')}}">マイページ</a>
     <div class="note">
     {{-- name属性つける --}}
-    <form action="{{route('member.add')}}" method="POST">
+    <form action="{{route('reserve.cancel')}}" method="POST">
         @csrf
         <div class="center">
             @if (isset($response))
@@ -26,6 +25,7 @@
         <p>予約完了しました！ご来店をお待ちしております</p>
        <td><img src="{{secure_asset('img/1.png')}}" alt="ロゴマーク" width="25%"><p>まる屋</p></td>
     </div>
+    <button type="submit">予約をキャンセルする</button>
 </form>
 </div>
 

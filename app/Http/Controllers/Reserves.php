@@ -139,12 +139,19 @@ if (isset($request->credit_token)) {
     $message='';
 }
       
-
-
-      
-
         return view('reserves.submit', [
             'response'=>$message
         ]);
     }
+}
+
+
+
+function cancel(){
+    
+
+
+    return view('reserves.submit', [
+        'response'=>$message
+    ]);
 }
