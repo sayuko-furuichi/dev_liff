@@ -46,24 +46,35 @@ class Reserves extends Controller
             'credit'=>$creditForm
         ]);
     }
+
+
+
     public function submit(Request $request)
     {
-        // $request->store;
-        // $request->dateTime;
-        // $request->courses[0];
-        // $request->sei;
-        // $request->mei;
-        // $request->FSei;
-        // $request->FMei;
-        // $request->tel;
+        //予約に入れる
+
+        if (isset($request->credit_token)) {
+            $charges= $this->createCharge($request);
         
-if (isset($request->credit_token)) {
+
+            return view('reserves.submit', [
+                'response'=>$charges['message'],
+                'charge'=> $charges['charge']
+            ]);
+        } else {
+            return view('reserves.submit');
+        }
+    }
+
+
+public function createCharge($request)
+{
     //POSTする内容を連想配列にまとめる
     $param =[
-        'amount'=>2980,
-        'currency' => 'jpy',
-        'card' => $request->credit_token,
-        'capture'=>'true'
+      'amount'=>2980,
+      'currency' => 'jpy',
+      'card' => $request->credit_token,
+      'capture'=>'true'
 
     ];
     //配列を hoge=hoge& のHTTPクエリパラメータにする
@@ -100,7 +111,7 @@ if (isset($request->credit_token)) {
         $message= '決済に失敗しました　';
     } elseif (($charge['failure_message']) != '') {
         $message= "決済に失敗しました\n
-             エラーコード:".$charge['failure_code'].
+         エラーコード:".$charge['failure_code'].
          "\nエラー：".$charge['failure_message'];
     } else {
         $message='決済が完了しました！';
@@ -134,24 +145,18 @@ if (isset($request->credit_token)) {
         $nwCharge->holder_name= $cardOb['name']==null ? 0 : $cardOb['name'];
 
         $nwCharge->save();
+
+        return  ['charge'=>$charge,'message'=>$message];
     }
-}else{
-    $message='';
 }
-      
+
+
+    function cancel()
+    {
         return view('reserves.submit', [
             'response'=>$message
         ]);
     }
+
 }
-
-
-
-function cancel(){
     
-
-
-    return view('reserves.submit', [
-        'response'=>$message
-    ]);
-}
