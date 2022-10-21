@@ -59,7 +59,7 @@ class Reserves extends Controller
             return view('reserves.submit', [
                 'response'=>$charges['message'],
                 'charge'=> $charges['charge'],
-                'store_id'=>$request->store
+                'store'=>$request->store
             ]);
         } else {
             return view('reserves.submit');
@@ -146,7 +146,7 @@ public function createCharge($request)
 
         $nwCharge->save();
 
-        return  ['charge'=>$charge,'message'=>$message,'store'=>$request->store];
+        return  ['charge'=>$charge,'message'=>$message];
     }
 }
 
