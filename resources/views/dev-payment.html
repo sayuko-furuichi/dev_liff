@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Cart and Payment</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <!-- LOGO -->
+      <div class="logo"><a href="#"><img src="assets/img/logo.png" alt="logo"></a></div>
+      <!-- NAVIGATION MENU -->
+      <ul class="nav-links">
+        <!-- USING CHECKBOX HACK -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+          <li><a href="#">Consulting<br><span>コンサル配信を視聴する</span></a></li>
+          <li><a href="/commons/monthly-study.html">Monthly<br><span>勉強会で先端知識を⾝につける</span></a></li>
+          <li><a href="#">Experience<br><span>プライベートを充実させる</span></a></li>
+          <li><a href="#">Communit<br><span>経営者仲間と交流する</span></a></li>
+        </div>
+      </ul>
+    </nav>
+    <div class="my-page">
+      <a href="#">My Page<br><span>個⼈情報を編集する</span></a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="cart-payment">
+      <div id="app" class="inner_content">
+        <!-- CART INFO DESKTOP VERSION -->
+        <div class="cart-info">
+          <h2>カート内情報</h2>
+          <table>
+            <thead>
+              <th class="product-name">商品名</th>
+              <th></th>
+              <th class="unit-price">単価</th>
+              <th>数量</th>
+              <th>割引</th>
+              <th class="amount">⾦額</th>
+              <th></th>
+            </thead>
+            <tbody>
+              <tr v-for="item in cart" class="c-border">
+                <td><img class="cart-img" :src="item.event.img1" alt="img1" /></td>
+                <td class="cart-ttl">
+                  <p>{{ new Date(item.event.date).getFullYear() }}年{{ new Date(item.event.date).getMonth() + 1 }}⽉{{ new
+                    Date(item.event.date).getDate() }}⽇</p>
+                  <p>{{ item.event.theme }} {{ item.event.hotelName }}</p>
+                </td>
+                <td class="unit-price">{{ item.event.amount.toLocaleString() }}</td>
+                <td class="quantity">{{ item.form.numberOfPeople }}</td>
+                <td class="discount">0%</td>
+                <td class="amount">{{ (item.form.numberOfPeople * item.event.amount).toLocaleString() }}円</td>
+                <td class="btn-wrap"><a class="btn-cart hv" href="#" @click.prevent="removeFromCart(item)">削 除</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- CART INFO MOBILE VERSION -->
+        <div class="m-cart">
+          <div v-for="item in cart" class="cart-wrap">
+            <p>{{ new Date(item.event.date).getFullYear() }}年{{ new Date(item.event.date).getMonth() }}⽉{{ new
+              Date(item.event.date).getDate() }}⽇</p>
+            <p>{{ item.event.theme }} {{ item.event.hotelName }}</p>
+            <div class="cart-details">
+              <div class="ttl">
+                <p>単価</p>
+                <p>数量</p>
+                <p>割引</p>
+                <p>⾦額</p>
+              </div>
+              <div class="details">
+                <p>{{ item.event.amount.toLocaleString() }}</p>
+                <p>{{ item.form.numberOfPeople }}</p>
+                <p>0%</p>
+                <p>{{ (item.form.numberOfPeople * item.event.amount).toLocaleString() }}円</p>
+              </div>
+            </div>
+            <div class="cart-img">
+              <img :src="item.event.img1" alt="img1">
+            </div>
+            <div class="btn-wrap">
+              <a class="btn-cart hv" href="#">削 除</a>
+            </div>
+          </div>
+        </div>
+        <!-- CART INFO MOBILE VERSION -->
+        <div class="payment">
+          <h2>⽀払い⽅法を選ぶ</h2>
+          <form>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="at" id="at" checked>
+              <label class="form-check-label" for="at">⼝座振替</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="cc" id="cc">
+              <label class="form-check-label" for="cc">クレジットカード</label>
+            </div>
+          </form>
+          <p class="payment-note">
+            クレジットカードでお⽀払いいただく場合、決済⼿数料として合計⾦額の3.6%（150,000×3.6%=5,400円）が<br>別途かかります。こちらはお客様の負担となります。あらかじめご了承ください。</p>
+        </div>
+        <div class="card-info">
+          <div class="card-list">
+            <label>カード番号</label>
+          </div>
+          <div placeholder="カード番号" id="number-form" class="payjs-outer"></div>
+          <div class="card-list">
+            <label>カード有効期限</label>
+
+          </div>
+          <div type="text" placeholder="⽉/年" id="expiry-form" class="payjs-outer" height="100px"></div>
+          <div class="card-list">
+            <label>セキュリティコード</label>
+
+          </div>
+          <div type="text" placeholder="CVC" id="cvc-form" class="payjs-outer"></div>
+          <div class="card-list">
+            <label>カード名義⽒名</label>
+            <input type="text" placeholder="カード名義 半⾓英字のみ" id="card_name">
+          </div>
+        </div>
+        <div class="cart-payment-btn">
+          <a class="btn-shop hv" href="/commons">買い物を続ける</a>
+          <a class="btn-buy hv" href="#">購⼊する</a>
+          <input type="hidden" class="credit_token" id="credit_tkn" value="">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="inner_content">
+      <a href="#"><img src="assets/img/logo.png" alt="footer-logo"></a>
+      <ul class="footer-menu">
+        <li><a href="#">お問い合わせ</a></li>
+        <li><a href="#">プライバシーポリシー</a></li>
+        <li><a href="#">利⽤規約</a></li>
+        <li><a href="#">特定商取引法に基づく表記</a></li>
+      </ul>
+      <p class="copyright">©TOKZUM LLC.</p>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/vue3.js"></script>
+  <script src="js/axios.js"></script>
+  <script src="js/app.js"></script>
+  <script src="https://js.pay.jp/v2/pay.js"></script>
+  <script src="js/creditform.js"></script>
+
+  <script>
+    const app = {
+      data() {
+        return {
+          cart: this.$storage.getCart()
+        }
+      },
+      created() {
+        console.log('cart', this.cart)
+      },
+      methods: {
+        async removeFromCart(order) {
+          // await this.$http.delete('/delete_item_cart_api/cart_item_id')
+
+          // Simulate cart item delete 
+          const idx = this.cart.indexOf(order)
+          if (idx > -1) {
+            this.cart.splice(idx, 1)
+          }
+          this.$storage.removeFromCart(order)
+        }
+      }
+    }
+    Commons.createApp({
+      root: '#app',
+      // components: {},
+      app: app
+    })
+  </script>
+</body>
+
+</html>
