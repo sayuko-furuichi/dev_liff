@@ -12,42 +12,69 @@ window.onload = function () {
 		style: {
 			base: {
 				backgroundColor: '#EBE6FF',
-				fontSize: '15px',
+				fontSize: '45px',
 				'::placeholder': {
 					color: '#757575',
+					fontSize:'15px'
+				},
+				':focus':{
+					fontSize:'15px'
+					
 				}
 			},
 			invalid: {
-				color: 'red'
-			}
+				color: 'red',
+				fontSize:'15px'
+			},
+			complete :{
+				fontSize:'15px'
+			},
 		}
 	});
 	var expiryElement = elements4.create('cardExpiry', {
 		style: {
 			base: {
 				backgroundColor: '#EBE6FF',
-				fontSize: '15px',
+				fontSize: '45px',
 				'::placeholder': {
 					color: '#757575',
+					fontSize:'15px'
+				},
+				':focus':{
+					fontSize:'15px'
+					
 				}
 			},
 			invalid: {
-				color: 'red'
-			}
+				color: 'red',
+				fontSize:'15px'
+			},
+			complete :{
+				fontSize:'15px'
+			},
 		}
 	});
 	var cvcElement = elements4.create('cardCvc', {
 		style: {
 			base: {
 				backgroundColor: '#EBE6FF',
-				fontSize: '15px',
+				fontSize: '45px',
 				'::placeholder': {
 					color: '#757575',
+					fontSize:'15px'
+				},
+				':focus':{
+					fontSize:'15px'
+					
 				}
 			},
 			invalid: {
-				color: 'red'
-			}
+				color: 'red',
+				fontSize:'15px'
+			},
+			complete :{
+				fontSize:'15px'
+			},
 		}
 	});
 	//HTMLの要素にフォームを作成する
@@ -57,7 +84,7 @@ window.onload = function () {
 
 
 	//トークンを生成する
-	document.getElementsByClassName("btn-buy hv").onclick = function () {
+	document.getElementsByClassName('btn-buy hv')[0].onclick = function () {
 		payjp.createToken(numberElement, {
 			card: {
 				name: document.getElementById('card_name').value
