@@ -12,22 +12,22 @@ window.onload = function () {
 		style: {
 			base: {
 				backgroundColor: '#EBE6FF',
-				fontSize: '45px',
+				fontSize: '40px',
 				'::placeholder': {
 					color: '#757575',
-					fontSize:'15px'
+					fontSize:'20px'
 				},
 				':focus':{
-					fontSize:'15px'
+					fontSize:'20px'
 					
 				}
 			},
 			invalid: {
 				color: 'red',
-				fontSize:'15px'
+				fontSize:'20px'
 			},
 			complete :{
-				fontSize:'15px'
+				fontSize:'20px'
 			},
 		}
 	});
@@ -35,22 +35,22 @@ window.onload = function () {
 		style: {
 			base: {
 				backgroundColor: '#EBE6FF',
-				fontSize: '45px',
+				fontSize: '40px',
 				'::placeholder': {
 					color: '#757575',
-					fontSize:'15px'
+					fontSize:'20px'
 				},
 				':focus':{
-					fontSize:'15px'
+					fontSize:'20px'
 					
 				}
 			},
 			invalid: {
 				color: 'red',
-				fontSize:'15px'
+				fontSize:'20px'
 			},
 			complete :{
-				fontSize:'15px'
+				fontSize:'20px'
 			},
 		}
 	});
@@ -58,22 +58,22 @@ window.onload = function () {
 		style: {
 			base: {
 				backgroundColor: '#EBE6FF',
-				fontSize: '45px',
+				fontSize: '40px',
 				'::placeholder': {
 					color: '#757575',
-					fontSize:'15px'
+					fontSize:'20px'
 				},
 				':focus':{
-					fontSize:'15px'
+					fontSize:'20px'
 					
 				}
 			},
 			invalid: {
 				color: 'red',
-				fontSize:'15px'
+				fontSize:'20px'
 			},
 			complete :{
-				fontSize:'15px'
+				fontSize:'20px'
 			},
 		}
 	});
