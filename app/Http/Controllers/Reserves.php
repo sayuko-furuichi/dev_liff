@@ -70,7 +70,6 @@ class Reserves extends Controller
 public function createCharge($request)
 {
     //POSTする内容を連想配列にまとめる
-    dd($request);
     $param =[
       'amount'=>2980,
       'currency' => 'jpy',
@@ -79,7 +78,7 @@ public function createCharge($request)
       //認証の期間を設定する
       'expiry_days'=>30,
       'metadata'=>[
-        'product'=>''
+        'product'=>$request->couses[0]
       ]
 
     ];
