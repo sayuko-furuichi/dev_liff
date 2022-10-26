@@ -26,8 +26,8 @@
 
     <div class="item">
         <p class="sub_title">　名前　　<span class="must">必須</span></p>
-        <input type="text" placeholder="姓" name="sei"   class="half_txt" pattern="^[^ 　0-9\$/_\[\]\t]+$">　<input type="text"
-            placeholder="名"  name="mei" class="half_txt" pattern="^[^ 　0-9\$/_\[\]\t]+$">
+        <input type="text" placeholder="姓" name="sei"  required class="half_txt" pattern="^[^ 　0-9\$/_\[\]\t]+$">　<input type="text"
+            placeholder="名"  name="mei" class="half_txt" pattern="^[^ 　0-9\$/_\[\]\t]+$" required>
     </div>
     <div class="item">
         <p class="sub_title">　ふりがな　　<span class="must">必須</span></p>
