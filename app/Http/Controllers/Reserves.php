@@ -79,8 +79,7 @@ public function createCharge($request)
       'expiry_days'=>30,
       'metadata'=>[
         'product'=>$request->courses[0],
-        'sei' =>$request->sei,
-        'mei'=>$request->mei
+        'name' =>$request->sei + $request->mei,
       ]
 
     ];
