@@ -74,7 +74,9 @@ public function createCharge($request)
       'amount'=>2980,
       'currency' => 'jpy',
       'card' => $request->credit_token,
-      'capture'=>'true'
+      'capture'=>'false',
+      //認証の期間を設定する
+      'expiry_days'=>30
 
     ];
     //配列を hoge=hoge& のHTTPクエリパラメータにする
