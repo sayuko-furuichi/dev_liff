@@ -78,7 +78,9 @@ public function createCharge($request)
       //認証の期間を設定する
       'expiry_days'=>30,
       'metadata'=>[
-        'product'=>$request->couses[0]
+        'product'=>$request->couses[0],
+        'sei' =>$request->sei,
+        'mei'=>$request->mei
       ]
 
     ];
