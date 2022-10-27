@@ -92,9 +92,10 @@ window.onload = function () {
 			}
 		}).then(function (r) {
 
-			document.querySelector('#token2').innerText = r.error ? r.error.message : '照会が完了しました';
+			document.querySelector('#token2').innerText = r.error ? r.error.message : r.id;
 			if (r.id != 'undefined') {
 				document.getElementById('credit_token').value = r.id;
+				
 			}
 		})
 
